@@ -3,19 +3,46 @@ export const projects = [
     title: "AI-Powered Creative Assistant",
     description: "An interactive system that helps artists and designers explore creative possibilities using machine learning",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-    technologies: ["TensorFlow", "React", "Python", "WebGL"]
+    technologies: ["TensorFlow", "React", "Python", "WebGL"],
+    demoUrl: "https://creative-ai-demo.example.com",
+    liveDemo: true,
+    demoDescription: "Try out the AI-powered creative suggestions in real-time. The system analyzes your input and generates artistic variations using machine learning algorithms.",
+    features: [
+      "Real-time AI suggestions",
+      "Style transfer capabilities",
+      "Collaborative creation tools",
+      "Export in multiple formats"
+    ]
   },
   {
     title: "Immersive Learning Platform",
     description: "Virtual reality-based educational platform for interactive STEM learning",
     image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-    technologies: ["Unity", "C#", "WebXR", "Three.js"]
+    technologies: ["Unity", "C#", "WebXR", "Three.js"],
+    demoUrl: "https://vr-learning.example.com",
+    liveDemo: true,
+    demoDescription: "Experience interactive 3D models and simulations for STEM education. Navigate through virtual experiments and hands-on learning scenarios.",
+    features: [
+      "Interactive 3D models",
+      "Virtual lab experiments",
+      "Progress tracking",
+      "Collaborative learning spaces"
+    ]
   },
   {
     title: "Adaptive Interface System",
     description: "Context-aware UI that adapts to user behavior and environmental conditions",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69",
-    technologies: ["React", "TypeScript", "Machine Learning", "Node.js"]
+    technologies: ["React", "TypeScript", "Machine Learning", "Node.js"],
+    demoUrl: "https://adaptive-ui.example.com",
+    liveDemo: true,
+    demoDescription: "Watch the interface adapt to different user interactions and environmental contexts in real-time.",
+    features: [
+      "Context-aware adaptations",
+      "Personalized UI elements",
+      "Environmental responsiveness",
+      "Usage analytics"
+    ]
   }
 ];
 
