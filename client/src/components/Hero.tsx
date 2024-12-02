@@ -1,23 +1,55 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function Hero() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isVideoError, setIsVideoError] = useState(false);
+
+  // Detect mobile devices
+  const [isMobile] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
+    return false;
+  });
+
+  const videoUrl = "https://assets.mixkit.co/videos/preview/mixkit-stars-in-space-1610-large.mp4";
+  const fallbackImageUrl = "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69";
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "brightness(0.3)" }}
-        >
-          <source src="https://player.vimeo.com/external/459863572.hd.mp4?s=49e34db9e4253106a8ac0b8a72f2ae88b1763f59&profile_id=174" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-black/30" /> {/* Additional overlay for better text visibility */}
+        {!isMobile ? (
+          <>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              onLoadedData={() => setIsVideoLoaded(true)}
+              onError={() => setIsVideoError(true)}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                isVideoLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{ filter: "brightness(0.3)" }}
+            >
+              <source src={videoUrl} type="video/mp4" />
+            </video>
+            {!isVideoLoaded && !isVideoError && (
+              <div className="absolute inset-0 bg-gray-900 animate-pulse" />
+            )}
+          </>
+        ) : (
+          <img
+            src={fallbackImageUrl}
+            alt="Background"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ filter: "brightness(0.3)" }}
+          />
+        )}
+        <div className="absolute inset-0 bg-black/30" />
       </div>
       
       <motion.div 
