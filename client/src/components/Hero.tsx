@@ -15,14 +15,23 @@ export function Hero() {
     return false;
   });
 
-  const videoUrl = "https://assets.mixkit.co/videos/preview/mixkit-stars-in-space-1610-large.mp4";
-  const fallbackImageUrl = "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69";
+  // Reliable CDN video source
+  const videoUrl = "https://assets.mixkit.co/videos/preview/mixkit-abstract-flowing-lines-loop-animation-12148-large.mp4";
+  const fallbackImageUrl = "https://images.unsplash.com/photo-1519874179391-5c97e0fccf16";
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         {!isMobile ? (
           <>
+            {/* Loading state */}
+            {!isVideoLoaded && !isVideoError && (
+              <div className="absolute inset-0 bg-gray-900 animate-pulse flex items-center justify-center">
+                <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+              </div>
+            )}
+            
+            {/* Video background */}
             <video
               autoPlay
               muted
@@ -33,23 +42,27 @@ export function Hero() {
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                 isVideoLoaded ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ filter: "brightness(0.3)" }}
             >
               <source src={videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
-            {!isVideoLoaded && !isVideoError && (
-              <div className="absolute inset-0 bg-gray-900 animate-pulse" />
-            )}
           </>
         ) : (
+          // Mobile fallback
           <img
             src={fallbackImageUrl}
             alt="Background"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ filter: "brightness(0.3)" }}
           />
         )}
-        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Gradient overlay */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"
+          style={{
+            background: 'linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%)'
+          }}
+        />
       </div>
       
       <motion.div 
@@ -67,7 +80,7 @@ export function Hero() {
         <Button 
           variant="outline" 
           size="lg"
-          className="text-white border-white hover:bg-white/20 shadow-lg"
+          className="text-white border-white hover:bg-white/20 shadow-lg backdrop-blur-sm"
           onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
         >
           View My Work
