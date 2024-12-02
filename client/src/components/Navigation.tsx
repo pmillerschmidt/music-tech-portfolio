@@ -8,7 +8,10 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
+    { label: "About", href: "#about" },
+    { label: "Research", href: "#research" },
     { label: "Projects", href: "#projects" },
+    { label: "Music", href: "#music" },
     { label: "Contact", href: "#contact" }
   ];
 
@@ -21,8 +24,8 @@ export function Navigation() {
     >
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/">
-            <a className="text-xl font-bold">Portfolio</a>
+          <Link href="/" className="text-xl font-bold">
+            Portfolio
           </Link>
 
           {/* Desktop Navigation */}
