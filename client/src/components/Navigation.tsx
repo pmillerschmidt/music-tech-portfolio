@@ -8,11 +8,11 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Research", href: "#research" },
-    { label: "Projects", href: "#projects" },
-    { label: "Music", href: "#music" },
-    { label: "Contact", href: "#contact" }
+    { label: "About", href: "/about" },
+    { label: "Research", href: "/research" },
+    { label: "Projects", href: "/projects" },
+    { label: "Music", href: "/music" },
+    { label: "Contact", href: "/contact" }
   ];
 
   return (
@@ -31,13 +31,13 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map(item => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 className="text-gray-600 hover:text-primary transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -61,14 +61,14 @@ export function Navigation() {
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map(item => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>

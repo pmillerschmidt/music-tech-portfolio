@@ -26,16 +26,16 @@ export function Hero() {
   // Video sources with multiple formats for better browser support
   const videoSources = [
     {
-      src: "https://assets.mixkit.co/videos/preview/mixkit-abstract-flowing-lines-loop-animation-12148-large.mp4",
+      src: "https://cdn.pixabay.com/vimeo/328269になってきた/47313/pexels-2611250.mp4?width=1280&hash=786c49e38c038d025b1d41fdb7dd2f00c58c9af1",
       type: "video/mp4"
     },
     {
-      src: "https://assets.mixkit.co/videos/preview/mixkit-abstract-flowing-lines-loop-animation-12148-large.webm",
+      src: "https://cdn.pixabay.com/vimeo/328269になってきた/47313/pexels-2611250.webm?width=1280&hash=786c49e38c038d025b1d41fdb7dd2f00c58c9af1",
       type: "video/webm"
     }
   ];
 
-  const fallbackImage = "https://images.unsplash.com/photo-1451187580459-43490279c0fa";
+  const fallbackImage = "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop";
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
