@@ -8,7 +8,7 @@ export function Hero() {
   const [isVideoError, setIsVideoError] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check for mobile devices on mount
+  // Check for mobile devices and handle resize events
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(
@@ -23,26 +23,28 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Video sources with multiple formats for better browser support
+  // Cloudinary video sources for reliable delivery
   const videoSources = [
     {
-      src: "https://cdn.pixabay.com/vimeo/328269になってきた/47313/pexels-2611250.mp4?width=1280&hash=786c49e38c038d025b1d41fdb7dd2f00c58c9af1",
+      src: "https://res.cloudinary.com/demo/video/upload/v1710339587/pexels-rostislav-uzunov-9389446_1080p_wvGA9.mp4",
       type: "video/mp4"
     },
     {
-      src: "https://cdn.pixabay.com/vimeo/328269になってきた/47313/pexels-2611250.webm?width=1280&hash=786c49e38c038d025b1d41fdb7dd2f00c58c9af1",
+      src: "https://res.cloudinary.com/demo/video/upload/v1710339587/pexels-rostislav-uzunov-9389446_1080p_wvGA9.webm",
       type: "video/webm"
     }
   ];
 
-  const fallbackImage = "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop";
+  // High-quality fallback image from Cloudinary
+  const fallbackImage = "https://res.cloudinary.com/demo/image/upload/v1710339587/hero-fallback_xn2bk9.jpg";
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Container */}
       <div className="absolute inset-0 z-0">
-        {/* Loading Spinner */}
+        {/* Loading State */}
         {!isVideoLoaded && !isVideoError && !isMobile && (
-          <div className="absolute inset-0 bg-gray-900 flex items-center justify-center transition-opacity duration-500">
+          <div className="absolute inset-0 bg-gray-900 flex items-center justify-center z-20 transition-opacity duration-500">
             <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin" />
           </div>
         )}
@@ -54,6 +56,7 @@ export function Hero() {
             muted
             loop
             playsInline
+            preload="metadata"
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             }`}
@@ -76,40 +79,41 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            loading="eager"
           />
         )}
 
-        {/* Gradient Overlay */}
+        {/* Enhanced Gradient Overlay */}
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 z-10 bg-gradient-to-b from-black/80 via-black/50 to-black/80"
           style={{
-            background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%)',
-            backdropFilter: 'blur(4px)'
+            backdropFilter: 'blur(4px)',
           }}
         />
       </div>
 
       {/* Content */}
       <motion.div 
-        className="relative z-10 text-center text-white max-w-4xl mx-auto px-4"
+        className="relative z-20 text-center text-white max-w-4xl mx-auto px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent drop-shadow-lg">
-          Creative Technology Researcher
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <span className="bg-gradient-to-r from-white via-white to-primary/80 bg-clip-text text-transparent drop-shadow-lg">
+            Creative Technology Researcher
+          </span>
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
           Exploring the intersection of human-computer interaction, artificial intelligence, and interactive media at MIT Media Lab
         </p>
         <Button 
-          variant="outline" 
+          className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300"
           size="lg"
-          className="text-white border-white hover:bg-white/20 transition-all duration-300 shadow-lg backdrop-blur-sm"
           onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
         >
           View My Work
-          <ArrowDown className="ml-2 w-5 h-5" />
+          <ArrowDown className="ml-2 w-5 h-5 animate-bounce" />
         </Button>
       </motion.div>
     </section>
