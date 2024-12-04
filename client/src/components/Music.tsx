@@ -68,12 +68,12 @@ export function Music() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
-                  <Button variant="outline" asChild>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Learn More
-                    </a>
-                  </Button>
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             </motion.div>
