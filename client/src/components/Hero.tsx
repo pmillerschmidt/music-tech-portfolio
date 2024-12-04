@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export function Hero() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -23,20 +24,27 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Cloudinary video sources for reliable delivery
-  const videoSources = [
-    {
-      src: "https://res.cloudinary.com/demo/video/upload/v1710339587/pexels-rostislav-uzunov-9389446_1080p_wvGA9.mp4",
-      type: "video/mp4"
-    },
-    {
-      src: "https://res.cloudinary.com/demo/video/upload/v1710339587/pexels-rostislav-uzunov-9389446_1080p_wvGA9.webm",
-      type: "video/webm"
-    }
-  ];
+  const videoUrl = "https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-background-48840-large.mp4";
+  const fallbackImage = "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop";
 
-  // High-quality fallback image from Cloudinary
-  const fallbackImage = "https://res.cloudinary.com/demo/image/upload/v1710339587/hero-fallback_xn2bk9.jpg";
+  const { toast } = useToast();
+
+  // Handle video loading success
+  const handleVideoLoaded = () => {
+    console.log('Video loaded successfully');
+    setIsVideoLoaded(true);
+  };
+
+  // Handle video loading error
+  const handleVideoError = (error: any) => {
+    console.error('Video loading error:', error);
+    setIsVideoError(true);
+    toast({
+      title: "Video Loading Error",
+      description: "Falling back to static image background",
+      variant: "destructive",
+    });
+  };
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -44,7 +52,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         {/* Loading State */}
         {!isVideoLoaded && !isVideoError && !isMobile && (
-          <div className="absolute inset-0 bg-gray-900 flex items-center justify-center z-20 transition-opacity duration-500">
+          <div className="absolute inset-0 bg-gray-900 flex items-center justify-center z-20">
             <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin" />
           </div>
         )}
@@ -56,16 +64,11 @@ export function Hero() {
             muted
             loop
             playsInline
-            preload="metadata"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              isVideoLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            onLoadedData={() => setIsVideoLoaded(true)}
-            onError={() => setIsVideoError(true)}
+            className="absolute inset-0 w-full h-full object-cover"
+            onLoadedData={handleVideoLoaded}
+            onError={handleVideoError}
           >
-            {videoSources.map((source, index) => (
-              <source key={index} src={source.src} type={source.type} />
-            ))}
+            <source src={videoUrl} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         )}
@@ -83,13 +86,8 @@ export function Hero() {
           />
         )}
 
-        {/* Enhanced Gradient Overlay */}
-        <div 
-          className="absolute inset-0 z-10 bg-gradient-to-b from-black/80 via-black/50 to-black/80"
-          style={{
-            backdropFilter: 'blur(4px)',
-          }}
-        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Content */}
