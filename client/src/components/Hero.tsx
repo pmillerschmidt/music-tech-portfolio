@@ -89,7 +89,7 @@ export function Hero() {
         )}
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
       </div>
 
       {/* Content */}
@@ -99,12 +99,12 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-          <span className="hero-text bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 tracking-tight">
+          <span className="hero-text bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(255,255,255,0.4)] animate-gradient">
             Paul Miller-Schmidt
           </span>
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
           Musician | Engineer | Educator
         </p>
         <Button 
