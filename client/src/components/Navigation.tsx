@@ -17,10 +17,10 @@ export function Navigation() {
 
   return (
     <motion.header 
-      className="fixed w-full z-50 bg-white/80 backdrop-blur-sm border-b"
+      className="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-primary/10 shadow-lg"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">

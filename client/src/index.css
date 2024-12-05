@@ -31,7 +31,24 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply antialiased bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .hero-text {
+    @apply bg-gradient-to-r from-primary via-primary/80 to-white/90;
+    background-size: 200% auto;
+    animation: shine 8s ease-in-out infinite;
+  }
+
+  @keyframes shine {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
   }
 }
