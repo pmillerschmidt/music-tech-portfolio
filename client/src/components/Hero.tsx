@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 
 export function Hero() {
-  const [_, navigate] = useLocation();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [isVideoError, setIsVideoError] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -31,21 +28,24 @@ export function Hero() {
 
   const { toast } = useToast();
 
-  // Handle video loading success
   const handleVideoLoaded = () => {
-    console.log('Video loaded successfully');
     setIsVideoLoaded(true);
   };
 
-  // Handle video loading error
-  const handleVideoError = (error: any) => {
-    console.error('Video loading error:', error);
+  const handleVideoError = () => {
     setIsVideoError(true);
     toast({
       title: "Video Loading Error",
       description: "Falling back to static image background",
       variant: "destructive",
     });
+  };
+
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -60,7 +60,7 @@ export function Hero() {
         )}
 
         {/* Video Background for Desktop */}
-        {!isMobile && (
+        {!isMobile && !isVideoError && (
           <video
             autoPlay
             muted
@@ -110,7 +110,7 @@ export function Hero() {
         <Button 
           className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
           size="lg"
-          onClick={() => navigate('/projects')}
+          onClick={scrollToProjects}
         >
           View My Work
           <motion.div

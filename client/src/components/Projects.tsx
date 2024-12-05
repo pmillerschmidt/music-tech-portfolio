@@ -35,7 +35,7 @@ export function Projects() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="snap-center shrink-0 w-[300px] md:w-[350px]"
+              className="snap-center shrink-0 w-[300px] md:w-[calc(33.333% - 1rem)]"
             >
               <Dialog>
                 <Card className="h-full hover:shadow-lg transition-shadow group">

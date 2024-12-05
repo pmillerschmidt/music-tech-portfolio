@@ -34,20 +34,20 @@ export function Contact() {
           >
             <Card>
               <CardContent className="pt-6">
-                <form className="space-y-6">
+                <form className="space-y-6 text-white">
                   <div>
-                    <Input placeholder="Your Name" />
+                    <Input placeholder="Your Name" className="bg-white/10 border-white/20 text-white placeholder:text-white/60" />
                   </div>
                   <div>
-                    <Input type="email" placeholder="Your Email" />
+                    <Input type="email" placeholder="Your Email" className="bg-white/10 border-white/20 text-white placeholder:text-white/60" />
                   </div>
                   <div>
                     <Textarea 
                       placeholder="Your Message"
-                      className="min-h-[150px]"
+                      className="min-h-[150px] bg-white/10 border-white/20 text-white placeholder:text-white/60"
                     />
                   </div>
-                  <Button className="w-full">Send Message</Button>
+                  <Button className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20">Send Message</Button>
                 </form>
               </CardContent>
             </Card>
@@ -59,27 +59,27 @@ export function Contact() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+            <div className="text-white backdrop-blur-sm bg-white/5 p-6 rounded-lg border border-white/10">
+              <h3 className="text-xl font-semibold mb-4 text-white">Contact Information</h3>
               <div className="space-y-4">
-                <a href="mailto:contact@example.com" className="flex items-center hover:text-primary">
+                <a href="mailto:contact@example.com" className="flex items-center text-white/80 hover:text-white transition-colors">
                   <Mail className="w-5 h-5 mr-3" />
                   contact@example.com
                 </a>
-                <a href="https://github.com" className="flex items-center hover:text-primary">
+                <a href="https://github.com" className="flex items-center text-white/80 hover:text-white transition-colors">
                   <Github className="w-5 h-5 mr-3" />
                   GitHub Profile
                 </a>
-                <a href="https://linkedin.com" className="flex items-center hover:text-primary">
+                <a href="https://linkedin.com" className="flex items-center text-white/80 hover:text-white transition-colors">
                   <Linkedin className="w-5 h-5 mr-3" />
                   LinkedIn Profile
                 </a>
               </div>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Download CV</h3>
-              <Button variant="outline" className="w-full">
+            <div className="text-white backdrop-blur-sm bg-white/5 p-6 rounded-lg border border-white/10">
+              <h3 className="text-xl font-semibold mb-4 text-white">Download CV</h3>
+              <Button className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20">
                 Download Resume/CV
               </Button>
             </div>

@@ -54,51 +54,57 @@ export function Music() {
           Music & Sound
         </motion.h2>
 
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 scrollbar-hide">
-          {musicProjects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="snap-center shrink-0 w-[300px] md:w-[400px]"
-            >
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative h-48">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="text-white border-white hover:bg-white/20"
-                      onClick={() => setPlayingIndex(playingIndex === index ? null : index)}
-                    >
-                      {playingIndex === index ? (
-                        <Pause className="h-4 w-4" />
-                      ) : (
-                        <Play className="h-4 w-4" />
-                      )}
-                    </Button>
+        <div className="relative">
+          {/* Scroll indicators */}
+          <div className="absolute left-0 inset-y-0 w-12 bg-gradient-to-r from-black/20 to-transparent pointer-events-none z-10" />
+          <div className="absolute right-0 inset-y-0 w-12 bg-gradient-to-l from-black/20 to-transparent pointer-events-none z-10" />
+          
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 custom-scrollbar">
+            {musicProjects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="snap-center shrink-0 w-[300px] md:w-[calc(33.333% - 1rem)] min-w-[300px]"
+              >
+                <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow bg-white/5 backdrop-blur-sm border-white/10">
+                  <div className="relative h-48">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="text-white border-white hover:bg-white/20"
+                        onClick={() => setPlayingIndex(playingIndex === index ? null : index)}
+                      >
+                        {playingIndex === index ? (
+                          <Pause className="h-4 w-4" />
+                        ) : (
+                          <Play className="h-4 w-4" />
+                        )}
+                      </Button>
+                    </div>
                   </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Learn More
-                    </Button>
-                  </a>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
+                    <p className="text-white/80 mb-4">{project.description}</p>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full text-white border-white/20 hover:bg-white/10">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Learn More
+                      </Button>
+                    </a>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
