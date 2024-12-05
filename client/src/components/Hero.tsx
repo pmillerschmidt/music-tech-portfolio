@@ -23,7 +23,7 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const videoUrl = "https://cdnl.iconscout.com/lottie/premium/preview-watermark/digital-technology-background-8126666-6521499.mp4";
+  const videoUrl = "https://static.videezy.com/system/resources/previews/000/004/381/original/Light_Tech_Background_4K_Motion.mp4";
   const fallbackImage = "https://images.unsplash.com/photo-1518972559570-7cc1309d3229?q=80&w=2070&auto=format&fit=crop";
 
   const { toast } = useToast();

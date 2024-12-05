@@ -31,14 +31,21 @@
   }
 
   body {
-    @apply antialiased bg-background text-foreground;
+    @apply antialiased bg-background text-foreground min-h-screen overflow-x-hidden;
     font-family: 'DM Sans', sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  main {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
 
   section {
+    min-height: 100vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
   }
