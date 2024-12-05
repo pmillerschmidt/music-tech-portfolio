@@ -23,7 +23,7 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const videoUrl = "https://cdn.pixabay.com/vimeo/529929190/technology-70469.mp4?width=1280&hash=d84c8c8372731a26d768e21a44deff4aa5ced052";
+  const videoUrl = "https://player.vimeo.com/external/451837838.hd.mp4?s=22b82f27ba96b6d69c864a566070be711d70c7b3&profile_id=175";
   const fallbackImage = "https://images.unsplash.com/photo-1518972559570-7cc1309d3229?q=80&w=2070&auto=format&fit=crop";
 
   const { toast } = useToast();
@@ -61,18 +61,20 @@ export function Hero() {
 
         {/* Video Background for Desktop */}
         {!isMobile && !isVideoError && (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            onLoadedData={handleVideoLoaded}
-            onError={handleVideoError}
-          >
-            <source src={videoUrl} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <div className="absolute inset-0">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+              onLoadedData={handleVideoLoaded}
+              onError={handleVideoError}
+            >
+              <source src={videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         )}
 
         {/* Fallback Image for Mobile or Error */}
