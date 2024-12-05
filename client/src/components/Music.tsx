@@ -69,14 +69,14 @@ export function Music() {
                 viewport={{ once: true }}
                 className="snap-center shrink-0 w-[300px] md:w-[calc(33.333% - 1rem)] min-w-[300px]"
               >
-                <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow bg-white/5 backdrop-blur-sm border-white/10">
-                  <div className="relative h-48">
+                <Card className="h-full hover:shadow-lg transition-shadow group">
+                  <div className="relative h-48 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden">
                     <img 
                       src={project.image} 
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <Button
                         variant="outline"
                         size="icon"

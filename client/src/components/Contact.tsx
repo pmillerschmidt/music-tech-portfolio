@@ -34,7 +34,11 @@ export function Contact() {
           >
             <Card>
               <CardContent className="pt-6">
-                <form className="space-y-6 text-white">
+                <form className="space-y-6 text-white" onSubmit={(e) => {
+                  e.preventDefault();
+                  // Add form submission logic here
+                  window.location.href = `mailto:contact@example.com?subject=Portfolio Contact`;
+                }}>
                   <div>
                     <Input placeholder="Your Name" className="bg-white/10 border-white/20 text-white placeholder:text-white/60" />
                   </div>

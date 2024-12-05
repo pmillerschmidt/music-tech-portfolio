@@ -27,8 +27,13 @@ export function Projects() {
           Featured Projects
         </motion.h2>
         
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 scrollbar-hide">
-          {projects.map((project, index) => (
+        <div className="relative">
+          {/* Scroll indicators */}
+          <div className="absolute left-0 inset-y-0 w-12 bg-gradient-to-r from-black/20 to-transparent pointer-events-none z-10" />
+          <div className="absolute right-0 inset-y-0 w-12 bg-gradient-to-l from-black/20 to-transparent pointer-events-none z-10" />
+          
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 custom-scrollbar">
+            {projects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, x: 100 }}
@@ -77,6 +82,7 @@ export function Projects() {
               </Dialog>
             </motion.div>
           ))}
+          </div>
         </div>
       </div>
     </section>
