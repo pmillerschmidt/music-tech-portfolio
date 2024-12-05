@@ -27,12 +27,32 @@ export function Projects() {
           Featured Projects
         </motion.h2>
         
-        <div className="relative">
+        <div className="relative group">
           {/* Scroll indicators */}
-          <div className="absolute left-0 top-0 bottom-6 w-24 bg-gradient-to-r from-black/40 to-transparent pointer-events-none z-10" />
-          <div className="absolute right-0 top-0 bottom-6 w-24 bg-gradient-to-l from-black/40 to-transparent pointer-events-none z-10" />
+          <div className="absolute left-0 top-0 bottom-6 w-24 bg-gradient-to-r from-black/80 to-transparent pointer-events-none z-10 flex items-center pl-4">
+            <motion.div
+              animate={{ x: [-5, 5, -5] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="text-white/80 hidden group-hover:block"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </motion.div>
+          </div>
+          <div className="absolute right-0 top-0 bottom-6 w-24 bg-gradient-to-l from-black/80 to-transparent pointer-events-none z-10 flex items-center justify-end pr-4">
+            <motion.div
+              animate={{ x: [5, -5, 5] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="text-white/80 hidden group-hover:block"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </motion.div>
+          </div>
           
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 custom-scrollbar">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 custom-scrollbar overflow-y-hidden">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
