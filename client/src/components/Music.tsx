@@ -23,10 +23,18 @@ export function Music() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   return (
-    <section id="music" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="music" className="relative py-20 min-h-screen flex items-center">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop"
+          alt="Music Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
+      </div>
+      <div className="container relative z-10 mx-auto px-4">
         <motion.h2 
-          className="text-4xl font-bold mb-12 text-center"
+          className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

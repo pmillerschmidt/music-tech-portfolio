@@ -8,10 +8,18 @@ import { ExternalLink } from "lucide-react";
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="relative py-20 min-h-screen flex items-center">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+          alt="Technology Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
+      </div>
+      <div className="container relative z-10 mx-auto px-4">
         <motion.h2 
-          className="text-4xl font-bold mb-12 text-center"
+          className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
