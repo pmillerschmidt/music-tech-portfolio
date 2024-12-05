@@ -23,7 +23,7 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const videoUrl = "https://player.vimeo.com/external/451837838.hd.mp4?s=22b82f27ba96b6d69c864a566070be711d70c7b3&profile_id=175";
+  const videoUrl = "https://cdnl.iconscout.com/lottie/premium/preview-watermark/digital-technology-background-8126666-6521499.mp4";
   const fallbackImage = "https://images.unsplash.com/photo-1518972559570-7cc1309d3229?q=80&w=2070&auto=format&fit=crop";
 
   const { toast } = useToast();
