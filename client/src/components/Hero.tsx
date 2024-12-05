@@ -67,11 +67,15 @@ export function Hero() {
               muted
               loop
               playsInline
+              preload="auto"
               className="absolute inset-0 w-full h-full object-cover"
               onLoadedData={handleVideoLoaded}
               onError={handleVideoError}
             >
-              <source src={videoUrl} type="video/mp4" />
+              <source 
+                src="https://cdn.coverr.co/videos/coverr-abstract-technology-background-1574/1080p.mp4"
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
           </div>
