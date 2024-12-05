@@ -32,17 +32,17 @@
 
   body {
     @apply antialiased bg-background text-foreground;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'DM Sans', sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Outfit', sans-serif;
   }
 
   .hero-text {
-    @apply bg-gradient-to-r from-primary via-primary/80 to-white/90;
-    background-size: 200% auto;
+    @apply bg-gradient-to-br from-primary via-purple-500 to-pink-500;
+    background-size: 300% 300%;
     animation: shine 8s ease-in-out infinite;
   }
 

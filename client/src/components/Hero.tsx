@@ -26,8 +26,8 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const videoUrl = "https://cdn.pixabay.com/vimeo/328373398/abstract-26589.mp4?width=1280&hash=0336a2eaf610c7d774c8bf751280f8c608db5902";
-  const fallbackImage = "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop";
+  const videoUrl = "https://cdn.pixabay.com/vimeo/529927344/paint-71788.mp4?width=1280&hash=bc7c3cc938db7c86523bc6be025ad4a42e5b3928";
+  const fallbackImage = "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop";
 
   const { toast } = useToast();
 
