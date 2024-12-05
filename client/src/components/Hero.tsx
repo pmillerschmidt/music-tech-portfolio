@@ -26,8 +26,8 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const videoUrl = "https://cdn.pixabay.com/vimeo/529927344/paint-71788.mp4?width=1280&hash=bc7c3cc938db7c86523bc6be025ad4a42e5b3928";
-  const fallbackImage = "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop";
+  const videoUrl = "https://cdn.pixabay.com/vimeo/810824720/waves-173898.mp4?width=1280&hash=d0d9b3b24939c6907bd1e1b05d47a5e5b39f7e97";
+  const fallbackImage = "https://images.unsplash.com/photo-1518972559570-7cc1309d3229?q=80&w=2070&auto=format&fit=crop";
 
   const { toast } = useToast();
 
@@ -89,7 +89,7 @@ export function Hero() {
         )}
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 backdrop-blur-[2px]" />
       </div>
 
       {/* Content */}
