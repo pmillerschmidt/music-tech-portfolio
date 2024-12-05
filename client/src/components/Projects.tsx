@@ -55,9 +55,12 @@ export function Projects() {
           )}
           
           <div 
-            className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 custom-scrollbar overflow-y-hidden scroll-smooth w-[calc(100%+8rem)] -mx-4"
-            onScroll={handleScroll}
+            className="container mx-auto px-4"
           >
+            <div 
+              className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 custom-scrollbar overflow-y-hidden scroll-smooth"
+              onScroll={handleScroll}
+            >
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -65,7 +68,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="snap-start shrink-0 w-[300px] md:w-[calc(33.333% - 1rem)]"
+                className="snap-start shrink-0 w-[calc(33.333% - 1rem)]"
               >
                 <Dialog>
                   <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group">
@@ -107,6 +110,7 @@ export function Projects() {
                 </Dialog>
               </motion.div>
             ))}
+            </div>
           </div>
         </div>
       </div>
