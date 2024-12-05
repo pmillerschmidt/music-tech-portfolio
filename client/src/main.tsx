@@ -7,7 +7,6 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
-import ResearchPage from "./pages/ResearchPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import MusicPage from "./pages/MusicPage";
 import ContactPage from "./pages/ContactPage";
@@ -20,7 +19,6 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/about" component={AboutPage} />
-        <Route path="/research" component={ResearchPage} />
         <Route path="/projects" component={ProjectsPage} />
         <Route path="/music" component={MusicPage} />
         <Route path="/contact" component={ContactPage} />

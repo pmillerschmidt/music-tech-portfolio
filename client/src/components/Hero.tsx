@@ -101,11 +101,11 @@ export function Hero() {
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
           <span className="hero-text bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]">
-            Creative Technology Researcher
+            Paul Miller-Schmidt
           </span>
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-          Exploring the intersection of human-computer interaction, artificial intelligence, and interactive media at MIT Media Lab
+          Musician | Engineer | Educator
         </p>
         <Button 
           className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300"
