@@ -58,7 +58,7 @@ export function Projects() {
             className="container mx-auto px-4"
           >
             <div 
-              className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 custom-scrollbar overflow-y-hidden scroll-smooth"
+              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth"
               onScroll={handleScroll}
             >
             {projects.map((project, index) => (
