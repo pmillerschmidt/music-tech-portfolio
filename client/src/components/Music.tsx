@@ -80,7 +80,7 @@ export function Music() {
           )}
           
           <div 
-            className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 custom-scrollbar overflow-y-hidden"
+            className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 custom-scrollbar overflow-y-hidden scroll-smooth scroll-p-4"
             onScroll={handleScroll}
           >
             {musicProjects.map((project, index) => (
@@ -90,7 +90,7 @@ export function Music() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="snap-center shrink-0 w-[300px] md:w-[calc(33.333% - 1rem)]"
+                className="snap-start shrink-0 w-[300px] md:w-[calc(33.333% - 1rem)]"
               >
                 <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group">
                   <CardHeader>

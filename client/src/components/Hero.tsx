@@ -23,7 +23,7 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const videoUrl = "https://cdn.pixabay.com/vimeo/810824720/waves-173898.mp4?width=1280&hash=d0d9b3b24939c6907bd1e1b05d47a5e5b39f7e97";
+  const videoUrl = "https://cdn.pixabay.com/vimeo/529929190/technology-70469.mp4?width=1280&hash=d84c8c8372731a26d768e21a44deff4aa5ced052";
   const fallbackImage = "https://images.unsplash.com/photo-1518972559570-7cc1309d3229?q=80&w=2070&auto=format&fit=crop";
 
   const { toast } = useToast();
