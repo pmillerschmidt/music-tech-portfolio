@@ -8,25 +8,25 @@ const musicProjects = [
   {
     title: "Digital Sound Processing",
     description: "Exploring the intersection of technology and music through digital sound processing and synthesis",
-    image: "https://images.unsplash.com/photo-1519874179391-5c97e0fccf16",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04",
     link: "#"
   },
   {
     title: "Interactive Music Installations",
     description: "Creating interactive installations that respond to movement and environmental factors",
-    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+    image: "https://images.unsplash.com/photo-1563330232-57114bb0823c",
     link: "#"
   },
   {
     title: "AI Music Generation",
     description: "Using machine learning to create unique musical compositions and soundscapes",
-    image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76",
+    image: "https://images.unsplash.com/photo-1598653222000-6b7b7a552625",
     link: "#"
   },
   {
     title: "Spatial Audio Experience",
     description: "Developing immersive 3D audio environments for virtual reality applications",
-    image: "https://images.unsplash.com/photo-1468164016595-6108e4c60c8b",
+    image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0",
     link: "#"
   }
 ];
@@ -47,7 +47,7 @@ export function Music() {
     <section id="music" className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop"
           alt="Music Background"
           className="w-full h-full object-cover"
         />
