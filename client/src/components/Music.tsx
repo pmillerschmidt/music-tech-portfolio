@@ -6,27 +6,27 @@ import { useState } from "react";
 
 const musicProjects = [
   {
-    title: "Digital Sound Processing",
-    description: "Exploring the intersection of technology and music through digital sound processing and synthesis",
-    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04",
+    title: "Neural Music Synthesis",
+    description: "Developing deep learning models for real-time audio synthesis and music generation using neural networks",
+    image: "https://images.unsplash.com/photo-1580654843061-8c90a9585600?q=80&w=2070", // Music visualization with circuit patterns
     link: "#"
   },
   {
-    title: "Interactive Music Installations",
-    description: "Creating interactive installations that respond to movement and environmental factors",
-    image: "https://images.unsplash.com/photo-1563330232-57114bb0823c",
+    title: "AI-Powered Music Composition",
+    description: "Building transformer-based models for generating complex musical arrangements and harmonies",
+    image: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=2070", // Digital waveforms and AI visualization
     link: "#"
   },
   {
-    title: "AI Music Generation",
-    description: "Using machine learning to create unique musical compositions and soundscapes",
-    image: "https://images.unsplash.com/photo-1598653222000-6b7b7a552625",
+    title: "Intelligent Music Production",
+    description: "Implementing machine learning algorithms for automated mixing, mastering, and sound design",
+    image: "https://images.unsplash.com/photo-1597995722437-b71d4300c0f0?q=80&w=2070", // Modern music tech studio
     link: "#"
   },
   {
-    title: "Spatial Audio Experience",
-    description: "Developing immersive 3D audio environments for virtual reality applications",
-    image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0",
+    title: "Adaptive Music Systems",
+    description: "Engineering context-aware AI systems that generate dynamic soundtracks based on real-time input",
+    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2070", // Tech interface with music elements
     link: "#"
   }
 ];
@@ -47,7 +47,7 @@ export function Music() {
     <section id="music" className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1580654843061-8c90a9585600?q=80&w=2070&auto=format&fit=crop"
           alt="Music Background"
           className="w-full h-full object-cover"
         />
