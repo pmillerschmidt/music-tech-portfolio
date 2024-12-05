@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogTrigger } from "@/components/ui/dialog";
-import { ProjectDemo } from "./ProjectDemo";
 import { projects } from "../lib/constants";
 import { ExternalLink } from "lucide-react";
+import { Link } from "wouter";
 
 export function Projects() {
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -70,8 +69,8 @@ export function Projects() {
                 viewport={{ once: true }}
                 className="snap-start shrink-0 w-[calc(33.333% - 1rem)]"
               >
-                <Dialog>
-                  <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group">
+                <Link href={`/projects/${index}`}>
+                  <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group cursor-pointer">
                     <CardHeader>
                       <CardTitle className="text-white">{project.title}</CardTitle>
                       <CardDescription className="text-white/70">{project.description}</CardDescription>
@@ -86,12 +85,10 @@ export function Projects() {
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                          <DialogTrigger asChild>
-                            <Button variant="outline" className="text-white border-white hover:bg-white/20">
-                              <ExternalLink className="w-4 h-4 mr-2" />
-                              View Demo
-                            </Button>
-                          </DialogTrigger>
+                          <Button variant="outline" className="text-white border-white hover:bg-white/20">
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            View Project
+                          </Button>
                         </div>
                       </div>
                       <div className="flex gap-2 flex-wrap">
@@ -106,8 +103,7 @@ export function Projects() {
                       </div>
                     </CardContent>
                   </Card>
-                  <ProjectDemo project={project} />
-                </Dialog>
+                </Link>
               </motion.div>
             ))}
             </div>
