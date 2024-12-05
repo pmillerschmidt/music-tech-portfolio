@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
@@ -7,6 +8,16 @@ import { projects } from "../lib/constants";
 import { ExternalLink } from "lucide-react";
 
 export function Projects() {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    if (e.currentTarget.scrollLeft > 0 && !hasScrolled) {
+      setHasScrolled(true);
+    } else if (e.currentTarget.scrollLeft === 0 && hasScrolled) {
+      setHasScrolled(false);
+    }
+  };
+
   return (
     <section id="projects" className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
@@ -29,19 +40,24 @@ export function Projects() {
         
         <div className="relative group">
           {/* Scroll indicator */}
-          <div className="absolute right-0 top-0 bottom-6 w-16 bg-gradient-to-l from-black/60 to-transparent pointer-events-none z-10 flex items-center justify-end pr-4">
-            <motion.div
-              animate={{ x: [5, 0, 5] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="text-white/60"
-            >
+          {!hasScrolled && (
+            <div className="absolute right-0 top-0 bottom-6 w-16 bg-gradient-to-l from-black/60 to-transparent pointer-events-none z-10 flex items-center justify-end pr-4">
+              <motion.div
+                animate={{ x: [5, 0, 5] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="text-white/60"
+              >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </motion.div>
           </div>
+          )}
           
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 custom-scrollbar overflow-y-hidden">
+          <div 
+            className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4 -mx-4 custom-scrollbar overflow-y-hidden"
+            onScroll={handleScroll}
+          >
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
