@@ -43,6 +43,51 @@ export const projects = [
       "Environmental responsiveness",
       "Usage analytics"
     ]
+  },
+  {
+    title: "Neural Music Generator",
+    description: "AI-powered system for generating original musical compositions",
+    image: "https://images.unsplash.com/photo-1509528358501-9738f9726ff3",
+    technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
+    demoUrl: "https://neural-music.example.com",
+    liveDemo: true,
+    demoDescription: "Create unique musical pieces using deep learning models trained on various musical styles.",
+    features: [
+      "Real-time music generation",
+      "Style transfer",
+      "MIDI export",
+      "Collaborative composition"
+    ]
+  },
+  {
+    title: "Interactive Sound Installation",
+    description: "Motion-responsive sound art installation using computer vision",
+    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+    technologies: ["OpenCV", "Max/MSP", "Arduino", "Pure Data"],
+    demoUrl: "https://sound-installation.example.com",
+    liveDemo: true,
+    demoDescription: "Experience how movement and gestures transform into dynamic soundscapes.",
+    features: [
+      "Motion tracking",
+      "Real-time audio synthesis",
+      "Multi-channel audio",
+      "Interactive visualization"
+    ]
+  },
+  {
+    title: "Augmented Reality Music Visualization",
+    description: "AR application that creates visual representations of music in real space",
+    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81",
+    technologies: ["Unity AR", "Vuforia", "C#", "MIDI"],
+    demoUrl: "https://ar-music-viz.example.com",
+    liveDemo: true,
+    demoDescription: "See music come to life in augmented reality with interactive 3D visualizations.",
+    features: [
+      "Real-time visualization",
+      "Audio analysis",
+      "Gesture control",
+      "Spatial audio"
+    ]
   }
 ];
 

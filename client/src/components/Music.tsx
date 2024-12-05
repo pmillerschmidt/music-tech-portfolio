@@ -16,6 +16,18 @@ const musicProjects = [
     description: "Creating interactive installations that respond to movement and environmental factors",
     image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
     link: "#"
+  },
+  {
+    title: "AI Music Generation",
+    description: "Using machine learning to create unique musical compositions and soundscapes",
+    image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76",
+    link: "#"
+  },
+  {
+    title: "Spatial Audio Experience",
+    description: "Developing immersive 3D audio environments for virtual reality applications",
+    image: "https://images.unsplash.com/photo-1468164016595-6108e4c60c8b",
+    link: "#"
   }
 ];
 
