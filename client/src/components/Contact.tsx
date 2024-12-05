@@ -4,8 +4,21 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Github, Linkedin } from "lucide-react";
+import { useState } from "react";
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:contact@example.com?subject=Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <section className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
@@ -32,26 +45,43 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <Card>
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="pt-6">
-                <form className="space-y-6 text-white" onSubmit={(e) => {
-                  e.preventDefault();
-                  // Add form submission logic here
-                  window.location.href = `mailto:contact@example.com?subject=Portfolio Contact`;
-                }}>
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
-                    <Input placeholder="Your Name" className="bg-white/10 border-white/20 text-white placeholder:text-white/60" />
+                    <Input 
+                      placeholder="Your Name" 
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
                   </div>
                   <div>
-                    <Input type="email" placeholder="Your Email" className="bg-white/10 border-white/20 text-white placeholder:text-white/60" />
+                    <Input 
+                      type="email" 
+                      placeholder="Your Email" 
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      required
+                    />
                   </div>
                   <div>
                     <Textarea 
                       placeholder="Your Message"
                       className="min-h-[150px] bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      required
                     />
                   </div>
-                  <Button className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20">Send Message</Button>
+                  <Button 
+                    type="submit"
+                    className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                  >
+                    Send Message
+                  </Button>
                 </form>
               </CardContent>
             </Card>
@@ -63,27 +93,30 @@ export function Contact() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="text-white backdrop-blur-sm bg-white/5 p-6 rounded-lg border border-white/10">
+            <div className="text-white backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-white">Contact Information</h3>
               <div className="space-y-4">
                 <a href="mailto:contact@example.com" className="flex items-center text-white/80 hover:text-white transition-colors">
                   <Mail className="w-5 h-5 mr-3" />
                   contact@example.com
                 </a>
-                <a href="https://github.com" className="flex items-center text-white/80 hover:text-white transition-colors">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-white/80 hover:text-white transition-colors">
                   <Github className="w-5 h-5 mr-3" />
                   GitHub Profile
                 </a>
-                <a href="https://linkedin.com" className="flex items-center text-white/80 hover:text-white transition-colors">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-white/80 hover:text-white transition-colors">
                   <Linkedin className="w-5 h-5 mr-3" />
                   LinkedIn Profile
                 </a>
               </div>
             </div>
 
-            <div className="text-white backdrop-blur-sm bg-white/5 p-6 rounded-lg border border-white/10">
+            <div className="text-white backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-white">Download CV</h3>
-              <Button className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20">
+              <Button 
+                className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                onClick={() => window.open('/cv.pdf', '_blank')}
+              >
                 Download Resume/CV
               </Button>
             </div>
