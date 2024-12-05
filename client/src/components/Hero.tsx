@@ -26,7 +26,7 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const videoUrl = "https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-background-48840-large.mp4";
+  const videoUrl = "https://cdn.pixabay.com/vimeo/328373398/abstract-26589.mp4?width=1280&hash=0336a2eaf610c7d774c8bf751280f8c608db5902";
   const fallbackImage = "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop";
 
   const { toast } = useToast();
