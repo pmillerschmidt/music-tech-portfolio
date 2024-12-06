@@ -68,9 +68,13 @@ export function Hero() {
               loop
               playsInline
               preload="auto"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
               onLoadedData={handleVideoLoaded}
               onError={handleVideoError}
+              style={{
+                filter: 'brightness(0.8) contrast(1.1)',
+                willChange: 'transform'
+              }}
             >
               <source 
                 src={videoUrl}
@@ -95,7 +99,9 @@ export function Hero() {
         )}
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black/20" />
+        </div>
       </div>
 
       {/* Content */}
