@@ -21,8 +21,8 @@ export function Projects() {
     <section id="projects" className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop"
-          alt="Technology Background"
+          src="/images/projects-background.png" // Place your background image in public/images/projects-background.png
+          alt="Projects Background"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
