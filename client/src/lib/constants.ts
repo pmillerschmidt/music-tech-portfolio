@@ -6,17 +6,19 @@
 
 export const projects = [
   {
-    title: "Example Project", // Your project title
-    description: "Brief overview of your project (1-2 sentences)", // Keep it concise but informative
-    image: "/images/example-project.jpg", // Path to your project image in public/images/
-    technologies: ["Technology1", "Technology2"], // List the main technologies used
-    demoUrl: "https://your-demo-url.com", // Optional: Link to live demo
-    liveDemo: false, // Set to true if you have an interactive demo
-    demoDescription: "Detailed description for the demo modal", // Shows up in the project demo view
-    features: [ // List 3-5 key features
-      "Key feature 1",
-      "Key feature 2",
-      "Key feature 3"
+    title: "Neural Music Synthesis",
+    description: "Real-time audio synthesis and music generation using deep learning models",
+    image: "/images/grooveblocks.jpg", // Place an image named grooveblocks.jpg in public/images/
+    technologies: ["TensorFlow", "Python", "Web Audio API", "React"],
+    demoUrl: "https://grooveblocks.mit.edu",
+    liveDemo: true,
+    demoDescription: "Experience interactive music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis in real-time.",
+    features: [
+      "Real-time audio synthesis",
+      "Neural network-based generation",
+      "Interactive pattern creation",
+      "Multi-track mixing capabilities",
+      "MIDI export functionality"
     ]
   },
   {
