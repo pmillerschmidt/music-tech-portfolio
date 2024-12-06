@@ -63,7 +63,7 @@ export function Music() {
     >
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/music-background.png" // Place your background image in public/images/music-background.png
+          src="/images/music-background.PNG" // Place your background image in public/images/music-background.PNG
           alt="Music Technology Background"
           className="w-full h-full object-cover"
         />

@@ -15,9 +15,9 @@ Supported formats:
 
 Recommended image sizes:
 - Project cards: 800x600 pixels
-- Background images: 1920x1080 pixels (music-background.png, projects-background.png)
+- Background images: 1920x1080 pixels (music-background.PNG, projects-background.png)
 - Ensure images are optimized for web (compressed)
 
 Current background images:
-- /images/music-background.png - Music section background
+- /images/music-background.PNG - Music section background
 - /images/projects-background.png - Projects section background
