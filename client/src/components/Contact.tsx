@@ -23,11 +23,17 @@ export function Contact() {
     <section className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
           alt="Contact Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
+          style={{
+            filter: 'brightness(0.7) contrast(1.1)',
+            willChange: 'transform'
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black/20" />
+        </div>
       </div>
       <div className="container relative z-10 mx-auto px-4">
         <motion.h2 
@@ -51,7 +57,7 @@ export function Contact() {
                   <div>
                     <Input 
                       placeholder="Your Name" 
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                      className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
                       required
@@ -61,7 +67,7 @@ export function Contact() {
                     <Input 
                       type="email" 
                       placeholder="Your Email" 
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                      className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
                       required
@@ -70,7 +76,7 @@ export function Contact() {
                   <div>
                     <Textarea 
                       placeholder="Your Message"
-                      className="min-h-[150px] bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                      className="min-h-[150px] bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                       required
@@ -78,7 +84,7 @@ export function Contact() {
                   </div>
                   <Button 
                     type="submit"
-                    className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                    className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300"
                   >
                     Send Message
                   </Button>
