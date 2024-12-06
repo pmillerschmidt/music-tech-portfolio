@@ -82,11 +82,11 @@ export function Music() {
         <div className="relative group">
           {/* Scroll indicator */}
           {!hasScrolled && (
-            <div className="absolute right-0 top-0 bottom-6 w-16 bg-gradient-to-l from-black/60 to-transparent pointer-events-none z-10 flex items-center justify-end pr-4">
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-10">
               <motion.div
                 animate={{ x: [5, 0, 5] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="text-white/60"
+                className="text-white/60 bg-black/20 rounded-full p-2 backdrop-blur-sm"
               >
                 <svg
                   width="20"
