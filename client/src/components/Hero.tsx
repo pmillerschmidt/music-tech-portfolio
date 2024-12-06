@@ -23,8 +23,8 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const videoUrl = "https://static.videezy.com/system/resources/previews/000/046/025/original/Piano_Keys_02_-_4K_res.mp4";
-  const fallbackImage = "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop";
+  const videoUrl = "/videos/hero-background.mp4"; // Place your video in public/videos/hero-background.mp4
+  const fallbackImage = "/images/hero-background.jpg"; // Place your image in public/images/hero-background.jpg";
 
   const { toast } = useToast();
 
@@ -73,7 +73,7 @@ export function Hero() {
               onError={handleVideoError}
             >
               <source 
-                src="https://cdn.coverr.co/videos/coverr-abstract-technology-background-1574/1080p.mp4"
+                src={videoUrl}
                 type="video/mp4"
               />
               Your browser does not support the video tag.

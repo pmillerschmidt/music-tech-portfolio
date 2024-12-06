@@ -21,3 +21,7 @@ Recommended image sizes:
 Current background images:
 - /images/music-background.PNG - Music section background
 - /images/projects-background.png - Projects section background
+- /images/hero-background.jpg - Hero section fallback image
+
+Video assets should be placed in the public/videos directory:
+- /videos/hero-background.mp4 - Hero section background video
