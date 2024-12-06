@@ -1,17 +1,22 @@
+// Project Image Guidelines:
+// 1. Place your project images in /public/images/ directory
+// 2. Use high-quality images (recommended: 1200x800 pixels)
+// 3. Supported formats: JPG, PNG, WebP
+// 4. Example path: "/images/your-project-name.jpg"
+
 export const projects = [
   {
-    title: "AI-Powered Creative Assistant",
-    description: "An interactive system that helps artists and designers explore creative possibilities using machine learning",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-    technologies: ["TensorFlow", "React", "Python", "WebGL"],
-    demoUrl: "https://creative-ai-demo.example.com",
-    liveDemo: true,
-    demoDescription: "Try out the AI-powered creative suggestions in real-time. The system analyzes your input and generates artistic variations using machine learning algorithms.",
-    features: [
-      "Real-time AI suggestions",
-      "Style transfer capabilities",
-      "Collaborative creation tools",
-      "Export in multiple formats"
+    title: "Example Project", // Your project title
+    description: "Brief overview of your project (1-2 sentences)", // Keep it concise but informative
+    image: "/images/example-project.jpg", // Path to your project image in public/images/
+    technologies: ["Technology1", "Technology2"], // List the main technologies used
+    demoUrl: "https://your-demo-url.com", // Optional: Link to live demo
+    liveDemo: false, // Set to true if you have an interactive demo
+    demoDescription: "Detailed description for the demo modal", // Shows up in the project demo view
+    features: [ // List 3-5 key features
+      "Key feature 1",
+      "Key feature 2",
+      "Key feature 3"
     ]
   },
   {

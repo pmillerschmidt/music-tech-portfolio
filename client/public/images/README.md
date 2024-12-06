@@ -1,27 +1,28 @@
-# Images Directory
+# Project Images Directory
 
-This directory is for storing your custom images for the portfolio.
+## Image Guidelines
 
-## How to add your own images:
+### File Requirements:
+1. Image Size: 1200x800 pixels (recommended)
+2. Format: JPG, PNG, or WebP
+3. Max file size: 500KB (optimize images for web)
 
-1. Place your image files in this directory (e.g., neural-music.jpg)
-2. Reference them in the code using the path: `/images/your-image-name.jpg`
+### Adding New Project Images:
+1. Place your image file in this directory
+2. Use a descriptive name (e.g., `neural-network-project.jpg`)
+3. Update the image path in `src/lib/constants.ts`
+4. Example path: `"/images/neural-network-project.jpg"`
 
-Supported formats:
-- JPG/JPEG
-- PNG
-- GIF
-- SVG
+### Tips for Good Project Images:
+- Use high-contrast, clear images that showcase your project
+- Ensure text is readable if screenshots contain text
+- Consider using a consistent style across project images
+- Compress images before adding them (use tools like TinyPNG)
 
-Recommended image sizes:
-- Project cards: 800x600 pixels
-- Background images: 1920x1080 pixels (music-background.PNG, projects-background.png)
-- Ensure images are optimized for web (compressed)
+### Example Project Types:
+1. Screenshots of applications
+2. Diagrams of system architecture
+3. Photos of physical projects
+4. UI/UX design mockups
 
-Current background images:
-- /images/music-background.PNG - Music section background
-- /images/projects-background.png - Projects section background
-- /images/hero-background.jpg - Hero section fallback image
-
-Video assets should be placed in the public/videos directory:
-- /videos/hero-background.mp4 - Hero section background video
+Remember to keep backup copies of your original images before compression.
