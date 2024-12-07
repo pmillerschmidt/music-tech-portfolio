@@ -72,8 +72,9 @@ export function Music() {
 
           <div className="container mx-auto px-4">
             <div
-              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth"
+              className="grid grid-flow-col auto-cols-[minmax(calc(33.333% - 1rem), 1fr)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth pl-4"
               onScroll={handleScroll}
+              style={{ scrollLeft: 0 }}
             >
               {musicProjects.map((project, index) => (
                 <motion.div
