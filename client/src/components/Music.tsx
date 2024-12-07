@@ -47,7 +47,7 @@ export function Music() {
           Music & Sound
         </motion.h2>
 
-        <div className="relative">
+        <div className="relative group">
           {/* Scroll indicator */}
           {!hasScrolled && (
             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-10">
@@ -70,85 +70,87 @@ export function Music() {
             </div>
           )}
 
-          <div 
-            className="flex gap-6 pb-6 overflow-x-auto custom-scrollbar scroll-smooth"
-            onScroll={handleScroll}
-          >
-            {musicProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="w-[calc(33.333% - 1rem)] min-w-[calc(33.333% - 1rem)] first:ml-0"
-              >
-                <Card 
-                  className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group cursor-pointer"
-                  onClick={() => setSelectedProject(index)}
+          <div className="container mx-auto px-4">
+            <div
+              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth"
+              onScroll={handleScroll}
+            >
+              {musicProjects.map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="snap-start shrink-0 w-[calc(33.333% - 1rem)]"
                 >
-                  <CardHeader>
-                    <CardTitle className="text-white">
-                      {project.title}
-                    </CardTitle>
-                    <CardDescription className="text-white/70">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="relative h-48 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                        {project.liveDemo && (
-                          <Button
-                            variant="outline"
-                            size="icon"
-                            className="text-white border-white hover:bg-white/20"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setPlayingIndex(playingIndex === index ? null : index);
-                            }}
-                          >
-                            {playingIndex === index ? (
-                              <Pause className="h-4 w-4" />
-                            ) : (
-                              <Play className="h-4 w-4" />
-                            )}
-                          </Button>
-                        )}
-                        {project.demoUrl && (
-                          <Button
-                            variant="outline"
-                            className="text-white border-white hover:bg-white/20"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              window.open(project.demoUrl, "_blank");
-                            }}
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            View Demo
-                          </Button>
-                        )}
+                  <Card 
+                    className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group cursor-pointer"
+                    onClick={() => setSelectedProject(index)}
+                  >
+                    <CardHeader>
+                      <CardTitle className="text-white">
+                        {project.title}
+                      </CardTitle>
+                      <CardDescription className="text-white/70">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="relative h-48 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                          {project.liveDemo && (
+                            <Button
+                              variant="outline"
+                              size="icon"
+                              className="text-white border-white hover:bg-white/20"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setPlayingIndex(playingIndex === index ? null : index);
+                              }}
+                            >
+                              {playingIndex === index ? (
+                                <Pause className="h-4 w-4" />
+                              ) : (
+                                <Play className="h-4 w-4" />
+                              )}
+                            </Button>
+                          )}
+                          {project.demoUrl && (
+                            <Button
+                              variant="outline"
+                              className="text-white border-white hover:bg-white/20"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                window.open(project.demoUrl, "_blank");
+                              }}
+                            >
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              View Demo
+                            </Button>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
