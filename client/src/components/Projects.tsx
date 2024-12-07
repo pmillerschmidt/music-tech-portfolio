@@ -50,34 +50,35 @@ export function Projects() {
         <div className="relative group">
           {/* Scroll indicator */}
           {!hasScrolled && (
-            <button 
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10"
+            <motion.button 
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 text-white/60 hover:text-white/80 transition-all duration-300 hover:scale-110"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                const container = e.currentTarget.parentElement?.querySelector('.project-scroll');
-                if (container) {
-                  container.scrollBy({ left: container.clientWidth, behavior: 'smooth' });
+                const scrollContainer = document.querySelector('.project-scroll');
+                if (scrollContainer) {
+                  const scrollAmount = scrollContainer.clientWidth * 0.8;
+                  scrollContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                  });
                 }
               }}
+              whileHover={{ x: [0, 5, 0] }}
+              transition={{ duration: 1 }}
             >
-              <motion.div
-                animate={{ x: [5, 0, 5] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="text-white/60 bg-black/20 rounded-full p-2 backdrop-blur-sm hover:bg-black/40 hover:text-white/80 transition-colors"
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="pointer-events-none"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </motion.div>
-            </button>
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </motion.button>
           )}
 
           <div className="container mx-auto px-4">
