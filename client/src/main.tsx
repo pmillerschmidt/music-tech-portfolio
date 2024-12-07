@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import MusicPage from "./pages/MusicPage";
+import MusicDetailPage from "./pages/MusicDetailPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/projects/:id" component={ProjectDetailPage} />
       <Route path="/projects" component={ProjectsPage} />
       <Route path="/music" component={MusicPage} />
+      <Route path="/music/:id" component={MusicDetailPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/about" component={AboutPage} />
     </Switch>

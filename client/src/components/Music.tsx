@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -7,16 +8,13 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play, Pause, ExternalLink } from "lucide-react";
-import { useState, useRef } from "react";
 import { musicProjects } from "../lib/constants";
-import { Dialog } from "@/components/ui/dialog";
-import { ProjectDemo } from "./ProjectDemo";
+import { ExternalLink } from "lucide-react";
+import { Link as WouterLink } from "wouter"; // Import for wouter Link
+
 
 export function Music() {
-  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
@@ -100,82 +98,49 @@ export function Music() {
                   viewport={{ once: true }}
                   className="w-full"
                 >
-                  <Card 
-                    className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer"
-                    onClick={() => setSelectedProject(index)}
-                  >
-                    <CardHeader>
-                      <CardTitle className="text-white">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="text-white/70">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="relative h-48 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                          {project.liveDemo && (
-                            <Button
-                              variant="outline"
-                              size="icon"
-                              className="text-white border-white hover:bg-white/20"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setPlayingIndex(playingIndex === index ? null : index);
-                              }}
-                            >
-                              {playingIndex === index ? (
-                                <Pause className="h-4 w-4" />
-                              ) : (
-                                <Play className="h-4 w-4" />
-                              )}
-                            </Button>
-                          )}
-                          {project.demoUrl && (
-                            <Button
-                              variant="outline"
-                              className="text-white border-white hover:bg-white/20"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                window.open(project.demoUrl, "_blank");
-                              }}
-                            >
-                              <ExternalLink className="w-4 h-4 mr-2" />
-                              View Project
-                            </Button>
-                          )}
+                  <WouterLink href={`/music/${index}`}> {/* Using wouter Link */}
+                    <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
+                      <CardHeader>
+                        <CardTitle className="text-white">
+                          {project.title}
+                        </CardTitle>
+                        <CardDescription className="text-white/70">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="relative h-48 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                            <span className="text-white font-medium flex items-center">
+                              View Details
+                              <ExternalLink className="w-4 h-4 ml-2" />
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </WouterLink>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
       </div>
-
-      <Dialog open={selectedProject !== null} onOpenChange={() => setSelectedProject(null)}>
-        {selectedProject !== null && (
-          <ProjectDemo project={musicProjects[selectedProject]} />
-        )}
-      </Dialog>
     </section>
   );
 }
