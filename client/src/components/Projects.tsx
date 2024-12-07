@@ -108,20 +108,11 @@ export function Projects() {
                             alt={project.title}
                             className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
                           />
-                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                            {project.demoUrl && (
-                              <Button
-                                variant="outline"
-                                className="text-white border-white hover:bg-white/20"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  e.preventDefault();
-                                }}
-                              >
-                                <ExternalLink className="w-4 h-4 mr-2" />
-                                View Project
-                              </Button>
-                            )}
+                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                            <span className="text-white font-medium flex items-center">
+                              View Details
+                              <ExternalLink className="w-4 h-4 ml-2" />
+                            </span>
                           </div>
                         </div>
                         <div className="flex flex-wrap gap-2">
