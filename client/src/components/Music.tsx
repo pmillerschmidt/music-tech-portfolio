@@ -92,7 +92,7 @@ export function Music() {
                   className="w-full"
                 >
                   <Card 
-                    className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group cursor-pointer"
+                    className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer"
                     onClick={() => setSelectedProject(index)}
                   >
                     <CardHeader>
@@ -108,9 +108,9 @@ export function Music() {
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
                         />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center gap-4">
                           {project.liveDemo && (
                             <Button
                               variant="outline"
@@ -138,7 +138,7 @@ export function Music() {
                               }}
                             >
                               <ExternalLink className="w-4 h-4 mr-2" />
-                              View Demo
+                              View Project
                             </Button>
                           )}
                         </div>
