@@ -16,6 +16,7 @@ interface Project {
   technologies: string[];
   demoUrl?: string;
   liveDemo?: boolean;
+  isExternalDemo?: boolean;
   demoDescription?: string;
   features?: string[];
 }

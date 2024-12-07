@@ -78,10 +78,20 @@ export default function ProjectDetailPage() {
                   <Button
                     variant="outline"
                     className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
-                    onClick={() => setIsPlaying(!isPlaying)}
+                    onClick={() => {
+                      if (project.isExternalDemo && project.demoUrl) {
+                        window.open(project.demoUrl, '_blank');
+                      } else {
+                        setIsPlaying(!isPlaying);
+                      }
+                    }}
                   >
-                    {isPlaying ? <Pause className="w-4 h-4 mr-2" /> : <Play className="w-4 h-4 mr-2" />}
-                    {isPlaying ? "Pause Demo" : "Play Demo"}
+                    {project.isExternalDemo ? (
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                    ) : (
+                      isPlaying ? <Pause className="w-4 h-4 mr-2" /> : <Play className="w-4 h-4 mr-2" />
+                    )}
+                    {project.isExternalDemo ? "Open Interactive Demo" : (isPlaying ? "Pause Demo" : "Play Demo")}
                   </Button>
                 )}
               </div>

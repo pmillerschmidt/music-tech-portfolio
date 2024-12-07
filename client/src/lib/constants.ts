@@ -222,13 +222,14 @@ export const projects = [
   {
     title: "Chess Scout Bot",
     description:
-      "AR application that creates visual representations of music in real space",
+      "Interactive chess AI using alpha-beta pruning and advanced heuristics",
     image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81",
-    technologies: ["Unity AR", "Vuforia", "C#", "MIDI"],
-    demoUrl: "https://ar-music-viz.example.com",
+    technologies: ["JavaScript", "Chess.js", "Alpha-Beta Pruning", "AI"],
+    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     liveDemo: true,
+    isExternalDemo: true,
     demoDescription:
-      "See music come to life in augmented reality with interactive 3D visualizations.",
+      "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     features: [
       "Real-time visualization",
       "Audio analysis",
