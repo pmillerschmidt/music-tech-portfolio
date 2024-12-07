@@ -6,73 +6,67 @@
 
 export const musicProjects = [
   {
-    title: "Neural Music Synthesis",
-    description: "Advanced deep learning models for real-time audio synthesis and generative music composition",
+    title: "Discography",
+    description:
+      "Advanced deep learning models for real-time audio synthesis and generative music composition",
     image: "/images/neural-synthesis.jpg", // Place in public/images/
-    technologies: [
-      "TensorFlow",
-      "PyTorch",
-      "Web Audio API",
-      "React",
-      "Python"
-    ],
+    technologies: ["TensorFlow", "PyTorch", "Web Audio API", "React", "Python"],
     demoUrl: "https://neural-music.mit.edu",
     liveDemo: true,
-    demoDescription: "Experience real-time music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis through an intuitive interface.",
+    demoDescription:
+      "Experience real-time music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis through an intuitive interface.",
     features: [
       "Real-time audio synthesis",
       "Neural network-based generation",
       "Interactive pattern creation",
       "Multi-track mixing capabilities",
-      "MIDI export functionality"
-    ]
+      "MIDI export functionality",
+    ],
   },
   {
-    title: "AI-Powered Music Composition",
-    description: "Transformer-based models for generating complex musical arrangements and harmonies",
+    title: "Computer Music",
+    description:
+      "Transformer-based models for generating complex musical arrangements and harmonies",
     image: "/images/ai-composer.jpg", // Place in public/images/
     technologies: [
       "GPT Architecture",
       "TensorFlow",
       "MIDI Processing",
       "Python",
-      "Flask"
+      "Flask",
     ],
     demoUrl: "https://ai-composer.mit.edu",
     liveDemo: true,
-    demoDescription: "Create complete musical compositions using advanced AI models. Explore different styles, harmonies, and arrangements through an interactive interface.",
+    demoDescription:
+      "Create complete musical compositions using advanced AI models. Explore different styles, harmonies, and arrangements through an interactive interface.",
     features: [
       "Style transfer composition",
       "Harmonic analysis",
       "Multi-instrument arrangement",
       "Real-time preview",
-      "Score visualization"
-    ]
+      "Score visualization",
+    ],
   },
   {
-    title: "Intelligent Music Production",
-    description: "AI-powered system for automated mixing, mastering, and sound design",
+    title: "Music Theory Research",
+    description:
+      "AI-powered system for automated mixing, mastering, and sound design",
     image: "/images/smart-production.jpg", // Place in public/images/
-    technologies: [
-      "Deep Learning",
-      "DSP",
-      "C++",
-      "JUCE Framework",
-      "Python"
-    ],
+    technologies: ["Deep Learning", "DSP", "C++", "JUCE Framework", "Python"],
     demoUrl: "https://smart-production.mit.edu",
     liveDemo: true,
-    demoDescription: "Experience professional-grade automated music production. Upload your tracks and let AI handle mixing, mastering, and sound design.",
+    demoDescription:
+      "Experience professional-grade automated music production. Upload your tracks and let AI handle mixing, mastering, and sound design.",
     features: [
       "Automated mixing",
       "AI mastering",
       "Intelligent EQ",
       "Dynamic processing",
-      "Spatial audio enhancement"
-    ]
+      "Spatial audio enhancement",
+    ],
   },
   {
-    title: "Adaptive Music Systems",
+    title: "Neighborhood Music Research",
     description: "Context-aware AI systems for dynamic soundtrack generation",
     image: "/images/adaptive-music.jpg", // Place in public/images/
     technologies: [
@@ -80,19 +74,43 @@ export const musicProjects = [
       "Unity3D",
       "C#",
       "Web Audio API",
-      "Node.js"
+      "Node.js",
     ],
     demoUrl: "https://adaptive-music.mit.edu",
     liveDemo: true,
-    demoDescription: "Experience interactive music that adapts to real-time input. Watch and hear how the system responds to different scenarios and user interactions.",
+    demoDescription:
+      "Experience interactive music that adapts to real-time input. Watch and hear how the system responds to different scenarios and user interactions.",
     features: [
       "Real-time adaptation",
       "Emotion-based generation",
       "Interactive parameters",
       "Scene analysis",
-      "Seamless transitions"
-    ]
-  }
+      "Seamless transitions",
+    ],
+  },
+  {
+    title: "Visual Scoring",
+    description: "Context-aware AI systems for dynamic soundtrack generation",
+    image: "/images/adaptive-music.jpg", // Place in public/images/
+    technologies: [
+      "Machine Learning",
+      "Unity3D",
+      "C#",
+      "Web Audio API",
+      "Node.js",
+    ],
+    demoUrl: "https://adaptive-music.mit.edu",
+    liveDemo: true,
+    demoDescription:
+      "Experience interactive music that adapts to real-time input. Watch and hear how the system responds to different scenarios and user interactions.",
+    features: [
+      "Real-time adaptation",
+      "Emotion-based generation",
+      "Interactive parameters",
+      "Scene analysis",
+      "Seamless transitions",
+    ],
+  },
 ];
 
 export const projects = [
