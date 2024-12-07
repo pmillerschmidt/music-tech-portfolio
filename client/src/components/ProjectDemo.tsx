@@ -48,7 +48,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
           {project.liveDemo ? (
             <div className="relative w-full h-full">
               {project.embedDemo && project.demoUrl ? (
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full bg-white">
                   {iframeLoading && (
                     <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                       <div className="text-center">
@@ -59,11 +59,11 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
                   )}
                   <iframe
                     src={project.demoUrl}
-                    className="w-full h-full border-0 bg-white"
+                    className="w-full h-full border-0"
                     onLoad={handleIframeLoad}
                     title={`${project.title} Demo`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                     loading="eager"
                     importance="high"
                   />
