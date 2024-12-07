@@ -28,9 +28,11 @@ export function Projects() {
     e.preventDefault();
     e.stopPropagation();
     if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+      // Calculate the width of one project card including gap
+      const cardWidth = scrollContainerRef.current.clientWidth / 3;
+      // Scroll by exactly 3 cards
       scrollContainerRef.current.scrollBy({
-        left: scrollAmount,
+        left: cardWidth * 3,
         behavior: 'smooth'
       });
     }
@@ -86,7 +88,7 @@ export function Projects() {
           <div className="container mx-auto px-4">
             <div
               ref={scrollContainerRef}
-              className="project-scroll grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
+              className="project-scroll grid grid-flow-col auto-cols-[calc(33.333%-1.333rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
               onScroll={handleScroll}
             >
               {projects.map((project, index) => (
