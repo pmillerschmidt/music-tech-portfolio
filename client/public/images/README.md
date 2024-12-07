@@ -7,22 +7,28 @@
 2. Format: JPG, PNG, or WebP
 3. Max file size: 500KB (optimize images for web)
 
-### Adding New Project Images:
-1. Place your image file in this directory
-2. Use a descriptive name (e.g., `neural-network-project.jpg`)
-3. Update the image path in `src/lib/constants.ts`
-4. Example path: `"/images/neural-network-project.jpg"`
+### Required Music Project Images:
+Place the following images in this directory:
+1. neural-synthesis.jpg - Neural music synthesis interface/visualization
+2. ai-composer.jpg - AI composition system interface
+3. smart-production.jpg - Intelligent music production workspace
+4. adaptive-music.jpg - Adaptive music system visualization
 
-### Tips for Good Project Images:
-- Use high-contrast, clear images that showcase your project
-- Ensure text is readable if screenshots contain text
-- Consider using a consistent style across project images
-- Compress images before adding them (use tools like TinyPNG)
+### Image Specifications:
+- Use high-resolution screenshots or visualizations
+- Maintain consistent aspect ratio (16:9 recommended)
+- Ensure good contrast for text visibility
+- Optimize file size before adding
 
-### Example Project Types:
-1. Screenshots of applications
-2. Diagrams of system architecture
-3. Photos of physical projects
-4. UI/UX design mockups
+### Tips for Music Project Images:
+- Include UI elements that showcase interactivity
+- Use waveforms, spectrograms, or musical notation
+- Show multiple views of the system if applicable
+- Include any unique visual features of your projects
 
-Remember to keep backup copies of your original images before compression.
+### Current Images:
+- grooveblocks.png - Groove-based music education interface
+- melgen.png - Melodic generation visualization
+- midi.webp - MIDI interface demonstration
+
+Remember to compress images before adding them to maintain good performance.
