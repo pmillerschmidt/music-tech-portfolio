@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Play, Pause, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { musicProjects } from "../lib/constants";
 import { Dialog } from "@/components/ui/dialog";
 import { ProjectDemo } from "./ProjectDemo";
@@ -17,12 +17,27 @@ export function Music() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     if (e.currentTarget.scrollLeft > 0 && !hasScrolled) {
       setHasScrolled(true);
     } else if (e.currentTarget.scrollLeft === 0 && hasScrolled) {
       setHasScrolled(false);
+    }
+  };
+
+  const scrollRight = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (scrollContainerRef.current) {
+      // Calculate the width of one project card including gap
+      const cardWidth = scrollContainerRef.current.clientWidth / 3;
+      // Scroll by exactly 3 cards
+      scrollContainerRef.current.scrollBy({
+        left: cardWidth * 3,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -50,37 +65,31 @@ export function Music() {
         <div className="relative group">
           {/* Scroll indicator */}
           {!hasScrolled && (
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-10">
-              <motion.div
-                animate={{ x: [5, 0, 5] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="text-white/60 bg-black/20 rounded-full p-2 backdrop-blur-sm"
+            <motion.button 
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-[100] p-3 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 text-white/60 hover:text-white/80 transition-all duration-300 hover:scale-110 cursor-pointer"
+              onClick={scrollRight}
+              whileHover={{ x: [0, 5, 0] }}
+              transition={{ duration: 1 }}
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="pointer-events-none"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </motion.div>
-            </div>
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </motion.button>
           )}
 
           <div className="container mx-auto px-4">
             <div 
-              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
+              ref={scrollContainerRef}
+              className="grid grid-flow-col auto-cols-[calc(33.333%-1.333rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
               onScroll={handleScroll}
-              ref={(el) => {
-                if (el) {
-                  requestAnimationFrame(() => {
-                    el.scrollLeft = 0;
-                  });
-                }
-              }}
             >
               {musicProjects.map((project, index) => (
                 <motion.div
