@@ -23,7 +23,7 @@ export function Contact() {
     <section className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2940&auto=format&fit=crop"
           alt="Contact Background"
           className="w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
           style={{

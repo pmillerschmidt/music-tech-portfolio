@@ -72,12 +72,12 @@ export function Hero() {
               onLoadedData={handleVideoLoaded}
               onError={handleVideoError}
               style={{
-                filter: 'brightness(0.8) contrast(1.1)',
+                filter: 'brightness(0.7) contrast(1.1)',
                 willChange: 'transform'
               }}
             >
               <source 
-                src={videoUrl}
+                src="/videos/hero-background.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
@@ -88,13 +88,17 @@ export function Hero() {
         {/* Fallback Image for Mobile or Error */}
         {(isMobile || isVideoError) && (
           <motion.img
-            src={fallbackImage}
+            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2940&auto=format&fit=crop"
             alt="Creative Technology Background"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             loading="eager"
+            style={{
+              filter: 'brightness(0.7) contrast(1.1)',
+              willChange: 'transform'
+            }}
           />
         )}
 
