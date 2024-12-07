@@ -17,6 +17,7 @@ interface Project {
   demoUrl?: string;
   liveDemo?: boolean;
   isExternalDemo?: boolean;
+  embedDemo?: boolean;
   demoDescription?: string;
   features?: string[];
 }
@@ -27,6 +28,11 @@ interface ProjectDemoProps {
 
 export function ProjectDemo({ project }: ProjectDemoProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [iframeLoading, setIframeLoading] = useState(true);
+
+  const handleIframeLoad = () => {
+    setIframeLoading(false);
+  };
 
   return (
     <DialogContent className="max-w-4xl w-full">
@@ -41,30 +47,63 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
         <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
           {project.liveDemo ? (
             <div className="relative w-full h-full">
-              <AnimatePresence mode="wait">
-                {isPlaying && (
-                  <motion.div
-                    key="demo"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute inset-0 flex items-center justify-center"
-                  >
-                    <div className="text-center">
-                      <p className="text-lg font-medium mb-4">Interactive Demo</p>
-                      <p className="text-sm text-gray-600">
-                        {project.demoDescription}
-                      </p>
+              {project.embedDemo && project.demoUrl ? (
+                <>
+                  {iframeLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                      <div className="text-center">
+                        <p className="text-lg font-medium mb-2">Loading Demo...</p>
+                        <p className="text-sm text-gray-600">Please wait while the demo loads</p>
+                      </div>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              <Button
-                className="absolute bottom-4 right-4 z-10"
-                onClick={() => setIsPlaying(!isPlaying)}
-              >
-                {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-              </Button>
+                  )}
+                  <iframe
+                    src={project.demoUrl}
+                    className="w-full h-full border-0"
+                    onLoad={handleIframeLoad}
+                    title={`${project.title} Demo`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                  />
+                </>
+              ) : (
+                <>
+                  <AnimatePresence mode="wait">
+                    {isPlaying && (
+                      <motion.div
+                        key="demo"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="absolute inset-0 flex items-center justify-center"
+                      >
+                        <div className="text-center">
+                          <p className="text-lg font-medium mb-4">Interactive Demo</p>
+                          <p className="text-sm text-gray-600">
+                            {project.demoDescription}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                  <Button
+                    className="absolute bottom-4 right-4 z-10"
+                    onClick={() => {
+                      if (project.isExternalDemo && project.demoUrl) {
+                        window.open(project.demoUrl, '_blank');
+                      } else {
+                        setIsPlaying(!isPlaying);
+                      }
+                    }}
+                  >
+                    {project.isExternalDemo ? (
+                      <ExternalLink className="w-4 h-4" />
+                    ) : (
+                      isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />
+                    )}
+                  </Button>
+                </>
+              )}
             </div>
           ) : (
             <img
@@ -104,7 +143,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
         </div>
       </div>
 
-      {project.demoUrl && (
+      {project.demoUrl && !project.embedDemo && (
         <div className="mt-6">
           <Button
             variant="outline"
@@ -112,7 +151,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
             className="w-full sm:w-auto"
           >
             <ExternalLink className="w-4 h-4 mr-2" />
-            Visit Live Demo
+            Open in New Tab
           </Button>
         </div>
       )}

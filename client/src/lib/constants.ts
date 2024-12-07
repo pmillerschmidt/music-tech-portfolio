@@ -227,7 +227,7 @@ export const projects = [
     technologies: ["JavaScript", "Chess.js", "Alpha-Beta Pruning", "AI"],
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     liveDemo: true,
-    isExternalDemo: true,
+    embedDemo: true,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     features: [
