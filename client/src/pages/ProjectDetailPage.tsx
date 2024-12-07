@@ -30,13 +30,13 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <main className="min-h-screen pt-16">
-      <div className="relative">
-        <div className="absolute inset-0 z-0">
+    <main className="min-h-screen">
+      <div className="relative min-h-screen">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-[50vh] object-cover"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
         </div>

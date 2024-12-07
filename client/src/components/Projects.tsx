@@ -50,11 +50,21 @@ export function Projects() {
         <div className="relative group">
           {/* Scroll indicator */}
           {!hasScrolled && (
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-10">
+            <button 
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const container = e.currentTarget.parentElement?.querySelector('.project-scroll');
+                if (container) {
+                  container.scrollBy({ left: container.clientWidth, behavior: 'smooth' });
+                }
+              }}
+            >
               <motion.div
                 animate={{ x: [5, 0, 5] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="text-white/60 bg-black/20 rounded-full p-2 backdrop-blur-sm"
+                className="text-white/60 bg-black/20 rounded-full p-2 backdrop-blur-sm hover:bg-black/40 hover:text-white/80 transition-colors"
               >
                 <svg
                   width="20"
@@ -67,12 +77,12 @@ export function Projects() {
                   <path d="M9 18l6-6-6-6" />
                 </svg>
               </motion.div>
-            </div>
+            </button>
           )}
 
           <div className="container mx-auto px-4">
             <div
-              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
+              className="project-scroll grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
               onScroll={handleScroll}
               ref={(el) => {
                 if (el) {
