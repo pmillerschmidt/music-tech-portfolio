@@ -59,12 +59,13 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
                   )}
                   <iframe
                     src={project.demoUrl}
-                    className="w-full h-full border-0"
+                    className="w-full h-full border-0 bg-white"
                     onLoad={handleIframeLoad}
                     title={`${project.title} Demo`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-                    referrerPolicy="no-referrer"
+                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                    loading="eager"
+                    importance="high"
                   />
                 </div>
               ) : (

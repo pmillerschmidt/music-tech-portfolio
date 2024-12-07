@@ -225,17 +225,17 @@ export const projects = [
       "Interactive chess AI using alpha-beta pruning and advanced heuristics",
     image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81",
     technologies: ["JavaScript", "Chess.js", "Alpha-Beta Pruning", "AI"],
-    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/index.html",
+    demoUrl: "https://chess-alpha-beta.vercel.app",
     liveDemo: true,
     embedDemo: true,
     isExternalDemo: false,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     features: [
-      "Real-time visualization",
-      "Audio analysis",
-      "Gesture control",
-      "Spatial audio",
+      "Alpha-beta pruning algorithm",
+      "Position evaluation",
+      "Interactive chess board",
+      "Real-time move calculation",
     ],
   },
 ];
