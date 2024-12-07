@@ -35,7 +35,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
   };
 
   return (
-    <DialogContent className="max-w-4xl w-full">
+    <DialogContent className="max-w-5xl w-full max-h-[90vh] overflow-y-auto">
       <DialogHeader>
         <DialogTitle className="text-2xl">{project.title}</DialogTitle>
         <DialogDescription className="text-lg mt-2">
@@ -51,11 +51,12 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
                 <div className="relative w-full h-full bg-white">
                   <iframe
                     src={project.demoUrl}
-                    className="w-full h-full border-0"
+                    className="w-full h-[600px] border-0"
                     title={`${project.title} Demo`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     loading="eager"
                     importance="high"
+                    style={{ minHeight: "600px" }}
                   />
                 </div>
               ) : (
