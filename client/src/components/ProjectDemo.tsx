@@ -64,6 +64,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
                     title={`${project.title} Demo`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                    referrerPolicy="no-referrer"
                   />
                 </>
               ) : (

@@ -228,6 +228,7 @@ export const projects = [
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     liveDemo: true,
     embedDemo: true,
+    isExternalDemo: false,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     features: [
