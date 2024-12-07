@@ -115,7 +115,7 @@ export function Projects() {
                                 className="text-white border-white hover:bg-white/20"
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  window.open(project.demoUrl, "_blank");
+                                  e.preventDefault();
                                 }}
                               >
                                 <ExternalLink className="w-4 h-4 mr-2" />
