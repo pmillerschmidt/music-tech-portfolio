@@ -57,9 +57,8 @@ export function Projects() {
             className="container mx-auto px-4"
           >
             <div 
-              className="grid grid-flow-col auto-cols-[minmax(calc(33.333% - 1rem), 1fr)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth pl-4"
+              className="flex gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth"
               onScroll={handleScroll}
-              style={{ scrollLeft: 0 }}
             >
             {projects.map((project, index) => (
               <motion.div
@@ -68,7 +67,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="snap-start shrink-0 w-[calc(33.333% - 1rem)]"
+                className="snap-start shrink-0 w-[calc(33.333% - 1rem)] first:ml-0"
               >
                 <Link href={`/projects/${index}`}>
                   <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group cursor-pointer">
