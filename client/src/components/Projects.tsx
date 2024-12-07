@@ -1,19 +1,21 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Card,
+  CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { projects } from "../lib/constants";
 import { ExternalLink } from "lucide-react";
-import { Link } from "wouter";
+import { Dialog } from "@/components/ui/dialog";
+import { ProjectDemo } from "./ProjectDemo";
 
 export function Projects() {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     if (e.currentTarget.scrollLeft > 0 && !hasScrolled) {
@@ -24,18 +26,16 @@ export function Projects() {
   };
 
   return (
-    <section
-      id="projects"
-      className="relative py-20 min-h-screen flex items-center"
-    >
+    <section id="projects" className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/projects-inverted.jpg"
+          src="/images/projects-background.png"
           alt="Projects Background"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
       </div>
+      
       <div className="container relative z-10 mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
@@ -70,7 +70,7 @@ export function Projects() {
           )}
 
           <div className="container mx-auto px-4">
-            <div
+            <div 
               className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
               onScroll={handleScroll}
               ref={(el) => {
@@ -83,14 +83,14 @@ export function Projects() {
             >
               {projects.map((project, index) => (
                 <motion.div
-                  key={project.title}
+                  key={index}
                   initial={{ opacity: 0, x: 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="w-full"
                 >
-                  <Link href={`/projects/${index}`}>
+                  <div onClick={() => setSelectedProject(index)}>
                     <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
                       <CardHeader>
                         <CardTitle className="text-white">
@@ -107,17 +107,23 @@ export function Projects() {
                             alt={project.title}
                             className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
                           />
-                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
-                            <Button
-                              variant="outline"
-                              className="text-white border-white hover:bg-white/20"
-                            >
-                              <ExternalLink className="w-4 h-4 mr-2" />
-                              View Project
-                            </Button>
+                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                            {project.demoUrl && (
+                              <Button
+                                variant="outline"
+                                className="text-white border-white hover:bg-white/20"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  window.open(project.demoUrl, "_blank");
+                                }}
+                              >
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                View Project
+                              </Button>
+                            )}
                           </div>
                         </div>
-                        <div className="flex gap-2 flex-wrap">
+                        <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech) => (
                             <span
                               key={tech}
@@ -129,12 +135,19 @@ export function Projects() {
                         </div>
                       </CardContent>
                     </Card>
-                  </Link>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
+
+        {/* Project Demo Dialog */}
+        <Dialog open={selectedProject !== null} onOpenChange={() => setSelectedProject(null)}>
+          {selectedProject !== null && (
+            <ProjectDemo project={projects[selectedProject]} />
+          )}
+        </Dialog>
       </div>
     </section>
   );
