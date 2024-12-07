@@ -225,7 +225,7 @@ export const projects = [
       "Interactive chess AI using alpha-beta pruning and advanced heuristics",
     image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81",
     technologies: ["JavaScript", "Chess.js", "Alpha-Beta Pruning", "AI"],
-    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta",
+    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/index.html",
     liveDemo: true,
     embedDemo: true,
     isExternalDemo: false,
