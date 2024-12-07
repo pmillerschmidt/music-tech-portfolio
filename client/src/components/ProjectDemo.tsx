@@ -48,23 +48,12 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
           {project.liveDemo ? (
             <div className="relative w-full h-full">
               {project.embedDemo && project.demoUrl ? (
-                // For embedded demos like Chess Scout Bot
                 <div className="relative w-full h-full bg-white">
-                  {iframeLoading && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                      <div className="text-center">
-                        <p className="text-lg font-medium mb-2">Loading Demo...</p>
-                        <p className="text-sm text-gray-600">Please wait while the demo loads</p>
-                      </div>
-                    </div>
-                  )}
                   <iframe
                     src={project.demoUrl}
                     className="w-full h-full border-0"
-                    onLoad={handleIframeLoad}
                     title={`${project.title} Demo`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                     loading="eager"
                     importance="high"
                   />
