@@ -53,17 +53,14 @@ export function Projects() {
             </div>
           )}
           
-          <div className="relative w-full">
+          <div className="container mx-auto px-4">
             <div 
-              className="grid grid-flow-col auto-cols-[minmax(calc(33.333% - 1rem), 1fr)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth"
-              style={{ scrollbarGutter: 'stable' }}
+              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
               onScroll={handleScroll}
               ref={(el) => {
                 if (el) {
-                  el.scrollLeft = 0;
-                  el.style.scrollBehavior = 'auto';
                   requestAnimationFrame(() => {
-                    el.style.scrollBehavior = 'smooth';
+                    el.scrollLeft = 0;
                   });
                 }
               }}
