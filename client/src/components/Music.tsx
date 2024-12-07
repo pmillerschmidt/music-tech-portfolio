@@ -89,7 +89,7 @@ export function Music() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="snap-start shrink-0 w-[calc(33.333% - 1rem)]"
+                  className="w-full"
                 >
                   <Card 
                     className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group cursor-pointer"
