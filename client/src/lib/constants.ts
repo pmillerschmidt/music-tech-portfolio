@@ -219,4 +219,21 @@ export const projects = [
       "Spatial audio",
     ],
   },
+  {
+    title: "Chess Scout Bot",
+    description:
+      "AR application that creates visual representations of music in real space",
+    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81",
+    technologies: ["Unity AR", "Vuforia", "C#", "MIDI"],
+    demoUrl: "https://ar-music-viz.example.com",
+    liveDemo: true,
+    demoDescription:
+      "See music come to life in augmented reality with interactive 3D visualizations.",
+    features: [
+      "Real-time visualization",
+      "Audio analysis",
+      "Gesture control",
+      "Spatial audio",
+    ],
+  },
 ];
