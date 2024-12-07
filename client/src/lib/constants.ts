@@ -24,10 +24,10 @@ export const projects = [
   {
     title: "Immersive Learning Platform",
     description: "Virtual reality-based educational platform for interactive STEM learning",
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+    image: "/images/vr-learning.jpg", // 👈 Place your image in public/images/
     technologies: ["Unity", "C#", "WebXR", "Three.js"],
-    demoUrl: "https://vr-learning.example.com",
-    liveDemo: true,
+    demoUrl: "https://vr-learning.example.com", // 👈 Your demo URL (optional)
+    liveDemo: true, // 👈 Set to true if you have an interactive demo
     demoDescription: "Experience interactive 3D models and simulations for STEM education. Navigate through virtual experiments and hands-on learning scenarios.",
     features: [
       "Interactive 3D models",
