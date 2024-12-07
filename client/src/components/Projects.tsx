@@ -10,12 +10,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { projects } from "../lib/constants";
 import { ExternalLink } from "lucide-react";
-import { Dialog } from "@/components/ui/dialog";
-import { ProjectDemo } from "./ProjectDemo";
+import { Link } from "wouter";
 
 export function Projects() {
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     if (e.currentTarget.scrollLeft > 0 && !hasScrolled) {
@@ -26,16 +24,19 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="relative py-20 min-h-screen flex items-center">
+    <section
+      id="projects"
+      className="relative py-20 min-h-screen flex items-center"
+    >
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/projects-background.png"
+          src="/images/projects-inverted.jpg"
           alt="Projects Background"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
       </div>
-      
+
       <div className="container relative z-10 mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
@@ -70,7 +71,7 @@ export function Projects() {
           )}
 
           <div className="container mx-auto px-4">
-            <div 
+            <div
               className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
               onScroll={handleScroll}
               ref={(el) => {
@@ -90,7 +91,7 @@ export function Projects() {
                   viewport={{ once: true }}
                   className="w-full"
                 >
-                  <div onClick={() => setSelectedProject(index)}>
+                  <Link href={`/projects/${index}`}>
                     <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
                       <CardHeader>
                         <CardTitle className="text-white">
@@ -135,19 +136,12 @@ export function Projects() {
                         </div>
                       </CardContent>
                     </Card>
-                  </div>
+                  </Link>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
-
-        {/* Project Demo Dialog */}
-        <Dialog open={selectedProject !== null} onOpenChange={() => setSelectedProject(null)}>
-          {selectedProject !== null && (
-            <ProjectDemo project={projects[selectedProject]} />
-          )}
-        </Dialog>
       </div>
     </section>
   );
