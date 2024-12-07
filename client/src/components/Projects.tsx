@@ -57,8 +57,13 @@ export function Projects() {
             className="container mx-auto px-4"
           >
             <div 
-              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth"
+              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth scroll-pl-4"
               onScroll={handleScroll}
+              ref={(el) => {
+                if (el) {
+                  el.scrollLeft = 0;
+                }
+              }}
             >
             {projects.map((project, index) => (
               <motion.div
