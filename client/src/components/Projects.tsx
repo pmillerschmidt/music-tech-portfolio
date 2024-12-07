@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -14,12 +14,25 @@ import { Link } from "wouter";
 
 export function Projects() {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     if (e.currentTarget.scrollLeft > 0 && !hasScrolled) {
       setHasScrolled(true);
     } else if (e.currentTarget.scrollLeft === 0 && hasScrolled) {
       setHasScrolled(false);
+    }
+  };
+
+  const scrollRight = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (scrollContainerRef.current) {
+      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -51,19 +64,8 @@ export function Projects() {
           {/* Scroll indicator */}
           {!hasScrolled && (
             <motion.button 
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 text-white/60 hover:text-white/80 transition-all duration-300 hover:scale-110"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const scrollContainer = document.querySelector('.project-scroll');
-                if (scrollContainer) {
-                  const scrollAmount = scrollContainer.clientWidth * 0.8;
-                  scrollContainer.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                  });
-                }
-              }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-[100] p-3 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 text-white/60 hover:text-white/80 transition-all duration-300 hover:scale-110 cursor-pointer"
+              onClick={scrollRight}
               whileHover={{ x: [0, 5, 0] }}
               transition={{ duration: 1 }}
             >
@@ -83,15 +85,9 @@ export function Projects() {
 
           <div className="container mx-auto px-4">
             <div
+              ref={scrollContainerRef}
               className="project-scroll grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
               onScroll={handleScroll}
-              ref={(el) => {
-                if (el) {
-                  requestAnimationFrame(() => {
-                    el.scrollLeft = 0;
-                  });
-                }
-              }}
             >
               {projects.map((project, index) => (
                 <motion.div

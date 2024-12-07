@@ -65,7 +65,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                     loading="eager"
-                    importance="high"
+                    loading="eager"
                   />
                 </div>
               ) : (
