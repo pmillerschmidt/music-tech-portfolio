@@ -21,7 +21,7 @@ export function Projects() {
     <section id="projects" className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/projects-background.png" // Place your background image in public/images/projects-background.png
+          src="/images/projects-background.png"
           alt="Projects Background"
           className="w-full h-full object-cover"
         />
@@ -37,7 +37,7 @@ export function Projects() {
           Featured Projects
         </motion.h2>
         
-        <div className="relative group">
+        <div className="relative">
           {/* Scroll indicator */}
           {!hasScrolled && (
             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-10">
@@ -54,12 +54,9 @@ export function Projects() {
           )}
           
           <div 
-            className="container mx-auto px-4"
+            className="flex gap-6 pb-6 overflow-x-auto custom-scrollbar scroll-smooth"
+            onScroll={handleScroll}
           >
-            <div 
-              className="flex gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar scroll-smooth"
-              onScroll={handleScroll}
-            >
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -67,7 +64,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="snap-start shrink-0 w-[calc(33.333% - 1rem)] first:ml-0"
+                className="w-[calc(33.333% - 1rem)] min-w-[calc(33.333% - 1rem)] first:ml-0"
               >
                 <Link href={`/projects/${index}`}>
                   <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group cursor-pointer">
@@ -106,7 +103,6 @@ export function Projects() {
                 </Link>
               </motion.div>
             ))}
-            </div>
           </div>
         </div>
       </div>
