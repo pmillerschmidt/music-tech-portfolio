@@ -7,21 +7,11 @@ import { ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 
 export function Projects() {
-  const [hasScrolled, setHasScrolled] = useState(false);
-
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    if (e.currentTarget.scrollLeft > 0 && !hasScrolled) {
-      setHasScrolled(true);
-    } else if (e.currentTarget.scrollLeft === 0 && hasScrolled) {
-      setHasScrolled(false);
-    }
-  };
-
   return (
     <section id="projects" className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/projects-background.png" // Place your background image in public/images/projects-background.png
+          src="/images/projects-background.png"
           alt="Projects Background"
           className="w-full h-full object-cover"
         />
@@ -37,34 +27,10 @@ export function Projects() {
           Featured Projects
         </motion.h2>
         
-        <div className="relative group">
-          {/* Scroll indicator */}
-          {!hasScrolled && (
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-10">
-              <motion.div
-                animate={{ x: [5, 0, 5] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="text-white/60 bg-black/20 rounded-full p-2 backdrop-blur-sm"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </motion.div>
-            </div>
-          )}
+        <div className="relative">
           
           <div className="container mx-auto px-4">
-            <div 
-              className="grid grid-flow-col auto-cols-[calc(33.333%-1rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
-              onScroll={handleScroll}
-              ref={(el) => {
-                if (el) {
-                  requestAnimationFrame(() => {
-                    el.scrollLeft = 0;
-                  });
-                }
-              }}
-            >
+            <div className="grid grid-cols-3 gap-6 pb-6">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -72,7 +38,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="snap-start shrink-0 w-[calc(33.333% - 1rem)]"
+                className="w-full"
               >
                 <Link href={`/projects/${index}`}>
                   <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group cursor-pointer">
