@@ -48,7 +48,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
           {project.liveDemo ? (
             <div className="relative w-full h-full">
               {project.embedDemo && project.demoUrl ? (
-                <>
+                <div className="relative w-full h-full">
                   {iframeLoading && (
                     <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                       <div className="text-center">
@@ -66,7 +66,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
                     sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                     referrerPolicy="no-referrer"
                   />
-                </>
+                </div>
               ) : (
                 <>
                   <AnimatePresence mode="wait">
