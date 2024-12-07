@@ -13,18 +13,18 @@ export function Hero() {
     const checkMobile = () => {
       setIsMobile(
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        ) || window.innerWidth < 768
+          navigator.userAgent,
+        ) || window.innerWidth < 768,
       );
     };
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const videoUrl = "/videos/hero-background.mp4"; // Place your video in public/videos/hero-background.mp4
-  const fallbackImage = "/images/hero-background.jpg"; // Place your image in public/images/hero-background.jpg";
+  const fallbackImage = "/images/hero.jpeg"; // Place your image in public/images/hero-background.jpg";
 
   const { toast } = useToast();
 
@@ -42,9 +42,9 @@ export function Hero() {
   };
 
   const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
+    const projectsSection = document.getElementById("projects");
     if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
+      projectsSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -54,7 +54,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <motion.img
           // Replace this URL with your own image
-          src="/images/hero-background.jpg"
+          src="/images/hero.jpeg"
           alt="Creative Technology Background"
           className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
           initial={{ opacity: 0 }}
@@ -62,8 +62,8 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           loading="eager"
           style={{
-            filter: 'brightness(0.7) contrast(1.1)',
-            willChange: 'transform'
+            filter: "brightness(0.7) contrast(1.1)",
+            willChange: "transform",
           }}
         />
 
@@ -74,7 +74,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <motion.div 
+      <motion.div
         className="relative z-20 text-center text-white max-w-4xl mx-auto px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export function Hero() {
         <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
           Musician | Engineer | Educator
         </p>
-        <Button 
+        <Button
           className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
           size="lg"
           onClick={scrollToProjects}
@@ -99,7 +99,16 @@ export function Hero() {
             transition={{ duration: 2, repeat: Infinity }}
             className="ml-2"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <polyline points="19 12 12 19 5 12"></polyline>
             </svg>

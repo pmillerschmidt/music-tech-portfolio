@@ -8,9 +8,9 @@ import { useState } from "react";
 
 export function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,12 +24,12 @@ export function Contact() {
       <div className="absolute inset-0 z-0">
         <img
           // Replace this URL with your own image
-          src="/images/contact-background.jpg"
+          src="/images/contact-background.png"
           alt="Contact Background"
           className="w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
           style={{
-            filter: 'brightness(0.7) contrast(1.1)',
-            willChange: 'transform'
+            filter: "brightness(0.7) contrast(1.1)",
+            willChange: "transform",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm">
@@ -37,7 +37,7 @@ export function Contact() {
         </div>
       </div>
       <div className="container relative z-10 mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -56,34 +56,40 @@ export function Contact() {
               <CardContent className="pt-6">
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
-                    <Input 
-                      placeholder="Your Name" 
+                    <Input
+                      placeholder="Your Name"
                       className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
                       value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       required
                     />
                   </div>
                   <div>
-                    <Input 
-                      type="email" 
-                      placeholder="Your Email" 
+                    <Input
+                      type="email"
+                      placeholder="Your Email"
                       className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       required
                     />
                   </div>
                   <div>
-                    <Textarea 
+                    <Textarea
                       placeholder="Your Message"
                       className="min-h-[150px] bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
                       value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
                       required
                     />
                   </div>
-                  <Button 
+                  <Button
                     type="submit"
                     className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300"
                   >
@@ -101,17 +107,32 @@ export function Contact() {
             className="space-y-6"
           >
             <div className="text-white backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
-              <h3 className="text-xl font-semibold mb-4 text-white">Contact Information</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">
+                Contact Information
+              </h3>
               <div className="space-y-4">
-                <a href="mailto:contact@example.com" className="flex items-center text-white/80 hover:text-white transition-colors">
+                <a
+                  href="mailto:contact@example.com"
+                  className="flex items-center text-white/80 hover:text-white transition-colors"
+                >
                   <Mail className="w-5 h-5 mr-3" />
                   contact@example.com
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-white/80 hover:text-white transition-colors">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-white/80 hover:text-white transition-colors"
+                >
                   <Github className="w-5 h-5 mr-3" />
                   GitHub Profile
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-white/80 hover:text-white transition-colors">
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-white/80 hover:text-white transition-colors"
+                >
                   <Linkedin className="w-5 h-5 mr-3" />
                   LinkedIn Profile
                 </a>
@@ -119,10 +140,12 @@ export function Contact() {
             </div>
 
             <div className="text-white backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
-              <h3 className="text-xl font-semibold mb-4 text-white">Download CV</h3>
-              <Button 
+              <h3 className="text-xl font-semibold mb-4 text-white">
+                Download CV
+              </h3>
+              <Button
                 className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-                onClick={() => window.open('/cv.pdf', '_blank')}
+                onClick={() => window.open("/cv.pdf", "_blank")}
               >
                 Download Resume/CV
               </Button>
