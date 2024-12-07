@@ -52,55 +52,19 @@ export function Hero() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Container */}
       <div className="absolute inset-0 z-0">
-        {/* Loading State */}
-        {!isVideoLoaded && !isVideoError && !isMobile && (
-          <div className="absolute inset-0 bg-gray-900 flex items-center justify-center z-20">
-            <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin" />
-          </div>
-        )}
-
-        {/* Video Background for Desktop */}
-        {!isMobile && !isVideoError && (
-          <div className="absolute inset-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
-              onLoadedData={handleVideoLoaded}
-              onError={handleVideoError}
-              style={{
-                filter: 'brightness(0.7) contrast(1.1)',
-                willChange: 'transform'
-              }}
-            >
-              <source 
-                src="/videos/hero-background.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        )}
-
-        {/* Fallback Image for Mobile or Error */}
-        {(isMobile || isVideoError) && (
-          <motion.img
-            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2940&auto=format&fit=crop"
-            alt="Creative Technology Background"
-            className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            loading="eager"
-            style={{
-              filter: 'brightness(0.7) contrast(1.1)',
-              willChange: 'transform'
-            }}
-          />
-        )}
+        <motion.img
+          src="https://images.unsplash.com/photo-1581472723648-909f4851d4ae?q=80&w=2940&auto=format&fit=crop"
+          alt="Creative Technology Background"
+          className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          loading="eager"
+          style={{
+            filter: 'brightness(0.7) contrast(1.1)',
+            willChange: 'transform'
+          }}
+        />
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm">
