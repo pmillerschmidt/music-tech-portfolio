@@ -30,7 +30,7 @@ export function Music() {
     <section id="music" className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/music-background.jpg"
+          src="/images/music-background.png"
           alt="Music Technology Background"
           className="w-full h-full object-cover"
         />
