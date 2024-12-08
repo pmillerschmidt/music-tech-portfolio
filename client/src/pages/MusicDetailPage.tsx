@@ -71,16 +71,27 @@ export default function MusicDetailPage() {
                 <h1 className="text-4xl md:text-5xl font-bold text-white hero-text bg-clip-text text-transparent">
                   {project.title}
                 </h1>
-                {project.projectUrl && (
-                  <Button 
-                    onClick={() => window.open(project.projectUrl, '_blank')}
-                    className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                    Visit Project Website
-                  </Button>
-                )}
-              </div>
+                </div>
+
+              {/* Short Description */}
+              {project.audioFiles && project.audioFiles.length > 0 && (
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                  <CardContent className="p-6 space-y-4">
+                    <h2 className="text-2xl font-semibold text-white mb-4">Audio Samples</h2>
+                    {project.audioFiles.map((audio, index) => (
+                      <div key={index} className="space-y-2">
+                        <h3 className="text-lg font-medium text-white">{audio.title}</h3>
+                        <p className="text-white/80 text-sm mb-2">{audio.description}</p>
+                        <audio
+                          controls
+                          className="w-full"
+                          src={audio.url}
+                        />
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              )}
 
               {/* Short Description */}
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">

@@ -11,8 +11,18 @@ export const musicProjects = [
       "Advanced deep learning models for real-time audio synthesis and generative music composition",
     image: "/images/neural-synthesis.jpg",
     technologies: ["TensorFlow", "PyTorch", "Web Audio API", "React", "Python"],
-    demoUrl: "https://neural-music.mit.edu",
-    projectUrl: "https://neural-synthesis.mit.edu",
+    audioFiles: [
+      {
+        title: "Neural Synthesis Demo 1",
+        description: "Generated using deep learning models",
+        url: "/audio/neural-synthesis-1.mp3"
+      },
+      {
+        title: "Neural Synthesis Demo 2",
+        description: "Real-time synthesis example",
+        url: "/audio/neural-synthesis-2.mp3"
+      }
+    ],
     videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
     liveDemo: true,
     demoDescription:
