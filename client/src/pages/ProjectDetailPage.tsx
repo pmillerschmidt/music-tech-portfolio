@@ -38,7 +38,7 @@ export default function ProjectDetailPage() {
             alt={project.title}
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/95 backdrop-blur-lg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-md" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
