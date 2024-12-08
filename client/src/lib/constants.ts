@@ -208,7 +208,7 @@ export const projects = [
   {
     title: "Artiphon Music Logic",
     description: "Melodic model based on Hidden Trigram Markov model",
-    image: "images/midi.webp",
+    image: "/images/midi.webp",
     technologies: ["C++"],
     liveDemo: true,
     demoDescription:
@@ -223,7 +223,7 @@ export const projects = [
   {
     title: "Q-tar",
     description: "Reinforcement learning agent with human feedback",
-    image: "https://images.unsplash.com/photo-1509528358501-9738f9726ff3",
+    image: "/images/qtar.jpg",
     technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
     demoUrl: "https://neural-music.example.com",
     liveDemo: true,
@@ -240,7 +240,7 @@ export const projects = [
     title: "Chord Compass",
     description:
       "Motion-responsive sound art installation using computer vision",
-    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+    image: "/images/chord-compass.jpg",
     technologies: ["OpenCV", "Max/MSP", "Arduino", "Pure Data"],
     demoUrl: "https://sound-installation.example.com",
     liveDemo: true,
@@ -257,26 +257,43 @@ export const projects = [
     title: "Lilypad",
     description:
       "AR application that creates visual representations of music in real space",
-    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81",
+    image: "/images/lilypad.jpg",
     technologies: ["Unity AR", "Vuforia", "C#", "MIDI"],
     demoUrl: "https://ar-music-viz.example.com",
+    projectUrl: "https://lilypad.mit.edu",
+    videoUrl: "https://example.com/videos/lilypad-demo.mp4",
     liveDemo: true,
     demoDescription:
       "See music come to life in augmented reality with interactive 3D visualizations.",
+    detailedDescription: `
+      Lilypad is an innovative augmented reality application that transforms musical data into 
+      immersive visual experiences. Using advanced computer vision and spatial audio techniques, 
+      the system creates interactive 3D visualizations that respond to music in real-time.
+
+      The project combines several cutting-edge technologies:
+      - Real-time audio analysis for feature extraction
+      - Spatial mapping for AR placement
+      - Interactive gesture recognition
+      - Multi-channel audio spatialization
+    `,
     features: [
       "Real-time visualization",
       "Audio analysis",
       "Gesture control",
       "Spatial audio",
+      "Multi-user interaction",
+      "Custom AR markers",
     ],
   },
   {
     title: "Chess Scout Bot",
     description:
       "Interactive chess AI using alpha-beta pruning and advanced heuristics",
-    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81",
+    image: "/images/chess-scout.jpg",
     technologies: ["JavaScript", "Chess.js", "Alpha-Beta Pruning", "AI"],
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    projectUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
+    videoUrl: "https://example.com/videos/chess-demo.mp4",
     liveDemo: true,
     embedDemo: true,
     isExternalDemo: false,
