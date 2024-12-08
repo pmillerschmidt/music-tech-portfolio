@@ -152,6 +152,7 @@ export const projects = [
     ],
     demoUrl: "https://grooveblocks.mit.edu/demo",
     projectUrl: "https://grooveblocks.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/GrooveBlocks",
     videoUrl: "https://example.com/videos/grooveblocks-demo.mp4",
     liveDemo: true,
     demoDescription:
@@ -187,6 +188,7 @@ export const projects = [
     technologies: ["Python", "TensorFlow", "Machine Learning"],
     demoUrl: "https://melgen.mit.edu/demo",
     projectUrl: "https://melgen.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/MelGen",
     videoUrl: "https://example.com/videos/melgen-demo.mp4",
     liveDemo: true,
     demoDescription:
@@ -321,7 +323,8 @@ export const projects = [
     image: "/images/chess-scout.jpg",
     technologies: ["JavaScript", "Chess.js", "Alpha-Beta Pruning", "AI"],
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    projectUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
+    projectUrl: "https://chess-scout.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
     videoUrl: "https://example.com/videos/chess-demo.mp4",
     liveDemo: true,
     embedDemo: true,
