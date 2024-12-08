@@ -64,26 +64,33 @@ export default function MusicDetailPage() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-4">
-                {project.demoUrl && (
-                  <Button 
-                    onClick={() => window.open(project.demoUrl, '_blank')}
-                    className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                    View Project
-                  </Button>
-                )}
-                {project.liveDemo && (
-                  <Button
-                    variant="outline"
-                    className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
-                    onClick={() => setIsPlaying(!isPlaying)}
-                  >
-                    {isPlaying ? <Pause className="w-4 h-4 mr-2" /> : <Play className="w-4 h-4 mr-2" />}
-                    {isPlaying ? "Pause Demo" : "Play Demo"}
-                  </Button>
-                )}
+              {/* Project Description and Links */}
+              <div className="space-y-6">
+                <p className="text-xl text-white/80">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+                  {project.projectUrl && (
+                    <Button 
+                      onClick={() => window.open(project.projectUrl, '_blank')}
+                      className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+                      Visit Project Website
+                    </Button>
+                  )}
+                  {project.demoUrl && project.demoUrl !== project.projectUrl && (
+                    <Button
+                      variant="outline"
+                      className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
+                      onClick={() => window.open(project.demoUrl, '_blank')}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View Live Demo
+                    </Button>
+                  )}
+                </div>
               </div>
 
               {/* Demo Video Section */}
@@ -119,34 +126,7 @@ export default function MusicDetailPage() {
                 </CardContent>
               </Card>
 
-              {/* Interactive Demo Section */}
-              {project.liveDemo && (
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-6">
-                    <h2 className="text-2xl font-semibold mb-4 text-white">Interactive Demo</h2>
-                    <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
-                      <div className="relative w-full h-full">
-                        {isPlaying && (
-                          <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="absolute inset-0 flex items-center justify-center"
-                          >
-                            <div className="text-center text-white">
-                              <p className="text-lg font-medium mb-4">Interactive Demo</p>
-                              <p className="text-sm text-white/60">
-                                {project.demoDescription}
-                              </p>
-                            </div>
-                          </motion.div>
-                        )}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-
+              {/* Key Features */}
               {project.features && (
                 <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                   <CardContent className="p-6">
@@ -163,6 +143,7 @@ export default function MusicDetailPage() {
                 </Card>
               )}
 
+              {/* Technologies */}
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
                   <h2 className="text-2xl font-semibold mb-4 text-white">Technologies Used</h2>
