@@ -36,7 +36,7 @@ export default function ProjectDetailPage() {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center scale-100"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-md" />
         </div>
