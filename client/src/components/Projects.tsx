@@ -49,7 +49,7 @@ export function Projects() {
           alt="Projects Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 backdrop-blur-[3px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-md" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4">
