@@ -224,6 +224,7 @@ export const projects = [
     technologies: ["C++", "JUCE Framework", "DSP", "MIDI", "Real-time Audio"],
     demoUrl: "https://artiphon.mit.edu/demo",
     projectUrl: "https://artiphon.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/artiphon-logic",
     videoUrl: "/videos/artiphon-demo.mp4",
     liveDemo: true,
     demoDescription:
@@ -257,6 +258,9 @@ export const projects = [
     image: "/images/qtar.jpg",
     technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
     demoUrl: "https://neural-music.example.com",
+    projectUrl: "https://qtar.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/qtar",
+    videoUrl: "/videos/qtar-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Create unique musical pieces using deep learning models trained on various musical styles.",
@@ -274,6 +278,9 @@ export const projects = [
     image: "/images/chord-compass.jpg",
     technologies: ["OpenCV", "Max/MSP", "Arduino", "Pure Data"],
     demoUrl: "https://sound-installation.example.com",
+    projectUrl: "https://chord-compass.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/chord-compass",
+    videoUrl: "/videos/chord-compass-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Experience how movement and gestures transform into dynamic soundscapes.",
