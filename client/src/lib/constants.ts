@@ -133,17 +133,34 @@ export const projects = [
     title: "GrooveBlocks",
     description:
       "Modular musical building blocks for composition-based music education",
-    image: "/images/grooveblocks.png", // Place an image named grooveblocks.jpg in public/images/
+    image: "/images/grooveblocks.png",
     technologies: [
       "Java",
       "Embedded Systems",
       "Digital Signal Processing",
       "C++",
     ],
-    demoUrl: "https://grooveblocks.mit.edu",
+    demoUrl: "https://grooveblocks.mit.edu/demo",
+    projectUrl: "https://grooveblocks.mit.edu",
+    videoUrl: "https://example.com/videos/grooveblocks-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Experience interactive music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis in real-time.",
+    detailedDescription: `
+      GrooveBlocks is an innovative music education platform that combines hands-on learning with advanced 
+      digital signal processing. The system uses modular hardware blocks that students can physically 
+      arrange to create musical compositions.
+
+      Each block represents different musical elements:
+      - Rhythm blocks for creating beat patterns
+      - Melody blocks for pitch sequences
+      - Effect blocks for sound modification
+      - Control blocks for overall composition structure
+
+      The hardware seamlessly integrates with a companion software that provides real-time 
+      visualization and additional composition tools. This hybrid approach makes music theory 
+      and composition accessible to students of all skill levels.
+    `,
     features: [
       "Real-time audio synthesis",
       "Neural network-based generation",
@@ -156,17 +173,36 @@ export const projects = [
     title: "MelGen",
     description:
       "Generative melodic model with attention to underlying chord structures",
-    image: "/images/melgen.png", // 👈 Place your image in public/images/
+    image: "/images/melgen.png",
     technologies: ["Python", "TensorFlow", "Machine Learning"],
-    demoUrl: "https://vr-learning.example.com", // 👈 Your demo URL (optional)
-    liveDemo: true, // 👈 Set to true if you have an interactive demo
+    demoUrl: "https://melgen.mit.edu/demo",
+    projectUrl: "https://melgen.mit.edu",
+    videoUrl: "https://example.com/videos/melgen-demo.mp4",
+    liveDemo: true,
     demoDescription:
-      "Experience interactive 3D models and simulations for STEM education. Navigate through virtual experiments and hands-on learning scenarios.",
+      "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
+    detailedDescription: `
+      MelGen is a state-of-the-art melodic generation system that uses deep learning to create 
+      musically coherent melodies while respecting underlying chord structures. The system employs 
+      a novel attention mechanism that allows it to maintain long-term musical coherence while 
+      ensuring local harmony.
+
+      Key technical features:
+      - Attention-based neural network architecture
+      - Real-time MIDI integration
+      - Chord-aware generation pipeline
+      - Style transfer capabilities
+      - User-controllable parameters for melody characteristics
+
+      The system has been trained on a diverse dataset of musical pieces and can generate melodies 
+      in various styles while maintaining musical coherence and theoretical correctness.
+    `,
     features: [
-      "Interactive 3D models",
-      "Virtual lab experiments",
-      "Progress tracking",
-      "Collaborative learning spaces",
+      "Real-time melody generation",
+      "Chord-aware composition",
+      "Style transfer",
+      "MIDI export",
+      "Interactive parameters",
     ],
   },
   {
