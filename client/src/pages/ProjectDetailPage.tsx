@@ -96,6 +96,40 @@ export default function ProjectDetailPage() {
                 )}
               </div>
 
+              {/* Demo Video Section */}
+              {project.videoUrl && (
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                  <CardContent className="p-6">
+                    <h2 className="text-2xl font-semibold mb-4 text-white">Project Demo</h2>
+                    <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
+                      <video
+                        src={project.videoUrl}
+                        controls
+                        className="w-full h-full"
+                        poster={project.image}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Detailed Description */}
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                <CardContent className="p-6">
+                  <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
+                  <div className="prose prose-invert">
+                    {project.detailedDescription?.split('\n').map((paragraph, index) => (
+                      paragraph.trim() && (
+                        <p key={index} className="text-white/80 mb-4">
+                          {paragraph.trim()}
+                        </p>
+                      )
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Interactive Demo Section */}
               {project.liveDemo && (
                 <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                   <CardContent className="p-6">

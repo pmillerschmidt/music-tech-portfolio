@@ -9,12 +9,27 @@ export const musicProjects = [
     title: "Discography",
     description:
       "Advanced deep learning models for real-time audio synthesis and generative music composition",
-    image: "/images/neural-synthesis.jpg", // Place in public/images/
+    image: "/images/neural-synthesis.jpg",
     technologies: ["TensorFlow", "PyTorch", "Web Audio API", "React", "Python"],
     demoUrl: "https://neural-music.mit.edu",
+    projectUrl: "https://neural-synthesis.mit.edu",
+    videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Experience real-time music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis through an intuitive interface.",
+    detailedDescription: `
+      Neural Synthesis is a groundbreaking project that combines deep learning with real-time audio synthesis. 
+      The system uses a novel architecture that combines transformer-based models with traditional DSP techniques 
+      to generate high-quality musical content in real-time.
+
+      The project features multiple interconnected modules:
+      1. A neural network trained on a diverse dataset of musical performances
+      2. A real-time audio synthesis engine that converts model outputs into sound
+      3. An intuitive web interface for controlling and manipulating the generation process
+      4. A collaborative environment where multiple users can interact with the system simultaneously
+
+      The system has been used in live performances and installations, demonstrating its reliability and creative potential.
+    `,
     features: [
       "Real-time audio synthesis",
       "Neural network-based generation",
