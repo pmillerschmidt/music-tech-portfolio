@@ -153,7 +153,7 @@ export const projects = [
     demoUrl: "https://grooveblocks.mit.edu/demo",
     projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/GrooveBlocks",
-    videoUrl: "https://example.com/videos/grooveblocks-demo.mp4",
+    videoUrl: "/videos/grooveblocks-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Experience interactive music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis in real-time.",
@@ -189,7 +189,7 @@ export const projects = [
     demoUrl: "https://melgen.mit.edu/demo",
     projectUrl: "https://melgen.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/MelGen",
-    videoUrl: "https://example.com/videos/melgen-demo.mp4",
+    videoUrl: "/videos/melgen-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
@@ -224,7 +224,7 @@ export const projects = [
     technologies: ["C++", "JUCE Framework", "DSP", "MIDI", "Real-time Audio"],
     demoUrl: "https://artiphon.mit.edu/demo",
     projectUrl: "https://artiphon.mit.edu",
-    videoUrl: "https://example.com/videos/artiphon-demo.mp4",
+    videoUrl: "/videos/artiphon-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Experience real-time melodic generation that adapts to your playing style. The system learns from your input and generates complementary musical phrases.",
@@ -292,7 +292,7 @@ export const projects = [
     technologies: ["Unity AR", "Vuforia", "C#", "MIDI"],
     demoUrl: "https://ar-music-viz.example.com",
     projectUrl: "https://lilypad.mit.edu",
-    videoUrl: "https://example.com/videos/lilypad-demo.mp4",
+    videoUrl: "/videos/lilypad-demo.mp4",
     liveDemo: true,
     demoDescription:
       "See music come to life in augmented reality with interactive 3D visualizations.",
@@ -325,7 +325,7 @@ export const projects = [
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     projectUrl: "https://chess-scout.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
-    videoUrl: "https://example.com/videos/chess-demo.mp4",
+    videoUrl: "/videos/chess-demo.mp4",
     liveDemo: true,
     embedDemo: true,
     isExternalDemo: false,
