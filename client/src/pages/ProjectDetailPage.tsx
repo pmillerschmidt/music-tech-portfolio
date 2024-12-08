@@ -67,31 +67,27 @@ export default function ProjectDetailPage() {
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
-              <div className="space-y-4">
+              <div className="flex justify-between items-center mb-6">
                 <h1 className="text-4xl md:text-5xl font-bold text-white hero-text bg-clip-text text-transparent">
                   {project.title}
                 </h1>
-                <p className="text-xl text-white/80">
-                  {project.demoDescription || project.description}
-                </p>
+                {project.projectUrl && (
+                  <Button 
+                    onClick={() => window.open(project.projectUrl, '_blank')}
+                    className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+                    Visit Project Website
+                  </Button>
+                )}
               </div>
 
-              {/* Project Description and Links */}
+              {/* Short Description */}
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
-                  <p className="text-white/80 text-lg mb-6">
+                  <p className="text-white/80 text-lg">
                     {project.description}
                   </p>
-
-                  {project.projectUrl && (
-                    <Button 
-                      onClick={() => window.open(project.projectUrl, '_blank')}
-                      className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                      Visit Project Website
-                    </Button>
-                  )}
                 </CardContent>
               </Card>
 
