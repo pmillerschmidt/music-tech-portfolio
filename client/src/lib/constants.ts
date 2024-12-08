@@ -207,17 +207,36 @@ export const projects = [
   },
   {
     title: "Artiphon Music Logic",
-    description: "Melodic model based on Hidden Trigram Markov model",
+    description: "Advanced melodic generation system using Hidden Trigram Markov models",
     image: "/images/midi.webp",
-    technologies: ["C++"],
+    technologies: ["C++", "JUCE Framework", "DSP", "MIDI", "Real-time Audio"],
+    demoUrl: "https://artiphon.mit.edu/demo",
+    projectUrl: "https://artiphon.mit.edu",
+    videoUrl: "https://example.com/videos/artiphon-demo.mp4",
     liveDemo: true,
     demoDescription:
-      "Watch the interface adapt to different user interactions and environmental contexts in real-time.",
+      "Experience real-time melodic generation that adapts to your playing style. The system learns from your input and generates complementary musical phrases.",
+    detailedDescription: `
+      The Artiphon Music Logic project implements a sophisticated melodic generation system 
+      using Hidden Trigram Markov models. This system analyzes patterns in musical sequences 
+      and generates contextually appropriate melodies in real-time.
+
+      The project focuses on several key innovations:
+      - Real-time pattern recognition and generation
+      - Adaptive learning from user input
+      - Low-latency audio processing
+      - Integration with MIDI controllers
+      
+      Built using C++ and the JUCE framework, the system provides professional-grade 
+      audio performance while maintaining the flexibility needed for creative expression.
+    `,
     features: [
-      "Context-aware adaptations",
-      "Personalized UI elements",
-      "Environmental responsiveness",
-      "Usage analytics",
+      "Real-time melody generation",
+      "Adaptive learning system",
+      "Custom DSP algorithms",
+      "MIDI device integration",
+      "Low-latency performance",
+      "Multi-channel audio support"
     ],
   },
   {
