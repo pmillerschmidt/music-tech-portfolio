@@ -30,27 +30,32 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black">
       <div className="relative min-h-screen">
+        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-center scale-100"
+            className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-[20s] hover:scale-110"
             style={{
               filter: "brightness(0.7) contrast(1.1)",
               willChange: "transform",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-sm">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black/20" />
           </div>
         </div>
-        
+
+        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             <Link href="/projects">
-              <Button variant="outline" className="mb-8 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+              <Button 
+                variant="outline" 
+                className="mb-8 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+              >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Projects
               </Button>
@@ -59,6 +64,7 @@ export default function ProjectDetailPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="space-y-8"
             >
               <div className="space-y-4">
@@ -71,21 +77,23 @@ export default function ProjectDetailPage() {
               </div>
 
               {/* Project Description and Links */}
-              <div className="space-y-6">
-                <p className="text-xl text-white/80">
-                  {project.description}
-                </p>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                <CardContent className="p-6">
+                  <p className="text-white/80 text-lg mb-6">
+                    {project.description}
+                  </p>
 
-                {project.projectUrl && (
-                  <Button 
-                    onClick={() => window.open(project.projectUrl, '_blank')}
-                    className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                    Visit Project Website
-                  </Button>
-                )}
-              </div>
+                  {project.projectUrl && (
+                    <Button 
+                      onClick={() => window.open(project.projectUrl, '_blank')}
+                      className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+                      Visit Project Website
+                    </Button>
+                  )}
+                </CardContent>
+              </Card>
 
               {/* Demo Video Section */}
               {project.videoUrl && (
@@ -105,20 +113,22 @@ export default function ProjectDetailPage() {
               )}
 
               {/* Detailed Description */}
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
-                  <div className="prose prose-invert">
-                    {project.detailedDescription?.split('\n').map((paragraph, index) => (
-                      paragraph.trim() && (
-                        <p key={index} className="text-white/80 mb-4">
-                          {paragraph.trim()}
-                        </p>
-                      )
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              {project.detailedDescription && (
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                  <CardContent className="p-6">
+                    <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
+                    <div className="prose prose-invert">
+                      {project.detailedDescription.split('\n').map((paragraph, index) => (
+                        paragraph.trim() && (
+                          <p key={index} className="text-white/80 mb-4">
+                            {paragraph.trim()}
+                          </p>
+                        )
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
 
               {/* Key Features */}
               {project.features && (
