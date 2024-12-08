@@ -70,27 +70,15 @@ export default function MusicDetailPage() {
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-4">
-                  {project.projectUrl && (
-                    <Button 
-                      onClick={() => window.open(project.projectUrl, '_blank')}
-                      className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                      Visit Project Website
-                    </Button>
-                  )}
-                  {project.demoUrl && project.demoUrl !== project.projectUrl && (
-                    <Button
-                      variant="outline"
-                      className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
-                      onClick={() => window.open(project.demoUrl, '_blank')}
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Live Demo
-                    </Button>
-                  )}
-                </div>
+                {project.projectUrl && (
+                  <Button 
+                    onClick={() => window.open(project.projectUrl, '_blank')}
+                    className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+                    Visit Project Website
+                  </Button>
+                )}
               </div>
 
               {/* Demo Video Section */}
