@@ -32,13 +32,19 @@ export default function MusicDetailPage() {
   return (
     <main className="min-h-screen">
       <div className="relative min-h-screen">
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover object-center scale-100"
+            style={{
+              filter: "brightness(0.7) contrast(1.1)",
+              willChange: "transform",
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-md" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-sm">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black/20" />
+          </div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
