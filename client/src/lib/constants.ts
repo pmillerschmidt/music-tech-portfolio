@@ -244,21 +244,20 @@ Music generation with machine learning poses unique challenges due to the high d
   },
   {
     title: "Artiphon Music Logic",
-    summary: "MIDI-based pattern generation system for interactive music creation",
-    description: "A musical pattern generation system built for use with the Artiphon MIDI controller. The project uses Hidden Trigram models to analyze and create melodic patterns, providing an interactive and adaptive music generation experience.",
+    summary: "MIDI-based pattern generation system",
+    description: "An innovative system that combines pattern recognition with real-time music generation, featuring adaptive learning and interactive performance capabilities.",
     image: "/images/midi.webp",
     technologies: ["C++", "JUCE Framework", "MIDI"],
     githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
-    detailedDescription: `
-      The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
+    detailedDescription: `The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
 
-      The project features several key components:
-      - Pattern Analysis: Uses Hidden Trigram Markov models to understand musical patterns
-      - Adaptive Learning: Continuously learns from user input to improve pattern generation
-      - Real-time Processing: Generates complementary phrases during live performance
-      - MIDI Integration: Seamless integration with the Artiphon MIDI controller
+The project features several key components:
+- Pattern Analysis: Uses Hidden Trigram Markov models to understand musical patterns
+- Adaptive Learning: Continuously learns from user input to improve pattern generation
+- Real-time Processing: Generates complementary phrases during live performance
+- MIDI Integration: Seamless integration with the Artiphon MIDI controller
 
-      The system demonstrates various capabilities through the included audio demonstrations, from basic pattern generation to complex adaptive performances. Each audio example showcases different aspects of the system's capabilities, from simple pattern recognition to complex adaptive learning.`,
+The system demonstrates various capabilities through the included audio demonstrations, from basic pattern generation to complex adaptive performances. Each audio example showcases different aspects of the system's capabilities, from simple pattern recognition to complex adaptive learning.`,
     originalWorks: [
       {
         title: "Basic Pattern Generation",
