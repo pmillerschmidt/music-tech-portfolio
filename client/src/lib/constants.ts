@@ -305,21 +305,33 @@ export const projects = [
   {
     title: "Chord Compass",
     description:
-      "Motion-responsive sound art installation using computer vision",
+      "Music theory research project exploring harmonic relationships and compositional techniques",
     image: "/images/chord-compass.jpg",
-    technologies: ["OpenCV", "Max/MSP", "Arduino", "Pure Data"],
-    demoUrl: "https://sound-installation.example.com",
+    technologies: ["Music Theory", "Composition", "Research", "Analysis"],
+    demoUrl: "https://chord-compass.mit.edu",
     projectUrl: "https://chord-compass.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/chord-compass",
     videoUrl: "/videos/chord-compass-demo.mp4",
     liveDemo: true,
     demoDescription:
-      "Experience how movement and gestures transform into dynamic soundscapes.",
+      "Explore harmonic relationships and compositional techniques through an interactive interface.",
+    detailedDescription: `
+      Chord Compass is a research project investigating the relationships between 
+      harmonic progressions and compositional techniques in contemporary music. 
+      The project combines traditional music theory analysis with modern 
+      computational approaches to understand chord relationships and voice leading.
+
+      Key research areas include:
+      - Analysis of harmonic patterns in contemporary compositions
+      - Study of voice leading techniques
+      - Investigation of chord progressions in different musical styles
+      - Documentation of compositional strategies
+    `,
     features: [
-      "Motion tracking",
-      "Real-time audio synthesis",
-      "Multi-channel audio",
-      "Interactive visualization",
+      "Harmonic analysis tools",
+      "Voice leading studies",
+      "Progression visualization",
+      "Interactive examples",
     ],
   },
   {
