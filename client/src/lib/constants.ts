@@ -117,7 +117,8 @@ export const musicProjects = [
     title: "Visual Scoring",
     description: "Innovative approach to music visualization combining traditional notation with dynamic visual elements",
     image: "/images/visual-scoring.jpg",
-    videoUrl: "/videos/visual-scoring-demo.mp4",
+    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    isYoutubeVideo: true,
     detailedDescription: `The Visual Scoring project represents a groundbreaking approach to music visualization and scoring, 
     combining traditional musical notation with dynamic visual elements. This project explores new ways of representing musical 
     structures and relationships through interactive visual designs.

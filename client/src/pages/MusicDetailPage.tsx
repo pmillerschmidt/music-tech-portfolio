@@ -99,12 +99,22 @@ export default function MusicDetailPage() {
                   <CardContent className="p-6">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Project Visualization</h2>
                     <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
-                      <video
-                        src={project.videoUrl}
-                        controls
-                        className="w-full h-full"
-                        poster={project.image}
-                      />
+                      {project.isYoutubeVideo ? (
+                        <iframe
+                          src={project.videoUrl}
+                          className="w-full h-full"
+                          title={`${project.title} Demo`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <video
+                          src={project.videoUrl}
+                          controls
+                          className="w-full h-full"
+                          poster={project.image}
+                        />
+                      )}
                     </div>
                   </CardContent>
                 </Card>
