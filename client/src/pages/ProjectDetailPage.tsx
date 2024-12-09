@@ -112,7 +112,7 @@ export default function ProjectDetailPage() {
                     <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
                       {project.isYoutubeVideo ? (
                         <iframe
-                          src={project.videoUrl}
+                          src={project.videoUrl.replace('watch?v=', 'embed/')}
                           className="w-full h-full"
                           title={`${project.title} Demo`}
                           frameBorder="0"

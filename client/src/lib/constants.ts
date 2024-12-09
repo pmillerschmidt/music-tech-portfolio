@@ -8,53 +8,60 @@ export const musicProjects = [
   {
     title: "Discography",
     summary: "Collection of original works, collaborations, and remixes",
-    description: "A comprehensive collection of my musical works spanning various genres and styles. From original compositions to collaborative projects and innovative remixes, this portfolio showcases my journey in music production and sound design.",
+    description:
+      "A comprehensive collection of my musical works spanning various genres and styles. From original compositions to collaborative projects and innovative remixes, this portfolio showcases my journey in music production and sound design.",
     image: "/images/neural-synthesis.jpg",
     originalWorks: [
       {
         title: "Synthesis Study No. 1",
-        description: "An exploration of granular synthesis and generative composition",
+        description:
+          "An exploration of granular synthesis and generative composition",
         url: "/audio/synthesis-1.mp3",
-        year: "2023"
+        year: "2023",
       },
       {
         title: "Electronic Suite",
-        description: "A three-part suite combining classical form with electronic elements",
+        description:
+          "A three-part suite combining classical form with electronic elements",
         url: "/audio/electronic-suite.mp3",
-        year: "2023"
-      }
+        year: "2023",
+      },
     ],
     collaborations: [
       {
         title: "Neural Networks",
-        description: "A collaborative piece exploring the intersection of AI and human creativity",
+        description:
+          "A collaborative piece exploring the intersection of AI and human creativity",
         collaborator: "Baltazar Lora",
         url: "/audio/neural-networks.mp3",
-        year: "2024"
+        year: "2024",
       },
       {
         title: "Digital Horizons",
-        description: "An experimental electronic piece created with live coding",
+        description:
+          "An experimental electronic piece created with live coding",
         collaborator: "Alex Chen",
         url: "/audio/digital-horizons.mp3",
-        year: "2023"
-      }
+        year: "2023",
+      },
     ],
     remixes: [
       {
         title: "Reimagined Patterns",
-        description: "A reinterpretation of classical minimalist works through electronic means",
+        description:
+          "A reinterpretation of classical minimalist works through electronic means",
         originalArtist: "Steve Reich",
         url: "/audio/reimagined-patterns.mp3",
-        year: "2024"
+        year: "2024",
       },
       {
         title: "Electronic Variations",
-        description: "Modern take on baroque counterpoint using synthesis techniques",
+        description:
+          "Modern take on baroque counterpoint using synthesis techniques",
         originalArtist: "J.S. Bach",
         url: "/audio/electronic-variations.mp3",
-        year: "2023"
-      }
+        year: "2023",
+      },
     ],
     videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
     liveDemo: true,
@@ -164,7 +171,7 @@ export const musicProjects = [
       "Scene analysis",
       "Seamless transitions",
     ],
-  }
+  },
 ];
 
 export const projects = [
@@ -304,7 +311,8 @@ export const projects = [
   },
   {
     title: "nextChord",
-    description: "AI-powered chord progression generator with real-time synthesis",
+    description:
+      "AI-powered chord progression generator with real-time synthesis",
     image: "/images/nextchord.jpg",
     technologies: ["TensorFlow", "Machine Learning", "React", "Web Audio API"],
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
@@ -312,7 +320,8 @@ export const projects = [
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     videoUrl: "/videos/nextchord-demo.mp4",
     liveDemo: true,
-    demoDescription: "Experience real-time chord progression generation powered by machine learning, with instant audio playback and visualization",
+    demoDescription:
+      "Experience real-time chord progression generation powered by machine learning, with instant audio playback and visualization",
     detailedDescription: `
       nextChord is an innovative web application that combines artificial intelligence with music theory 
       to generate meaningful and creative chord progressions. The system learns from a vast dataset of 
@@ -337,10 +346,37 @@ export const projects = [
     ],
   },
   {
-    title: "Chess Scout Bot",
+    title: "Chess Engine Design",
     description:
       "Interactive chess AI using alpha-beta pruning and advanced heuristics",
     image: "/images/chess-scout.jpg",
+    technologies: [
+      "JavaScript",
+      "Python",
+      "Chess.js",
+      "Alpha-Beta Pruning",
+      "Tree Search",
+    ],
+    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
+    videoUrl: "https://www.youtube.com/watch?v=fieytpoR_04",
+    liveDemo: true,
+    embedDemo: true,
+    isExternalDemo: false,
+    demoDescription:
+      "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
+    features: [
+      "Alpha-beta pruning algorithm",
+      "Position evaluation",
+      "Interactive chess board",
+      "Real-time move calculation",
+    ],
+  },
+  {
+    title: "Brookline Teen Center Makerspace",
+    description: "Makerspace and program",
+    image: "/images/makerspace.jpg",
     technologies: [
       "JavaScript",
       "Python",
@@ -362,30 +398,6 @@ export const projects = [
       "Position evaluation",
       "Interactive chess board",
       "Real-time move calculation",
-    ],
-  },
-  {
-    title: "Brookline Teen Center Makerspace",
-    description: "Makerspace and program",
-    image: "/images/makerspace.jpg",
-    technologies: [
-      "Electrical Engineering",
-      "Electronics",
-      "3D Printing",
-      "Programming",
-      "Robotics",
-    ],
-    demoUrl: "https://btc-makerspace.mit.edu",
-    projectUrl: "https://btc-makerspace.mit.edu",
-    githubUrl: "",
-    liveDemo: false,
-    demoDescription:
-      "A collaborative makerspace program designed to teach electronics, programming, and digital fabrication",
-    features: [
-      "Electronics lab",
-      "3D printing station",
-      "Programming workshops",
-      "Robotics projects",
     ],
   },
 ];
