@@ -112,29 +112,29 @@ export function Contact() {
               </h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:contact@example.com"
+                  href="mailto:pmillerschmidt@gmail.com"
                   className="flex items-center text-white/80 hover:text-white transition-colors"
                 >
                   <Mail className="w-5 h-5 mr-3" />
-                  contact@example.com
+                  pmillerschmidt@gmail.com
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/pmillerschmidt"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-white/80 hover:text-white transition-colors"
                 >
                   <Github className="w-5 h-5 mr-3" />
-                  GitHub Profile
+                  GitHub
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/paul-miller-schmidt-767370b4/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-white/80 hover:text-white transition-colors"
                 >
                   <Linkedin className="w-5 h-5 mr-3" />
-                  LinkedIn Profile
+                  LinkedIn
                 </a>
               </div>
             </div>
