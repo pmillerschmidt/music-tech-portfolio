@@ -133,13 +133,15 @@ export default function MusicDetailPage() {
                   <h2 className="text-2xl font-semibold mb-4 text-white">About</h2>
                   <div className="prose prose-invert">
                     {project.detailedDescription ? (
-                      project.detailedDescription.split('\n').map((paragraph, index) => (
-                        paragraph.trim() && (
-                          <p key={index} className="text-white/80 mb-4">
-                            {paragraph.trim()}
-                          </p>
-                        )
-                      ))
+                      <div 
+                        dangerouslySetInnerHTML={{ 
+                          __html: project.detailedDescription.split('\n')
+                            .filter(p => p.trim())
+                            .map(p => `<p class="text-white/80 mb-4">${p.trim()}</p>`)
+                            .join('')
+                        }}
+                        className="[&_a]:text-primary [&_a]:no-underline hover:[&_a]:underline"
+                      />
                     ) : (
                       <p className="text-white/80 text-lg">
                         {project.description}

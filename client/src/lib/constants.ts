@@ -115,13 +115,12 @@ export const musicProjects = [
   },
   {
     title: "Visual Scoring",
-    description:
-      "Film score composition project",
+    description: "Film score composition project",
     image: "/images/visual-scoring.jpg",
     videoUrl: "https://youtu.be/W0jj0Gkzsc8",
     embedCode: "https://youtu.be/W0jj0Gkzsc8", // Optional: Use this for private videos with custom embed code
     isYoutubeVideo: true,
-    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://www.example.com/baltazar-lora" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale. You can watch the full performance on <a href="https://youtu.be/W0jj0Gkzsc8" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">YouTube</a>.`,
+    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
   },
 ];
 
