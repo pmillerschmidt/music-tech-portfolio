@@ -175,8 +175,7 @@ export const projects = [
     demoUrl: "https://melgen.mit.edu/demo",
     projectUrl: "https://melgen.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/MelGen",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual MelGen video ID
-    embedCode: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // Replace with actual MelGen video ID
+    videoUrl: "https://www.youtube.com/embed/VGp2k8LJc3M",
     isYoutubeVideo: true,
     liveDemo: true,
     demoDescription:
