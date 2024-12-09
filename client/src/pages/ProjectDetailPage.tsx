@@ -140,9 +140,11 @@ export default function ProjectDetailPage() {
                     <div className="prose prose-invert">
                       {project.detailedDescription.split('\n').map((paragraph, index) => (
                         paragraph.trim() && (
-                          <p key={index} className="text-white/80 mb-4">
-                            {paragraph.trim()}
-                          </p>
+                          <p key={index} className="text-white/80 mb-4" dangerouslySetInnerHTML={{
+                            __html: paragraph.trim().startsWith('-') 
+                              ? `• ${paragraph.trim().substring(1)}` 
+                              : paragraph.trim()
+                          }} />
                         )
                       ))}
                     </div>
