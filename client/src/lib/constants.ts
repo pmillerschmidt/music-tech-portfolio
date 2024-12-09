@@ -7,9 +7,9 @@
 export const musicProjects = [
   {
     title: "Discography",
-    summary: "Advanced deep learning models for real-time audio synthesis and generative music composition",
+    summary: "Advanced deep learning models for music synthesis",
     description:
-      "Neural Synthesis is a groundbreaking project that combines deep learning with real-time audio synthesis. The system uses a novel architecture that combines transformer-based models with traditional DSP techniques to generate high-quality musical content in real-time. The project features multiple interconnected modules including a neural network trained on diverse musical performances, a real-time audio synthesis engine, and an intuitive web interface for controlling the generation process. The system has been used in live performances and installations, demonstrating its reliability and creative potential.",
+      "Advanced deep learning models for real-time audio synthesis and generative music composition",
     image: "/images/neural-synthesis.jpg",
     technologies: ["TensorFlow", "PyTorch", "Web Audio API", "React", "Python"],
     audioFiles: [
@@ -26,6 +26,21 @@ export const musicProjects = [
     ],
     videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
     liveDemo: true,
+    demoDescription:
+      "Experience real-time music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis through an intuitive interface.",
+    detailedDescription: `
+      Neural Synthesis is a groundbreaking project that combines deep learning with real-time audio synthesis. 
+      The system uses a novel architecture that combines transformer-based models with traditional DSP techniques 
+      to generate high-quality musical content in real-time.
+
+      The project features multiple interconnected modules:
+      1. A neural network trained on a diverse dataset of musical performances
+      2. A real-time audio synthesis engine that converts model outputs into sound
+      3. An intuitive web interface for controlling and manipulating the generation process
+      4. A collaborative environment where multiple users can interact with the system simultaneously
+
+      The system has been used in live performances and installations, demonstrating its reliability and creative potential.
+    `,
     features: [
       "Real-time audio synthesis",
       "Neural network-based generation",
@@ -36,10 +51,12 @@ export const musicProjects = [
   },
   {
     title: "Computer Music",
-    summary: "Simple yet effective musical machines using probabilistic models",
-    description: "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract statistical information from musical data that was then used to generate probabilistic music sequences. While the models involved are quite simple, they are well-suited to capture basic short-term coherence.",
-    image: "/images/computer-music.jpg",
+    summary: "Exploring musical machines and probabilistic composition",
+    description:
+      "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences. While the models involved are quite simple, they are well-suited to capture basic short-term coherence.",
+    image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
+    technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
     audioFiles: [
       {
         title: "Hidden Markov Model Melody/Drum generation",
@@ -55,12 +72,15 @@ export const musicProjects = [
   },
   {
     title: "Music Theory Research",
-    summary: "AI-powered system for automated mixing, mastering, and sound design",
-    description: "This research project explores the application of artificial intelligence to music production tasks. The system combines traditional DSP techniques with modern deep learning approaches to automate complex mixing and mastering processes. It includes real-time processing capabilities and can adapt to different musical styles and genres.",
+    summary: "AI-powered music production and mastering system",
+    description:
+      "AI-powered system for automated mixing, mastering, and sound design",
     image: "/images/smart-production.jpg",
     technologies: ["Deep Learning", "DSP", "C++", "JUCE Framework", "Python"],
     demoUrl: "https://smart-production.mit.edu",
     liveDemo: true,
+    demoDescription:
+      "Experience professional-grade automated music production. Upload your tracks and let AI handle mixing, mastering, and sound design.",
     features: [
       "Automated mixing",
       "AI mastering",
@@ -71,12 +91,20 @@ export const musicProjects = [
   },
   {
     title: "Neighborhood Music Research",
-    summary: "Context-aware AI systems for dynamic soundtrack generation",
-    description: "A research project investigating how AI can generate contextually appropriate music based on environmental and user inputs. The system analyzes various parameters in real-time to create adaptive soundtracks that enhance interactive experiences.",
+    summary: "Context-aware adaptive music generation system",
+    description: "Context-aware AI systems for dynamic soundtrack generation",
     image: "/images/adaptive-music.jpg",
-    technologies: ["Machine Learning", "Unity3D", "C#", "Web Audio API", "Node.js"],
+    technologies: [
+      "Machine Learning",
+      "Unity3D",
+      "C#",
+      "Web Audio API",
+      "Node.js",
+    ],
     demoUrl: "https://adaptive-music.mit.edu",
     liveDemo: true,
+    demoDescription:
+      "Experience interactive music that adapts to real-time input. Watch and hear how the system responds to different scenarios and user interactions.",
     features: [
       "Real-time adaptation",
       "Emotion-based generation",
@@ -87,11 +115,13 @@ export const musicProjects = [
   },
   {
     title: "Visual Scoring",
-    summary: "Film score composition project",
-    description: "This is a visual score I wrote with my friend and collaborator Baltazar Lora for our composition seminar at Yale. The project explores the intersection of visual and musical composition, creating a unique audiovisual experience.",
+    summary: "Collaborative film score composition project",
+    description: "Film score composition project",
     image: "/images/visual-scoring.jpg",
     videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
     isYoutubeVideo: true,
+    technologies: ["Logic Pro", "Film Scoring", "Composition", "Orchestration"],
+    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
   },
 ];
 
