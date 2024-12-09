@@ -8,40 +8,29 @@ export const musicProjects = [
   {
     title: "Discography",
     summary: "Collection of original works, collaborations, and remixes",
+    image: "/images/performance.png",
+    technologies: ["Ableton", "Logic Pro", "Pioneer"],
     description:
       "A comprehensive collection of my musical works spanning various genres and styles. From original compositions to collaborative projects and innovative remixes, this portfolio showcases my journey in music production and sound design.",
-    image: "/images/neural-synthesis.jpg",
     originalWorks: [
       {
-        title: "Synthesis Study No. 1",
-        description:
-          "An exploration of granular synthesis and generative composition",
+        title: "Tell Me a Lie (feat. Abby Walker)",
         url: "/audio/synthesis-1.mp3",
         year: "2023",
       },
       {
-        title: "Electronic Suite",
-        description:
-          "A three-part suite combining classical form with electronic elements",
+        title: "Something (feat. Abby Walker)",
         url: "/audio/electronic-suite.mp3",
         year: "2023",
       },
-    ],
-    collaborations: [
       {
-        title: "Neural Networks",
-        description:
-          "A collaborative piece exploring the intersection of AI and human creativity",
-        collaborator: "Baltazar Lora",
-        url: "/audio/neural-networks.mp3",
-        year: "2024",
+        title: "Afterlife (feat. Abby Walker)",
+        url: "/audio/electronic-suite.mp3",
+        year: "2023",
       },
       {
-        title: "Digital Horizons",
-        description:
-          "An experimental electronic piece created with live coding",
-        collaborator: "Alex Chen",
-        url: "/audio/digital-horizons.mp3",
+        title: "Mi Vida",
+        url: "/audio/electronic-suite.mp3",
         year: "2023",
       },
     ],
@@ -112,22 +101,27 @@ export const musicProjects = [
   {
     title: "Visual Scoring",
     summary: "Collaborative film score composition project",
-    description: "Film score composition project",
+    description: "An innovative approach to film scoring that combines visual elements with musical composition. This project explores the intersection of visual art and musical expression through a unique collaborative process.",
     image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
+    videoUrl: "https://www.youtube.com/watch?v=W0jj0Gkzsc8",
     isYoutubeVideo: true,
-    technologies: ["Logic Pro", "Film Scoring", "Composition", "Orchestration"],
-    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
-  },
-  {
-    title: "Performance",
-    summary: "",
-    description: "Film score composition project",
-    image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
-    isYoutubeVideo: true,
-    technologies: ["Logic Pro", "Film Scoring", "Composition", "Orchestration"],
-    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
+    technologies: ["Ableton", "Film Scoring", "Composition", "Max/MSP", "Visual Programming"],
+    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale. The project explores innovative ways of representing musical ideas through visual elements, creating a unique intersection between visual art and musical composition.
+
+The score incorporates:
+- Real-time visual feedback
+- Interactive elements that respond to musical input
+- Custom-built Max/MSP patches for visual processing
+- Collaborative performance capabilities
+
+This experimental approach to scoring allows for a more intuitive and expressive way of composing and performing music, while creating an engaging visual experience for the audience.`,
+    features: [
+      "Real-time visual feedback",
+      "Interactive score elements",
+      "Custom Max/MSP patches",
+      "Collaborative performance mode",
+      "Visual programming interface"
+    ],
   },
   {
     title: "Music Theory Research",
@@ -218,8 +212,7 @@ export const projects = [
   },
   {
     title: "MelGen",
-    description:
-      "Generative melodic model with attention to underlying chord structures",
+    description: "Generative melodic/harmonic LSTM model",
     image: "/images/melgen.png",
     technologies: ["Python", "TensorFlow", "Machine Learning"],
     demoUrl: "https://melgen.mit.edu/demo",
@@ -231,25 +224,23 @@ export const projects = [
     demoDescription:
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
-      MelGen is a state-of-the-art melodic generation system that uses deep learning to create 
-      musically coherent melodies while respecting underlying chord structures. The system employs 
-      a novel attention mechanism that allows it to maintain long-term musical coherence while 
-      ensuring local harmony.
+      Abstract
+Machine Learning models have already changed the way we think about and interact with text, images, and video. The implementation of Transformers in Generative Pre-Trained Models, such as ChatGPT and Dall-E, has shown how powerful these technologies can be. However, music generation presents a unique challenge. When sampled at 44100hz, a 25-second clip of audio has more than a million data points. In addition, music has complex temporal structures and hierarchical patterns. Multiple instruments are dependent on each other in nuanced ways and identifying commonalities and patterns is challenging. When building a generative musical model, a decision must be made between generating simpler representations or pure audio. Previous works have used basic model architectures, such as RNNs and LSTMs, for MIDI or XML generation and more complicated architectures, such as GANs and VQ-VAEs, for pure audio generation. This paper investigates the existing research and outlines the development of MelGen, an artificially intelligent MIDI generator. The model was trained on the Rock Corpus Dataset [1], a collection of harmonic analyses and melodic transcriptions of popular songs from the 20th century. The LSTM was trained for over 24 hours with a learning rate of 0.001, using sparse categorical cross-entropy for loss. Due to the size of the dataset and the specificity of the task (attention to harmonic structure), the raw data generated by the model had serious inconsistencies. Specifically, due to filtering out non-chord choices, the likelihood of a continuation was overestimated, meaning that the generated MIDI would get “stuck” on notes for a long time. To account for this, I implemented continuation reduction to decrease the likelihood of continuations depending on the current note length. This had the effect of generating more consistent and reasonable melodies.
 
-      Key technical features:
-      - Attention-based neural network architecture
-      - Real-time MIDI integration
-      - Chord-aware generation pipeline
-      - Style transfer capabilities
-      - User-controllable parameters for melody characteristics
+Interaction
+To run the generator, drag a MIDI file of chords and a MIDI file seed melody into the same folder as the generator. Then call python3 generator.py [MIDI FILE] [SEED MELODY FILE]. The generated melody will appear in the folder titled 'mel.mid'.
 
-      The system has been trained on a diverse dataset of musical pieces and can generate melodies 
-      in various styles while maintaining musical coherence and theoretical correctness.
+Code Overview
+The folder data_processing contains all of the python files used to clean the data from the Rock Corpus dataset and turn it into usable data, in the form of the file_dataset used for training.
+
+For training, I used Tensorflow and Keras to build an LSTM model with one LSTM layer, a Dropout layer, and a softmax classifier. The Model was then trained over 50 epochs using Sparse Categorical Cross-Entropy for loss, a learning rate of 0.001, a batch size of 64, and Keras’ optimizer Adam. The module used for training is train.py, and can be called to train the model based on the data processed in file_dataset.
+
+The Generator is in generator.py and is fed a seed sequence of chord degrees (with time offsets) and a seed melody to build on. It then generated melody MIDI data with a 1/8th note time step.
     `,
     features: [
       "Real-time melody generation",
       "Chord-aware composition",
-      "Style transfer",
+      "Machine Learning",
       "MIDI export",
       "Interactive parameters",
     ],
