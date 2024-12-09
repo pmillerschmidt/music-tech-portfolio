@@ -30,7 +30,6 @@ export default function MusicDetailPage() {
   return (
     <main className="min-h-screen bg-black">
       <div className="relative min-h-screen">
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={project.image}
@@ -46,7 +45,6 @@ export default function MusicDetailPage() {
           </div>
         </div>
 
-        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             <Link href="/music">
@@ -65,7 +63,6 @@ export default function MusicDetailPage() {
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
-              {/* Title and GitHub Link */}
               <div className="flex justify-between items-center mb-6">
                 <h1 className="text-4xl md:text-5xl font-bold text-white hero-text bg-clip-text text-transparent">
                   {project.title}
@@ -83,34 +80,30 @@ export default function MusicDetailPage() {
                 )}
               </div>
 
-              {/* Description */}
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
-                  <p className="text-white/80 text-lg">
+                  <p className="text-white/80 text-lg leading-relaxed">
                     {project.description}
                   </p>
+                  
+                  {project.audioFiles && project.audioFiles.length > 0 && (
+                    <div className="mt-8 space-y-6">
+                      <h2 className="text-xl font-semibold text-white mb-4">Audio Samples</h2>
+                      {project.audioFiles.map((audio, index) => (
+                        <div key={index} className="space-y-2">
+                          <h3 className="text-lg font-medium text-white">{audio.title}</h3>
+                          <p className="text-white/80 text-sm mb-2">{audio.description}</p>
+                          <audio
+                            controls
+                            className="w-full"
+                            src={audio.url}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
-
-              {/* Audio Files */}
-              {project.audioFiles && project.audioFiles.length > 0 && (
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-6 space-y-4">
-                    <h2 className="text-2xl font-semibold text-white mb-4">Audio Samples</h2>
-                    {project.audioFiles.map((audio, index) => (
-                      <div key={index} className="space-y-2">
-                        <h3 className="text-lg font-medium text-white">{audio.title}</h3>
-                        <p className="text-white/80 text-sm mb-2">{audio.description}</p>
-                        <audio
-                          controls
-                          className="w-full"
-                          src={audio.url}
-                        />
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
-              )}
             </motion.div>
           </div>
         </div>
