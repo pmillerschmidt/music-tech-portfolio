@@ -122,18 +122,16 @@ export function Music() {
                             </span>
                           </div>
                         </div>
-                        {project.technologies && (
-                          <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((tech) => (
-                              <span
-                                key={tech}
-                                className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        )}
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies?.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </CardContent>
                     </Card>
                   </WouterLink>
