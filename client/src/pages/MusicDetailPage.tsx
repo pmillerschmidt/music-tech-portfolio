@@ -100,13 +100,20 @@ export default function MusicDetailPage() {
                     <h2 className="text-2xl font-semibold mb-4 text-white">Project Visualization</h2>
                     <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
                       {project.isYoutubeVideo ? (
-                        <iframe
-                          src={project.videoUrl}
-                          className="w-full h-full"
-                          title={`${project.title} Demo`}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
+                        project.embedCode ? (
+                          <div 
+                            className="w-full h-full"
+                            dangerouslySetInnerHTML={{ __html: project.embedCode }}
+                          />
+                        ) : (
+                          <iframe
+                            src={project.videoUrl}
+                            className="w-full h-full"
+                            title={`${project.title} Demo`}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        )
                       ) : (
                         <video
                           src={project.videoUrl}
