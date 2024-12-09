@@ -151,23 +151,7 @@ export default function MusicDetailPage() {
                 </CardContent>
               </Card>
 
-              {/* Detailed Description */}
-              {project.detailedDescription && (
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-6">
-                    <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
-                    <div className="prose prose-invert">
-                      {project.detailedDescription.split('\n').map((paragraph, index) => (
-                        paragraph.trim() && (
-                          <p key={index} className="text-white/80 mb-4">
-                            {paragraph.trim()}
-                          </p>
-                        )
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
+              
 
               {/* Key Features */}
               {project.features && (
