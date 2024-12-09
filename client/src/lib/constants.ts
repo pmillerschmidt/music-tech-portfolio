@@ -245,25 +245,34 @@ Music generation with machine learning poses unique challenges due to the high d
   {
     title: "Artiphon Music Logic",
     summary: "Music generation system with MIDI integration",
-    description: "A melodic generation system that uses Hidden Trigram Markov models to create musical patterns with MIDI controller integration.",
-    image: "/images/midi.webp",
+    description: "A musical pattern generation system built for use with the Artiphon MIDI controller. The project uses Hidden Trigram Markov models to analyze and create melodic patterns, providing an interactive and adaptive music generation experience. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.",
+    image: "/images/artiphon-logic.jpg",
     technologies: ["C++", "JUCE Framework", "MIDI"],
     githubUrl: "https://github.com/pmillerschmidt/artiphon-logic",
     originalWorks: [
       {
-        title: "Pattern Generation Demo 1",
-        url: "/audio/artiphon-pattern1.mp3",
-        year: "2023",
+        title: "Basic Pattern Generation",
+        url: "/audio/artiphon/pattern-demo-1.mp3",
+        description: "Demonstration of the basic pattern generation capabilities using common chord progressions",
+        year: "2023"
       },
       {
-        title: "Adaptive Learning Demo",
-        url: "/audio/artiphon-pattern2.mp3",
-        year: "2023",
+        title: "Adaptive Pattern Learning",
+        url: "/audio/artiphon/adaptive-demo-1.mp3",
+        description: "Example of the system learning from user input and generating complementary patterns",
+        year: "2023"
       },
       {
-        title: "MIDI Controller Integration",
-        url: "/audio/artiphon-midi.mp3",
-        year: "2023",
+        title: "Complex Pattern Generation",
+        url: "/audio/artiphon/pattern-demo-2.mp3",
+        description: "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
+        year: "2023"
+      },
+      {
+        title: "Live Performance Demo",
+        url: "/audio/artiphon/live-demo-1.mp3",
+        description: "Recording of a live performance using the system with the Artiphon MIDI controller",
+        year: "2023"
       }
     ]
   },
