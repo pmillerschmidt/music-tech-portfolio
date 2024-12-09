@@ -78,11 +78,70 @@ export const musicProjects = [
     ],
   },
   {
+    title: "Computer Music",
+    summary: "Exploring musical machines and probabilistic composition",
+    description:
+      "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
+    image: "/images/computer-music.png",
+    githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
+    technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
+    originalWorks: [
+      {
+        title: "Hidden Markov Model Generation",
+        url: "/audio/markov-song.mp3",
+        description: "Melody and drum patterns generated using Hidden Markov Models",
+        year: "2023"
+      },
+      {
+        title: "Mealy Machine Generation",
+        url: "/audio/mealy-song.mp3",
+        description: "Melody and drum patterns generated using Mealy Machines",
+        year: "2023"
+      }
+    ],
+  },
+  {
+    title: "Visual Scoring",
+    summary: "Collaborative film score composition project",
+    description:
+      "An innovative approach to film scoring that combines visual elements with musical composition. This project explores the intersection of visual art and musical expression through a unique collaborative process.",
+    image: "/images/visual-scoring.jpg",
+    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
+    isYoutubeVideo: true,
+    technologies: [
+      "Ableton",
+      "Film Scoring",
+      "Composition",
+      "Max/MSP",
+      "Visual Programming",
+    ],
+    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale. The project explores innovative ways of representing musical ideas through visual elements, creating a unique intersection between visual art and musical composition.
+
+The score incorporates:
+- Real-time visual feedback
+- Interactive elements that respond to musical input
+- Custom-built Max/MSP patches for visual processing
+- Collaborative performance capabilities
+
+This experimental approach to scoring allows for a more intuitive and expressive way of composing and performing music, while creating an engaging visual experience for the audience.`,
+    features: [
+      "Real-time visual feedback",
+      "Interactive score elements",
+      "Custom Max/MSP patches",
+      "Collaborative performance mode",
+      "Visual programming interface",
+    ],
+  },
+];
+
+export const projects = [
+  {
     title: "Artiphon Music Logic",
-    summary: "Interactive MIDI-based pattern generation system",
+    summary: "MIDI-based pattern generation system",
+    description: "An innovative system that combines pattern recognition with real-time music generation, featuring adaptive learning and interactive performance capabilities.",
     image: "/images/midi.webp",
     technologies: ["C++", "JUCE Framework", "MIDI"],
-    description: "A pattern generation system that combines musical analysis with real-time generation, featuring adaptive learning and interactive performance capabilities.",
+    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
     detailedDescription: `The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
 
 The project features several key components:
@@ -118,107 +177,7 @@ The system demonstrates various capabilities through the included audio demonstr
         year: "2023"
       }
     ],
-    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic"
   },
-  {
-    title: "Computer Music",
-    summary: "Exploring musical machines and probabilistic composition",
-    description:
-      "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences. While the models involved are quite simple, they are well-suited to capture basic short-term coherence.",
-    image: "/images/computer-music.png",
-    githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
-    technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
-    audioFiles: [
-      {
-        title: "Hidden Markov Model Melody/Drum generation",
-        description: "Generated using HMM",
-        url: "/audio/markov-song.mp3",
-      },
-      {
-        title: "Mealy Machine Melody/Drum generation",
-        description: "Generated using Mealy machine",
-        url: "/audio/mealy-song.mp3",
-      },
-    ],
-  },
-  {
-    title: "Visual Scoring",
-    summary: "Collaborative film score composition project",
-    description:
-      "An innovative approach to film scoring that combines visual elements with musical composition. This project explores the intersection of visual art and musical expression through a unique collaborative process.",
-    image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
-    isYoutubeVideo: true,
-    technologies: [
-      "Ableton",
-      "Film Scoring",
-      "Composition",
-      "Max/MSP",
-      "Visual Programming",
-    ],
-    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale. The project explores innovative ways of representing musical ideas through visual elements, creating a unique intersection between visual art and musical composition.
-
-The score incorporates:
-- Real-time visual feedback
-- Interactive elements that respond to musical input
-- Custom-built Max/MSP patches for visual processing
-- Collaborative performance capabilities
-
-This experimental approach to scoring allows for a more intuitive and expressive way of composing and performing music, while creating an engaging visual experience for the audience.`,
-    features: [
-      "Real-time visual feedback",
-      "Interactive score elements",
-      "Custom Max/MSP patches",
-      "Collaborative performance mode",
-      "Visual programming interface",
-    ],
-  },
-  {
-    title: "Music Theory Research",
-    summary: "AI-powered music production and mastering system",
-    description:
-      "AI-powered system for automated mixing, mastering, and sound design",
-    image: "/images/smart-production.jpg",
-    technologies: ["Deep Learning", "DSP", "C++", "JUCE Framework", "Python"],
-    demoUrl: "https://smart-production.mit.edu",
-    liveDemo: true,
-    demoDescription:
-      "Experience professional-grade automated music production. Upload your tracks and let AI handle mixing, mastering, and sound design.",
-    features: [
-      "Automated mixing",
-      "AI mastering",
-      "Intelligent EQ",
-      "Dynamic processing",
-      "Spatial audio enhancement",
-    ],
-  },
-  {
-    title: "Neighborhood Music Research",
-    summary: "Context-aware adaptive music generation system",
-    description: "Context-aware AI systems for dynamic soundtrack generation",
-    image: "/images/adaptive-music.jpg",
-    technologies: [
-      "Machine Learning",
-      "Unity3D",
-      "C#",
-      "Web Audio API",
-      "Node.js",
-    ],
-    demoUrl: "https://adaptive-music.mit.edu",
-    liveDemo: true,
-    demoDescription:
-      "Experience interactive music that adapts to real-time input. Watch and hear how the system responds to different scenarios and user interactions.",
-    features: [
-      "Real-time adaptation",
-      "Emotion-based generation",
-      "Interactive parameters",
-      "Scene analysis",
-      "Seamless transitions",
-    ],
-  },
-];
-
-export const projects = [
   {
     title: "GrooveBlocks",
     description:
@@ -283,53 +242,6 @@ Music generation with machine learning poses unique challenges due to the high d
       "Machine Learning",
       "MIDI export",
       "Interactive parameters",
-    ],
-  },
-  {
-    title: "Artiphon Music Logic",
-    summary: "MIDI-based pattern generation system",
-    description: "An innovative system that combines pattern recognition with real-time music generation, featuring adaptive learning and interactive performance capabilities.",
-    image: "/images/midi.webp",
-    technologies: ["C++", "JUCE Framework", "MIDI"],
-    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
-    detailedDescription: `The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
-
-The project features several key components:
-- Pattern Analysis: Uses Hidden Trigram Markov models to understand musical patterns
-- Adaptive Learning: Continuously learns from user input to improve pattern generation
-- Real-time Processing: Generates complementary phrases during live performance
-- MIDI Integration: Seamless integration with the Artiphon MIDI controller
-
-The system demonstrates various capabilities through the included audio demonstrations, from basic pattern generation to complex adaptive performances. Each audio example showcases different aspects of the system's capabilities, from simple pattern recognition to complex adaptive learning.`,
-    originalWorks: [
-      {
-        title: "Basic Pattern Generation",
-        url: "/audio/artiphon/pattern-demo-1.mp3",
-        description:
-          "Demonstration of the basic pattern generation capabilities using common chord progressions",
-        year: "2023",
-      },
-      {
-        title: "Adaptive Pattern Learning",
-        url: "/audio/artiphon/adaptive-demo-1.mp3",
-        description:
-          "Example of the system learning from user input and generating complementary patterns",
-        year: "2023",
-      },
-      {
-        title: "Complex Pattern Generation",
-        url: "/audio/artiphon/pattern-demo-2.mp3",
-        description:
-          "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
-        year: "2023",
-      },
-      {
-        title: "Live Performance Demo",
-        url: "/audio/artiphon/live-demo-1.mp3",
-        description:
-          "Recording of a live performance using the system with the Artiphon MIDI controller",
-        year: "2023",
-      },
     ],
   },
   {
