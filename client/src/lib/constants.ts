@@ -304,34 +304,34 @@ export const projects = [
   },
   {
     title: "Chord Compass",
-    description:
-      "Music theory research project exploring harmonic relationships and compositional techniques",
+    description: "Interactive music theory tool for exploring harmonic relationships",
     image: "/images/chord-compass.jpg",
-    technologies: ["Music Theory", "Composition", "Research", "Analysis"],
-    demoUrl: "https://chord-compass.mit.edu",
-    projectUrl: "https://chord-compass.mit.edu",
-    githubUrl: "https://github.com/pmillerschmidt/chord-compass",
+    technologies: ["Web Audio API", "React", "TypeScript", "Music Theory"],
+    demoUrl: "https://chord-compass.example.com",
+    projectUrl: "https://chord-compass.example.com",
+    githubUrl: "https://github.com/yourusername/chord-compass",
     videoUrl: "/videos/chord-compass-demo.mp4",
     liveDemo: true,
-    demoDescription:
-      "Explore harmonic relationships and compositional techniques through an interactive interface.",
+    isExternalDemo: true,
+    demoDescription: "An interactive tool for exploring chord progressions and musical harmony",
     detailedDescription: `
-      Chord Compass is a research project investigating the relationships between 
-      harmonic progressions and compositional techniques in contemporary music. 
-      The project combines traditional music theory analysis with modern 
-      computational approaches to understand chord relationships and voice leading.
+      Chord Compass is an interactive web application that helps musicians and composers explore chord progressions and harmonic relationships. The tool provides a visual and auditory interface for understanding music theory concepts.
 
-      Key research areas include:
-      - Analysis of harmonic patterns in contemporary compositions
-      - Study of voice leading techniques
-      - Investigation of chord progressions in different musical styles
-      - Documentation of compositional strategies
+      Features include:
+      - Interactive chord progression builder
+      - Real-time audio playback
+      - Visual representation of chord relationships
+      - Harmony analysis tools
+      - Custom progression saving
+      
+      The application uses the Web Audio API for high-quality sound synthesis and modern web technologies for a responsive user experience.
     `,
     features: [
-      "Harmonic analysis tools",
-      "Voice leading studies",
-      "Progression visualization",
-      "Interactive examples",
+      "Real-time audio synthesis",
+      "Interactive chord wheel",
+      "Progression suggestions",
+      "Theory analysis tools",
+      "Custom voicing options"
     ],
   },
   {
