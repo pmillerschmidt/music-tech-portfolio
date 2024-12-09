@@ -155,21 +155,23 @@ export default function MusicDetailPage() {
               )}
 
               {/* Technologies */}
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-semibold mb-4 text-white">Technologies Used</h2>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              {project.technologies && (
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                  <CardContent className="p-6">
+                    <h2 className="text-2xl font-semibold mb-4 text-white">Technologies Used</h2>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
             </motion.div>
           </div>
         </div>

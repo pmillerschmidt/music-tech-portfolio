@@ -15,13 +15,13 @@ export const musicProjects = [
       {
         title: "Neural Synthesis Demo 1",
         description: "Generated using deep learning models",
-        url: "/audio/neural-synthesis-1.mp3"
+        url: "/audio/neural-synthesis-1.mp3",
       },
       {
         title: "Neural Synthesis Demo 2",
         description: "Real-time synthesis example",
-        url: "/audio/neural-synthesis-2.mp3"
-      }
+        url: "/audio/neural-synthesis-2.mp3",
+      },
     ],
     videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
     liveDemo: true,
@@ -115,26 +115,9 @@ export const musicProjects = [
   },
   {
     title: "Visual Scoring",
-    description: "Context-aware AI systems for dynamic soundtrack generation",
-    image: "/images/adaptive-music.jpg", // Place in public/images/
-    technologies: [
-      "Machine Learning",
-      "Unity3D",
-      "C#",
-      "Web Audio API",
-      "Node.js",
-    ],
-    demoUrl: "https://adaptive-music.mit.edu",
-    liveDemo: true,
-    demoDescription:
-      "Experience interactive music that adapts to real-time input. Watch and hear how the system responds to different scenarios and user interactions.",
-    features: [
-      "Real-time adaptation",
-      "Emotion-based generation",
-      "Interactive parameters",
-      "Scene analysis",
-      "Seamless transitions",
-    ],
+    description: "An innovative approach to music visualization and scoring that combines traditional notation with dynamic visual elements. This project explores new ways of representing musical structures and relationships through interactive visual designs.",
+    image: "/images/visual-scoring.jpg",
+    videoUrl: "/videos/visual-scoring-demo.mp4"
   },
 ];
 
@@ -219,7 +202,8 @@ export const projects = [
   },
   {
     title: "Artiphon Music Logic",
-    description: "Advanced melodic generation system using Hidden Trigram Markov models",
+    description:
+      "Advanced melodic generation system using Hidden Trigram Markov models",
     image: "/images/midi.webp",
     technologies: ["C++", "JUCE Framework", "DSP", "MIDI", "Real-time Audio"],
     demoUrl: "https://artiphon.mit.edu/demo",
@@ -249,7 +233,7 @@ export const projects = [
       "Custom DSP algorithms",
       "MIDI device integration",
       "Low-latency performance",
-      "Multi-channel audio support"
+      "Multi-channel audio support",
     ],
   },
   {
@@ -292,45 +276,19 @@ export const projects = [
     ],
   },
   {
-    title: "Lilypad",
-    description:
-      "AR application that creates visual representations of music in real space",
-    image: "/images/lilypad.jpg",
-    technologies: ["Unity AR", "Vuforia", "C#", "MIDI"],
-    demoUrl: "https://ar-music-viz.example.com",
-    projectUrl: "https://lilypad.mit.edu",
-    videoUrl: "/videos/lilypad-demo.mp4",
-    liveDemo: true,
-    demoDescription:
-      "See music come to life in augmented reality with interactive 3D visualizations.",
-    detailedDescription: `
-      Lilypad is an innovative augmented reality application that transforms musical data into 
-      immersive visual experiences. Using advanced computer vision and spatial audio techniques, 
-      the system creates interactive 3D visualizations that respond to music in real-time.
-
-      The project combines several cutting-edge technologies:
-      - Real-time audio analysis for feature extraction
-      - Spatial mapping for AR placement
-      - Interactive gesture recognition
-      - Multi-channel audio spatialization
-    `,
-    features: [
-      "Real-time visualization",
-      "Audio analysis",
-      "Gesture control",
-      "Spatial audio",
-      "Multi-user interaction",
-      "Custom AR markers",
-    ],
-  },
-  {
     title: "Chess Scout Bot",
     description:
       "Interactive chess AI using alpha-beta pruning and advanced heuristics",
     image: "/images/chess-scout.jpg",
-    technologies: ["JavaScript", "Chess.js", "Alpha-Beta Pruning", "AI"],
+    technologies: [
+      "JavaScript",
+      "Python",
+      "Chess.js",
+      "Alpha-Beta Pruning",
+      "Tree Search",
+    ],
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    projectUrl: "https://chess-scout.mit.edu",
+    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
     videoUrl: "/videos/chess-demo.mp4",
     liveDemo: true,
