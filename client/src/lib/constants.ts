@@ -304,35 +304,33 @@ export const projects = [
   },
   {
     title: "Chord Compass",
-    description: "A research project exploring harmonic relationships and music theory using interactive visualizations",
+    description: "Interactive music theory visualization and learning platform",
     image: "/images/chord-compass.jpg",
-    technologies: ["Music Theory", "Research", "Analysis", "Composition"],
+    technologies: ["Web Audio API", "React", "TypeScript", "Music Theory"],
     demoUrl: "https://chord-compass.mit.edu",
     projectUrl: "https://chord-compass.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/chord-compass",
     videoUrl: "/videos/chord-compass-demo.mp4",
     liveDemo: true,
-    demoDescription: "Explore harmonic relationships and music theory concepts through interactive visualizations and real-time audio feedback",
+    demoDescription: "Explore musical harmony and chord progressions through an interactive, visual interface with real-time audio feedback",
     detailedDescription: `
-      Chord Compass is a music theory research project that investigates the relationships between 
-      harmonic progressions and compositional techniques in contemporary music. The project combines 
-      traditional music theory analysis with modern computational approaches.
+      Chord Compass is an innovative web application designed to make music theory and harmonic relationships accessible through interactive visualizations. The platform provides real-time audio feedback and intuitive visual representations of complex musical concepts.
 
-      Key research areas include:
-      - Analysis of harmonic patterns in contemporary compositions
-      - Study of voice leading techniques and their applications
-      - Investigation of chord progressions across different musical styles
-      - Documentation of compositional strategies and patterns
+      Key features include:
+      - Interactive chord wheel for exploring harmonic relationships
+      - Real-time audio synthesis of chord progressions
+      - Visual representation of voice leading and chord connections
+      - Customizable progression builder with MIDI export
+      - Integrated lessons and exercises for music theory concepts
       
-      The project aims to bridge the gap between theoretical understanding and practical application 
-      in musical composition through interactive tools and visualizations.
+      Built using modern web technologies, the application offers a responsive and engaging experience for musicians, students, and educators.
     `,
     features: [
-      "Harmonic analysis tools",
-      "Voice leading visualization",
-      "Interactive progression explorer",
-      "Pattern recognition system",
-      "Compositional strategy guide"
+      "Interactive chord wheel",
+      "Real-time audio synthesis",
+      "Visual progression mapping",
+      "Custom voicing creation",
+      "Theory lesson integration"
     ],
   },
   {
