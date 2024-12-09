@@ -115,9 +115,19 @@ export const musicProjects = [
   },
   {
     title: "Visual Scoring",
-    description: "An innovative approach to music visualization and scoring that combines traditional notation with dynamic visual elements. This project explores new ways of representing musical structures and relationships through interactive visual designs.",
+    description: "Innovative approach to music visualization combining traditional notation with dynamic visual elements",
     image: "/images/visual-scoring.jpg",
-    videoUrl: "/videos/visual-scoring-demo.mp4"
+    videoUrl: "/videos/visual-scoring-demo.mp4",
+    detailedDescription: `The Visual Scoring project represents a groundbreaking approach to music visualization and scoring, 
+    combining traditional musical notation with dynamic visual elements. This project explores new ways of representing musical 
+    structures and relationships through interactive visual designs.
+
+    The system creates a bridge between conventional music notation and modern digital visualization techniques, offering musicians 
+    and composers new ways to understand and interact with musical compositions. By incorporating real-time visual feedback and 
+    innovative graphical representations, the project makes complex musical concepts more accessible and intuitive.
+
+    Through this unique visualization approach, musicians can better understand the relationships between different musical elements, 
+    from harmony and rhythm to form and texture. The project demonstrates how visual design can enhance musical understanding and creativity.`
   },
 ];
 
