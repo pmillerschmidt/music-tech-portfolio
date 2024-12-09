@@ -86,17 +86,65 @@ export default function MusicDetailPage() {
                     {project.description}
                   </p>
                   
-                  {project.audioFiles && project.audioFiles.length > 0 && (
+                  {/* Original Works Section */}
+                  {project.originalWorks && (
                     <div className="mt-8 space-y-6">
-                      <h2 className="text-xl font-semibold text-white mb-4">Audio Samples</h2>
-                      {project.audioFiles.map((audio, index) => (
-                        <div key={index} className="space-y-2">
-                          <h3 className="text-lg font-medium text-white">{audio.title}</h3>
-                          <p className="text-white/80 text-sm mb-2">{audio.description}</p>
+                      <h2 className="text-2xl font-semibold text-white mb-6">Original Works</h2>
+                      {project.originalWorks.map((work, index) => (
+                        <div key={index} className="bg-white/5 rounded-lg p-4 space-y-2">
+                          <div className="flex justify-between items-center">
+                            <h3 className="text-lg font-medium text-white">{work.title}</h3>
+                            <span className="text-white/60 text-sm">{work.year}</span>
+                          </div>
+                          <p className="text-white/80 text-sm mb-3">{work.description}</p>
                           <audio
                             controls
                             className="w-full"
-                            src={audio.url}
+                            src={work.url}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Collaborations Section */}
+                  {project.collaborations && (
+                    <div className="mt-8 space-y-6">
+                      <h2 className="text-2xl font-semibold text-white mb-6">Collaborations</h2>
+                      {project.collaborations.map((collab, index) => (
+                        <div key={index} className="bg-white/5 rounded-lg p-4 space-y-2">
+                          <div className="flex justify-between items-center">
+                            <h3 className="text-lg font-medium text-white">{collab.title}</h3>
+                            <span className="text-white/60 text-sm">{collab.year}</span>
+                          </div>
+                          <p className="text-white/80 text-sm">with {collab.collaborator}</p>
+                          <p className="text-white/80 text-sm mb-3">{collab.description}</p>
+                          <audio
+                            controls
+                            className="w-full"
+                            src={collab.url}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Remixes Section */}
+                  {project.remixes && (
+                    <div className="mt-8 space-y-6">
+                      <h2 className="text-2xl font-semibold text-white mb-6">Remixes</h2>
+                      {project.remixes.map((remix, index) => (
+                        <div key={index} className="bg-white/5 rounded-lg p-4 space-y-2">
+                          <div className="flex justify-between items-center">
+                            <h3 className="text-lg font-medium text-white">{remix.title}</h3>
+                            <span className="text-white/60 text-sm">{remix.year}</span>
+                          </div>
+                          <p className="text-white/80 text-sm">Original by {remix.originalArtist}</p>
+                          <p className="text-white/80 text-sm mb-3">{remix.description}</p>
+                          <audio
+                            controls
+                            className="w-full"
+                            src={remix.url}
                           />
                         </div>
                       ))}

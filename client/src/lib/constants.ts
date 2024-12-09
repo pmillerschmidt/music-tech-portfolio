@@ -7,22 +7,54 @@
 export const musicProjects = [
   {
     title: "Discography",
-    summary: "Advanced deep learning models for music synthesis",
-    description:
-      "Advanced deep learning models for real-time audio synthesis and generative music composition",
+    summary: "Collection of original works, collaborations, and remixes",
+    description: "A comprehensive collection of my musical works spanning various genres and styles. From original compositions to collaborative projects and innovative remixes, this portfolio showcases my journey in music production and sound design.",
     image: "/images/neural-synthesis.jpg",
-    technologies: ["TensorFlow", "PyTorch", "Web Audio API", "React", "Python"],
-    audioFiles: [
+    originalWorks: [
       {
-        title: "Neural Synthesis Demo 1",
-        description: "Generated using deep learning models",
-        url: "/audio/neural-synthesis-1.mp3",
+        title: "Synthesis Study No. 1",
+        description: "An exploration of granular synthesis and generative composition",
+        url: "/audio/synthesis-1.mp3",
+        year: "2023"
       },
       {
-        title: "Neural Synthesis Demo 2",
-        description: "Real-time synthesis example",
-        url: "/audio/neural-synthesis-2.mp3",
+        title: "Electronic Suite",
+        description: "A three-part suite combining classical form with electronic elements",
+        url: "/audio/electronic-suite.mp3",
+        year: "2023"
+      }
+    ],
+    collaborations: [
+      {
+        title: "Neural Networks",
+        description: "A collaborative piece exploring the intersection of AI and human creativity",
+        collaborator: "Baltazar Lora",
+        url: "/audio/neural-networks.mp3",
+        year: "2024"
       },
+      {
+        title: "Digital Horizons",
+        description: "An experimental electronic piece created with live coding",
+        collaborator: "Alex Chen",
+        url: "/audio/digital-horizons.mp3",
+        year: "2023"
+      }
+    ],
+    remixes: [
+      {
+        title: "Reimagined Patterns",
+        description: "A reinterpretation of classical minimalist works through electronic means",
+        originalArtist: "Steve Reich",
+        url: "/audio/reimagined-patterns.mp3",
+        year: "2024"
+      },
+      {
+        title: "Electronic Variations",
+        description: "Modern take on baroque counterpoint using synthesis techniques",
+        originalArtist: "J.S. Bach",
+        url: "/audio/electronic-variations.mp3",
+        year: "2023"
+      }
     ],
     videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
     liveDemo: true,
@@ -71,6 +103,26 @@ export const musicProjects = [
     ],
   },
   {
+    title: "Visual Scoring",
+    summary: "Collaborative film score composition project",
+    description: "Film score composition project",
+    image: "/images/visual-scoring.jpg",
+    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
+    isYoutubeVideo: true,
+    technologies: ["Logic Pro", "Film Scoring", "Composition", "Orchestration"],
+    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
+  },
+  {
+    title: "Performance",
+    summary: "",
+    description: "Film score composition project",
+    image: "/images/visual-scoring.jpg",
+    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
+    isYoutubeVideo: true,
+    technologies: ["Logic Pro", "Film Scoring", "Composition", "Orchestration"],
+    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
+  },
+  {
     title: "Music Theory Research",
     summary: "AI-powered music production and mastering system",
     description:
@@ -112,17 +164,7 @@ export const musicProjects = [
       "Scene analysis",
       "Seamless transitions",
     ],
-  },
-  {
-    title: "Visual Scoring",
-    summary: "Collaborative film score composition project",
-    description: "Film score composition project",
-    image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
-    isYoutubeVideo: true,
-    technologies: ["Logic Pro", "Film Scoring", "Composition", "Orchestration"],
-    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
-  },
+  }
 ];
 
 export const projects = [
