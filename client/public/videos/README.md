@@ -18,6 +18,12 @@ Place your hero background video here as `hero-background.mp4` with the followin
 
 ## Current Videos:
 - hero-background.mp4 - Homepage hero section background
+- visual-scoring-demo.mp4 - Visual scoring project demo video
+  - Resolution: 1920x1080 recommended
+  - Format: MP4 (H.264 codec)
+  - Duration: 1-3 minutes
+  - Content: Show the visual scoring system in action
+  - Size: Optimize for web (max 10MB recommended)
 
 ## Fallback
 If the video fails to load or for mobile devices, the system will automatically fall back to the static image at `/images/hero-background.jpg`
