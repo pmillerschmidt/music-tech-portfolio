@@ -93,20 +93,11 @@ export default function MusicDetailPage() {
                 </Card>
               )}
 
-              {/* Short Description */}
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                <CardContent className="p-6">
-                  <p className="text-white/80 text-lg">
-                    {project.description}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Demo Video Section */}
+              {/* Video Section - Displayed First */}
               {project.videoUrl && (
                 <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                   <CardContent className="p-6">
-                    <h2 className="text-2xl font-semibold mb-4 text-white">Project Demo</h2>
+                    <h2 className="text-2xl font-semibold mb-4 text-white">Project Visualization</h2>
                     <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
                       <video
                         src={project.videoUrl}
@@ -118,6 +109,28 @@ export default function MusicDetailPage() {
                   </CardContent>
                 </Card>
               )}
+
+              {/* Description */}
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                <CardContent className="p-6">
+                  <h2 className="text-2xl font-semibold mb-4 text-white">About</h2>
+                  <div className="prose prose-invert">
+                    {project.detailedDescription ? (
+                      project.detailedDescription.split('\n').map((paragraph, index) => (
+                        paragraph.trim() && (
+                          <p key={index} className="text-white/80 mb-4">
+                            {paragraph.trim()}
+                          </p>
+                        )
+                      ))
+                    ) : (
+                      <p className="text-white/80 text-lg">
+                        {project.description}
+                      </p>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Detailed Description */}
               {project.detailedDescription && (
