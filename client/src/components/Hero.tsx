@@ -23,8 +23,8 @@ export function Hero() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const videoUrl = "/videos/hero-background.mp4"; // Place your video in public/videos/hero-background.mp4
-  const fallbackImage = "/images/hero.jpeg"; // Place your image in public/images/hero-background.jpg";
+  const videoUrl = "/videos/hero-background.mp4"; // Video background for desktop
+  const fallbackImage = "/images/hero.jpeg"; // Fallback image for mobile and error cases
 
   const { toast } = useToast();
 
@@ -66,8 +66,9 @@ export function Hero() {
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             }`}
             style={{
-              filter: "brightness(0.7) contrast(1.1)",
+              filter: "brightness(0.6) contrast(1.2) saturate(1.2)",
               willChange: "transform",
+              transform: "scale(1.05)",
             }}
           />
         )}
