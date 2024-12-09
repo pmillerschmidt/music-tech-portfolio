@@ -245,7 +245,7 @@ Music generation with machine learning poses unique challenges due to the high d
   {
     title: "Artiphon Music Logic",
     summary: "MIDI-based pattern generation system for interactive music creation",
-    description: "A musical pattern generation system built for use with the Artiphon MIDI controller. The project uses Hidden Trigram Markov models to analyze and create melodic patterns, providing an interactive and adaptive music generation experience.",
+    description: "A musical pattern generation system built for use with the Artiphon MIDI controller. The project uses Hidden Trigram models to analyze and create melodic patterns, providing an interactive and adaptive music generation experience.",
     image: "/images/midi.webp",
     technologies: ["C++", "JUCE Framework", "MIDI"],
     githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
