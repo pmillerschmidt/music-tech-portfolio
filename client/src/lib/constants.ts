@@ -360,10 +360,9 @@ export const projects = [
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
-    videoUrl: "https://www.youtube.com/watch?v=fieytpoR_04",
+    videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
     liveDemo: true,
-    embedDemo: true,
-    isExternalDemo: false,
+    isYoutubeVideo: true,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     features: [
