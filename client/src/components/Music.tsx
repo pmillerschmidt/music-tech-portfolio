@@ -105,7 +105,7 @@ export function Music() {
                           {project.title}
                         </CardTitle>
                         <CardDescription className="text-white/70">
-                          {project.description}
+                          {project.summary}
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
