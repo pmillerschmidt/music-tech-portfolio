@@ -244,37 +244,52 @@ Music generation with machine learning poses unique challenges due to the high d
   },
   {
     title: "Artiphon Music Logic",
-    summary: "Music generation system with MIDI integration",
-    description: "A musical pattern generation system built for use with the Artiphon MIDI controller. The project uses Hidden Trigram Markov models to analyze and create melodic patterns, providing an interactive and adaptive music generation experience. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.",
-    image: "/images/artiphon-logic/main.jpg",
+    summary: "Music generation system with MIDI integration and adaptive pattern learning",
+    description:
+      "A musical pattern generation system built for use with the Artiphon MIDI controller. The project uses Hidden Trigram Markov models to analyze and create melodic patterns, providing an interactive and adaptive music generation experience.",
+    image: "/images/midi.webp",
     technologies: ["C++", "JUCE Framework", "MIDI"],
-    githubUrl: "https://github.com/pmillerschmidt/artiphon-logic",
+    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
+    detailedDescription: `
+      The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
+
+      The project features several key components:
+      - Pattern Analysis: Uses Hidden Trigram Markov models to understand musical patterns
+      - Adaptive Learning: Continuously learns from user input to improve pattern generation
+      - Real-time Processing: Generates complementary phrases during live performance
+      - MIDI Integration: Seamless integration with the Artiphon MIDI controller
+
+      The system demonstrates various capabilities through the included audio demonstrations, from basic pattern generation to complex adaptive performances.`,
     originalWorks: [
       {
         title: "Basic Pattern Generation",
         url: "/audio/artiphon/pattern-demo-1.mp3",
-        description: "Demonstration of the basic pattern generation capabilities using common chord progressions",
-        year: "2023"
+        description:
+          "Demonstration of the basic pattern generation capabilities using common chord progressions",
+        year: "2023",
       },
       {
         title: "Adaptive Pattern Learning",
         url: "/audio/artiphon/adaptive-demo-1.mp3",
-        description: "Example of the system learning from user input and generating complementary patterns",
-        year: "2023"
+        description:
+          "Example of the system learning from user input and generating complementary patterns",
+        year: "2023",
       },
       {
         title: "Complex Pattern Generation",
         url: "/audio/artiphon/pattern-demo-2.mp3",
-        description: "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
-        year: "2023"
+        description:
+          "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
+        year: "2023",
       },
       {
         title: "Live Performance Demo",
         url: "/audio/artiphon/live-demo-1.mp3",
-        description: "Recording of a live performance using the system with the Artiphon MIDI controller",
-        year: "2023"
-      }
-    ]
+        description:
+          "Recording of a live performance using the system with the Artiphon MIDI controller",
+        year: "2023",
+      },
+    ],
   },
   {
     title: "Q-tar",
@@ -299,7 +314,7 @@ Music generation with machine learning poses unique challenges due to the high d
     title: "nextChord",
     description:
       "AI-powered chord progression generator with real-time synthesis",
-    image: "/images/nextchord.jpg",
+    image: "/images/next-chord.png",
     technologies: ["TensorFlow", "Machine Learning", "React", "Web Audio API"],
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     projectUrl: "https://pmillerschmidt.github.io/ChordCompass/",
