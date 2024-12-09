@@ -117,8 +117,8 @@ export const musicProjects = [
     title: "Visual Scoring",
     description: "Film score composition project",
     image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
-    embedCode: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/W0jj0Gkzsc8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    videoUrl: "https://www.youtube.com/watch?v=W0jj0Gkzsc8",
+    embedCode: "https://www.youtube.com/watch?v=W0jj0Gkzsc8", // Optional: Use this for private videos with custom embed code
     isYoutubeVideo: true,
     detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
   },
@@ -175,7 +175,9 @@ export const projects = [
     demoUrl: "https://melgen.mit.edu/demo",
     projectUrl: "https://melgen.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/MelGen",
-    videoUrl: "/videos/melgen-demo.mp4",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual MelGen video ID
+    embedCode: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // Replace with actual MelGen video ID
+    isYoutubeVideo: true,
     liveDemo: true,
     demoDescription:
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
@@ -283,6 +285,33 @@ export const projects = [
     description:
       "Interactive chess AI using alpha-beta pruning and advanced heuristics",
     image: "/images/chess-scout.jpg",
+    technologies: [
+      "JavaScript",
+      "Python",
+      "Chess.js",
+      "Alpha-Beta Pruning",
+      "Tree Search",
+    ],
+    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
+    videoUrl: "/videos/chess-demo.mp4",
+    liveDemo: true,
+    embedDemo: true,
+    isExternalDemo: false,
+    demoDescription:
+      "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
+    features: [
+      "Alpha-beta pruning algorithm",
+      "Position evaluation",
+      "Interactive chess board",
+      "Real-time move calculation",
+    ],
+  },
+  {
+    title: "Brookline Teen Center Makerspace",
+    description: "Makerspace and program",
+    image: "/images/makerspace.jpg",
     technologies: [
       "JavaScript",
       "Python",
