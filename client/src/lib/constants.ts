@@ -115,21 +115,13 @@ export const musicProjects = [
   },
   {
     title: "Visual Scoring",
-    description: "Innovative approach to music visualization combining traditional notation with dynamic visual elements",
+    description:
+      "Film score composition project",
     image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID?modestbranding=1&rel=0",
-    embedCode: "", // Optional: Use this for private videos with custom embed code
+    videoUrl: "https://youtu.be/W0jj0Gkzsc8",
+    embedCode: "https://youtu.be/W0jj0Gkzsc8", // Optional: Use this for private videos with custom embed code
     isYoutubeVideo: true,
-    detailedDescription: `The Visual Scoring project represents a groundbreaking approach to music visualization and scoring, 
-    combining traditional musical notation with dynamic visual elements. This project explores new ways of representing musical 
-    structures and relationships through interactive visual designs.
-
-    The system creates a bridge between conventional music notation and modern digital visualization techniques, offering musicians 
-    and composers new ways to understand and interact with musical compositions. By incorporating real-time visual feedback and 
-    innovative graphical representations, the project makes complex musical concepts more accessible and intuitive.
-
-    Through this unique visualization approach, musicians can better understand the relationships between different musical elements, 
-    from harmony and rhythm to form and texture. The project demonstrates how visual design can enhance musical understanding and creativity.`
+    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://www.example.com/baltazar-lora" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale. You can watch the full performance on <a href="https://youtu.be/W0jj0Gkzsc8" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">YouTube</a>.`,
   },
 ];
 
