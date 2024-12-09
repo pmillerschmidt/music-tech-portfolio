@@ -303,34 +303,37 @@ export const projects = [
     ],
   },
   {
-    title: "Chord Compass",
-    description: "Interactive music theory visualization and learning platform",
-    image: "/images/chord-compass.jpg",
-    technologies: ["Web Audio API", "React", "TypeScript", "Music Theory"],
-    demoUrl: "https://chord-compass.mit.edu",
-    projectUrl: "https://chord-compass.mit.edu",
-    githubUrl: "https://github.com/pmillerschmidt/chord-compass",
-    videoUrl: "/videos/chord-compass-demo.mp4",
+    title: "nextChord",
+    description: "AI-powered chord progression generator with real-time synthesis",
+    image: "/images/nextchord.jpg",
+    technologies: ["TensorFlow.js", "Web Audio API", "React", "Music Theory"],
+    demoUrl: "https://nextchord.mit.edu/demo",
+    projectUrl: "https://nextchord.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/nextchord",
+    videoUrl: "/videos/nextchord-demo.mp4",
     liveDemo: true,
-    demoDescription: "Explore musical harmony and chord progressions through an interactive, visual interface with real-time audio feedback",
+    demoDescription: "Experience real-time chord progression generation powered by machine learning, with instant audio playback and visualization",
     detailedDescription: `
-      Chord Compass is an innovative web application designed to make music theory and harmonic relationships accessible through interactive visualizations. The platform provides real-time audio feedback and intuitive visual representations of complex musical concepts.
+      nextChord is an innovative web application that combines artificial intelligence with music theory 
+      to generate meaningful and creative chord progressions. The system learns from a vast dataset of 
+      musical pieces to understand harmonic relationships and musical structure.
 
       Key features include:
-      - Interactive chord wheel for exploring harmonic relationships
-      - Real-time audio synthesis of chord progressions
-      - Visual representation of voice leading and chord connections
-      - Customizable progression builder with MIDI export
-      - Integrated lessons and exercises for music theory concepts
+      - AI-powered chord progression generation
+      - Real-time audio synthesis and visualization
+      - Style-based generation (Jazz, Classical, Pop)
+      - MIDI export functionality
+      - Interactive progression editing
       
-      Built using modern web technologies, the application offers a responsive and engaging experience for musicians, students, and educators.
+      The application uses TensorFlow.js for client-side AI processing and Web Audio API for 
+      high-quality sound synthesis, providing a responsive and professional experience.
     `,
     features: [
-      "Interactive chord wheel",
+      "AI chord generation",
       "Real-time audio synthesis",
-      "Visual progression mapping",
-      "Custom voicing creation",
-      "Theory lesson integration"
+      "Multiple musical styles",
+      "MIDI export capability",
+      "Interactive editing",
     ],
   },
   {
