@@ -103,7 +103,7 @@ export const musicProjects = [
     summary: "Collaborative film score composition project",
     description: "An innovative approach to film scoring that combines visual elements with musical composition. This project explores the intersection of visual art and musical expression through a unique collaborative process.",
     image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=W0jj0Gkzsc8",
+    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
     isYoutubeVideo: true,
     technologies: ["Ableton", "Film Scoring", "Composition", "Max/MSP", "Visual Programming"],
     detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale. The project explores innovative ways of representing musical ideas through visual elements, creating a unique intersection between visual art and musical composition.
