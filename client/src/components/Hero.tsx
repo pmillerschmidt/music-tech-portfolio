@@ -52,13 +52,34 @@ export function Hero() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Container */}
       <div className="absolute inset-0 z-0">
+        {!isMobile && !isVideoError && (
+          <motion.video
+            key="hero-video"
+            src={videoUrl}
+            autoPlay
+            loop
+            muted
+            playsInline
+            onLoadedData={handleVideoLoaded}
+            onError={handleVideoError}
+            className={`absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110 ${
+              isVideoLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              filter: "brightness(0.7) contrast(1.1)",
+              willChange: "transform",
+            }}
+          />
+        )}
+        
         <motion.img
-          // Replace this URL with your own image
-          src="/images/hero.jpeg"
+          src={fallbackImage}
           alt="Creative Technology Background"
-          className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
+          className={`absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110 ${
+            (!isVideoLoaded || isMobile || isVideoError) ? 'opacity-100' : 'opacity-0'
+          }`}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: (!isVideoLoaded || isMobile || isVideoError) ? 1 : 0 }}
           transition={{ duration: 0.5 }}
           loading="eager"
           style={{
