@@ -23,8 +23,10 @@ export function Hero() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Video and image URLs
   const videoUrl = "/videos/hero-background.mp4"; // Video background for desktop
   const fallbackImage = "/images/hero.jpeg"; // Fallback image for mobile and error cases
+  const [isLoading, setIsLoading] = useState(true);
 
   const { toast } = useToast();
 
@@ -60,15 +62,18 @@ export function Hero() {
             loop
             muted
             playsInline
-            onLoadedData={handleVideoLoaded}
+            onLoadStart={() => setIsLoading(true)}
+            onLoadedData={() => {
+              handleVideoLoaded();
+              setIsLoading(false);
+            }}
             onError={handleVideoError}
-            className={`absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110 ${
-              isVideoLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 w-full h-full object-cover transform scale-105 transition-all duration-1000 ${
+              isVideoLoaded && !isLoading ? 'opacity-100' : 'opacity-0'
+            } hover:scale-110`}
             style={{
               filter: "brightness(0.6) contrast(1.2) saturate(1.2)",
               willChange: "transform",
-              transform: "scale(1.05)",
             }}
           />
         )}
