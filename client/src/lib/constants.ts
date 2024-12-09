@@ -117,8 +117,8 @@ export const musicProjects = [
     title: "Visual Scoring",
     description: "Film score composition project",
     image: "/images/visual-scoring.jpg",
-    videoUrl: "https://youtu.be/W0jj0Gkzsc8",
-    embedCode: "https://youtu.be/W0jj0Gkzsc8", // Optional: Use this for private videos with custom embed code
+    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
+    embedCode: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/W0jj0Gkzsc8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     isYoutubeVideo: true,
     detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
   },
