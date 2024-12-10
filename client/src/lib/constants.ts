@@ -179,44 +179,46 @@ The system demonstrates various capabilities through the included audio demonstr
     ],
   },
   {
-    title: "GrooveBlocks",
-    description:
-      "Modular musical building blocks for composition-based music education",
-    image: "/images/grooveblocks.png",
-    technologies: [
-      "Java",
-      "Embedded Systems",
-      "Digital Signal Processing",
-      "C++",
-    ],
-    demoUrl: "https://grooveblocks.mit.edu/demo",
-    projectUrl: "https://grooveblocks.mit.edu",
-    githubUrl: "https://github.com/pmillerschmidt/GrooveBlocks",
-    videoUrl: "/videos/grooveblocks-demo.mp4",
-    liveDemo: true,
-    demoDescription:
-      "Experience interactive music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis in real-time.",
-    detailedDescription: `
-      GrooveBlocks is an innovative music education platform that combines hands-on learning with advanced 
-      digital signal processing. The system uses modular hardware blocks that students can physically 
-      arrange to create musical compositions.
+    title: "Artiphon Music Logic",
+    summary: "MIDI-based pattern generation system",
+    description: "An innovative system that combines pattern recognition with real-time music generation, featuring adaptive learning and interactive performance capabilities.",
+    image: "/images/midi.webp",
+    technologies: ["C++", "JUCE Framework", "MIDI"],
+    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
+    detailedDescription: `The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
 
-      Each block represents different musical elements:
-      - Rhythm blocks for creating beat patterns
-      - Melody blocks for pitch sequences
-      - Effect blocks for sound modification
-      - Control blocks for overall composition structure
+The project features several key components:
+- Pattern Analysis: Uses Hidden Trigram Markov models to understand musical patterns
+- Adaptive Learning: Continuously learns from user input to improve pattern generation
+- Real-time Processing: Generates complementary phrases during live performance
+- MIDI Integration: Seamless integration with the Artiphon MIDI controller
 
-      The hardware seamlessly integrates with a companion software that provides real-time 
-      visualization and additional composition tools. This hybrid approach makes music theory 
-      and composition accessible to students of all skill levels.
-    `,
-    features: [
-      "Real-time audio synthesis",
-      "Neural network-based generation",
-      "Interactive pattern creation",
-      "Multi-track mixing capabilities",
-      "MIDI export functionality",
+The system demonstrates various capabilities through the included audio demonstrations, from basic pattern generation to complex adaptive performances. Each audio example showcases different aspects of the system's capabilities, from simple pattern recognition to complex adaptive learning.`,
+    originalWorks: [
+      {
+        title: "Basic Pattern Generation",
+        url: "/audio/artiphon/pattern-demo-1.mp3",
+        description: "Demonstration of the basic pattern generation capabilities using common chord progressions",
+        year: "2023"
+      },
+      {
+        title: "Adaptive Pattern Learning",
+        url: "/audio/artiphon/adaptive-demo-1.mp3",
+        description: "Example of the system learning from user input and generating complementary patterns",
+        year: "2023"
+      },
+      {
+        title: "Complex Pattern Generation",
+        url: "/audio/artiphon/pattern-demo-2.mp3",
+        description: "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
+        year: "2023"
+      },
+      {
+        title: "Live Performance Demo",
+        url: "/audio/artiphon/live-demo-1.mp3",
+        description: "Recording of a live performance using the system with the Artiphon MIDI controller",
+        year: "2023"
+      }
     ],
   },
   {
