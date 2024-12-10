@@ -95,8 +95,8 @@ export function Projects() {
           </div>
           </div>
 
-          {/* Second set of projects - appears on scroll */}
-          <div className="min-h-screen flex items-center">
+          {/* Second set of projects - partially visible */}
+          <div className="min-h-screen flex items-start -mt-48">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               {projects.slice(3, 6).map((project, index) => (
               <motion.div
