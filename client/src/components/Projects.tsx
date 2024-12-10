@@ -28,124 +28,127 @@ export function Projects() {
         </div>
 
         {/* Content container */}
-        <div className="relative z-10 container mx-auto px-4">
+        <div className="relative z-10">
           {/* First viewport - initial view */}
-          <div className="h-screen flex flex-col justify-center">
-            <motion.h2
-              className="text-4xl font-bold mb-8 text-center text-white hero-text bg-clip-text text-transparent"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-            >
-              Featured Projects
-            </motion.h2>
-
-            {/* First three projects */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {projects.slice(0, 3).map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+          <div className="h-screen flex items-center">
+            <div className="container mx-auto px-4">
+              <motion.h2
+                className="text-4xl font-bold mb-8 text-center text-white hero-text bg-clip-text text-transparent"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="w-full"
               >
-                <Link href={`/projects/${index}`}>
-                  <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
-                    <CardHeader className="p-4">
-                      <CardTitle className="text-white">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="text-white/70">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="p-4">
-                      <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
-                          <span className="text-white font-medium flex items-center">
-                            View Details
-                            <ExternalLink className="w-4 h-4 ml-2" />
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+                Featured Projects
+              </motion.h2>
 
-          </div>
+              {/* First three projects */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {projects.slice(0, 3).map((project, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="w-full"
+                  >
+                    <Link href={`/projects/${index}`}>
+                      <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
+                        <CardHeader className="p-4">
+                          <CardTitle className="text-white">
+                            {project.title}
+                          </CardTitle>
+                          <CardDescription className="text-white/70">
+                            {project.description}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent className="p-4">
+                          <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                            <img
+                              src={project.image}
+                              alt={project.title}
+                              className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                              <span className="text-white font-medium flex items-center">
+                                View Details
+                                <ExternalLink className="w-4 h-4 ml-2" />
+                              </span>
+                            </div>
+                          </div>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Second set of projects - partially visible */}
-          <div className="min-h-screen flex items-start -mt-48">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-              {projects.slice(3, 6).map((project, index) => (
-              <motion.div
-                key={index + 3}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="w-full"
-              >
-                <Link href={`/projects/${index + 3}`}>
-                  <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
-                    <CardHeader className="p-4">
-                      <CardTitle className="text-white">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="text-white/70">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="p-4">
-                      <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
-                          <span className="text-white font-medium flex items-center">
-                            View Details
-                            <ExternalLink className="w-4 h-4 ml-2" />
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </motion.div>
-            ))}
+          <div className="h-screen -mt-32">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {projects.slice(3, 6).map((project, index) => (
+                  <motion.div
+                    key={index + 3}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="w-full"
+                  >
+                    <Link href={`/projects/${index + 3}`}>
+                      <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
+                        <CardHeader className="p-4">
+                          <CardTitle className="text-white">
+                            {project.title}
+                          </CardTitle>
+                          <CardDescription className="text-white/70">
+                            {project.description}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent className="p-4">
+                          <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                            <img
+                              src={project.image}
+                              alt={project.title}
+                              className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                              <span className="text-white font-medium flex items-center">
+                                View Details
+                                <ExternalLink className="w-4 h-4 ml-2" />
+                              </span>
+                            </div>
+                          </div>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
