@@ -16,7 +16,7 @@ export function Projects() {
       id="projects"
       className="relative"
     >
-      <div className="min-h-[200vh] relative">
+      <div className="min-h-[150vh] relative">
         {/* Background that covers entire section */}
         <div className="fixed inset-0 z-0">
           <img
