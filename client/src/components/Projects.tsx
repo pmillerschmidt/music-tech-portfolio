@@ -14,7 +14,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-12 min-h-screen"
+      className="relative py-20"
     >
       <div className="absolute inset-0 z-0">
         <img
@@ -27,7 +27,7 @@ export function Projects() {
 
       <div className="container relative z-10 mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold mb-8 text-center text-white hero-text bg-clip-text text-transparent"
+          className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -35,8 +35,8 @@ export function Projects() {
           Featured Projects
         </motion.h2>
 
-        <div className="space-y-8">
-          {/* First row - First 3 projects */}
+        <div className="space-y-24">
+          {/* First three projects */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projects.slice(0, 3).map((project, index) => (
               <motion.div
@@ -88,7 +88,7 @@ export function Projects() {
             ))}
           </div>
 
-          {/* Second row - Next 3 projects */}
+          {/* Next three projects */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projects.slice(3, 6).map((project, index) => (
               <motion.div
