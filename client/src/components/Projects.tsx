@@ -16,8 +16,8 @@ export function Projects() {
       id="projects"
       className="relative"
     >
-      {/* First Projects Section - Full Viewport Height */}
-      <div className="min-h-screen relative py-20">
+      {/* First Projects Section - Exactly Screen Height */}
+      <div className="h-screen relative flex flex-col justify-center">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/projects-inverted.jpg"
@@ -27,9 +27,9 @@ export function Projects() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-md" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-4">
+        <div className="container relative z-10 mx-auto px-4 h-full flex flex-col justify-center">
           <motion.h2
-            className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
+            className="text-4xl font-bold mb-8 text-center text-white hero-text bg-clip-text text-transparent"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -38,7 +38,7 @@ export function Projects() {
           </motion.h2>
 
           {/* First three projects */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projects.slice(0, 3).map((project, index) => (
               <motion.div
                 key={index}
