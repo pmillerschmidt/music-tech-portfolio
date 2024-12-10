@@ -40,7 +40,7 @@ export function Music() {
   };
 
   return (
-    <section id="music" className="relative py-8 min-h-screen flex items-center">
+    <section id="music" className="relative py-4 min-h-screen flex items-center -mt-24">
       <div className="absolute inset-0 z-0">
         <img
           src="/images/music-background.png"
