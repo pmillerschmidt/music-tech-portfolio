@@ -30,7 +30,7 @@ export function Projects() {
         {/* Content container */}
         <div className="relative z-10">
           {/* First viewport - initial view */}
-          <div className="h-screen flex items-center">
+          <div className="min-h-screen flex items-center py-20">
             <div className="container mx-auto px-4">
               <motion.h2
                 className="text-4xl font-bold mb-8 text-center text-white hero-text bg-clip-text text-transparent"
@@ -96,7 +96,7 @@ export function Projects() {
           </div>
 
           {/* Second set of projects - partially visible */}
-          <div className="h-screen -mt-16">
+          <div className="min-h-screen pt-20">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {projects.slice(3, 6).map((project, index) => (
