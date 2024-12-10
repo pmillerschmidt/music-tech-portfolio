@@ -14,30 +14,31 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-20"
+      className="relative"
     >
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/images/projects-inverted.jpg"
-          alt="Projects Background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-md" />
-      </div>
+      {/* First Projects Section - Full Viewport Height */}
+      <div className="min-h-screen relative py-20">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/projects-inverted.jpg"
+            alt="Projects Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-md" />
+        </div>
 
-      <div className="container relative z-10 mx-auto px-4">
-        <motion.h2
-          className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          Featured Projects
-        </motion.h2>
+        <div className="container relative z-10 mx-auto px-4">
+          <motion.h2
+            className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            Featured Projects
+          </motion.h2>
 
-        <div className="space-y-24">
           {/* First three projects */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
             {projects.slice(0, 3).map((project, index) => (
               <motion.div
                 key={index}
@@ -88,8 +89,13 @@ export function Projects() {
             ))}
           </div>
 
-          {/* Next three projects */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          </div>
+      </div>
+
+      {/* Second Projects Section */}
+      <div className="min-h-screen relative py-20 bg-black/90">
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
             {projects.slice(3, 6).map((project, index) => (
               <motion.div
                 key={index + 3}
