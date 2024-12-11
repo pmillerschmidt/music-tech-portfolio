@@ -88,7 +88,7 @@ export function Contact() {
             viewport={{ once: true }}
           >
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-6 space-y-8">
+              <CardContent className="p-6 space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold mb-6 text-white">
                     Contact Information
@@ -153,7 +153,7 @@ export function Contact() {
                     <div>
                       <Textarea
                         placeholder="Your Message"
-                        className="min-h-[150px] bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
+                        className="min-h-[100px] bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
                         value={formData.message}
                         onChange={(e) =>
                           setFormData({ ...formData, message: e.target.value })
