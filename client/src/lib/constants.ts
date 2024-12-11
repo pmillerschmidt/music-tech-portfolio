@@ -180,37 +180,35 @@ The system demonstrates various capabilities through the included audio demonstr
     ],
   },
   {
-    title: "Grooveblocks",
-    description: "Interactive music composition tool",
-    image: "/images/grooveblocks.png",
-    technologies: ["React", "Web Audio API", "TensorFlow.js"],
-    demoUrl: "https://grooveblocks.mit.edu",
-    projectUrl: "https://grooveblocks.mit.edu",
-    githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
-    videoUrl: "/videos/grooveblocks-demo.mp4",
+    title: "Artiphon Music Logic",
+    description: "MIDI-based pattern generation system",
+    image: "/images/midi.webp",
+    technologies: ["C++", "JUCE Framework", "MIDI"],
+    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
+    videoUrl: "/videos/artiphon-demo.mp4",
     liveDemo: true,
     demoDescription:
-      "Create and manipulate musical patterns in real-time with an intuitive block-based interface",
+      "Experience real-time pattern generation and adaptive learning in a MIDI-based music system",
     detailedDescription: `
-      Grooveblocks is an innovative music composition tool that combines the accessibility of block-based programming 
-      with the power of modern web audio technologies. The system allows users to create complex musical patterns 
-      by arranging and connecting different blocks, each representing a musical element or transformation.
+      The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. 
+      The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable 
+      for both live performance and studio environments.
 
       Key components include:
-      - Visual block-based interface for music composition
-      - Real-time audio synthesis and processing
-      - Pattern generation and transformation tools
-      - Collaborative features for group music creation
+      - Pattern recognition using advanced algorithms
+      - Real-time MIDI processing and generation
+      - Adaptive learning from user input
+      - Integration with MIDI controllers
       
-      The project makes music composition accessible to users of all skill levels while providing powerful tools
-      for advanced music creation and experimentation.
+      The system demonstrates the potential of combining traditional MIDI technology with modern machine learning approaches
+      to create an intuitive and responsive musical instrument.
     `,
     features: [
-      "Block-based composition",
-      "Real-time audio synthesis",
-      "Pattern generation",
-      "Collaborative features",
-      "Export capabilities",
+      "Real-time pattern recognition",
+      "MIDI integration",
+      "Adaptive learning",
+      "Performance mode",
+      "Studio integration",
     ],
   },
   {
