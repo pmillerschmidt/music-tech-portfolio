@@ -136,12 +136,13 @@ This experimental approach to scoring allows for a more intuitive and expressive
 
 export const projects = [
   {
-    title: "Artiphon Music Logic",
-    summary: "MIDI-based pattern generation system",
-    description: "An innovative system that combines pattern recognition with real-time music generation, featuring adaptive learning and interactive performance capabilities.",
-    image: "/images/midi.webp",
-    technologies: ["C++", "JUCE Framework", "MIDI"],
-    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
+    title: "Grooveblocks",
+    description: "Interactive music composition tool",
+    image: "/images/grooveblocks.png",
+    technologies: ["React", "Web Audio API", "TensorFlow.js"],
+    demoUrl: "https://grooveblocks.mit.edu",
+    projectUrl: "https://grooveblocks.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
     detailedDescription: `The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
 
 The project features several key components:
@@ -179,46 +180,37 @@ The system demonstrates various capabilities through the included audio demonstr
     ],
   },
   {
-    title: "Artiphon Music Logic",
-    summary: "MIDI-based pattern generation system",
-    description: "An innovative system that combines pattern recognition with real-time music generation, featuring adaptive learning and interactive performance capabilities.",
-    image: "/images/midi.webp",
-    technologies: ["C++", "JUCE Framework", "MIDI"],
-    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
-    detailedDescription: `The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
+    title: "Grooveblocks",
+    description: "Interactive music composition tool",
+    image: "/images/grooveblocks.png",
+    technologies: ["React", "Web Audio API", "TensorFlow.js"],
+    demoUrl: "https://grooveblocks.mit.edu",
+    projectUrl: "https://grooveblocks.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
+    videoUrl: "/videos/grooveblocks-demo.mp4",
+    liveDemo: true,
+    demoDescription:
+      "Create and manipulate musical patterns in real-time with an intuitive block-based interface",
+    detailedDescription: `
+      Grooveblocks is an innovative music composition tool that combines the accessibility of block-based programming 
+      with the power of modern web audio technologies. The system allows users to create complex musical patterns 
+      by arranging and connecting different blocks, each representing a musical element or transformation.
 
-The project features several key components:
-- Pattern Analysis: Uses Hidden Trigram Markov models to understand musical patterns
-- Adaptive Learning: Continuously learns from user input to improve pattern generation
-- Real-time Processing: Generates complementary phrases during live performance
-- MIDI Integration: Seamless integration with the Artiphon MIDI controller
-
-The system demonstrates various capabilities through the included audio demonstrations, from basic pattern generation to complex adaptive performances. Each audio example showcases different aspects of the system's capabilities, from simple pattern recognition to complex adaptive learning.`,
-    originalWorks: [
-      {
-        title: "Basic Pattern Generation",
-        url: "/audio/artiphon/pattern-demo-1.mp3",
-        description: "Demonstration of the basic pattern generation capabilities using common chord progressions",
-        year: "2023"
-      },
-      {
-        title: "Adaptive Pattern Learning",
-        url: "/audio/artiphon/adaptive-demo-1.mp3",
-        description: "Example of the system learning from user input and generating complementary patterns",
-        year: "2023"
-      },
-      {
-        title: "Complex Pattern Generation",
-        url: "/audio/artiphon/pattern-demo-2.mp3",
-        description: "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
-        year: "2023"
-      },
-      {
-        title: "Live Performance Demo",
-        url: "/audio/artiphon/live-demo-1.mp3",
-        description: "Recording of a live performance using the system with the Artiphon MIDI controller",
-        year: "2023"
-      }
+      Key components include:
+      - Visual block-based interface for music composition
+      - Real-time audio synthesis and processing
+      - Pattern generation and transformation tools
+      - Collaborative features for group music creation
+      
+      The project makes music composition accessible to users of all skill levels while providing powerful tools
+      for advanced music creation and experimentation.
+    `,
+    features: [
+      "Block-based composition",
+      "Real-time audio synthesis",
+      "Pattern generation",
+      "Collaborative features",
+      "Export capabilities",
     ],
   },
   {
@@ -236,7 +228,7 @@ The system demonstrates various capabilities through the included audio demonstr
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
       
-Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project’s codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
+Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
     `,
     features: [
       "Real-time melody generation",
@@ -319,33 +311,6 @@ Music generation with machine learning poses unique challenges due to the high d
     videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
     liveDemo: true,
     isYoutubeVideo: true,
-    demoDescription:
-      "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
-    features: [
-      "Alpha-beta pruning algorithm",
-      "Position evaluation",
-      "Interactive chess board",
-      "Real-time move calculation",
-    ],
-  },
-  {
-    title: "Brookline Teen Center Makerspace",
-    description: "Makerspace and program",
-    image: "/images/makerspace.jpg",
-    technologies: [
-      "JavaScript",
-      "Python",
-      "Chess.js",
-      "Alpha-Beta Pruning",
-      "Tree Search",
-    ],
-    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
-    videoUrl: "/videos/chess-demo.mp4",
-    liveDemo: true,
-    embedDemo: true,
-    isExternalDemo: false,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     features: [

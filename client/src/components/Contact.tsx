@@ -108,6 +108,15 @@ export function Contact() {
           >
             <div className="text-white backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-white">
+                About Me
+              </h3>
+              <p className="text-white/80 mb-6 leading-relaxed">
+                I'm a creative technologist and software engineer with a passion for building innovative digital experiences. 
+                Currently pursuing my M.S. in Media Arts and Sciences, I specialize in developing interactive systems that 
+                bridge technology and creativity. My work spans across web development, machine learning, and interactive media,
+                with a particular focus on music technology and human-computer interaction.
+              </p>
+              <h3 className="text-xl font-semibold mb-4 text-white">
                 Contact Information
               </h3>
               <div className="space-y-4">
