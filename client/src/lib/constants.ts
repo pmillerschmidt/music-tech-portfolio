@@ -104,7 +104,7 @@ export const musicProjects = [
   {
     title: "Visual Scoring",
     summary: "Collaborative film score composition project",
-    description: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
+    description: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 underline decoration-primary-500 decoration-2 hover:text-primary-400 hover:decoration-primary-400 transition-colors duration-200">Baltazar Lora</a> for our composition seminar at Yale.`,
     image: "/images/visual-scoring.jpg",
     videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
     isYoutubeVideo: true,
