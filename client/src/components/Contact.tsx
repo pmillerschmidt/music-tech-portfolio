@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Download } from "lucide-react";
 import { useState } from "react";
 
 export function Contact() {
@@ -23,7 +23,6 @@ export function Contact() {
     <section className="relative py-20 min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          // Replace this URL with your own image
           src="/images/contact-background.png"
           alt="Contact Background"
           className="w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
@@ -47,24 +46,42 @@ export function Contact() {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          {/* About Me and CV Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="text-white backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
-              <h3 className="text-xl font-semibold mb-4 text-white">
-                About Me
-              </h3>
-              <p className="text-white/80 mb-6 leading-relaxed">
-                I'm a creative technologist and software engineer with a passion for building innovative digital experiences. 
-                Currently pursuing my M.S. in Media Arts and Sciences, I specialize in developing interactive systems that 
-                bridge technology and creativity. My work spans across web development, machine learning, and interactive media,
-                with a particular focus on music technology and human-computer interaction.
-              </p>
-            </div>
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-white">
+                    About Me
+                  </h3>
+                  <p className="text-white/80 mb-6 leading-relaxed">
+                    I'm a creative technologist and software engineer with a passion for building innovative digital experiences. 
+                    Currently pursuing my M.S. in Media Arts and Sciences, I specialize in developing interactive systems that 
+                    bridge technology and creativity. My work spans across web development, machine learning, and interactive media,
+                    with a particular focus on music technology and human-computer interaction.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-white">
+                    Download CV
+                  </h3>
+                  <Button
+                    className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group"
+                    onClick={() => window.open("/cv.pdf", "_blank")}
+                  >
+                    <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                    Download Resume/CV
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
 
+          {/* Contact Info and Message Form Card */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -151,18 +168,6 @@ export function Contact() {
                       Send Message
                     </Button>
                   </form>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">
-                    Download CV
-                  </h3>
-                  <Button
-                    className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-                    onClick={() => window.open("/cv.pdf", "_blank")}
-                  >
-                    Download Resume/CV
-                  </Button>
                 </div>
               </CardContent>
             </Card>
