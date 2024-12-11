@@ -52,60 +52,6 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="pt-6">
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                  <div>
-                    <Input
-                      placeholder="Your Name"
-                      className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Your Email"
-                      className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      placeholder="Your Message"
-                      className="min-h-[150px] bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      required
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
             <div className="text-white backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-white">
                 About Me
@@ -116,49 +62,110 @@ export function Contact() {
                 bridge technology and creativity. My work spans across web development, machine learning, and interactive media,
                 with a particular focus on music technology and human-computer interaction.
               </p>
-              <h3 className="text-xl font-semibold mb-4 text-white">
-                Contact Information
-              </h3>
-              <div className="space-y-4">
-                <a
-                  href="mailto:pmillerschmidt@gmail.com"
-                  className="flex items-center text-white/80 hover:text-white transition-colors"
-                >
-                  <Mail className="w-5 h-5 mr-3" />
-                  pmillerschmidt@gmail.com
-                </a>
-                <a
-                  href="https://github.com/pmillerschmidt"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-white/80 hover:text-white transition-colors"
-                >
-                  <Github className="w-5 h-5 mr-3" />
-                  GitHub
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/paul-miller-schmidt-767370b4/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-white/80 hover:text-white transition-colors"
-                >
-                  <Linkedin className="w-5 h-5 mr-3" />
-                  LinkedIn
-                </a>
-              </div>
             </div>
+          </motion.div>
 
-            <div className="text-white backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
-              <h3 className="text-xl font-semibold mb-4 text-white">
-                Download CV
-              </h3>
-              <Button
-                className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-                onClick={() => window.open("/cv.pdf", "_blank")}
-              >
-                Download Resume/CV
-              </Button>
-            </div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 space-y-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-6 text-white">
+                    Contact Information
+                  </h3>
+                  <div className="space-y-4">
+                    <a
+                      href="mailto:pmillerschmidt@gmail.com"
+                      className="flex items-center text-white/80 hover:text-white transition-colors"
+                    >
+                      <Mail className="w-5 h-5 mr-3" />
+                      pmillerschmidt@gmail.com
+                    </a>
+                    <a
+                      href="https://github.com/pmillerschmidt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-white/80 hover:text-white transition-colors"
+                    >
+                      <Github className="w-5 h-5 mr-3" />
+                      GitHub
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/paul-miller-schmidt-767370b4/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-white/80 hover:text-white transition-colors"
+                    >
+                      <Linkedin className="w-5 h-5 mr-3" />
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-6 text-white">
+                    Send Message
+                  </h3>
+                  <form className="space-y-4" onSubmit={handleSubmit}>
+                    <div>
+                      <Input
+                        placeholder="Your Name"
+                        className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
+                        value={formData.name}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        type="email"
+                        placeholder="Your Email"
+                        className="bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
+                        value={formData.email}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Textarea
+                        placeholder="Your Message"
+                        className="min-h-[150px] bg-white/5 border-white/10 text-white placeholder:text-white/50 focus:border-white/30 focus:bg-white/10 transition-all duration-300"
+                        value={formData.message}
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
+                        required
+                      />
+                    </div>
+                    <Button
+                      type="submit"
+                      className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      Send Message
+                    </Button>
+                  </form>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-white">
+                    Download CV
+                  </h3>
+                  <Button
+                    className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                    onClick={() => window.open("/cv.pdf", "_blank")}
+                  >
+                    Download Resume/CV
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </div>
