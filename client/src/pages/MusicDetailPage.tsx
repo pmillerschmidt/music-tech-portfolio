@@ -83,9 +83,10 @@ export default function MusicDetailPage() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
                   <div className="space-y-6">
-                    <p className="text-white/80 text-lg leading-relaxed">
-                      {project.description}
-                    </p>
+                    <p 
+                      className="text-white/80 text-lg leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: project.description }}
+                    />
 
                     {/* Video Section */}
                     {project.videoUrl && (

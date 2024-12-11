@@ -89,48 +89,26 @@ export const musicProjects = [
       {
         title: "Hidden Markov Model Generation",
         url: "/audio/markov-song.mp3",
-        description: "Melody and drum patterns generated using Hidden Markov Models",
-        year: "2023"
+        description:
+          "Melody and drum patterns generated using Hidden Markov Models",
+        year: "2023",
       },
       {
         title: "Mealy Machine Generation",
         url: "/audio/mealy-song.mp3",
         description: "Melody and drum patterns generated using Mealy Machines",
-        year: "2023"
-      }
+        year: "2023",
+      },
     ],
   },
   {
     title: "Visual Scoring",
     summary: "Collaborative film score composition project",
-    description:
-      "An innovative approach to film scoring that combines visual elements with musical composition. This project explores the intersection of visual art and musical expression through a unique collaborative process.",
+    description: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale.`,
     image: "/images/visual-scoring.jpg",
     videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
     isYoutubeVideo: true,
-    technologies: [
-      "Ableton",
-      "Film Scoring",
-      "Composition",
-      "Max/MSP",
-      "Visual Programming",
-    ],
-    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Baltazar Lora</a> for our composition seminar at Yale. The project explores innovative ways of representing musical ideas through visual elements, creating a unique intersection between visual art and musical composition.
-
-The score incorporates:
-- Real-time visual feedback
-- Interactive elements that respond to musical input
-- Custom-built Max/MSP patches for visual processing
-- Collaborative performance capabilities
-
-This experimental approach to scoring allows for a more intuitive and expressive way of composing and performing music, while creating an engaging visual experience for the audience.`,
-    features: [
-      "Real-time visual feedback",
-      "Interactive score elements",
-      "Custom Max/MSP patches",
-      "Collaborative performance mode",
-      "Visual programming interface",
-    ],
+    technologies: ["Ableton", "Film Scoring", "Composition"],
   },
 ];
 
@@ -156,27 +134,31 @@ The system demonstrates various capabilities through the included audio demonstr
       {
         title: "Basic Pattern Generation",
         url: "/audio/artiphon/pattern-demo-1.mp3",
-        description: "Demonstration of the basic pattern generation capabilities using common chord progressions",
-        year: "2023"
+        description:
+          "Demonstration of the basic pattern generation capabilities using common chord progressions",
+        year: "2023",
       },
       {
         title: "Adaptive Pattern Learning",
         url: "/audio/artiphon/adaptive-demo-1.mp3",
-        description: "Example of the system learning from user input and generating complementary patterns",
-        year: "2023"
+        description:
+          "Example of the system learning from user input and generating complementary patterns",
+        year: "2023",
       },
       {
         title: "Complex Pattern Generation",
         url: "/audio/artiphon/pattern-demo-2.mp3",
-        description: "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
-        year: "2023"
+        description:
+          "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
+        year: "2023",
       },
       {
         title: "Live Performance Demo",
         url: "/audio/artiphon/live-demo-1.mp3",
-        description: "Recording of a live performance using the system with the Artiphon MIDI controller",
-        year: "2023"
-      }
+        description:
+          "Recording of a live performance using the system with the Artiphon MIDI controller",
+        year: "2023",
+      },
     ],
   },
   {
