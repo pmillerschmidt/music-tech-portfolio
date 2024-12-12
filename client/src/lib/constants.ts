@@ -163,27 +163,33 @@ The system demonstrates various capabilities through the included audio demonstr
   },
   {
     title: "Artiphon Music Logic",
-    description: "MIDI-based pattern generation system",
+    description: "Markov MIDI generator for embedded systems",
     image: "/images/midi.webp",
-    technologies: ["C++", "JUCE Framework", "MIDI"],
+    technologies: ["C++", "JUCE Framework", "MIDI", "embedded systems"],
     githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
-    videoUrl: "/videos/artiphon-demo.mp4",
-    liveDemo: true,
-    demoDescription:
-      "Experience real-time pattern generation and adaptive learning in a MIDI-based music system",
     detailedDescription: `
-      The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. 
-      The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable 
-      for both live performance and studio environments.
+      <p>For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++. The algorithm incorporated a Trigram Hidden Markov Model and user-specified hyper-parameters for precise melodic control. The program parses artist-specific MIDI to emulate their style. For my exploration, I fed it Avicii top-line melodies normalized around A minor. The model is designed to be lightweight and work on the low-memory, embedded systems that Artiphon specializes in.</p>
 
-      Key components include:
-      - Pattern recognition using advanced algorithms
-      - Real-time MIDI processing and generation
-      - Adaptive learning from user input
-      - Integration with MIDI controllers
-      
-      The system demonstrates the potential of combining traditional MIDI technology with modern machine learning approaches
-      to create an intuitive and responsive musical instrument.
+      <h3 class="text-xl font-semibold mt-6 mb-4">Hyper-parameters</h3>
+      <ul class="list-none space-y-2">
+        <li><strong>Chord coefficient:</strong> the likelihood of chord tones</li>
+        <li><strong>Strong note coefficient:</strong> the likelihood that down beats emphasize chord tones</li>
+        <li><strong>Movement hesitance:</strong> the amount of desired movement (jumpiness)</li>
+        <li><strong>Movement spread:</strong> essentially the range of the generated melody</li>
+        <li><strong>Repetition coefficient:</strong> likelihood of repetition (1 = none, 0 = total repetition)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Audio Examples</h3>
+      <div class="space-y-4">
+        <div>
+          <p class="mb-2"><strong>Pattern Generation Demo:</strong> This example demonstrates the basic pattern generation capabilities using common chord progressions.</p>
+          <audio controls src="/audio/artiphon/pattern-demo-1.mp3" class="w-full"></audio>
+        </div>
+        <div>
+          <p class="mb-2"><strong>Adaptive Learning Demo:</strong> This example shows how the system learns from user input and generates complementary patterns.</p>
+          <audio controls src="/audio/artiphon/adaptive-demo-1.mp3" class="w-full"></audio>
+        </div>
+      </div>
     `,
     features: [
       "Real-time pattern recognition",
