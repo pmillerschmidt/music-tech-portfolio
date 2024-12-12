@@ -89,14 +89,6 @@ export default function MusicDetailPage() {
                         <div dangerouslySetInnerHTML={{ __html: project.detailedDescription }} />
                       </div>
                     )}
-                    {/* Only show detailed description */}
-                    {project.detailedDescription && (
-                      <div className="mt-8">
-                        <div className="prose prose-invert">
-                          <div dangerouslySetInnerHTML={{ __html: project.detailedDescription }} />
-                        </div>
-                      </div>
-                    )}
 
                     {/* Video Section */}
                     {project.videoUrl && (

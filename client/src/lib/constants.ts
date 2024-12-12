@@ -10,8 +10,8 @@ export const musicProjects = [
     summary: "Collection of original works, collaborations, and remixes",
     image: "/images/performance.png",
     technologies: ["Ableton", "Logic Pro", "Pioneer"],
-    description:
-      "A comprehensive collection of my musical works spanning various genres and styles. From original compositions to collaborative projects and innovative remixes, this portfolio showcases my journey in music production and sound design.",
+    detailedDescription:
+      "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life.         I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music with friends, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
     originalWorks: [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
@@ -36,17 +36,13 @@ export const musicProjects = [
     ],
     remixes: [
       {
-        title: "Reimagined Patterns",
-        description:
-          "A reinterpretation of classical minimalist works through electronic means",
+        title: "Rasputin remix",
         originalArtist: "Steve Reich",
         url: "/audio/reimagined-patterns.mp3",
         year: "2024",
       },
       {
-        title: "Electronic Variations",
-        description:
-          "Modern take on baroque counterpoint using synthesis techniques",
+        title: "Smalltown Boy remix",
         originalArtist: "J.S. Bach",
         url: "/audio/electronic-variations.mp3",
         year: "2023",
@@ -54,34 +50,12 @@ export const musicProjects = [
     ],
     videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
     liveDemo: true,
-    demoDescription:
-      "Experience real-time music generation powered by neural networks. Create unique musical patterns and explore AI-driven sound synthesis through an intuitive interface.",
-    detailedDescription: `
-      Neural Synthesis is a groundbreaking project that combines deep learning with real-time audio synthesis. 
-      The system uses a novel architecture that combines transformer-based models with traditional DSP techniques 
-      to generate high-quality musical content in real-time.
-
-      The project features multiple interconnected modules:
-      1. A neural network trained on a diverse dataset of musical performances
-      2. A real-time audio synthesis engine that converts model outputs into sound
-      3. An intuitive web interface for controlling and manipulating the generation process
-      4. A collaborative environment where multiple users can interact with the system simultaneously
-
-      The system has been used in live performances and installations, demonstrating its reliability and creative potential.
-    `,
-    features: [
-      "Real-time audio synthesis",
-      "Neural network-based generation",
-      "Interactive pattern creation",
-      "Multi-track mixing capabilities",
-      "MIDI export functionality",
-    ],
   },
   {
     title: "Computer Music",
     summary: "Exploring musical machines and probabilistic composition",
-    description:
-      "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
+    description: "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
+    detailedDescription: "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
     technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
@@ -104,7 +78,8 @@ export const musicProjects = [
   {
     title: "Visual Scoring",
     summary: "Collaborative film score composition project",
-    description: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar at Yale.`,
+    description: "A collaborative film score composition project with Baltazar Lora",
+    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar at Yale.`,
     image: "/images/visual-scoring.jpg",
     videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
     isYoutubeVideo: true,
@@ -113,72 +88,6 @@ export const musicProjects = [
 ];
 
 export const projects = [
-  {
-    title: "Chess Engine Design",
-    description:
-      "Interactive minimax chess engine using alpha-beta pruning and advanced heuristics",
-    image: "/images/minimax.png",
-    technologies: [
-      "JavaScript",
-      "Python",
-      "Chess.js",
-      "Alpha-Beta Pruning",
-      "Tree Search",
-    ],
-    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
-    videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
-    liveDemo: true,
-    isYoutubeVideo: true,
-    demoDescription:
-      "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
-    features: [
-      "Alpha-beta pruning algorithm",
-      "Position evaluation",
-      "Interactive chess board",
-      "Real-time move calculation",
-    ],
-  },
-  {
-    title: "Artiphon Music Logic",
-    summary:
-      "For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++.",
-    image: "/images/midi.webp",
-    technologies: ["C++", "JUCE Framework", "MIDI", "embedded systems"],
-    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
-    detailedDescription: `
-      <p>For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++. The algorithm incorporated a Trigram Hidden Markov Model and user-specified hyper-parameters for precise melodic control. The program parses artist-specific MIDI to emulate their style. For my exploration, I fed it Avicii top-line melodies normalized around A minor. The model is designed to be lightweight and work on the low-memory, embedded systems that Artiphon specializes in.</p>
-
-      <h3 class="text-xl font-semibold mt-6 mb-4">Hyper-parameters</h3>
-      <ul class="list-none space-y-2">
-        <li><strong>Chord coefficient:</strong> the likelihood of chord tones</li>
-        <li><strong>Strong note coefficient:</strong> the likelihood that down beats emphasize chord tones</li>
-        <li><strong>Movement hesitance:</strong> the amount of desired movement (jumpiness)</li>
-        <li><strong>Movement spread:</strong> essentially the range of the generated melody</li>
-        <li><strong>Repetition coefficient:</strong> likelihood of repetition (1 = none, 0 = total repetition)</li>
-      </ul>
-
-      <h3 class="text-xl font-semibold mt-6 mb-4">Audio Examples</h3>
-      <div class="space-y-4">
-        <div>
-          <p class="mb-2"><strong>Pattern Generation Demo:</strong> This example demonstrates the basic pattern generation capabilities using common chord progressions.</p>
-          <audio controls src="/audio/artiphon/pattern-demo-1.mp3" class="w-full"></audio>
-        </div>
-        <div>
-          <p class="mb-2"><strong>Adaptive Learning Demo:</strong> This example shows how the system learns from user input and generates complementary patterns.</p>
-          <audio controls src="/audio/artiphon/adaptive-demo-1.mp3" class="w-full"></audio>
-        </div>
-      </div>
-    `,
-    features: [
-      "Real-time pattern recognition",
-      "MIDI integration",
-      "Adaptive learning",
-      "Performance mode",
-      "Studio integration",
-    ],
-  },
   {
     title: "Grooveblocks",
     description: "Interactive music composition tool",
@@ -233,8 +142,8 @@ export const projects = [
     demoDescription:
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
-      
-Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
+
+  Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
     `,
     features: [
       "Real-time melody generation",
@@ -245,9 +154,54 @@ Music generation with machine learning poses unique challenges due to the high d
     ],
   },
   {
+    title: "Artiphon Music Logic",
+    description: "Markov Melody generator for embedded systems",
+    image: "/images/midi.webp",
+    technologies: ["C++", "MIDI", "embedded systems"],
+    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
+    detailedDescription: `
+      <p>For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++. The algorithm incorporated a Trigram Hidden Markov Model and user-specified temperatures for precise melodic control. The program parses artist-specific MIDI to emulate their style. For my exploration, I fed it Avicii top-line melodies normalized around A minor. The model is designed to be lightweight and work on the low-memory, embedded systems that Artiphon specializes in. It was an interesting challenge in building statistical models that are simple, but still create novel and reasonable music.</p>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">User controls</h3>
+      <ul class="list-none space-y-2">
+        <li><strong>Chord coefficient:</strong> the likelihood of chord tones</li>
+        <li><strong>Strong note coefficient:</strong> the likelihood that down beats emphasize chord tones</li>
+        <li><strong>Movement hesitance:</strong> the amount of desired movement (jumpiness)</li>
+        <li><strong>Movement spread:</strong> essentially the range of the generated melody</li>
+        <li><strong>Repetition coefficient:</strong> likelihood of repetition (1 = none, 0 = total repetition)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Audio Examples</h3>
+      Here are a few examples of the generator creating top-line melodies. The temperatures are displayed in the title. The drum/bass/chords are just for reference, the lead melody is the generated section
+      <div class="space-y-4">
+        <div>
+          <p class="mb-2"><strong>CSMG-Avicii-{4,7,3,12,0}</strong></p>
+          <audio controls src="/audio/artiphon/CSMG-Avicii-{4,7,3,12,0}.mp3" class="w-full"></audio>
+        </div>
+        <div>
+          <p class="mb-2"><strong>CSMG-Avicii-{5, 6, 8, 8, 0.1}</strong></p>
+          <audio controls src="/audio/artiphon/CSMG-Avicii-{5, 6, 8, 8, 0.1}.mp3" class="w-full"></audio>
+        </div>
+        <div>
+          <p class="mb-2"><strong>CSMG-Avicii-{10,4,15,15,0.6}</strong></p>
+          <audio controls src="/audio/artiphon/CSMG-Avicii-{10,4,15,15,0.6}.mp3" class="w-full"></audio>
+        </div>
+      </div>
+
+      
+    `,
+    features: [
+      "Real-time pattern recognition",
+      "MIDI integration",
+      "Adaptive learning",
+      "Performance mode",
+      "Studio integration",
+    ],
+  },
+  {
     title: "Q-tar",
-    description: "Reinforcement learning agent with human feedback",
-    image: "/images/qtar.jpg",
+    description: "Reinforcement learning for melody generation",
+    image: "/images/Qtar.png",
     technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
     demoUrl: "https://neural-music.example.com",
     projectUrl: "https://qtar.mit.edu",
@@ -265,8 +219,7 @@ Music generation with machine learning poses unique challenges due to the high d
   },
   {
     title: "nextChord",
-    description:
-      "AI-powered chord progression generator with real-time synthesis",
+    description: "chord progression neural network",
     image: "/images/next-chord.png",
     technologies: ["TensorFlow", "Machine Learning", "React", "Web Audio API"],
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
@@ -274,29 +227,36 @@ Music generation with machine learning poses unique challenges due to the high d
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     videoUrl: "/videos/nextchord-demo.mp4",
     liveDemo: true,
-    demoDescription:
-      "Experience real-time chord progression generation powered by machine learning, with instant audio playback and visualization",
     detailedDescription: `
-      nextChord is an innovative web application that combines artificial intelligence with music theory 
-      to generate meaningful and creative chord progressions. The system learns from a vast dataset of 
-      musical pieces to understand harmonic relationships and musical structure.
-
-      Key features include:
-      - AI-powered chord progression generation
-      - Real-time audio synthesis and visualization
-      - Style-based generation (Jazz, Classical, Pop)
-      - MIDI export functionality
-      - Interactive progression editing
-      
-      The application uses TensorFlow.js for client-side AI processing and Web Audio API for 
-      high-quality sound synthesis, providing a responsive and professional experience.
+      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict. 
     `,
+    features: ["PyTorch", "AI chord generation", "React", "API Design"],
+  },
+  {
+    title: "Chess Engine Design",
+    description:
+      "Minimax chess engine using alpha-beta pruning and advanced heuristics",
+    image: "/images/minimax.png",
+    technologies: [
+      "JavaScript",
+      "Python",
+      "Chess.js",
+      "Alpha-Beta Pruning",
+      "Tree Search",
+    ],
+    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
+    videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
+    liveDemo: true,
+    isYoutubeVideo: true,
+    demoDescription:
+      "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     features: [
-      "AI chord generation",
-      "Real-time audio synthesis",
-      "Multiple musical styles",
-      "MIDI export capability",
-      "Interactive editing",
+      "Alpha-beta pruning algorithm",
+      "Position evaluation",
+      "Interactive chess board",
+      "Real-time move calculation",
     ],
   },
 ];
