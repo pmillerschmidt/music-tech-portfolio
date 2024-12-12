@@ -83,38 +83,40 @@ export default function MusicDetailPage() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
                   <div className="space-y-6">
-                    {/* Detailed Description Section */}
-                    {project.detailedDescription && (
-                      <div className="prose prose-invert">
-                        <div dangerouslySetInnerHTML={{ __html: project.detailedDescription }} />
-                      </div>
-                    )}
-
-                    {/* Video Section */}
-                    {project.videoUrl && (
-                      <div className="mt-8">
-                        <h2 className="text-2xl font-semibold text-white mb-4">Project Demo</h2>
-                        <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
-                          {project.isYoutubeVideo ? (
-                            <iframe
-                              src={project.videoUrl.includes('embed') ? project.videoUrl : project.videoUrl.replace('watch?v=', 'embed/')}
-                              className="w-full h-full"
-                              title={`${project.title} Demo`}
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                            />
-                          ) : (
-                            <video
-                              src={project.videoUrl}
-                              controls
-                              className="w-full h-full"
-                              poster={project.image}
-                            />
-                          )}
+                    {/* Description Section */}
+                    <div className="space-y-6">
+                      {project.detailedDescription && (
+                        <div className="prose prose-invert">
+                          <div dangerouslySetInnerHTML={{ __html: project.detailedDescription }} />
                         </div>
-                      </div>
-                    )}
+                      )}
+
+                      {/* Video Section */}
+                      {project.videoUrl && (
+                        <div className="mt-8">
+                          <h2 className="text-2xl font-semibold text-white mb-4">Project Demo</h2>
+                          <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
+                            {project.isYoutubeVideo ? (
+                              <iframe
+                                src={project.videoUrl.includes('embed') ? project.videoUrl : project.videoUrl.replace('watch?v=', 'embed/')}
+                                className="w-full h-full"
+                                title={`${project.title} Demo`}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              />
+                            ) : (
+                              <video
+                                src={project.videoUrl}
+                                controls
+                                className="w-full h-full"
+                                poster={project.image}
+                              />
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
 
                     {/* Removed duplicate detailed description section */}
                   </div>

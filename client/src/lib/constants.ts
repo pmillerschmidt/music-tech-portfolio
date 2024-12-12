@@ -11,7 +11,7 @@ export const musicProjects = [
     image: "/images/performance.png",
     technologies: ["Ableton", "Logic Pro", "Pioneer"],
     detailedDescription:
-      "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life.         I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music with friends, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
+      "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life.         I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
     originalWorks: [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
@@ -25,11 +25,6 @@ export const musicProjects = [
       },
       {
         title: "Afterlife (feat. Abby Walker)",
-        url: "/audio/electronic-suite.mp3",
-        year: "2023",
-      },
-      {
-        title: "Mi Vida",
         url: "/audio/electronic-suite.mp3",
         year: "2023",
       },
@@ -54,8 +49,10 @@ export const musicProjects = [
   {
     title: "Computer Music",
     summary: "Exploring musical machines and probabilistic composition",
-    description: "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
-    detailedDescription: "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
+    description:
+      "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
+    detailedDescription:
+      "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
     technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
@@ -78,7 +75,8 @@ export const musicProjects = [
   {
     title: "Visual Scoring",
     summary: "Collaborative film score composition project",
-    description: "A collaborative film score composition project with Baltazar Lora",
+    description:
+      "A collaborative film score composition project with Baltazar Lora",
     detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar at Yale.`,
     image: "/images/visual-scoring.jpg",
     videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
