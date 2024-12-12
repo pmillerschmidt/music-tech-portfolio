@@ -114,6 +114,33 @@ export const musicProjects = [
 
 export const projects = [
   {
+    title: "Chess Engine Design",
+    description:
+      "Interactive minimax chess engine using alpha-beta pruning and advanced heuristics",
+    image: "/images/minimax.png",
+    technologies: [
+      "JavaScript",
+      "Python",
+      "Chess.js",
+      "Alpha-Beta Pruning",
+      "Tree Search",
+    ],
+    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
+    videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
+    liveDemo: true,
+    isYoutubeVideo: true,
+    demoDescription:
+      "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
+    features: [
+      "Alpha-beta pruning algorithm",
+      "Position evaluation",
+      "Interactive chess board",
+      "Real-time move calculation",
+    ],
+  },
+  {
     title: "Artiphon Music Logic",
     description: "Markov MIDI generator for embedded systems",
     image: "/images/midi.webp",
@@ -189,44 +216,6 @@ export const projects = [
           "Recording of a live performance using the system with the Artiphon MIDI controller",
         year: "2023",
       },
-    ],
-  },
-  {
-    title: "Artiphon Music Logic",
-    description: "Markov MIDI generator for embedded systems",
-    image: "/images/midi.webp",
-    technologies: ["C++", "JUCE Framework", "MIDI", "embedded systems"],
-    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
-    detailedDescription: `
-      <p>For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++. The algorithm incorporated a Trigram Hidden Markov Model and user-specified hyper-parameters for precise melodic control. The program parses artist-specific MIDI to emulate their style. For my exploration, I fed it Avicii top-line melodies normalized around A minor. The model is designed to be lightweight and work on the low-memory, embedded systems that Artiphon specializes in.</p>
-
-      <h3 class="text-xl font-semibold mt-6 mb-4">Hyper-parameters</h3>
-      <ul class="list-none space-y-2">
-        <li><strong>Chord coefficient:</strong> the likelihood of chord tones</li>
-        <li><strong>Strong note coefficient:</strong> the likelihood that down beats emphasize chord tones</li>
-        <li><strong>Movement hesitance:</strong> the amount of desired movement (jumpiness)</li>
-        <li><strong>Movement spread:</strong> essentially the range of the generated melody</li>
-        <li><strong>Repetition coefficient:</strong> likelihood of repetition (1 = none, 0 = total repetition)</li>
-      </ul>
-
-      <h3 class="text-xl font-semibold mt-6 mb-4">Audio Examples</h3>
-      <div class="space-y-4">
-        <div>
-          <p class="mb-2"><strong>Pattern Generation Demo:</strong> This example demonstrates the basic pattern generation capabilities using common chord progressions.</p>
-          <audio controls src="/audio/artiphon/pattern-demo-1.mp3" class="w-full"></audio>
-        </div>
-        <div>
-          <p class="mb-2"><strong>Adaptive Learning Demo:</strong> This example shows how the system learns from user input and generates complementary patterns.</p>
-          <audio controls src="/audio/artiphon/adaptive-demo-1.mp3" class="w-full"></audio>
-        </div>
-      </div>
-    `,
-    features: [
-      "Real-time pattern recognition",
-      "MIDI integration",
-      "Adaptive learning",
-      "Performance mode",
-      "Studio integration",
     ],
   },
   {
@@ -307,33 +296,6 @@ Music generation with machine learning poses unique challenges due to the high d
       "Multiple musical styles",
       "MIDI export capability",
       "Interactive editing",
-    ],
-  },
-  {
-    title: "Chess Engine Design",
-    description:
-      "Interactive minimax chess engine using alpha-beta pruning and advanced heuristics",
-    image: "/images/minimax.png",
-    technologies: [
-      "JavaScript",
-      "Python",
-      "Chess.js",
-      "Alpha-Beta Pruning",
-      "Tree Search",
-    ],
-    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
-    videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
-    liveDemo: true,
-    isYoutubeVideo: true,
-    demoDescription:
-      "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
-    features: [
-      "Alpha-beta pruning algorithm",
-      "Position evaluation",
-      "Interactive chess board",
-      "Real-time move calculation",
     ],
   },
 ];
