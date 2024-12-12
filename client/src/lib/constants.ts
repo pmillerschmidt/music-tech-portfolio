@@ -8,14 +8,14 @@ export const musicProjects = [
   {
     title: "Discography",
     summary: "Collection of original works, collaborations, and remixes",
-    image: "/images/performance.png",
+    image: "/images/dj.png",
     technologies: ["Ableton", "Logic Pro", "Pioneer"],
     detailedDescription:
       "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life.         I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
     originalWorks: [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
-        url: "/audio/synthesis-1.mp3",
+        url: "/audio/Tell Me a Lie (feat. Abby Walker).mp3",
         year: "2023",
       },
       {
@@ -25,7 +25,7 @@ export const musicProjects = [
       },
       {
         title: "Afterlife (feat. Abby Walker)",
-        url: "/audio/electronic-suite.mp3",
+        url: "/audio/afterlife (feat. Abby Walker) - lolla bounce.wav",
         year: "2023",
       },
     ],
@@ -47,12 +47,23 @@ export const musicProjects = [
     liveDemo: true,
   },
   {
+    title: "Coursework",
+    summary: "Collaborative film score composition project",
+    description:
+      "A collaborative film score composition project with Baltazar Lora",
+    detailedDescription: `
+    Music classes at Yale were a wonderful oasis of creativity and joy in my otherwise gruelling engineering coursework. After taking introductory theory courses my first year, I took nearly every course I was proficient enough to handle. Some of my favorites include Where Music Theories Collide, American Neighborhood Musics, and Gamelan Ensemble. 
+    Below is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar.`,
+    image: "/images/visual-scoring.jpg",
+    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
+    isYoutubeVideo: true,
+    technologies: ["Ableton", "Film Scoring", "Composition"],
+  },
+  {
     title: "Computer Music",
     summary: "Exploring musical machines and probabilistic composition",
-    description:
-      "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     detailedDescription:
-      "These are some simple projects based on my coursework in Computer Music. My classes focused on the history and technology of the field. We built basic musical machines in SuperCollider that used mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
+      "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
     technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
@@ -71,17 +82,6 @@ export const musicProjects = [
         year: "2023",
       },
     ],
-  },
-  {
-    title: "Visual Scoring",
-    summary: "Collaborative film score composition project",
-    description:
-      "A collaborative film score composition project with Baltazar Lora",
-    detailedDescription: `This is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar at Yale.`,
-    image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
-    isYoutubeVideo: true,
-    technologies: ["Ableton", "Film Scoring", "Composition"],
   },
 ];
 

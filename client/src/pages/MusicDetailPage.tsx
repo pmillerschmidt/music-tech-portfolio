@@ -30,6 +30,7 @@ export default function MusicDetailPage() {
   return (
     <main className="min-h-screen bg-black">
       <div className="relative min-h-screen">
+        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={project.image}
@@ -45,6 +46,7 @@ export default function MusicDetailPage() {
           </div>
         </div>
 
+        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             <Link href="/music">
@@ -63,6 +65,7 @@ export default function MusicDetailPage() {
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
+              {/* Title and GitHub Button */}
               <div className="flex justify-between items-center mb-6">
                 <h1 className="text-4xl md:text-5xl font-bold text-white hero-text bg-clip-text text-transparent">
                   {project.title}
@@ -82,109 +85,87 @@ export default function MusicDetailPage() {
 
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
-                  <div className="space-y-6">
+                  <div className="space-y-8">
                     {/* Description Section */}
-                    <div className="space-y-6">
-                      {project.detailedDescription && (
-                        <div className="prose prose-invert">
-                          <div dangerouslySetInnerHTML={{ __html: project.detailedDescription }} />
-                        </div>
-                      )}
+                    {project.detailedDescription && (
+                      <div className="prose prose-invert">
+                        <div dangerouslySetInnerHTML={{ __html: project.detailedDescription }} />
+                      </div>
+                    )}
 
-                      {/* Video Section */}
-                      {project.videoUrl && (
-                        <div className="mt-8">
-                          <h2 className="text-2xl font-semibold text-white mb-4">Project Demo</h2>
-                          <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
-                            {project.isYoutubeVideo ? (
-                              <iframe
-                                src={project.videoUrl.includes('embed') ? project.videoUrl : project.videoUrl.replace('watch?v=', 'embed/')}
-                                className="w-full h-full"
-                                title={`${project.title} Demo`}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                              />
-                            ) : (
-                              <video
-                                src={project.videoUrl}
-                                controls
-                                className="w-full h-full"
-                                poster={project.image}
-                              />
+                    {/* Original Works Section */}
+                    {project.originalWorks && (
+                      <div className="mt-8 space-y-6">
+                        <h2 className="text-2xl font-semibold text-white mb-6">Original Works</h2>
+                        {project.originalWorks.map((work, index) => (
+                          <div key={index} className="bg-white/5 rounded-lg p-4 space-y-2">
+                            <div className="flex justify-between items-center">
+                              <h3 className="text-lg font-medium text-white">{work.title}</h3>
+                              <span className="text-white/60 text-sm">{work.year}</span>
+                            </div>
+                            {work.description && (
+                              <p className="text-white/80 text-sm mb-3">{work.description}</p>
                             )}
+                            <audio
+                              controls
+                              className="w-full"
+                              src={work.url}
+                            />
                           </div>
-                        </div>
-                      )}
-                    </div>
+                        ))}
+                      </div>
+                    )}
 
-                    {/* Removed duplicate detailed description section */}
+                    {/* Remixes Section */}
+                    {project.remixes && (
+                      <div className="mt-8 space-y-6">
+                        <h2 className="text-2xl font-semibold text-white mb-6">Remixes</h2>
+                        {project.remixes.map((remix, index) => (
+                          <div key={index} className="bg-white/5 rounded-lg p-4 space-y-2">
+                            <div className="flex justify-between items-center">
+                              <h3 className="text-lg font-medium text-white">{remix.title}</h3>
+                              <span className="text-white/60 text-sm">{remix.year}</span>
+                            </div>
+                            <p className="text-white/80 text-sm">Original by {remix.originalArtist}</p>
+                            {remix.description && (
+                              <p className="text-white/80 text-sm mb-3">{remix.description}</p>
+                            )}
+                            <audio
+                              controls
+                              className="w-full"
+                              src={remix.url}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Video Section - Moved to the end */}
+                    {project.videoUrl && (
+                      <div className="mt-8">
+                        <h2 className="text-2xl font-semibold text-white mb-4">Project Demo</h2>
+                        <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
+                          {project.isYoutubeVideo ? (
+                            <iframe
+                              src={project.videoUrl.includes('embed') ? project.videoUrl : project.videoUrl.replace('watch?v=', 'embed/')}
+                              className="w-full h-full"
+                              title={`${project.title} Demo`}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          ) : (
+                            <video
+                              src={project.videoUrl}
+                              controls
+                              className="w-full h-full"
+                              poster={project.image}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    )}
                   </div>
-
-                  {/* Original Works Section */}
-                  {project.originalWorks && (
-                    <div className="mt-8 space-y-6">
-                      <h2 className="text-2xl font-semibold text-white mb-6">Original Works</h2>
-                      {project.originalWorks.map((work, index) => (
-                        <div key={index} className="bg-white/5 rounded-lg p-4 space-y-2">
-                          <div className="flex justify-between items-center">
-                            <h3 className="text-lg font-medium text-white">{work.title}</h3>
-                            <span className="text-white/60 text-sm">{work.year}</span>
-                          </div>
-                          <p className="text-white/80 text-sm mb-3">{work.description}</p>
-                          <audio
-                            controls
-                            className="w-full"
-                            src={work.url}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Collaborations Section */}
-                  {project.collaborations && (
-                    <div className="mt-8 space-y-6">
-                      <h2 className="text-2xl font-semibold text-white mb-6">Collaborations</h2>
-                      {project.collaborations.map((collab, index) => (
-                        <div key={index} className="bg-white/5 rounded-lg p-4 space-y-2">
-                          <div className="flex justify-between items-center">
-                            <h3 className="text-lg font-medium text-white">{collab.title}</h3>
-                            <span className="text-white/60 text-sm">{collab.year}</span>
-                          </div>
-                          <p className="text-white/80 text-sm">with {collab.collaborator}</p>
-                          <p className="text-white/80 text-sm mb-3">{collab.description}</p>
-                          <audio
-                            controls
-                            className="w-full"
-                            src={collab.url}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Remixes Section */}
-                  {project.remixes && (
-                    <div className="mt-8 space-y-6">
-                      <h2 className="text-2xl font-semibold text-white mb-6">Remixes</h2>
-                      {project.remixes.map((remix, index) => (
-                        <div key={index} className="bg-white/5 rounded-lg p-4 space-y-2">
-                          <div className="flex justify-between items-center">
-                            <h3 className="text-lg font-medium text-white">{remix.title}</h3>
-                            <span className="text-white/60 text-sm">{remix.year}</span>
-                          </div>
-                          <p className="text-white/80 text-sm">Original by {remix.originalArtist}</p>
-                          <p className="text-white/80 text-sm mb-3">{remix.description}</p>
-                          <audio
-                            controls
-                            className="w-full"
-                            src={remix.url}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </CardContent>
               </Card>
             </motion.div>

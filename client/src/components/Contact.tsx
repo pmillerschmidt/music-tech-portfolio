@@ -59,10 +59,12 @@ export function Contact() {
                     About Me
                   </h3>
                   <p className="text-white/80 mb-6 leading-relaxed">
-                    I'm a creative technologist and software engineer with a passion for building innovative digital experiences. 
-                    Currently pursuing my M.S. in Media Arts and Sciences, I specialize in developing interactive systems that 
-                    bridge technology and creativity. My work spans across web development, machine learning, and interactive media,
-                    with a particular focus on music technology and human-computer interaction.
+                    I'm a tinkerer and musical late bloomer. I like building
+                    communities and tools that my younger self would find joy in.
+                    I aim to make the world an more fun and creative place
+                    through thoughtful design. I am on a mission to build the
+                    future of music education through adaptive and intelligent
+                    interfaces.
                   </p>
                 </div>
                 <div>
