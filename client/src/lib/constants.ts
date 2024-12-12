@@ -142,7 +142,7 @@ export const projects = [
   },
   {
     title: "Artiphon Music Logic",
-    description: "Markov MIDI generator for embedded systems",
+    description: "For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++.",
     image: "/images/midi.webp",
     technologies: ["C++", "JUCE Framework", "MIDI", "embedded systems"],
     githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
