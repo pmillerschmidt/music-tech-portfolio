@@ -165,6 +165,23 @@ export default function MusicDetailPage() {
                         </div>
                       </div>
                     )}
+
+                    {/* Technologies Used Section */}
+                    {project.technologies && project.technologies.length > 0 && (
+                      <div className="mt-8">
+                        <h2 className="text-2xl font-semibold text-white mb-4">Technologies Used</h2>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
