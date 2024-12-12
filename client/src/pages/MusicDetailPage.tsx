@@ -83,7 +83,20 @@ export default function MusicDetailPage() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
                   <div className="space-y-6">
-                    {/* Skip showing description/summary on detail page */}
+                    {/* Detailed Description Section */}
+                    {project.detailedDescription && (
+                      <div className="prose prose-invert">
+                        <div dangerouslySetInnerHTML={{ __html: project.detailedDescription }} />
+                      </div>
+                    )}
+                    {/* Only show detailed description */}
+                    {project.detailedDescription && (
+                      <div className="mt-8">
+                        <div className="prose prose-invert">
+                          <div dangerouslySetInnerHTML={{ __html: project.detailedDescription }} />
+                        </div>
+                      </div>
+                    )}
 
                     {/* Video Section */}
                     {project.videoUrl && (
@@ -111,23 +124,7 @@ export default function MusicDetailPage() {
                       </div>
                     )}
 
-                    {/* Detailed Description */}
-                    {project.detailedDescription && (
-                      <div className="mt-8">
-                        <h2 className="text-2xl font-semibold text-white mb-4">About This Project</h2>
-                        <div className="prose prose-invert">
-                          {project.detailedDescription.split('\n').map((paragraph, index) => (
-                            paragraph.trim() && (
-                              <p key={index} className="text-white/80 mb-4" dangerouslySetInnerHTML={{
-                                __html: paragraph.trim().startsWith('-') 
-                                  ? `• ${paragraph.trim().substring(1)}` 
-                                  : paragraph.trim()
-                              }} />
-                            )
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    {/* Removed duplicate detailed description section */}
                   </div>
 
                   {/* Original Works Section */}
