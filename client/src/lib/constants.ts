@@ -114,6 +114,44 @@ export const musicProjects = [
 
 export const projects = [
   {
+    title: "Artiphon Music Logic",
+    description: "Markov MIDI generator for embedded systems",
+    image: "/images/midi.webp",
+    technologies: ["C++", "JUCE Framework", "MIDI", "embedded systems"],
+    githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
+    detailedDescription: `
+      <p>For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++. The algorithm incorporated a Trigram Hidden Markov Model and user-specified hyper-parameters for precise melodic control. The program parses artist-specific MIDI to emulate their style. For my exploration, I fed it Avicii top-line melodies normalized around A minor. The model is designed to be lightweight and work on the low-memory, embedded systems that Artiphon specializes in.</p>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Hyper-parameters</h3>
+      <ul class="list-none space-y-2">
+        <li><strong>Chord coefficient:</strong> the likelihood of chord tones</li>
+        <li><strong>Strong note coefficient:</strong> the likelihood that down beats emphasize chord tones</li>
+        <li><strong>Movement hesitance:</strong> the amount of desired movement (jumpiness)</li>
+        <li><strong>Movement spread:</strong> essentially the range of the generated melody</li>
+        <li><strong>Repetition coefficient:</strong> likelihood of repetition (1 = none, 0 = total repetition)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Audio Examples</h3>
+      <div class="space-y-4">
+        <div>
+          <p class="mb-2"><strong>Pattern Generation Demo:</strong> This example demonstrates the basic pattern generation capabilities using common chord progressions.</p>
+          <audio controls src="/audio/artiphon/pattern-demo-1.mp3" class="w-full"></audio>
+        </div>
+        <div>
+          <p class="mb-2"><strong>Adaptive Learning Demo:</strong> This example shows how the system learns from user input and generates complementary patterns.</p>
+          <audio controls src="/audio/artiphon/adaptive-demo-1.mp3" class="w-full"></audio>
+        </div>
+      </div>
+    `,
+    features: [
+      "Real-time pattern recognition",
+      "MIDI integration",
+      "Adaptive learning",
+      "Performance mode",
+      "Studio integration",
+    ],
+  },
+  {
     title: "Grooveblocks",
     description: "Interactive music composition tool",
     image: "/images/grooveblocks.png",
@@ -121,15 +159,7 @@ export const projects = [
     demoUrl: "https://grooveblocks.mit.edu",
     projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
-    detailedDescription: `The Artiphon Music Logic project is an innovative system that combines pattern recognition with real-time music generation. The system learns from the user's playing style and generates complementary musical phrases in real-time, making it suitable for both live performance and studio environments.
-
-The project features several key components:
-- Pattern Analysis: Uses Hidden Trigram Markov models to understand musical patterns
-- Adaptive Learning: Continuously learns from user input to improve pattern generation
-- Real-time Processing: Generates complementary phrases during live performance
-- MIDI Integration: Seamless integration with the Artiphon MIDI controller
-
-The system demonstrates various capabilities through the included audio demonstrations, from basic pattern generation to complex adaptive performances. Each audio example showcases different aspects of the system's capabilities, from simple pattern recognition to complex adaptive learning.`,
+    detailedDescription: `An innovative web-based music composition tool that combines machine learning with interactive music creation. Users can create and manipulate musical patterns through an intuitive interface while the system provides intelligent suggestions and complementary patterns.`,
     originalWorks: [
       {
         title: "Basic Pattern Generation",
