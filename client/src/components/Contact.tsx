@@ -59,12 +59,15 @@ export function Contact() {
                     About Me
                   </h3>
                   <p className="text-white/80 mb-6 leading-relaxed">
-                    I'm a tinkerer and musical late bloomer. I like building
-                    communities and tools that my younger self would find joy in.
-                    I aim to make the world an more fun and creative place
-                    through thoughtful design. I am on a mission to build the
-                    future of music education through adaptive and intelligent
-                    interfaces.
+                    I'm a tinkerer and musical late bloomer who loves building
+                    technology that my younger self would have found joy in.
+                    From founding a makerspace in high school to developing
+                    musical toys, I focus on making learning playful and
+                    impactful. By combining machine learning with electronic
+                    instrument design, I build generative systems and adaptive
+                    interfaces that support human creative agency. I'm on a
+                    mission to transform music education through technology that
+                    makes artistic expression accessible to everyone.
                   </p>
                 </div>
                 <div>

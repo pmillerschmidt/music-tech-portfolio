@@ -132,7 +132,6 @@ export const projects = [
     image: "/images/melgen.png",
     technologies: ["Python", "TensorFlow", "Machine Learning"],
     demoUrl: "https://melgen.mit.edu/demo",
-    projectUrl: "https://melgen.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/MelGen",
     videoUrl: "https://www.youtube.com/embed/VGp2k8LJc3M",
     isYoutubeVideo: true,
