@@ -4,86 +4,20 @@
 // 3. Supported formats: JPG, PNG, WebP
 // 4. Example path: "/images/your-project-name.jpg"
 
-export const musicProjects = [
-  {
-    title: "Discography",
-    summary: "Collection of original works, collaborations, and remixes",
-    image: "/images/dj.png",
-    technologies: ["Ableton", "Logic Pro", "Pioneer"],
-    detailedDescription:
-      "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life.         I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
-    originalWorks: [
-      {
-        title: "Tell Me a Lie (feat. Abby Walker)",
-        url: "/audio/Tell Me a Lie (feat. Abby Walker).mp3",
-        year: "2023",
-      },
-      {
-        title: "Something (feat. Abby Walker)",
-        url: "/audio/electronic-suite.mp3",
-        year: "2023",
-      },
-      {
-        title: "Afterlife (feat. Abby Walker)",
-        url: "/audio/afterlife (feat. Abby Walker) - lolla bounce.wav",
-        year: "2023",
-      },
-    ],
-    remixes: [
-      {
-        title: "Rasputin remix",
-        originalArtist: "Steve Reich",
-        url: "/audio/reimagined-patterns.mp3",
-        year: "2024",
-      },
-      {
-        title: "Smalltown Boy remix",
-        originalArtist: "J.S. Bach",
-        url: "/audio/electronic-variations.mp3",
-        year: "2023",
-      },
-    ],
-    videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
-    liveDemo: true,
-  },
-  {
-    title: "Coursework",
-    summary: "Collaborative film score composition project",
-    description:
-      "A collaborative film score composition project with Baltazar Lora",
-    detailedDescription: `
-    Music classes at Yale were a wonderful oasis of creativity and joy in my otherwise gruelling engineering coursework. After taking introductory theory courses my first year, I took nearly every course I was proficient enough to handle. Some of my favorites include Where Music Theories Collide, American Neighborhood Musics, and Gamelan Ensemble. 
-    Below is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar.`,
-    image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
-    isYoutubeVideo: true,
-    technologies: ["Ableton", "Film Scoring", "Composition"],
-  },
-  {
-    title: "Computer Music",
-    summary: "Exploring musical machines and probabilistic composition",
-    detailedDescription:
-      "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
-    image: "/images/computer-music.png",
-    githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
-    technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
-    originalWorks: [
-      {
-        title: "Hidden Markov Model Generation",
-        url: "/audio/markov-song.mp3",
-        description:
-          "Melody and drum patterns generated using Hidden Markov Models",
-        year: "2023",
-      },
-      {
-        title: "Mealy Machine Generation",
-        url: "/audio/mealy-song.mp3",
-        description: "Melody and drum patterns generated using Mealy Machines",
-        year: "2023",
-      },
-    ],
-  },
-];
+interface MusicWork {
+  title: string;
+  url: string;
+  year: string;
+  description?: string;
+}
+
+interface MusicRemix {
+  title: string;
+  originalArtist: string;
+  url: string;
+  year: string;
+  description?: string;
+}
 
 export const projects = [
   {
@@ -92,10 +26,11 @@ export const projects = [
     image: "/images/grooveblocks.png",
     technologies: ["React", "Web Audio API", "TensorFlow.js", "Node.js", "Express", "WebMIDI API"],
     demoUrl: "https://grooveblocks.mit.edu",
-    projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video URL
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     isYoutubeVideo: true,
+    liveDemo: true,
+    demoDescription: "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
       <p>Grooveblocks is an innovative web-based music composition tool that combines machine learning with interactive music creation. The project aims to make music composition more accessible and intuitive for both beginners and experienced musicians.</p>
 
@@ -131,7 +66,38 @@ export const projects = [
         <img src="/images/grooveblocks/architecture.png" alt="System Architecture" class="w-full rounded-lg shadow-lg mb-2" />
         <p class="text-sm text-white/60 text-center">System architecture showing the integration of various components</p>
       </div>
+
+      <div class="mt-6 mb-8">
+        <img src="/images/grooveblocks/user-interface.png" alt="User Interface" class="w-full rounded-lg shadow-lg mb-2" />
+        <p class="text-sm text-white/60 text-center">The intuitive user interface designed for musicians</p>
+      </div>
+
+      <div class="mt-6 mb-8">
+        <img src="/images/grooveblocks/performance.png" alt="Live Performance" class="w-full rounded-lg shadow-lg mb-2" />
+        <p class="text-sm text-white/60 text-center">Grooveblocks being used in a live performance setting</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Project Demo</h3>
+      <div class="aspect-video rounded-lg overflow-hidden bg-black/40">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          class="w-full h-full"
+          title="Grooveblocks Demo"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
     `,
+    features: [
+      "Interactive block-based composition",
+      "AI-powered pattern generation",
+      "Real-time MIDI controller support",
+      "Collaborative music creation",
+      "Multiple synthesis engines",
+      "Pattern variation controls",
+      "Export to MIDI/WAV formats"
+    ],
     originalWorks: [
       {
         title: "Basic Pattern Generation",
@@ -162,15 +128,6 @@ export const projects = [
         year: "2023",
       },
     ],
-    features: [
-      "Interactive block-based composition",
-      "AI-powered pattern generation",
-      "Real-time MIDI controller support",
-      "Collaborative music creation",
-      "Multiple synthesis engines",
-      "Pattern variation controls",
-      "Export to MIDI/WAV formats"
-    ],
   },
   {
     title: "MelGen",
@@ -182,12 +139,8 @@ export const projects = [
     videoUrl: "https://www.youtube.com/embed/VGp2k8LJc3M",
     isYoutubeVideo: true,
     liveDemo: true,
-    demoDescription:
-      "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
-    detailedDescription: `
-
-  Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
-    `,
+    demoDescription: "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
+    detailedDescription: `Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.`,
     features: [
       "Real-time melody generation",
       "Chord-aware composition",
@@ -247,7 +200,6 @@ export const projects = [
     image: "/images/Qtar.png",
     technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
     demoUrl: "https://neural-music.example.com",
-    projectUrl: "https://qtar.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/qtar",
     videoUrl: "/videos/qtar-demo.mp4",
     liveDemo: true,
@@ -266,7 +218,6 @@ export const projects = [
     image: "/images/next-chord.png",
     technologies: ["TensorFlow", "Machine Learning", "React", "Web Audio API"],
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
-    projectUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     videoUrl: "/videos/nextchord-demo.mp4",
     liveDemo: true,
@@ -288,7 +239,6 @@ export const projects = [
       "Tree Search",
     ],
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
-    projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
     videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
     liveDemo: true,
@@ -303,3 +253,86 @@ export const projects = [
     ],
   },
 ];
+
+export const musicProjects = [
+  {
+    title: "Discography",
+    summary: "Collection of original works, collaborations, and remixes",
+    image: "/images/dj.png",
+    technologies: ["Ableton", "Logic Pro", "Pioneer"],
+    detailedDescription: "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life. I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
+    originalWorks: [
+      {
+        title: "Tell Me a Lie (feat. Abby Walker)",
+        url: "/audio/Tell Me a Lie (feat. Abby Walker).mp3",
+        year: "2023",
+      } as MusicWork,
+      {
+        title: "Something (feat. Abby Walker)",
+        url: "/audio/electronic-suite.mp3",
+        year: "2023",
+      } as MusicWork,
+      {
+        title: "Afterlife (feat. Abby Walker)",
+        url: "/audio/afterlife (feat. Abby Walker) - lolla bounce.wav",
+        year: "2023",
+      } as MusicWork,
+    ],
+    remixes: [
+      {
+        title: "Rasputin remix",
+        originalArtist: "Steve Reich",
+        url: "/audio/reimagined-patterns.mp3",
+        year: "2024",
+      } as MusicRemix,
+      {
+        title: "Smalltown Boy remix",
+        originalArtist: "J.S. Bach",
+        url: "/audio/electronic-variations.mp3",
+        year: "2023",
+      } as MusicRemix,
+    ],
+    videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
+    liveDemo: true,
+  },
+  {
+    title: "Coursework",
+    summary: "Collaborative film score composition project",
+    description:
+      "A collaborative film score composition project with Baltazar Lora",
+    detailedDescription: `
+    Music classes at Yale were a wonderful oasis of creativity and joy in my otherwise gruelling engineering coursework. After taking introductory theory courses my first year, I took nearly every course I was proficient enough to handle. Some of my favorites include Where Music Theories Collide, American Neighborhood Musics, and Gamelan Ensemble. 
+    Below is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar.`,
+    image: "/images/visual-scoring.jpg",
+    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
+    isYoutubeVideo: true,
+    technologies: ["Ableton", "Film Scoring", "Composition"],
+  },
+  {
+    title: "Computer Music",
+    summary: "Exploring musical machines and probabilistic composition",
+    detailedDescription:
+      "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
+    image: "/images/computer-music.png",
+    githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
+    technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
+    originalWorks: [
+      {
+        title: "Hidden Markov Model Generation",
+        url: "/audio/markov-song.mp3",
+        description:
+          "Melody and drum patterns generated using Hidden Markov Models",
+        year: "2023",
+      },
+      {
+        title: "Mealy Machine Generation",
+        url: "/audio/mealy-song.mp3",
+        description: "Melody and drum patterns generated using Mealy Machines",
+        year: "2023",
+      },
+    ],
+  },
+];
+
+export const publications: any[] = [];
+export const researchInterests: any[] = [];
