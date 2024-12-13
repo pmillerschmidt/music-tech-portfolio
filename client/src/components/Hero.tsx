@@ -19,7 +19,7 @@ export function Hero() {
       {/* Background Container */}
       <div className="absolute inset-0 z-0">
         <motion.img
-          src="/images/hero.jpg"
+          src="/images/hero.jpeg"
           alt="Creative Technology Background"
           className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
           initial={{ opacity: 0 }}
