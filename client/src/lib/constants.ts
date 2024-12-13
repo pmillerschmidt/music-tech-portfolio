@@ -32,6 +32,18 @@ export const projects = [
     liveDemo: true,
     demoDescription: "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
+      <h3 class="text-xl font-semibold mt-6 mb-4">Project Demo</h3>
+      <div class="aspect-video rounded-lg overflow-hidden bg-black/40 mb-8">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          class="w-full h-full"
+          title="Grooveblocks Demo"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+
       <p>Grooveblocks is an innovative web-based music composition tool that combines machine learning with interactive music creation. The project aims to make music composition more accessible and intuitive for both beginners and experienced musicians.</p>
 
       <div class="mt-6 mb-8">
