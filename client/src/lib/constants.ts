@@ -99,6 +99,11 @@ export const projects = [
     detailedDescription: `
       <p>Grooveblocks is an innovative web-based music composition tool that combines machine learning with interactive music creation. The project aims to make music composition more accessible and intuitive for both beginners and experienced musicians.</p>
 
+      <div class="mt-6 mb-8">
+        <img src="/images/grooveblocks/interface.png" alt="Grooveblocks Interface" class="w-full rounded-lg shadow-lg mb-2" />
+        <p class="text-sm text-white/60 text-center">The main interface showing the pattern blocks and real-time visualization</p>
+      </div>
+
       <h3 class="text-xl font-semibold mt-6 mb-4">Key Features</h3>
       <ul class="list-none space-y-2">
         <li><strong>Interactive Block Interface:</strong> Drag-and-drop interface for arranging musical patterns</li>
@@ -108,8 +113,24 @@ export const projects = [
         <li><strong>Export Options:</strong> Export compositions as MIDI or audio files</li>
       </ul>
 
+      <div class="grid grid-cols-2 gap-4 my-8">
+        <div>
+          <img src="/images/grooveblocks/pattern-editor.png" alt="Pattern Editor" class="w-full rounded-lg shadow-lg mb-2" />
+          <p class="text-sm text-white/60 text-center">Pattern editor with MIDI visualization</p>
+        </div>
+        <div>
+          <img src="/images/grooveblocks/collaboration.png" alt="Collaboration Features" class="w-full rounded-lg shadow-lg mb-2" />
+          <p class="text-sm text-white/60 text-center">Real-time collaboration interface</p>
+        </div>
+      </div>
+
       <h3 class="text-xl font-semibold mt-6 mb-4">Technical Implementation</h3>
       <p>The system uses TensorFlow.js for client-side machine learning, enabling real-time pattern generation without server latency. The Web Audio API handles all sound synthesis and processing, while WebMIDI provides hardware integration capabilities.</p>
+
+      <div class="mt-6 mb-8">
+        <img src="/images/grooveblocks/architecture.png" alt="System Architecture" class="w-full rounded-lg shadow-lg mb-2" />
+        <p class="text-sm text-white/60 text-center">System architecture showing the integration of various components</p>
+      </div>
     `,
     originalWorks: [
       {
