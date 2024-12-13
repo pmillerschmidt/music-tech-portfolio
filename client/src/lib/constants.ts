@@ -27,22 +27,7 @@ export const projects = [
     technologies: ["React", "Web Audio API", "TensorFlow.js", "Node.js", "Express", "WebMIDI API"],
     demoUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isYoutubeVideo: true,
-    liveDemo: true,
-    demoDescription: "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
-      <h3 class="text-xl font-semibold mt-6 mb-4">Project Demo</h3>
-      <div class="aspect-video rounded-lg overflow-hidden bg-black/40 mb-8">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          class="w-full h-full"
-          title="Grooveblocks Demo"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
 
       <p>Grooveblocks is an innovative web-based music composition tool that combines machine learning with interactive music creation. The project aims to make music composition more accessible and intuitive for both beginners and experienced musicians.</p>
 
@@ -152,7 +137,20 @@ export const projects = [
     isYoutubeVideo: true,
     liveDemo: true,
     demoDescription: "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
-    detailedDescription: `Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.`,
+    detailedDescription: `
+      <h3 class="text-xl font-semibold mt-6 mb-4">Project Demo</h3>
+      <div class="aspect-video rounded-lg overflow-hidden bg-black/40 mb-8">
+        <iframe
+          src="https://www.youtube.com/embed/VGp2k8LJc3M"
+          class="w-full h-full"
+          title="MelGen Demo"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+
+      Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.`,
     features: [
       "Real-time melody generation",
       "Chord-aware composition",
