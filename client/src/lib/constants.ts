@@ -88,13 +88,29 @@ export const musicProjects = [
 export const projects = [
   {
     title: "Grooveblocks",
-    description: "Interactive music composition tool",
+    description: "Interactive music composition tool powered by machine learning",
     image: "/images/grooveblocks.png",
-    technologies: ["React", "Web Audio API", "TensorFlow.js"],
+    technologies: ["React", "Web Audio API", "TensorFlow.js", "Node.js", "Express", "WebMIDI API"],
     demoUrl: "https://grooveblocks.mit.edu",
     projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
-    detailedDescription: `An innovative web-based music composition tool that combines machine learning with interactive music creation. Users can create and manipulate musical patterns through an intuitive interface while the system provides intelligent suggestions and complementary patterns.`,
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video URL
+    isYoutubeVideo: true,
+    detailedDescription: `
+      <p>Grooveblocks is an innovative web-based music composition tool that combines machine learning with interactive music creation. The project aims to make music composition more accessible and intuitive for both beginners and experienced musicians.</p>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Key Features</h3>
+      <ul class="list-none space-y-2">
+        <li><strong>Interactive Block Interface:</strong> Drag-and-drop interface for arranging musical patterns</li>
+        <li><strong>Real-time Generation:</strong> AI-powered pattern generation that responds to user input</li>
+        <li><strong>MIDI Integration:</strong> Support for MIDI controllers and external instruments</li>
+        <li><strong>Collaborative Features:</strong> Real-time collaboration between multiple users</li>
+        <li><strong>Export Options:</strong> Export compositions as MIDI or audio files</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Technical Implementation</h3>
+      <p>The system uses TensorFlow.js for client-side machine learning, enabling real-time pattern generation without server latency. The Web Audio API handles all sound synthesis and processing, while WebMIDI provides hardware integration capabilities.</p>
+    `,
     originalWorks: [
       {
         title: "Basic Pattern Generation",
@@ -124,6 +140,15 @@ export const projects = [
           "Recording of a live performance using the system with the Artiphon MIDI controller",
         year: "2023",
       },
+    ],
+    features: [
+      "Interactive block-based composition",
+      "AI-powered pattern generation",
+      "Real-time MIDI controller support",
+      "Collaborative music creation",
+      "Multiple synthesis engines",
+      "Pattern variation controls",
+      "Export to MIDI/WAV formats"
     ],
   },
   {
