@@ -4,44 +4,8 @@ import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 export function Hero() {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const [isVideoError, setIsVideoError] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check for mobile devices and handle resize events
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent,
-        ) || window.innerWidth < 768,
-      );
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  // Video and image URLs
-  const videoUrl = "/videos/hero-background.mp4"; // Video background for desktop
-  const fallbackImage = "/images/hero.jpeg"; // Fallback image for mobile and error cases
   const [isLoading, setIsLoading] = useState(true);
-
   const { toast } = useToast();
-
-  const handleVideoLoaded = () => {
-    setIsVideoLoaded(true);
-  };
-
-  const handleVideoError = () => {
-    setIsVideoError(true);
-    toast({
-      title: "Video Loading Error",
-      description: "Falling back to static image background",
-      variant: "destructive",
-    });
-  };
 
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects");
@@ -54,38 +18,12 @@ export function Hero() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Container */}
       <div className="absolute inset-0 z-0">
-        {!isMobile && !isVideoError && (
-          <motion.video
-            key="hero-video"
-            src={videoUrl}
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadStart={() => setIsLoading(true)}
-            onLoadedData={() => {
-              handleVideoLoaded();
-              setIsLoading(false);
-            }}
-            onError={handleVideoError}
-            className={`absolute inset-0 w-full h-full object-cover transform scale-105 transition-all duration-1000 ${
-              isVideoLoaded && !isLoading ? 'opacity-100' : 'opacity-0'
-            } hover:scale-110`}
-            style={{
-              filter: "brightness(0.6) contrast(1.2) saturate(1.2)",
-              willChange: "transform",
-            }}
-          />
-        )}
-        
         <motion.img
-          src={fallbackImage}
+          src="/images/hero.jpg"
           alt="Creative Technology Background"
-          className={`absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110 ${
-            (!isVideoLoaded || isMobile || isVideoError) ? 'opacity-100' : 'opacity-0'
-          }`}
+          className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
           initial={{ opacity: 0 }}
-          animate={{ opacity: (!isVideoLoaded || isMobile || isVideoError) ? 1 : 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           loading="eager"
           style={{
