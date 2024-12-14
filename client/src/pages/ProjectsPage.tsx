@@ -8,18 +8,29 @@ export default function ProjectsPage() {
   const [location] = useLocation();
 
   useEffect(() => {
-    // Check if we have a hash in the URL
-    const hash = window.location.hash;
-    if (hash) {
-      // Remove the # from the hash
-      const element = document.getElementById(hash.substring(1));
-      if (element) {
-        // Ensure the element is scrolled into view after a short delay
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100);
+    // Function to handle scroll
+    const scrollToSection = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
+        }
       }
-    }
+    };
+
+    // Initial scroll
+    scrollToSection();
+
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', scrollToSection);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('hashchange', scrollToSection);
+    };
   }, [location]);
 
   return (

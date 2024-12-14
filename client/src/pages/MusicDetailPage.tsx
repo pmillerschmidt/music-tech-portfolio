@@ -49,15 +49,16 @@ export default function MusicDetailPage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
-            <Link href="/#music">
-              <Button
-                variant="outline"
-                className="mb-8 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Music
-              </Button>
-            </Link>
+            <Button
+              variant="outline"
+              className="mb-8 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+              onClick={() => {
+                window.location.href = '/#music';
+              }}
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Music
+            </Button>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
