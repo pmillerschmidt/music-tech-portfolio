@@ -38,7 +38,7 @@ export function Projects() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
               >
-                Featured Projects
+                Projects
               </motion.h2>
 
               {/* First three projects */}
