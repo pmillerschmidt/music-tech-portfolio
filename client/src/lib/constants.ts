@@ -169,7 +169,7 @@ export const projects = [
       "Pattern variation controls",
       "Export to MIDI/WAV formats",
     ],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID",
     isYoutubeVideo: true,
   },
   {
