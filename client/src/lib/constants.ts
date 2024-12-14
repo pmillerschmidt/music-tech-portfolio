@@ -47,7 +47,6 @@ export const musicProjects = [
       },
     ],
     videoUrl: "https://example.com/videos/neural-synthesis-demo.mp4",
-    liveDemo: true,
   },
   {
     title: "Coursework",
@@ -142,7 +141,6 @@ export const projects = [
     githubUrl: "https://github.com/pmillerschmidt/MelGen",
     videoUrl: "https://www.youtube.com/embed/VGp2k8LJc3M",
     isYoutubeVideo: true,
-    liveDemo: true,
     demoDescription:
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
@@ -211,7 +209,6 @@ export const projects = [
     projectUrl: "https://qtar.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/qtar",
     videoUrl: "/videos/qtar-demo.mp4",
-    liveDemo: true,
     demoDescription:
       "Create unique musical pieces using deep learning models trained on various musical styles.",
     features: [
@@ -229,7 +226,6 @@ export const projects = [
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     projectUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
-    liveDemo: true,
     detailedDescription: `
       nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict.
 
@@ -252,7 +248,6 @@ export const projects = [
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
     videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
-    liveDemo: true,
     isYoutubeVideo: true,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
