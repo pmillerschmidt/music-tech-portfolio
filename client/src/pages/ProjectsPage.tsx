@@ -16,13 +16,26 @@ export default function ProjectsPage() {
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
+          // Enable scrolling on the body
+          document.body.style.overflow = 'auto';
+          document.documentElement.style.overflow = 'auto';
         }, 100);
       }
+    } else {
+      // If no hash, ensure scrolling is enabled
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
     }
+
+    // Cleanup function to ensure scrolling is always enabled when component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    };
   }, [location]);
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-auto">
       <Hero />
       <Projects />
       <Music />
