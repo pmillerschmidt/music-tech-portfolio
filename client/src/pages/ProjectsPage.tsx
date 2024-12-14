@@ -18,11 +18,14 @@ export default function ProjectsPage() {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 100);
       }
+    } else {
+      // If no hash, scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
   return (
-    <main className="min-h-screen">
+    <main className="relative min-h-screen overflow-y-auto">
       <Hero />
       <Projects />
       <Music />
