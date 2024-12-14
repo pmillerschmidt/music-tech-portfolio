@@ -14,18 +14,16 @@ export default function ProjectsPage() {
       // Remove the # from the hash
       const element = document.getElementById(hash.substring(1));
       if (element) {
+        // Ensure the element is scrolled into view after a short delay
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 100);
       }
-    } else {
-      // If no hash, scroll to top
-      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
   return (
-    <main className="relative min-h-screen overflow-y-auto">
+    <main className="relative min-h-screen overflow-y-auto scroll-smooth">
       <Hero />
       <Projects />
       <Music />

@@ -30,7 +30,7 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black overflow-y-auto scroll-smooth">
       <div className="relative min-h-screen">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
