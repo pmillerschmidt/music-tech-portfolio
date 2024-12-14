@@ -4,6 +4,9 @@
 // 3. Supported formats: JPG, PNG, WebP
 // 4. Example path: "/images/your-project-name.jpg"
 
+export const publications = [];
+export const researchInterests = [];
+
 export const musicProjects = [
   {
     title: "Discography",
