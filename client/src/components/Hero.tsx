@@ -15,7 +15,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
       {/* Background Container */}
       <div className="absolute inset-0 z-0">
         <motion.img

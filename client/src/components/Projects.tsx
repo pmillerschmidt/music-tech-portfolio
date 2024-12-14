@@ -14,7 +14,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen pt-12"
+      className="relative min-h-screen -mt-1"
     >
       <div className="relative w-full h-full">
         {/* Background that covers entire section */}
