@@ -14,11 +14,11 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative"
+      className="relative min-h-screen py-24"
     >
-      <div className="relative">
+      <div className="relative w-full h-full">
         {/* Background that covers entire section */}
-        <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src="/images/projects-inverted.jpg"
             alt="Projects Background"
@@ -30,8 +30,8 @@ export function Projects() {
         {/* Content container */}
         <div className="relative z-10">
           {/* First viewport - initial view */}
-          <div className="min-h-screen flex items-center py-12">
-            <div className="container mx-auto px-4">
+          <div className="flex items-center">
+            <div className="container mx-auto px-4 py-12">
               <motion.h2
                 className="text-4xl font-bold mb-8 text-center text-white hero-text bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
