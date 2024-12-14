@@ -127,19 +127,7 @@ export const projects = [
     
     <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through middle school testing and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities.</p>
 
-    <div class="mt-8">
-      <h3 class="text-xl font-semibold mb-4">Project Demo</h3>
-      <div class="aspect-video rounded-lg overflow-hidden">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          class="w-full h-full"
-          title="GrooveBlocks Demo"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+    
       
     `,
     originalWorks: [
