@@ -63,19 +63,43 @@ export function Projects() {
                           </CardDescription>
                         </CardHeader>
                         <CardContent className="p-4">
-                          <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                            <img
-                              src={project.image}
-                              alt={project.title}
-                              className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
-                              <span className="text-white font-medium flex items-center">
-                                View Details
-                                <ExternalLink className="w-4 h-4 ml-2" />
-                              </span>
+                          {/* Multiple Images Support */}
+                          {Array.isArray(project.images) ? (
+                            <div className="grid grid-cols-2 gap-2 mb-4">
+                              {project.images.map((image, imgIndex) => (
+                                <div
+                                  key={imgIndex}
+                                  className="relative h-40 bg-cover bg-center rounded-md overflow-hidden group-hover:shadow-lg transition-all duration-300"
+                                >
+                                  <img
+                                    src={image}
+                                    alt={`${project.title} - View ${imgIndex + 1}`}
+                                    className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                                  />
+                                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span className="text-white font-medium flex items-center">
+                                      View Details
+                                      <ExternalLink className="w-4 h-4 ml-2" />
+                                    </span>
+                                  </div>
+                                </div>
+                              ))}
                             </div>
-                          </div>
+                          ) : (
+                            <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                              <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                              />
+                              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                                <span className="text-white font-medium flex items-center">
+                                  View Details
+                                  <ExternalLink className="w-4 h-4 ml-2" />
+                                </span>
+                              </div>
+                            </div>
+                          )}
                           <div className="flex flex-wrap gap-2">
                             {project.technologies.map((tech) => (
                               <span
@@ -95,7 +119,7 @@ export function Projects() {
             </div>
           </div>
 
-          {/* Second set of projects - partially visible */}
+          {/* Second set of projects */}
           <div className="min-h-[80vh] pt-0">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -119,19 +143,43 @@ export function Projects() {
                           </CardDescription>
                         </CardHeader>
                         <CardContent className="p-4">
-                          <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                            <img
-                              src={project.image}
-                              alt={project.title}
-                              className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
-                              <span className="text-white font-medium flex items-center">
-                                View Details
-                                <ExternalLink className="w-4 h-4 ml-2" />
-                              </span>
+                          {/* Multiple Images Support */}
+                          {Array.isArray(project.images) ? (
+                            <div className="grid grid-cols-2 gap-2 mb-4">
+                              {project.images.map((image, imgIndex) => (
+                                <div
+                                  key={imgIndex}
+                                  className="relative h-40 bg-cover bg-center rounded-md overflow-hidden group-hover:shadow-lg transition-all duration-300"
+                                >
+                                  <img
+                                    src={image}
+                                    alt={`${project.title} - View ${imgIndex + 1}`}
+                                    className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                                  />
+                                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span className="text-white font-medium flex items-center">
+                                      View Details
+                                      <ExternalLink className="w-4 h-4 ml-2" />
+                                    </span>
+                                  </div>
+                                </div>
+                              ))}
                             </div>
-                          </div>
+                          ) : (
+                            <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                              <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                              />
+                              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                                <span className="text-white font-medium flex items-center">
+                                  View Details
+                                  <ExternalLink className="w-4 h-4 ml-2" />
+                                </span>
+                              </div>
+                            </div>
+                          )}
                           <div className="flex flex-wrap gap-2">
                             {project.technologies.map((tech) => (
                               <span

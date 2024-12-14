@@ -10,11 +10,11 @@ export const researchInterests = [];
 export const musicProjects = [
   {
     title: "Discography",
-    summary: "Collection of original works, collaborations, and remixes",
+    summary: "Original works, collaborations, and remixes",
     image: "/images/dj.png",
     technologies: ["Ableton", "Logic Pro", "Pioneer"],
     detailedDescription:
-      "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life.         I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
+      "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life. I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
     originalWorks: [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
@@ -64,7 +64,7 @@ export const musicProjects = [
   },
   {
     title: "Computer Music",
-    summary: "Exploring musical machines and probabilistic composition",
+    summary: "Musical machines and probabilistic composition",
     detailedDescription:
       "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
@@ -91,48 +91,37 @@ export const musicProjects = [
 export const projects = [
   {
     title: "Grooveblocks",
-    description: "Interactive music composition tool powered by machine learning",
+    description: "Combinatory blocks for composition-based learning",
     image: "/images/grooveblocks.png",
-    technologies: ["React", "Web Audio API", "TensorFlow.js", "Node.js", "Express", "WebMIDI API"],
+    technologies: [
+      "React",
+      "Web Audio API",
+      "TensorFlow.js",
+      "Node.js",
+      "Express",
+      "WebMIDI API",
+    ],
     demoUrl: "https://grooveblocks.mit.edu",
     projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
-    
+
     detailedDescription: `
-      <p>Grooveblocks is an innovative web-based music composition tool that combines machine learning with interactive music creation. The project aims to make music composition more accessible and intuitive for both beginners and experienced musicians.</p>
-
-      <div class="mt-6 mb-8">
-        <img src="/images/grooveblocks/interface.png" alt="Grooveblocks Interface" class="w-full rounded-lg shadow-lg mb-2" />
-        <p class="text-sm text-white/60 text-center">The main interface showing the pattern blocks and real-time visualization</p>
+      <p>GrooveBlocks reimagines music education through tangible, interactive building blocks that make composition accessible from day one. Traditional music education often prioritizes technical proficiency over creative expression, leading to high dropout rates and missed opportunities for musical discovery. Instead of following the conventional path of years of practice before creation, GrooveBlocks lets students start creating immediately through an intuitive system of modular blocks that control different musical elements.</p> 
+      <div>
+        <img src="/images/grooveblocks/grooveblocks-design.png" alt="Design" class="w-full rounded-lg shadow-lg mb-2" />
+        <p class="text-sm text-white/60 text-center">Grooveblocks initial design conceptions</p>
       </div>
+      
+      <p>The hardware consists of connectable blocks for rhythm, melody, harmony, and effects, each equipped with sensors that translate physical manipulation into musical elements. These blocks interface with our companion app, which features three seamlessly integrated modes: Learn, Jam, and Create. The Learn mode uses AI to adapt to each student's interests and progress, introducing new concepts when they're ready. Jam mode facilitates improvisation and collaboration, while Create mode offers varying levels of compositional guidance based on the student's experience.</p>
 
-      <h3 class="text-xl font-semibold mt-6 mb-4">Key Features</h3>
-      <ul class="list-none space-y-2">
-        <li><strong>Interactive Block Interface:</strong> Drag-and-drop interface for arranging musical patterns</li>
-        <li><strong>Real-time Generation:</strong> AI-powered pattern generation that responds to user input</li>
-        <li><strong>MIDI Integration:</strong> Support for MIDI controllers and external instruments</li>
-        <li><strong>Collaborative Features:</strong> Real-time collaboration between multiple users</li>
-        <li><strong>Export Options:</strong> Export compositions as MIDI or audio files</li>
-      </ul>
 
-      <div class="grid grid-cols-2 gap-4 my-8">
-        <div>
-          <img src="/images/grooveblocks/pattern-editor.png" alt="Pattern Editor" class="w-full rounded-lg shadow-lg mb-2" />
-          <p class="text-sm text-white/60 text-center">Pattern editor with MIDI visualization</p>
-        </div>
-        <div>
-          <img src="/images/grooveblocks/collaboration.png" alt="Collaboration Features" class="w-full rounded-lg shadow-lg mb-2" />
-          <p class="text-sm text-white/60 text-center">Real-time collaboration interface</p>
-        </div>
-      </div>
-
-      <h3 class="text-xl font-semibold mt-6 mb-4">Technical Implementation</h3>
-      <p>The system uses TensorFlow.js for client-side machine learning, enabling real-time pattern generation without server latency. The Web Audio API handles all sound synthesis and processing, while WebMIDI provides hardware integration capabilities.</p>
-
-      <div class="mt-6 mb-8">
-        <img src="/images/grooveblocks/architecture.png" alt="System Architecture" class="w-full rounded-lg shadow-lg mb-2" />
-        <p class="text-sm text-white/60 text-center">System architecture showing the integration of various components</p>
-      </div>
+    <div class="mt-6 mb-8">
+      <img src="/images/grooveblocks/basic-ui.png" alt="Grooveblocks Interface" class="w-full rounded-lg shadow-lg mb-2" />
+      <p class="text-sm text-white/60 text-center">Jam Mode UI</p>
+    </div>
+    
+    <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through middle school testing and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities.</p>
+      
     `,
     originalWorks: [
       {
@@ -171,7 +160,7 @@ export const projects = [
       "Collaborative music creation",
       "Multiple synthesis engines",
       "Pattern variation controls",
-      "Export to MIDI/WAV formats"
+      "Export to MIDI/WAV formats",
     ],
   },
   {
@@ -279,8 +268,7 @@ export const projects = [
   },
   {
     title: "Chess Engine Design",
-    description:
-      "Minimax chess engine using alpha-beta pruning and advanced heuristics",
+    description: "Minimax chess engine with advanced heuristics",
     image: "/images/minimax.png",
     technologies: [
       "JavaScript",
