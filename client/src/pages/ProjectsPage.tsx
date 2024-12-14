@@ -8,28 +8,54 @@ export default function ProjectsPage() {
   const [location] = useLocation();
 
   useEffect(() => {
-    // Function to handle scroll
-    const scrollToSection = () => {
+    // Function to handle scroll with retry
+    const scrollToSection = (retryCount = 0) => {
       const hash = window.location.hash;
       if (hash) {
         const element = document.getElementById(hash.substring(1));
         if (element) {
-          setTimeout(() => {
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
-          }, 100);
+          // Force a layout reflow
+          void element.offsetHeight;
+          
+          const scrollOptions = {
+            behavior: "smooth" as ScrollBehavior,
+            block: "start" as ScrollLogicalPosition,
+          };
+
+          try {
+            element.scrollIntoView(scrollOptions);
+          } catch (e) {
+            console.error("Scroll error:", e);
+            // Fallback to window.scrollTo
+            const rect = element.getBoundingClientRect();
+            window.scrollTo({
+              top: rect.top + window.pageYOffset,
+              behavior: "smooth",
+            });
+          }
+        } else if (retryCount < 3) {
+          // Retry a few times if element is not found
+          setTimeout(() => scrollToSection(retryCount + 1), 250);
         }
       }
     };
 
-    // Initial scroll
-    scrollToSection();
+    // Delay initial scroll to ensure content is loaded
+    const initialScrollTimeout = setTimeout(() => {
+      scrollToSection();
+    }, 500);
 
-    // Add event listener for hash changes
-    window.addEventListener('hashchange', scrollToSection);
+    // Handle hash changes
+    const handleHashChange = () => {
+      scrollToSection();
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
 
     // Cleanup
     return () => {
-      window.removeEventListener('hashchange', scrollToSection);
+      clearTimeout(initialScrollTimeout);
+      window.removeEventListener('hashchange', handleHashChange);
     };
   }, [location]);
 

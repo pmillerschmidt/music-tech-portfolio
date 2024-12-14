@@ -53,7 +53,15 @@ export default function MusicDetailPage() {
               variant="outline"
               className="mb-8 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300"
               onClick={() => {
+                // First navigate to the page
                 window.location.href = '/#music';
+                // Force a scroll after navigation
+                setTimeout(() => {
+                  const element = document.getElementById('music');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 100);
               }}
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
