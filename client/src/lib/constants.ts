@@ -114,13 +114,13 @@ export const projects = [
       
       <p>The hardware consists of connectable blocks for rhythm, melody, harmony, and effects, each equipped with sensors that translate physical manipulation into musical elements. These blocks interface with our companion app, which features three seamlessly integrated modes: Learn, Jam, and Create. The Learn mode uses AI to adapt to each student's interests and progress, introducing new concepts when they're ready. Jam mode facilitates improvisation and collaboration, while Create mode offers varying levels of compositional guidance based on the student's experience.</p>
 
-    <div class="mt-6 mb-8 flex flex-row gap-4">
-      <div class="w-1/2">
-        <img src="/images/grooveblocks/basic-ui.png" alt="Grooveblocks Interface" class="w-full rounded-lg shadow-lg mb-2" />
+    <div class="flex flex-row items-start space-x-4 mt-6 mb-8">
+      <div class="flex-1">
+        <img src="/images/grooveblocks/basic-ui.png" alt="Grooveblocks Interface" class="w-full h-auto rounded-lg shadow-lg mb-2" />
         <p class="text-sm text-white/60 text-center">Jam Mode UI</p>
       </div>
-      <div class="w-1/2">
-        <img src="/images/grooveblocks/prospective-ui.png" alt="Prospective UI" class="w-full rounded-lg shadow-lg mb-2" />
+      <div class="flex-1">
+        <img src="/images/grooveblocks/prospective-ui.png" alt="Prospective UI" class="w-full h-auto rounded-lg shadow-lg mb-2" />
         <p class="text-sm text-white/60 text-center">Prospective UI Design</p>
       </div>
     </div>
