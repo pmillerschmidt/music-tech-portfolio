@@ -62,9 +62,7 @@ export function Music() {
 
         <div className="relative group">
           {/* Scroll indicator */}
-          {!hasScrolled && scrollContainerRef.current && 
-           scrollContainerRef.current.scrollWidth > scrollContainerRef.current.clientWidth && 
-           scrollContainerRef.current.scrollLeft + scrollContainerRef.current.clientWidth < scrollContainerRef.current.scrollWidth - 10 && (
+          {!hasScrolled && scrollContainerRef.current && scrollContainerRef.current.scrollWidth > scrollContainerRef.current.clientWidth && (
             <motion.button 
               className="absolute right-4 top-1/2 -translate-y-1/2 z-[100] p-3 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 text-white/60 hover:text-white/80 transition-all duration-300 hover:scale-110 cursor-pointer"
               onClick={scrollRight}
