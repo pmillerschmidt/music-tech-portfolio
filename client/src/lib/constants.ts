@@ -101,7 +101,6 @@ export const projects = [
       "Express",
       "WebMIDI API",
     ],
-    demoUrl: "https://grooveblocks.mit.edu",
     projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
 
@@ -116,57 +115,22 @@ export const projects = [
 
     <div style="display: flex; gap: 1rem; margin: 1.5rem 0;">
       <div style="flex: 1;">
-        <img src="/images/grooveblocks/basic-ui.png" alt="Grooveblocks Interface" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;" />
-        <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.6); text-align: center;">Jam Mode UI</p>
-      </div>
-      <div style="flex: 1;">
-        <img src="/images/grooveblocks/prospective-ui.png" alt="Prospective UI" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;" />
-        <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.6); text-align: center;">Prospective UI Design</p>
+        <img src="/images/grooveblocks/grooveblocks-ui.png" alt="Grooveblocks Interface" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;" />
+        <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.6); text-align: center;">Jam Mode UI & Prospective UI Design</p>
       </div>
     </div>
     
-    <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through middle school testing and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities.</p>
+    <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through middle school testing and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities. While we weren't able to film demos in schools, below are some videos of the blocks in action.</p>
 
-    <iframe src="https://www.youtube.com/embed/VGp2k8LJc3M" style="width: 100%; aspect-ratio: 16/9;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/x5WkWsCPJ6E?si=dzzrCyO7XtQcbLTQ" title="YouTube video player" frameborder="0" style="display: block; margin: 0 auto;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
     `,
-    originalWorks: [
-      {
-        title: "Basic Pattern Generation",
-        url: "/audio/artiphon/pattern-demo-1.mp3",
-        description:
-          "Demonstration of the basic pattern generation capabilities using common chord progressions",
-        year: "2023",
-      },
-      {
-        title: "Adaptive Pattern Learning",
-        url: "/audio/artiphon/adaptive-demo-1.mp3",
-        description:
-          "Example of the system learning from user input and generating complementary patterns",
-        year: "2023",
-      },
-      {
-        title: "Complex Pattern Generation",
-        url: "/audio/artiphon/pattern-demo-2.mp3",
-        description:
-          "Advanced pattern generation with multiple simultaneous voices and rhythmic variation",
-        year: "2023",
-      },
-      {
-        title: "Live Performance Demo",
-        url: "/audio/artiphon/live-demo-1.mp3",
-        description:
-          "Recording of a live performance using the system with the Artiphon MIDI controller",
-        year: "2023",
-      },
-    ],
     features: [
       "Interactive block-based composition",
-      "AI-powered pattern generation",
-      "Real-time MIDI controller support",
+      "Real-time audio processing",
       "Collaborative music creation",
       "Multiple synthesis engines",
-      "Pattern variation controls",
-      "Export to MIDI/WAV formats",
+      "Rich visual and haptic",
     ],
   },
   {
