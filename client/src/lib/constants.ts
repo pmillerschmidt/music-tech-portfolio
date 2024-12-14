@@ -114,14 +114,14 @@ export const projects = [
       
       <p>The hardware consists of connectable blocks for rhythm, melody, harmony, and effects, each equipped with sensors that translate physical manipulation into musical elements. These blocks interface with our companion app, which features three seamlessly integrated modes: Learn, Jam, and Create. The Learn mode uses AI to adapt to each student's interests and progress, introducing new concepts when they're ready. Jam mode facilitates improvisation and collaboration, while Create mode offers varying levels of compositional guidance based on the student's experience.</p>
 
-    <div class="flex flex-row items-start space-x-4 mt-6 mb-8">
-      <div class="flex-1">
-        <img src="/images/grooveblocks/basic-ui.png" alt="Grooveblocks Interface" class="w-full h-auto rounded-lg shadow-lg mb-2" />
-        <p class="text-sm text-white/60 text-center">Jam Mode UI</p>
+    <div style="display: flex; gap: 1rem; margin: 1.5rem 0;">
+      <div style="flex: 1;">
+        <img src="/images/grooveblocks/basic-ui.png" alt="Grooveblocks Interface" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;" />
+        <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.6); text-align: center;">Jam Mode UI</p>
       </div>
-      <div class="flex-1">
-        <img src="/images/grooveblocks/prospective-ui.png" alt="Prospective UI" class="w-full h-auto rounded-lg shadow-lg mb-2" />
-        <p class="text-sm text-white/60 text-center">Prospective UI Design</p>
+      <div style="flex: 1;">
+        <img src="/images/grooveblocks/prospective-ui.png" alt="Prospective UI" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;" />
+        <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.6); text-align: center;">Prospective UI Design</p>
       </div>
     </div>
     
