@@ -129,14 +129,7 @@ export const projects = [
 
     <h3 class="text-xl font-semibold mt-6 mb-4">Project Demo</h3>
     <div class="aspect-video rounded-lg overflow-hidden bg-black/40">
-      <iframe
-        src="https://www.youtube.com/embed/VGp2k8LJc3M"
-        class="w-full h-full"
-        title="Grooveblocks Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <iframe src="https://www.youtube.com/embed/VGp2k8LJc3M" class="w-full h-full" title="Grooveblocks Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     `,
     originalWorks: [
@@ -281,14 +274,7 @@ export const projects = [
 
     <h3 class="text-xl font-semibold mt-6 mb-4">Project Demo</h3>
     <div class="aspect-video rounded-lg overflow-hidden bg-black/40">
-      <iframe
-        src="https://www.youtube.com/embed/fieytpoR_04"
-        class="w-full h-full"
-        title="nextChord Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <iframe src="https://www.youtube.com/embed/fieytpoR_04" class="w-full h-full" title="nextChord Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     `,
     features: ["PyTorch", "AI chord generation", "React", "API Design"],
