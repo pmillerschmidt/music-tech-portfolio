@@ -126,8 +126,21 @@ export const projects = [
     </div>
     
     <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through middle school testing and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities.</p>
-      
+
+    <h3 class="text-xl font-semibold mt-6 mb-4">Project Demo</h3>
+    <div class="aspect-video rounded-lg overflow-hidden bg-black/40">
+      <iframe
+        src="https://www.youtube.com/embed/VGp2k8LJc3M"
+        class="w-full h-full"
+        title="Grooveblocks Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
     `,
+    videoUrl: "https://www.youtube.com/embed/VGp2k8LJc3M",
+    isYoutubeVideo: true,
     originalWorks: [
       {
         title: "Basic Pattern Generation",
@@ -267,8 +280,22 @@ export const projects = [
     videoUrl: "/videos/nextchord-demo.mp4",
     liveDemo: true,
     detailedDescription: `
-      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict. 
+      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict.
+
+    <h3 class="text-xl font-semibold mt-6 mb-4">Project Demo</h3>
+    <div class="aspect-video rounded-lg overflow-hidden bg-black/40">
+      <iframe
+        src="https://www.youtube.com/embed/fieytpoR_04"
+        class="w-full h-full"
+        title="nextChord Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
     `,
+    videoUrl: "https://www.youtube.com/embed/fieytpoR_04",
+    isYoutubeVideo: true,
     features: ["PyTorch", "AI chord generation", "React", "API Design"],
   },
   {
