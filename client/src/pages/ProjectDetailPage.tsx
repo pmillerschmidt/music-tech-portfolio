@@ -51,7 +51,7 @@ export default function ProjectDetailPage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
-            <Link href="/projects">
+            <Link href="/#projects">
               <Button 
                 variant="outline" 
                 className="mb-8 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300"
