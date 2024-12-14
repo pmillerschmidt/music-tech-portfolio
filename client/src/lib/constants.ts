@@ -114,10 +114,15 @@ export const projects = [
       
       <p>The hardware consists of connectable blocks for rhythm, melody, harmony, and effects, each equipped with sensors that translate physical manipulation into musical elements. These blocks interface with our companion app, which features three seamlessly integrated modes: Learn, Jam, and Create. The Learn mode uses AI to adapt to each student's interests and progress, introducing new concepts when they're ready. Jam mode facilitates improvisation and collaboration, while Create mode offers varying levels of compositional guidance based on the student's experience.</p>
 
-
-    <div class="mt-6 mb-8">
-      <img src="/images/grooveblocks/basic-ui.png" alt="Grooveblocks Interface" class="w-full rounded-lg shadow-lg mb-2" />
-      <p class="text-sm text-white/60 text-center">Jam Mode UI</p>
+    <div class="mt-6 mb-8 grid grid-cols-2 gap-4">
+      <div>
+        <img src="/images/grooveblocks/basic-ui.png" alt="Grooveblocks Interface" class="w-full rounded-lg shadow-lg mb-2" />
+        <p class="text-sm text-white/60 text-center">Jam Mode UI</p>
+      </div>
+      <div>
+        <img src="/images/grooveblocks/prospective-ui.png" alt="Prospective UI" class="w-full rounded-lg shadow-lg mb-2" />
+        <p class="text-sm text-white/60 text-center">Prospective UI Design</p>
+      </div>
     </div>
     
     <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through middle school testing and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities.</p>
