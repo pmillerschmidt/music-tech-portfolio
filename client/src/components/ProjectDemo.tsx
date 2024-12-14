@@ -69,7 +69,8 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
                 </div>
               ) : (
                 <>
-                  <AnimatePresence mode="wait">
+                  {/* Removed demo button and related functionality */}
+                  {/* <AnimatePresence mode="wait">
                     {isPlaying && (
                       <motion.div
                         key="demo"
@@ -102,7 +103,7 @@ export function ProjectDemo({ project }: ProjectDemoProps) {
                     ) : (
                       isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />
                     )}
-                  </Button>
+                  </Button> */}
                 </>
               )}
             </div>
