@@ -196,6 +196,70 @@ Music generation with machine learning poses unique challenges due to the high d
     ],
   },
   {
+    title: "Q-tar",
+    description: "Reinforcement learning for melody generation",
+    image: "/images/Qtar.png",
+    technologies: ["PyTorch", "Reinforcement Learning", "Flask"],
+    demoUrl: "https://neural-music.example.com",
+    projectUrl: "https://qtar.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/qtar",
+    videoUrl: "/videos/qtar-demo.mp4",
+    liveDemo: true,
+    demoDescription:
+      "Create unique musical pieces using deep learning models trained on various musical styles.",
+    detailedDescription: `
+      Q-tar is a reinforcement learning-based system for generating melodies in real-time. The project explores the application of Q-learning algorithms to musical composition, treating melody generation as a sequential decision-making process. The system learns optimal note sequences by maximizing a reward function that considers both musical theory rules and stylistic patterns from training data.
+
+      The neural network architecture combines a convolutional layer for processing local note patterns with LSTM layers for capturing longer-term musical dependencies. The model is trained using a custom reward function that evaluates both the local coherence of note transitions and the global structure of the generated melodies.
+
+      A web interface allows users to interact with the trained model, providing controls for:
+      - Tempo and rhythm constraints
+      - Harmonic context (key and chord progression)
+      - Style parameters (jazz, classical, pop)
+      - Real-time parameter adjustment
+      
+      The system also includes a collaborative mode where multiple users can contribute to the same composition, with the AI model adapting to maintain musical coherence between different user inputs.
+    `,
+    features: [
+      "Real-time music generation",
+      "Style transfer",
+      "MIDI export",
+      "Collaborative composition",
+    ],
+  },
+  {
+    title: "Q-tar",
+    description: "Reinforcement learning for melody generation",
+    image: "/images/Qtar.png",
+    technologies: ["PyTorch", "Reinforcement Learning", "Flask"],
+    demoUrl: "https://neural-music.example.com",
+    projectUrl: "https://qtar.mit.edu",
+    githubUrl: "https://github.com/pmillerschmidt/qtar",
+    videoUrl: "/videos/qtar-demo.mp4",
+    liveDemo: true,
+    demoDescription:
+      "Create unique musical pieces using deep learning models trained on various musical styles.",
+    detailedDescription: `
+      Q-tar is a reinforcement learning-based system for generating melodies in real-time. The project explores the application of Q-learning algorithms to musical composition, treating melody generation as a sequential decision-making process. The system learns optimal note sequences by maximizing a reward function that considers both musical theory rules and stylistic patterns from training data.
+
+      The neural network architecture combines a convolutional layer for processing local note patterns with LSTM layers for capturing longer-term musical dependencies. The model is trained using a custom reward function that evaluates both the local coherence of note transitions and the global structure of the generated melodies.
+
+      A web interface allows users to interact with the trained model, providing controls for:
+      - Tempo and rhythm constraints
+      - Harmonic context (key and chord progression)
+      - Style parameters (jazz, classical, pop)
+      - Real-time parameter adjustment
+      
+      The system also includes a collaborative mode where multiple users can contribute to the same composition, with the AI model adapting to maintain musical coherence between different user inputs.
+    `,
+    features: [
+      "Real-time music generation",
+      "Style transfer",
+      "MIDI export",
+      "Collaborative composition",
+    ],
+  },
+  {
     title: "nextChord",
     description: "chord progression neural network",
     image: "/images/next-chord.png",
