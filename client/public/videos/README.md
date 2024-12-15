@@ -1,8 +1,13 @@
-# Video Assets Directory
+# Portfolio Assets Directory
 
-This directory is for storing video assets used in the portfolio.
+This directory contains the multimedia assets used in the portfolio.
 
-## Hero Background Video Requirements
+## Asset Organization
+- `/videos` - Video content for portfolio sections
+- `/images` - Image assets and backgrounds
+- `/resume.pdf` - Downloadable CV/resume file 
+
+## Video Requirements
 
 Place your hero background video here as `hero-background.mp4` with the following specifications:
 
