@@ -84,7 +84,7 @@ export default function ProjectDetailPage() {
                         View Source
                       </Button>
                     )}
-                    {project.projectUrl && !project.demoUrl && (
+                    {(project.title === "nextChord" || project.title === "Chess Engine Design") && project.projectUrl && (
                       <Button 
                         onClick={() => window.open(project.projectUrl, '_blank')}
                         className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300"
