@@ -47,8 +47,8 @@ export const musicProjects = [
       },
     ],
     performanceImage: {
-      url: "/images/dj-performance.png",
-      caption: "DJ Set at Toad's Place, New Haven - Senior Year"
+      url: "/images/performance.png",
+      caption: "Live performance at Toad's Place, New Haven"
     },
   },
   {
