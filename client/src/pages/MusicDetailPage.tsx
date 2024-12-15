@@ -10,6 +10,30 @@ export default function MusicDetailPage() {
   const [, params] = useRoute("/music/:id");
   const projectId = parseInt(params?.id || "0");
   const project = musicProjects[projectId];
+interface Project {
+  title: string;
+  summary: string;
+  image: string;
+  technologies: string[];
+  detailedDescription?: string;
+  originalWorks?: Array<{
+    title: string;
+    url: string;
+    year: string;
+  }>;
+  remixes?: Array<{
+    title: string;
+    originalArtist: string;
+    url: string;
+    year: string;
+  }>;
+  performanceImage?: {
+    url: string;
+    caption: string;
+  };
+  videoUrl?: string;
+  isYoutubeVideo?: boolean;
+}
 
   if (!project) {
     return (

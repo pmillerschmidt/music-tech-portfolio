@@ -46,6 +46,10 @@ export const musicProjects = [
         year: "2023",
       },
     ],
+    performanceImage: {
+      url: "/images/dj-performance.png",
+      caption: "Live performance at Toad's Place, New Haven"
+    },
   },
   {
     title: "Coursework",
