@@ -19,31 +19,31 @@ export const musicProjects = [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
         url: "/audio/Tell Me a Lie (feat. Abby Walker).mp3",
-        year: "2022",
+        year: "2023",
       },
       {
         title: "Something (feat. Abby Walker)",
-        url: "/audio/something (feat. Abby Walker).mp3",
-        year: "2022",
+        url: "/audio/electronic-suite.mp3",
+        year: "2023",
       },
       {
         title: "Afterlife (feat. Abby Walker)",
-        url: "/audio/afterlife (feat. Abby Walker).mp3",
+        url: "/audio/afterlife (feat. Abby Walker) - lolla bounce.wav",
         year: "2023",
       },
     ],
     remixes: [
       {
-        title: "Rasputin (Boney M.) Remix",
-        originalArtist: "Boney M.",
-        url: "/audio/Rasputin.mp3",
-        year: "2023",
+        title: "Rasputin remix",
+        originalArtist: "Steve Reich",
+        url: "/audio/reimagined-patterns.mp3",
+        year: "2024",
       },
       {
-        title: "Smalltown Boy (Bronski Beat) Remix",
-        originalArtist: "Bronski Beat",
-        url: "/audio/smalltown.mp3",
-        year: "2024",
+        title: "Smalltown Boy remix",
+        originalArtist: "J.S. Bach",
+        url: "/audio/electronic-variations.mp3",
+        year: "2023",
       },
     ],
     performanceImage: {
@@ -207,30 +207,17 @@ export const projects = [
     ],
   },
   {
-    title: "Q-tar & Hfonics",
+    title: "Q-tar",
     description: "Reinforcement learning for melody generation",
     image: "/images/Qtar.png",
     technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
+    demoUrl: "https://neural-music.example.com",
+    projectUrl: "https://qtar.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/qtar",
     videoUrl: "/videos/qtar-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Create unique musical pieces using deep learning models trained on various musical styles.",
-    detailedDescription: `
-      <p>Q-tar is a reinforcement learning-based melody generation system that learns to create melodies by interacting with a musical environment. Unlike traditional supervised learning approaches, Q-tar learns through exploration and feedback, similar to how a musician might learn through practice and experimentation.</p>
-
-      <p>The system uses a deep Q-learning network that receives rewards based on music theory rules and aesthetic preferences. The agent learns to navigate a state space of musical possibilities, where states represent musical context (current chord, previous notes, rhythm) and actions represent possible next notes. The reward function incorporates both local coherence (how well a note fits with its immediate context) and global structure (adherence to musical form and development).</p>
-
-      <p>Key technical features include:</p>
-      <ul class="list-disc pl-6 space-y-2 text-white/80">
-        <li>Custom musical environment built with PyTorch</li>
-        <li>Deep Q-Network with both convolutional and recurrent layers</li>
-        <li>Prioritized experience replay for efficient learning</li>
-        <li>Web interface for real-time interaction and generation</li>
-      </ul>
-
-      <p>The project demonstrates how reinforcement learning can capture both the rules and creativity of music composition, leading to melodies that are both theoretically sound and musically interesting.</p>
-    `,
     features: [
       "Real-time music generation",
       "Style transfer",
@@ -247,7 +234,7 @@ export const projects = [
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     liveDemo: true,
     detailedDescription: `
-      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with varied progressions and a larger vocab of chords to predict.
+      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/F9KaOG3SCbU?si=DCH0-pj5UwgRz2yw" style="display: block; margin: 0 auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     `,
@@ -257,7 +244,13 @@ export const projects = [
     title: "Chess Engine Design",
     description: "Minimax chess engine with advanced heuristics",
     image: "/images/minimax.png",
-    technologies: ["JavaScript", "Alpha-Beta Pruning", "Tree Search"],
+    technologies: [
+      "JavaScript",
+      "Python",
+      "Chess.js",
+      "Alpha-Beta Pruning",
+      "Tree Search",
+    ],
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
     videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
@@ -265,30 +258,11 @@ export const projects = [
     isYoutubeVideo: true,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
-    detailedDescription: `
-      <p>This chess engine implements the minimax algorithm with Alpha-Beta pruning and advanced heuristics. The project was my final project for Computational Intelligence for Games. I was interested in the application of tree search algorithms in the context of perfect information games like chess. </p>
-
-      <h3 class="text-2xl font-semibold mb-4 text-white">Engine Evaluation Strategy</h3>
-      <ul class="list-disc pl-20 space-y-1 text-white/80 mb-4">
-        <li>Material gain (does the move gain/lose a piece)</li>
-        <li>Material balance (piece values and their relative worth)</li>
-        <li>Piece position evaluation (using piece-square tables)</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold mb-4 text-white">Performance Optimizations</h3>
-      <ul class="list-disc pl-20 space-y-1 text-white/80 mb-4">
-        <li>Alpha-Beta pruning to reduce the search space</li>
-        <li>Move ordering to improve pruning efficiency</li>
-        <li>Scout implementation to reduce search time</li>
-      </ul>
-
-      <p>The web interface provides a clean, responsive chessboard with multiple engine levels. Players can choose to play a random, greedy, minimax, or scout agent.</p>
-    `,
     features: [
-      "Minimax algorithm",
-      "Alpha-beta pruning",
+      "Alpha-beta pruning algorithm",
       "Position evaluation",
-      "Scout optimization",
+      "Interactive chess board",
+      "Real-time move calculation",
     ],
   },
 ];
