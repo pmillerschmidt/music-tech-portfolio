@@ -234,9 +234,28 @@ export const projects = [
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     liveDemo: true,
     detailedDescription: `
-      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict.
+      <p>nextChord is an AI-powered chord progression generator that leverages deep learning to create musically coherent and interesting chord sequences. The model is trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a>, which contains over 5,000 chord progressions from various musical styles.</p>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/F9KaOG3SCbU?si=DCH0-pj5UwgRz2yw" style="display: block; margin: 0 auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3 class="text-xl font-semibold mt-6 mb-4">Technical Implementation</h3>
+      <p>The system works in three main steps:</p>
+      <ul class="list-none space-y-2 mb-4">
+        <li>1. Pre-processing: Converts chord progressions into roman numeral notation for key-agnostic learning</li>
+        <li>2. LSTM Training: Uses a deep LSTM network to learn patterns in chord sequences</li>
+        <li>3. Generation: Implements a temperature parameter to control randomness in predictions</li>
+      </ul>
+
+      <p>The web interface allows users to:</p>
+      <ul class="list-none space-y-2 mb-4">
+        <li>• Select different musical styles and moods</li>
+        <li>• Adjust generation parameters in real-time</li>
+        <li>• Listen to generated progressions with various instruments</li>
+        <li>• Export progressions as MIDI files</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Demo Video</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/F9KaOG3SCbU?si=DCH0-pj5UwgRz2yw" style="display: block; margin: 0 auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <p class="mt-6">Future developments include expanding the training dataset to include more complex progressions and implementing style transfer between different genres.</p>
     `,
     features: ["PyTorch", "AI chord generation", "React", "API Design"],
   },
@@ -258,6 +277,36 @@ export const projects = [
     isYoutubeVideo: true,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
+    detailedDescription: `
+      <p>This chess engine implements a sophisticated AI opponent using the minimax algorithm with alpha-beta pruning. The engine evaluates positions using both material balance and positional factors to make strong moves while maintaining reasonable computation times.</p>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Technical Architecture</h3>
+      <ul class="list-none space-y-2 mb-4">
+        <li>• <strong>Search Algorithm:</strong> Implements minimax with alpha-beta pruning for efficient game tree exploration</li>
+        <li>• <strong>Position Evaluation:</strong> Combines material counting with positional heuristics</li>
+        <li>• <strong>Move Ordering:</strong> Uses MVV-LVA (Most Valuable Victim - Least Valuable Attacker) for better pruning</li>
+        <li>• <strong>Transposition Tables:</strong> Caches previously evaluated positions to avoid redundant calculations</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Position Evaluation Factors</h3>
+      <ul class="list-none space-y-2 mb-4">
+        <li>• Piece-square tables for positional scoring</li>
+        <li>• Pawn structure analysis</li>
+        <li>• King safety evaluation</li>
+        <li>• Mobility assessment</li>
+        <li>• Development incentives in opening stages</li>
+      </ul>
+
+      <p>The engine is implemented in JavaScript for client-side computation, making it accessible through web browsers without requiring server-side resources. The interface uses Chess.js for move validation and board representation, providing a smooth user experience while maintaining chess rule compliance.</p>
+
+      <h3 class="text-xl font-semibold mt-6 mb-4">Performance Optimizations</h3>
+      <ul class="list-none space-y-2 mb-4">
+        <li>• Iterative deepening for better time management</li>
+        <li>• Principal Variation Search</li>
+        <li>• Null move pruning in non-zugzwang positions</li>
+        <li>• Late move reductions for deep searches</li>
+      </ul>
+    `,
     features: [
       "Alpha-beta pruning algorithm",
       "Position evaluation",
