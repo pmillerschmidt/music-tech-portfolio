@@ -231,6 +231,7 @@ export const projects = [
     technologies: ["TensorFlow", "Machine Learning", "React", "Web Audio API"],
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     projectUrl: "https://pmillerschmidt.github.io/ChordCompass/",
+    isExternalDemo: true,
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     liveDemo: true,
     detailedDescription: `
@@ -253,6 +254,7 @@ export const projects = [
     ],
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
+    isExternalDemo: true,
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
     videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
     liveDemo: true,
