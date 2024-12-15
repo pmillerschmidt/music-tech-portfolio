@@ -64,9 +64,9 @@ export function Projects() {
                         </CardHeader>
                         <CardContent className="p-4">
                           {/* Multiple Images Support */}
-                          {Array.isArray(project.images) ? (
+                          {Array.isArray(project.image) ? (
                             <div className="grid grid-cols-2 gap-2 mb-4">
-                              {project.images.map((image, imgIndex) => (
+                              {project.image.map((img, imgIndex) => (
                                 <div
                                   key={imgIndex}
                                   className="relative h-40 bg-cover bg-center rounded-md overflow-hidden group-hover:shadow-lg transition-all duration-300"
@@ -144,9 +144,9 @@ export function Projects() {
                         </CardHeader>
                         <CardContent className="p-4">
                           {/* Multiple Images Support */}
-                          {Array.isArray(project.images) ? (
+                          {Array.isArray(project.image) ? (
                             <div className="grid grid-cols-2 gap-2 mb-4">
-                              {project.images.map((image, imgIndex) => (
+                              {project.image.map((img, imgIndex) => (
                                 <div
                                   key={imgIndex}
                                   className="relative h-40 bg-cover bg-center rounded-md overflow-hidden group-hover:shadow-lg transition-all duration-300"
