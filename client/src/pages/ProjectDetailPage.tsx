@@ -97,61 +97,121 @@ export default function ProjectDetailPage() {
                 </div>
               </div>
 
-              {/* Short Description */}
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                <CardContent className="p-6">
-                  <p className="text-white/80 text-lg">
-                    {project.description}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Demo Video Section */}
-              {project.videoUrl && (
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-6">
-                    <h2 className="text-2xl font-semibold mb-4 text-white">Project Demo</h2>
-                    <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
-                      {project.isYoutubeVideo ? (
-                        <iframe
-                          src={project.videoUrl.includes('embed') ? project.videoUrl : project.videoUrl.replace('watch?v=', 'embed/')}
-                          className="w-full h-full"
-                          title={`${project.title} Demo`}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
+              {/* For MelGen project, show About section first */}
+              {project.title === "MelGen" ? (
+                <>
+                  {/* About Section with Image */}
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                    <CardContent className="p-6">
+                      <div className="aspect-video rounded-lg overflow-hidden bg-black/40 mb-6">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
                         />
-                      ) : (
-                        <video
-                          src={project.videoUrl}
-                          controls
-                          className="w-full h-full"
-                          poster={project.image}
-                        />
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
+                      </div>
+                      <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
+                      <div className="prose prose-invert">
+                        {project.detailedDescription.split('\n').map((paragraph, index) => (
+                          paragraph.trim() && (
+                            <p key={index} className="text-white/80 mb-4" dangerouslySetInnerHTML={{
+                              __html: paragraph.trim().startsWith('-') 
+                                ? `• ${paragraph.trim().substring(1)}` 
+                                : paragraph.trim()
+                            }} />
+                          )
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
 
-              {/* Detailed Description */}
-              {project.detailedDescription && (
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-6">
-                    <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
-                    <div className="prose prose-invert">
-                      {project.detailedDescription.split('\n').map((paragraph, index) => (
-                        paragraph.trim() && (
-                          <p key={index} className="text-white/80 mb-4" dangerouslySetInnerHTML={{
-                            __html: paragraph.trim().startsWith('-') 
-                              ? `• ${paragraph.trim().substring(1)}` 
-                              : paragraph.trim()
-                          }} />
-                        )
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                  {/* Demo Video Section */}
+                  {project.videoUrl && (
+                    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                      <CardContent className="p-6">
+                        <h2 className="text-2xl font-semibold mb-4 text-white">Project Demo</h2>
+                        <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
+                          {project.isYoutubeVideo ? (
+                            <iframe
+                              src={project.videoUrl.includes('embed') ? project.videoUrl : project.videoUrl.replace('watch?v=', 'embed/')}
+                              className="w-full h-full"
+                              title={`${project.title} Demo`}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          ) : (
+                            <video
+                              src={project.videoUrl}
+                              controls
+                              className="w-full h-full"
+                              poster={project.image}
+                            />
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+                </>
+              ) : (
+                <>
+                  {/* Short Description */}
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                    <CardContent className="p-6">
+                      <p className="text-white/80 text-lg">
+                        {project.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  {/* Demo Video Section */}
+                  {project.videoUrl && (
+                    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                      <CardContent className="p-6">
+                        <h2 className="text-2xl font-semibold mb-4 text-white">Project Demo</h2>
+                        <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
+                          {project.isYoutubeVideo ? (
+                            <iframe
+                              src={project.videoUrl.includes('embed') ? project.videoUrl : project.videoUrl.replace('watch?v=', 'embed/')}
+                              className="w-full h-full"
+                              title={`${project.title} Demo`}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          ) : (
+                            <video
+                              src={project.videoUrl}
+                              controls
+                              className="w-full h-full"
+                              poster={project.image}
+                            />
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+
+                  {/* Detailed Description */}
+                  {project.detailedDescription && (
+                    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                      <CardContent className="p-6">
+                        <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
+                        <div className="prose prose-invert">
+                          {project.detailedDescription.split('\n').map((paragraph, index) => (
+                            paragraph.trim() && (
+                              <p key={index} className="text-white/80 mb-4" dangerouslySetInnerHTML={{
+                                __html: paragraph.trim().startsWith('-') 
+                                  ? `• ${paragraph.trim().substring(1)}` 
+                                  : paragraph.trim()
+                              }} />
+                            )
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+                </>
               )}
 
               {/* Key Features */}
