@@ -12,7 +12,10 @@ import { Link } from "wouter";
 
 export function Projects() {
   return (
-    <section id="projects" className="relative min-h-screen -mt-1">
+    <section
+      id="projects"
+      className="relative min-h-screen -mt-1"
+    >
       <div className="relative w-full h-full">
         {/* Background that covers entire section */}
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -61,15 +64,15 @@ export function Projects() {
                         </CardHeader>
                         <CardContent className="p-4">
                           {/* Multiple Images Support */}
-                          {Array.isArray(project.image) ? (
+                          {Array.isArray(project.images) ? (
                             <div className="grid grid-cols-2 gap-2 mb-4">
-                              {project.image.map((img, imgIndex) => (
+                              {project.images.map((image, imgIndex) => (
                                 <div
                                   key={imgIndex}
                                   className="relative h-40 bg-cover bg-center rounded-md overflow-hidden group-hover:shadow-lg transition-all duration-300"
                                 >
                                   <img
-                                    src={img}
+                                    src={image}
                                     alt={`${project.title} - View ${imgIndex + 1}`}
                                     className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
                                   />
@@ -141,15 +144,15 @@ export function Projects() {
                         </CardHeader>
                         <CardContent className="p-4">
                           {/* Multiple Images Support */}
-                          {Array.isArray(project.image) ? (
+                          {Array.isArray(project.images) ? (
                             <div className="grid grid-cols-2 gap-2 mb-4">
-                              {project.image.map((img, imgIndex) => (
+                              {project.images.map((image, imgIndex) => (
                                 <div
                                   key={imgIndex}
                                   className="relative h-40 bg-cover bg-center rounded-md overflow-hidden group-hover:shadow-lg transition-all duration-300"
                                 >
                                   <img
-                                    src={img}
+                                    src={image}
                                     alt={`${project.title} - View ${imgIndex + 1}`}
                                     className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
                                   />
