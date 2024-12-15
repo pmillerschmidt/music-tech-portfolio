@@ -274,8 +274,8 @@ export const projects = [
     detailedDescription: `
       <p>This chess engine implements the minimax algorithm with Alpha-Beta pruning and advanced heuristics. The project was my final project for Computational Intelligence for Games. I was interested in the application of tree search algorithms in the context of perfect information games like chess. </p>
 
-      <h3 class="text-2xl font-semibold mb-4 text-white">Engine Evaluation Strategy</h3>
-      <ul class="list-disc pl-12 space-y-3 text-white/80 mb-8">
+      <h3 class="text-2xl font-semibold mb-4 text-white pl-8">Engine Evaluation Strategy</h3>
+      <ul class="list-disc pl-12 space-y-3 text-white/80 mb-4">
         <li>Material gain (does the move gain/lose a piece)</li>
         <li>Material balance (piece values and their relative worth)</li>
         <li>Piece position evaluation (using piece-square tables)</li>
@@ -284,8 +284,8 @@ export const projects = [
         <li>Control of central squares</li>
       </ul>
 
-      <h3 class="text-2xl font-semibold mb-4 text-white">Performance Optimizations</h3>
-      <ul class="list-disc pl-12 space-y-3 text-white/80 mb-8">
+      <h3 class="text-2xl font-semibold mb-4 text-white pl-8">Performance Optimizations</h3>
+      <ul class="list-disc pl-12 space-y-3 text-white/80 mb-4">
         <li>Alpha-Beta pruning to reduce the search space</li>
         <li>Move ordering to improve pruning efficiency</li>
         <li>Scout implementation to reduce search time</li>
