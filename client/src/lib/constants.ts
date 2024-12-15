@@ -218,6 +218,21 @@ export const projects = [
     liveDemo: true,
     demoDescription:
       "Create unique musical pieces using deep learning models trained on various musical styles.",
+    detailedDescription: `
+      <p>Q-tar is a reinforcement learning-based melody generation system that learns to create melodies by interacting with a musical environment. Unlike traditional supervised learning approaches, Q-tar learns through exploration and feedback, similar to how a musician might learn through practice and experimentation.</p>
+
+      <p>The system uses a deep Q-learning network that receives rewards based on music theory rules and aesthetic preferences. The agent learns to navigate a state space of musical possibilities, where states represent musical context (current chord, previous notes, rhythm) and actions represent possible next notes. The reward function incorporates both local coherence (how well a note fits with its immediate context) and global structure (adherence to musical form and development).</p>
+
+      <p>Key technical features include:</p>
+      <ul class="list-disc pl-6 space-y-2 text-white/80">
+        <li>Custom musical environment built with PyTorch</li>
+        <li>Deep Q-Network with both convolutional and recurrent layers</li>
+        <li>Prioritized experience replay for efficient learning</li>
+        <li>Web interface for real-time interaction and generation</li>
+      </ul>
+
+      <p>The project demonstrates how reinforcement learning can capture both the rules and creativity of music composition, leading to melodies that are both theoretically sound and musically interesting.</p>
+    `,
     features: [
       "Real-time music generation",
       "Style transfer",
@@ -258,6 +273,28 @@ export const projects = [
     isYoutubeVideo: true,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
+    detailedDescription: `
+      <p>This chess engine implements a sophisticated AI system using the Minimax algorithm with Alpha-Beta pruning. The project was born out of a fascination with game theory and artificial intelligence, particularly in the context of perfect information games like chess.</p>
+
+      <p>The engine's evaluation function considers multiple aspects of chess strategy:</p>
+      <ul class="list-disc pl-6 space-y-2 text-white/80">
+        <li>Material balance (piece values and their relative worth)</li>
+        <li>Piece position evaluation using piece-square tables</li>
+        <li>Pawn structure analysis</li>
+        <li>King safety assessment</li>
+        <li>Control of central squares</li>
+      </ul>
+
+      <p>Performance optimizations include:</p>
+      <ul class="list-disc pl-6 space-y-2 text-white/80">
+        <li>Alpha-Beta pruning to reduce the search space</li>
+        <li>Move ordering to improve pruning efficiency</li>
+        <li>Transposition tables to cache evaluated positions</li>
+        <li>Iterative deepening for better time management</li>
+      </ul>
+
+      <p>The web interface provides a clean, responsive chessboard with multiple difficulty levels. Players can also analyze positions, view the engine's evaluation, and see a visualization of the search tree.</p>
+    `,
     features: [
       "Alpha-beta pruning algorithm",
       "Position evaluation",
