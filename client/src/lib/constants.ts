@@ -37,13 +37,13 @@ export const musicProjects = [
         title: "Rasputin (Boney M.) remix",
         originalArtist: "Steve Reich",
         url: "/audio/Rasputin (five trees remix).mp3",
-        year: "2024",
+        year: "2023",
       },
       {
-        title: "Smalltown Boy remix",
+        title: "Smalltown Boy (Bronski Beat) remix",
         originalArtist: "J.S. Bach",
-        url: "/audio/electronic-variations.mp3",
-        year: "2023",
+        url: "/audio/PMS_Stimulation.mp3",
+        year: "2024",
       },
     ],
     performanceImage: {
