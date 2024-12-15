@@ -19,24 +19,24 @@ export const musicProjects = [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
         url: "/audio/Tell Me a Lie (feat. Abby Walker).mp3",
-        year: "2023",
+        year: "2022",
       },
       {
         title: "Something (feat. Abby Walker)",
-        url: "/audio/electronic-suite.mp3",
-        year: "2023",
+        url: "/audio/something (feat. Abby Walker) - lolla bounce.mp3",
+        year: "2022",
       },
       {
         title: "Afterlife (feat. Abby Walker)",
-        url: "/audio/afterlife (feat. Abby Walker) - lolla bounce.wav",
+        url: "/audio/afterlife (feat. Abby Walker) - lolla bounce.mp3",
         year: "2023",
       },
     ],
     remixes: [
       {
-        title: "Rasputin remix",
+        title: "Rasputin (Boney M.) remix",
         originalArtist: "Steve Reich",
-        url: "/audio/reimagined-patterns.mp3",
+        url: "/audio/Rasputin (five trees remix).mp3",
         year: "2024",
       },
       {
@@ -47,8 +47,9 @@ export const musicProjects = [
       },
     ],
     performanceImage: {
-      url: "/images/performance.png",
-      caption: "Live performance at Toad's Place, New Haven"
+      url: "/images/dj-performance.png",
+      caption:
+        "DJ set (left), Toad's Place backing up PJ Frantz (upper right), student music festival with Abby Walker (bottom right)",
     },
   },
   {
@@ -71,7 +72,7 @@ export const musicProjects = [
       "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
-    technologies: ["SuperCollider", "Markov Models", "Mealy Machines"],
+    technologies: ["SuperCollider", "Markov Chain", "Mealy Machine"],
     originalWorks: [
       {
         title: "Hidden Markov Model Generation",
@@ -92,16 +93,13 @@ export const musicProjects = [
 
 export const projects = [
   {
-    title: "Grooveblocks",
+    title: "GrooveBlocks",
     description: "Combinatory blocks for composition-based learning",
     image: "/images/grooveblocks.png",
     technologies: [
-      "React",
-      "Web Audio API",
-      "TensorFlow.js",
-      "Node.js",
-      "Express",
-      "WebMIDI API",
+      "Java",
+      "Embedded Systems",
+      "C++"
     ],
     demoUrl: "https://grooveblocks.mit.edu",
     projectUrl: "https://grooveblocks.mit.edu",
@@ -123,7 +121,7 @@ export const projects = [
       </div>
     </div>
     
-    <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through middle school testing and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities. While we weren't able to film demos in schools, below are some videos of the blocks in action.</p>
+    <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through testing with middle schoolers and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities. While we weren't able to film demos in schools, below are some videos of the blocks in action.</p>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/x5WkWsCPJ6E?si=dzzrCyO7XtQcbLTQ" title="YouTube video player" frameborder="0" style="display: block; margin: 0 auto;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     
@@ -133,7 +131,7 @@ export const projects = [
       "Real-time audio processing",
       "Collaborative music creation",
       "Multiple synthesis engines",
-      "Rich visual and haptic",
+      "Rich visual and haptic feedback",
     ],
   },
   {
@@ -241,7 +239,7 @@ export const projects = [
     title: "nextChord",
     description: "chord progression neural network",
     image: "/images/next-chord.png",
-    technologies: ["TensorFlow", "Machine Learning", "React", "Web Audio API"],
+    technologies: ["TensorFlow", "Machine Learning", "React"],
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     projectUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     isExternalDemo: true,
@@ -258,13 +256,7 @@ export const projects = [
     title: "Chess Engine Design",
     description: "Minimax chess engine with advanced heuristics",
     image: "/images/minimax.png",
-    technologies: [
-      "JavaScript",
-      "Python",
-      "Chess.js",
-      "Alpha-Beta Pruning",
-      "Tree Search",
-    ],
+    technologies: ["Python", "Alpha-Beta Pruning", "Tree Search"],
     demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     isExternalDemo: true,
@@ -275,28 +267,15 @@ export const projects = [
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     detailedDescription: `
-      This chess engine implements the minimax algorithm with alpha-beta pruning to create a challenging AI opponent. The engine evaluates positions using a sophisticated scoring system that considers multiple factors:
-
+      This chess engine implements the minimax algorithm with alpha-beta pruning and advanced move sorting heuristics. This was my final project for my Computational Intelligence for Games course and was inspired by my interest in perfect information games like chess. The engine evaluates positions using a scoring system that considers multiple factors:
+      - Material gain (whether a move is winning/losing a piece)
       - Material balance (piece values and their relative worth)
-      - Piece mobility and control of key squares
-      - Pawn structure analysis
-      - King safety evaluation
-      - Control of center squares
-      - Development of pieces in the opening
+      - Piece Square Evaluation
+      - Lethal threats (e.g. checkmate)
 
-      The implementation uses iterative deepening to ensure the engine makes moves within a reasonable time frame while maximizing the search depth. The alpha-beta pruning optimization significantly reduces the number of positions that need to be evaluated, allowing the engine to search deeper within the same time constraints.
-
-      Key technical features include:
-      - Dynamic move ordering to improve pruning efficiency
-      - Transposition table for storing previously evaluated positions
-      - Late move reduction for deeper search of promising variations
-      - Quiescence search to handle tactical sequences accurately
-
-      The web interface provides an interactive board where users can play against the engine, with options to:
-      - Adjust the engine's playing strength
-      - Take back moves and analyze positions
-      - View the engine's evaluation of the current position
-      - Export games in PGN format
+      The algorithm evaluates every move based on this reward system by searching the game tree and applying the minimax algorithm. To improve search efficiency, we implemented alpha-beta pruning and scout optimizations. 
+      
+      The web interface provides an interactive board where users can play a random, greedy, minimax, or scout agent with increasing levels of challenge. 
     `,
     features: [
       "Alpha-beta pruning algorithm",

@@ -107,7 +107,7 @@ export default function ProjectDetailPage() {
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                       <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
