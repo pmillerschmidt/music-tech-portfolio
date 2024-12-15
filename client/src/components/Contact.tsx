@@ -59,8 +59,8 @@ export function Contact() {
                     About Me
                   </h3>
                   <p className="text-white/80 mb-6 leading-relaxed">
-                    As a tinkerer who discovered music later in life, I aim to
-                    build the tools I wish I'd had. With a background in
+                    As a tinkerer who discovered music-making later in life, I
+                    aim to build the tools I wish I'd had. With a background in
                     computer science, machine learning, and electronic
                     instrument design, I want to create adaptive systems that
                     make musical expression more accessible. From building a
@@ -70,15 +70,12 @@ export function Contact() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">
-                    Download CV
-                  </h3>
                   <Button
                     className="w-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group"
-                    onClick={() => window.open("/cv.pdf", "_blank")}
+                    onClick={() => window.open("/resume.pdf", "_blank")}
                   >
                     <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                    Download Resume/CV
+                    Download Resume
                   </Button>
                 </div>
               </CardContent>

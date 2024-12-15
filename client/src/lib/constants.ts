@@ -11,7 +11,7 @@ export const musicProjects = [
   {
     title: "Discography",
     summary: "Original works, collaborations, and remixes",
-    image: "/images/deck.png",
+    image: "/images/visual-scoring.jpg",
     technologies: ["Ableton Live", "Logic Pro", "Rekordbox"],
     detailedDescription:
       "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life. I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
@@ -59,7 +59,7 @@ export const musicProjects = [
       "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
-    technologies: ["SuperCollider", "Markov Models", "Max/MSP"],
+    technologies: ["SuperCollider", "Markov Model", "Max/MSP"],
     originalWorks: [
       {
         title: "Hidden Markov Model Generation",
@@ -78,13 +78,13 @@ export const musicProjects = [
   },
   {
     title: "Coursework",
-    summary: "Collaborative film score composition project",
+    summary: "Academic background in theory and study",
     description:
       "A collaborative film score composition project with Baltazar Lora",
     detailedDescription: `
     Music classes at Yale were a wonderful oasis of creativity and joy in my otherwise gruelling engineering coursework. After taking introductory theory courses my first year, I took nearly every course I was proficient enough to handle. Some of my favorites include Where Music Theories Collide, American Neighborhood Musics, and Gamelan Ensemble. 
     Below is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar.`,
-    image: "/images/visual-scoring.jpg",
+    image: "/images/theory.jpg",
     videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
     isYoutubeVideo: true,
     technologies: ["Theory", "Film Scoring", "Composition"],
@@ -116,7 +116,7 @@ export const projects = [
       </div>
     </div>
     
-    <p>What sets GrooveBlocks apart is its adaptive approach to complexity. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through testing with middle schoolers and collaboration with music educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities. While we weren't able to film demos in schools, below are some videos of the blocks in action.</p>
+    <p>What sets GrooveBlocks apart is its adaptive approach. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through testing with middle schoolers and collaboration with educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities.</p>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/x5WkWsCPJ6E?si=dzzrCyO7XtQcbLTQ" title="YouTube video player" frameborder="0" style="display: block; margin: 0 auto;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     
@@ -125,7 +125,6 @@ export const projects = [
       "Interactive block-based composition",
       "Real-time audio processing",
       "Collaborative music creation",
-      "Multiple synthesis engines",
       "Rich visual and haptic feedback",
     ],
   },
@@ -148,7 +147,6 @@ Music generation with machine learning poses unique challenges due to the high d
       "Real-time melody generation",
       "Chord-aware composition",
       "Machine Learning",
-      "MIDI export",
       "Interactive parameters",
     ],
   },
@@ -188,15 +186,13 @@ Music generation with machine learning poses unique challenges due to the high d
       </div>
     `,
     features: [
-      "Real-time pattern recognition",
-      "MIDI integration",
-      "Adaptive learning",
-      "Performance mode",
-      "Studio integration",
+      "Low time/memory complexity",
+      "User-controlled generation",
+      "MIDI export",
     ],
   },
   {
-    title: "Q-tar",
+    title: "Q-tar & Hfonics",
     description: "Reinforcement learning for melody generation",
     image: "/images/Qtar.png",
     technologies: ["PyTorch", "Reinforcement Learning", "Flask"],
@@ -210,21 +206,17 @@ Music generation with machine learning poses unique challenges due to the high d
     detailedDescription: `
       Q-tar is a reinforcement learning-based system for generating melodies in real-time. The project explores the application of Q-learning algorithms to musical composition, treating melody generation as a sequential decision-making process. The system learns optimal note sequences by maximizing a reward function that considers both musical theory rules and stylistic patterns from training data.
 
-      The neural network architecture combines a convolutional layer for processing local note patterns with LSTM layers for capturing longer-term musical dependencies. The model is trained using a custom reward function that evaluates both the local coherence of note transitions and the global structure of the generated melodies.
+      Once the model is pretrained on the environment, human feedback is incorporated through a React-based web application. The user can interact with the system by listening to generated melodies and then giving them a rating between 1-5. That rating is then incorporated into the models reward function and used to train the model. 
 
-      A web interface allows users to interact with the trained model, providing controls for:
-      - Tempo and rhythm constraints
-      - Harmonic context (key and chord progression)
-      - Style parameters (jazz, classical, pop)
-      - Real-time parameter adjustment
-      
-      The system also includes a collaborative mode where multiple users can contribute to the same composition, with the AI model adapting to maintain musical coherence between different user inputs.
+      A parallel project is Hfonics, which is a generative melodic model trained on the Maestro dataset from Google Magenta. After being trained, the model can be used to generate melodies in real-time. It also has a RL-based feedback mechanism to fine-tune the model. 
+
+      I was interested in testing whether this approach, which is often used for training LLMs might also be effective in music generation. 
     `,
     features: [
       "Real-time music generation",
-      "Style transfer",
-      "MIDI export",
-      "Collaborative composition",
+      "Reinforcement Learning",
+      "Attention",
+      "RLHF fine-tuning",
     ],
   },
   {
