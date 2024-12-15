@@ -214,10 +214,26 @@ export const projects = [
     demoUrl: "https://neural-music.example.com",
     projectUrl: "https://qtar.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/qtar",
+    githubUrl2: "https://github.com/pmillerschmidt/qtar-server",
     videoUrl: "/videos/qtar-demo.mp4",
     liveDemo: true,
     demoDescription:
       "Create unique musical pieces using deep learning models trained on various musical styles.",
+    detailedDescription: `
+      Q-tar is an innovative project that combines reinforcement learning with music generation. The system learns to generate melodies by treating music composition as a reinforcement learning problem, where the agent (Q-tar) learns optimal note sequences through Q-learning.
+      
+      The project consists of two main components:
+      - A PyTorch-based reinforcement learning model that learns melodic patterns
+      - A web interface built with React and the Web Audio API for real-time interaction
+
+      The reinforcement learning agent is trained on a dataset of MIDI files, learning to understand musical structure, harmony, and rhythm. The reward function incorporates music theory principles and user feedback, allowing the model to generate increasingly coherent and pleasing melodies.
+      
+      The web interface allows users to:
+      - Set musical parameters like key, tempo, and style
+      - Provide real-time feedback to guide the generation process
+      - Export generated melodies as MIDI files
+      - Collaborate with other users in real-time sessions
+    `,
     features: [
       "Real-time music generation",
       "Style transfer",
@@ -258,6 +274,24 @@ export const projects = [
     isYoutubeVideo: true,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
+    detailedDescription: `
+      This chess engine implements the minimax algorithm with alpha-beta pruning to create a challenging AI opponent. The engine evaluates positions using a sophisticated scoring system that considers:
+      - Material advantage (piece values and their positions)
+      - Pawn structure analysis
+      - King safety evaluation
+      - Control of center squares
+      - Piece mobility and development
+      
+      The alpha-beta pruning optimization allows the engine to search deeper into the game tree by eliminating branches that won't affect the final decision. This results in better move selection while maintaining reasonable computation times.
+      
+      Key technical features:
+      - Dynamic search depth based on position complexity
+      - Opening book integration for early game moves
+      - Iterative deepening for time management
+      - Position caching to avoid redundant evaluations
+      
+      The web interface provides an interactive board where users can play against the engine at different difficulty levels, which adjust the search depth and evaluation complexity.
+    `,
     features: [
       "Alpha-beta pruning algorithm",
       "Position evaluation",
