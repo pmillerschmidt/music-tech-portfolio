@@ -48,7 +48,8 @@ export const musicProjects = [
     ],
     performanceImage: {
       url: "/images/dj-performance.png",
-      caption: "DJ Set at Toad's Place, New Haven - Senior Year"
+      caption:
+        "DJ Set (left), Toad's Place with PJ Frantz (upper right), student musical festival  with Abby Walker (lower right)",
     },
   },
   {
@@ -251,7 +252,6 @@ export const projects = [
       "Alpha-Beta Pruning",
       "Tree Search",
     ],
-    demoUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
     videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
