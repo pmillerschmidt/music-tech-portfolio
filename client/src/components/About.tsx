@@ -7,7 +7,7 @@ export function About() {
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           className="text-4xl font-bold mb-12 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -39,17 +39,27 @@ export function About() {
           >
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-4">Creative Technologist</h3>
+                <h3 className="text-2xl font-semibold mb-4">
+                  Paul Miller-Schmidt
+                </h3>
                 <p className="text-gray-600 mb-6">
-                  As a creative technologist, I explore the intersection of human-computer interaction, 
-                  artificial intelligence, and interactive media. My work focuses on developing novel 
-                  interfaces and experiences that bridge the gap between technology and human creativity.
+                  As a tinkerer who discovered music later in life, I aim to
+                  build the tools I wish I'd had. With a background in computer
+                  science, machine learning, and electronic instrument design, I
+                  want to create adaptive systems that make musical expression
+                  more accessible. From building a makerspace in high school to
+                  developing musical toys at Yale, I'm driven to use technology
+                  to help people learn through play.
                 </p>
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-medium mb-2">Education</h4>
-                    <p className="text-gray-600">M.S. Media Arts and Sciences (Expected 2025)</p>
-                    <p className="text-gray-600">B.S. Computer Science and Music Technology</p>
+                    <p className="text-gray-600">
+                      M.S. Media Arts and Sciences (Expected 2025)
+                    </p>
+                    <p className="text-gray-600">
+                      B.S. Computer Science and Music Technology
+                    </p>
                   </div>
                   <div>
                     <h4 className="font-medium mb-2">Research Interests</h4>

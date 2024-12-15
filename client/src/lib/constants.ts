@@ -11,8 +11,8 @@ export const musicProjects = [
   {
     title: "Discography",
     summary: "Original works, collaborations, and remixes",
-    image: "/images/dj.png",
-    technologies: ["Ableton", "Logic Pro", "Pioneer"],
+    image: "/images/deck.png",
+    technologies: ["Ableton Live", "Logic Pro", "Rekordbox"],
     detailedDescription:
       "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life. I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
     originalWorks: [
@@ -53,26 +53,13 @@ export const musicProjects = [
     },
   },
   {
-    title: "Coursework",
-    summary: "Collaborative film score composition project",
-    description:
-      "A collaborative film score composition project with Baltazar Lora",
-    detailedDescription: `
-    Music classes at Yale were a wonderful oasis of creativity and joy in my otherwise gruelling engineering coursework. After taking introductory theory courses my first year, I took nearly every course I was proficient enough to handle. Some of my favorites include Where Music Theories Collide, American Neighborhood Musics, and Gamelan Ensemble. 
-    Below is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar.`,
-    image: "/images/visual-scoring.jpg",
-    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
-    isYoutubeVideo: true,
-    technologies: ["Ableton", "Film Scoring", "Composition"],
-  },
-  {
     title: "Computer Music",
     summary: "Musical machines and probabilistic composition",
     detailedDescription:
       "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
-    technologies: ["SuperCollider", "Markov Chain", "Mealy Machine"],
+    technologies: ["SuperCollider", "Markov Chain", "Max/MSP"],
     originalWorks: [
       {
         title: "Hidden Markov Model Generation",
@@ -89,6 +76,19 @@ export const musicProjects = [
       },
     ],
   },
+  {
+    title: "Coursework",
+    summary: "Collaborative film score composition project",
+    description:
+      "A collaborative film score composition project with Baltazar Lora",
+    detailedDescription: `
+    Music classes at Yale were a wonderful oasis of creativity and joy in my otherwise gruelling engineering coursework. After taking introductory theory courses my first year, I took nearly every course I was proficient enough to handle. Some of my favorites include Where Music Theories Collide, American Neighborhood Musics, and Gamelan Ensemble. 
+    Below is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar.`,
+    image: "/images/visual-scoring.jpg",
+    videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
+    isYoutubeVideo: true,
+    technologies: ["Theory", "Film Scoring", "Composition"],
+  },
 ];
 
 export const projects = [
@@ -96,11 +96,7 @@ export const projects = [
     title: "GrooveBlocks",
     description: "Combinatory blocks for composition-based learning",
     image: "/images/grooveblocks.png",
-    technologies: [
-      "Java",
-      "Embedded Systems",
-      "C++"
-    ],
+    technologies: ["Java", "Audio Processing", "C++"],
     demoUrl: "https://grooveblocks.mit.edu",
     projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
@@ -162,7 +158,7 @@ export const projects = [
     title: "Artiphon Music Logic",
     description: "Markov Melody generator for embedded systems",
     image: "/images/midi.webp",
-    technologies: ["C++", "MIDI", "embedded systems"],
+    technologies: ["C++", "MIDI", "Embedded Systems"],
     githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
     detailedDescription: `
       <p>For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++. The algorithm incorporated a Trigram Hidden Markov Model and user-specified temperatures for precise melodic control. The program parses artist-specific MIDI to emulate their style. For my exploration, I fed it Avicii top-line melodies normalized around A minor. The model is designed to be lightweight and work on the low-memory, embedded systems that Artiphon specializes in. It was an interesting challenge in building statistical models that are simple, but still create novel and reasonable music.</p>
@@ -207,7 +203,7 @@ export const projects = [
     title: "Q-tar",
     description: "Reinforcement learning for melody generation",
     image: "/images/Qtar.png",
-    technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
+    technologies: ["PyTorch", "Reinforcement Learning", "Flask"],
     demoUrl: "https://neural-music.example.com",
     projectUrl: "https://qtar.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/qtar",
@@ -239,7 +235,7 @@ export const projects = [
     title: "nextChord",
     description: "chord progression neural network",
     image: "/images/next-chord.png",
-    technologies: ["TensorFlow", "Machine Learning", "React"],
+    technologies: ["PyTorch", "Long Short-Term Memory", "React"],
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     projectUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     isExternalDemo: true,
@@ -250,7 +246,7 @@ export const projects = [
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/F9KaOG3SCbU?si=DCH0-pj5UwgRz2yw" style="display: block; margin: 0 auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     `,
-    features: ["PyTorch", "AI chord generation", "React", "API Design"],
+    features: ["AI chord generation", "API Design", "Web Audio Processing"],
   },
   {
     title: "Chess Engine Design",
