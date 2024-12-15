@@ -90,7 +90,7 @@ export default function ProjectDetailPage() {
                         className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300"
                       >
                         <ExternalLink className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                        Visit Project Website
+                        View Source
                       </Button>
                     )}
                   </div>

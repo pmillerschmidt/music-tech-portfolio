@@ -19,31 +19,31 @@ export const musicProjects = [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
         url: "/audio/Tell Me a Lie (feat. Abby Walker).mp3",
-        year: "2023",
+        year: "2022",
       },
       {
         title: "Something (feat. Abby Walker)",
-        url: "/audio/electronic-suite.mp3",
-        year: "2023",
+        url: "/audio/something (feat. Abby Walker).mp3",
+        year: "2022",
       },
       {
         title: "Afterlife (feat. Abby Walker)",
-        url: "/audio/afterlife (feat. Abby Walker) - lolla bounce.wav",
+        url: "/audio/afterlife (feat. Abby Walker).mp3",
         year: "2023",
       },
     ],
     remixes: [
       {
-        title: "Rasputin remix",
-        originalArtist: "Steve Reich",
-        url: "/audio/reimagined-patterns.mp3",
-        year: "2024",
+        title: "Rasputin (Boney M.) Remix",
+        originalArtist: "Boney M.",
+        url: "/audio/Rasputin.mp3",
+        year: "2023",
       },
       {
-        title: "Smalltown Boy remix",
-        originalArtist: "J.S. Bach",
-        url: "/audio/electronic-variations.mp3",
-        year: "2023",
+        title: "Smalltown Boy (Bronski Beat) Remix",
+        originalArtist: "Bronski Beat",
+        url: "/audio/smalltown.mp3",
+        year: "2024",
       },
     ],
     performanceImage: {
@@ -207,7 +207,7 @@ export const projects = [
     ],
   },
   {
-    title: "Q-tar",
+    title: "Q-tar & Hfonics",
     description: "Reinforcement learning for melody generation",
     image: "/images/Qtar.png",
     technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
@@ -259,11 +259,7 @@ export const projects = [
     title: "Chess Engine Design",
     description: "Minimax chess engine with advanced heuristics",
     image: "/images/minimax.png",
-    technologies: [
-      "JavaScript",
-      "Alpha-Beta Pruning",
-      "Tree Search"
-    ],
+    technologies: ["JavaScript", "Alpha-Beta Pruning", "Tree Search"],
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
     videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
@@ -279,9 +275,6 @@ export const projects = [
         <li>Material gain (does the move gain/lose a piece)</li>
         <li>Material balance (piece values and their relative worth)</li>
         <li>Piece position evaluation (using piece-square tables)</li>
-        <li>Pawn structure analysis</li>
-        <li>King safety assessment</li>
-        <li>Control of central squares</li>
       </ul>
 
       <h3 class="text-2xl font-semibold mb-4 text-white">Performance Optimizations</h3>
@@ -289,7 +282,6 @@ export const projects = [
         <li>Alpha-Beta pruning to reduce the search space</li>
         <li>Move ordering to improve pruning efficiency</li>
         <li>Scout implementation to reduce search time</li>
-        <li>Iterative deepening for better time management</li>
       </ul>
 
       <p>The web interface provides a clean, responsive chessboard with multiple engine levels. Players can choose to play a random, greedy, minimax, or scout agent.</p>
@@ -298,7 +290,7 @@ export const projects = [
       "Minimax algorithm",
       "Alpha-beta pruning",
       "Position evaluation",
-      "Scout optimization"
+      "Scout optimization",
     ],
   },
 ];
