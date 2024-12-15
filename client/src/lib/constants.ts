@@ -230,7 +230,6 @@ export const projects = [
     description: "chord progression neural network",
     image: "/images/next-chord.png",
     technologies: ["TensorFlow", "Machine Learning", "React", "Web Audio API"],
-    demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     projectUrl: "https://pmillerschmidt.github.io/ChordCompass/",
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     liveDemo: true,
