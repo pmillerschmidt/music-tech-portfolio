@@ -249,7 +249,7 @@ export const projects = [
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     liveDemo: true,
     detailedDescription: `
-      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict.
+      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with varied progressions and a larger vocab of chords to predict.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/F9KaOG3SCbU?si=DCH0-pj5UwgRz2yw" style="display: block; margin: 0 auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     `,
@@ -261,10 +261,8 @@ export const projects = [
     image: "/images/minimax.png",
     technologies: [
       "JavaScript",
-      "Python",
-      "Chess.js",
       "Alpha-Beta Pruning",
-      "Tree Search",
+      "Tree Search"
     ],
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
@@ -274,32 +272,33 @@ export const projects = [
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
     detailedDescription: `
-      <p>This chess engine implements a sophisticated AI system using the Minimax algorithm with Alpha-Beta pruning. The project was born out of a fascination with game theory and artificial intelligence, particularly in the context of perfect information games like chess.</p>
+      <p>This chess engine implements the minimax algorithm with Alpha-Beta pruning and advanced heuristics. The project was my final project for Computational Intelligence for Games. I was interested in the application of tree search algorithms in the context of perfect information games like chess. </p>
 
-      <p>The engine's evaluation function considers multiple aspects of chess strategy:</p>
-      <ul class="list-disc pl-6 space-y-2 text-white/80">
+      <h3 class="text-2xl font-semibold mb-4 text-white">Engine Evaluation Strategy</h3>
+      <ul class="list-disc pl-12 space-y-3 text-white/80 mb-8">
+        <li>Material gain (does the move gain/lose a piece)</li>
         <li>Material balance (piece values and their relative worth)</li>
-        <li>Piece position evaluation using piece-square tables</li>
+        <li>Piece position evaluation (using piece-square tables)</li>
         <li>Pawn structure analysis</li>
         <li>King safety assessment</li>
         <li>Control of central squares</li>
       </ul>
 
-      <p>Performance optimizations include:</p>
-      <ul class="list-disc pl-6 space-y-2 text-white/80">
+      <h3 class="text-2xl font-semibold mb-4 text-white">Performance Optimizations</h3>
+      <ul class="list-disc pl-12 space-y-3 text-white/80 mb-8">
         <li>Alpha-Beta pruning to reduce the search space</li>
         <li>Move ordering to improve pruning efficiency</li>
-        <li>Transposition tables to cache evaluated positions</li>
+        <li>Scout implementation to reduce search time</li>
         <li>Iterative deepening for better time management</li>
       </ul>
 
-      <p>The web interface provides a clean, responsive chessboard with multiple difficulty levels. Players can also analyze positions, view the engine's evaluation, and see a visualization of the search tree.</p>
+      <p>The web interface provides a clean, responsive chessboard with multiple engine levels. Players can choose to play a random, greedy, minimax, or scout agent.</p>
     `,
     features: [
-      "Alpha-beta pruning algorithm",
+      "Minimax algorithm",
+      "Alpha-beta pruning",
       "Position evaluation",
-      "Interactive chess board",
-      "Real-time move calculation",
+      "Scout optimization"
     ],
   },
 ];
