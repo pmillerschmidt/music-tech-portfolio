@@ -192,6 +192,25 @@ export default function MusicDetailPage() {
                       </div>
                     )}
 
+                    {/* Performance Image Section */}
+                    {project.performanceImage && (
+                      <div className="mt-8 space-y-4">
+                        <h2 className="text-2xl font-semibold text-white mb-4">
+                          Performance
+                        </h2>
+                        <div className="relative rounded-lg overflow-hidden">
+                          <img
+                            src={project.performanceImage.url}
+                            alt="Performance"
+                            className="w-full h-auto rounded-lg"
+                          />
+                          <p className="text-white/60 text-sm mt-2 text-center">
+                            {project.performanceImage.caption}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
                     {/* Technologies Used Section */}
                     {project.technologies &&
                       project.technologies.length > 0 && (

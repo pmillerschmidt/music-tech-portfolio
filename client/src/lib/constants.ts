@@ -15,6 +15,7 @@ export const musicProjects = [
     technologies: ["Ableton", "Logic Pro", "Pioneer"],
     detailedDescription:
       "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life. I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
+
     originalWorks: [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
@@ -47,6 +48,10 @@ export const musicProjects = [
       },
     ],
     image: "/images/dj.png",
+    performanceImage: {
+      url: "/images/performance.png",
+      caption: "Live performance at Toad's Place, New Haven"
+    },
   },
   {
     title: "Coursework",
