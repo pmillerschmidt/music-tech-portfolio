@@ -59,7 +59,7 @@ export const musicProjects = [
       "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
-    technologies: ["SuperCollider", "Markov Chain", "Max/MSP"],
+    technologies: ["SuperCollider", "Markov Models", "Max/MSP"],
     originalWorks: [
       {
         title: "Hidden Markov Model Generation",
@@ -100,7 +100,6 @@ export const projects = [
     demoUrl: "https://grooveblocks.mit.edu",
     projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
-
     detailedDescription: `
       <p>GrooveBlocks reimagines music education through tangible, interactive building blocks that make composition accessible from day one. Traditional music education often prioritizes technical proficiency over creative expression, leading to high dropout rates and missed opportunities for musical discovery. Instead of following the conventional path of years of practice before creation, GrooveBlocks lets students start creating immediately through an intuitive system of modular blocks that control different musical elements.</p> 
       <div>
@@ -143,8 +142,7 @@ export const projects = [
     demoDescription:
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
-
-  Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
+Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
     `,
     features: [
       "Real-time melody generation",
@@ -188,8 +186,6 @@ export const projects = [
           <audio controls src="/audio/artiphon/CSMG-Avicii-{10,4,15,15,0.6}.mp3" class="w-full"></audio>
         </div>
       </div>
-
-      
     `,
     features: [
       "Real-time pattern recognition",
@@ -197,38 +193,6 @@ export const projects = [
       "Adaptive learning",
       "Performance mode",
       "Studio integration",
-    ],
-  },
-  {
-    title: "Q-tar",
-    description: "Reinforcement learning for melody generation",
-    image: "/images/Qtar.png",
-    technologies: ["PyTorch", "Reinforcement Learning", "Flask"],
-    demoUrl: "https://neural-music.example.com",
-    projectUrl: "https://qtar.mit.edu",
-    githubUrl: "https://github.com/pmillerschmidt/qtar",
-    videoUrl: "/videos/qtar-demo.mp4",
-    liveDemo: true,
-    demoDescription:
-      "Create unique musical pieces using deep learning models trained on various musical styles.",
-    detailedDescription: `
-      Q-tar is a reinforcement learning-based system for generating melodies in real-time. The project explores the application of Q-learning algorithms to musical composition, treating melody generation as a sequential decision-making process. The system learns optimal note sequences by maximizing a reward function that considers both musical theory rules and stylistic patterns from training data.
-
-      The neural network architecture combines a convolutional layer for processing local note patterns with LSTM layers for capturing longer-term musical dependencies. The model is trained using a custom reward function that evaluates both the local coherence of note transitions and the global structure of the generated melodies.
-
-      A web interface allows users to interact with the trained model, providing controls for:
-      - Tempo and rhythm constraints
-      - Harmonic context (key and chord progression)
-      - Style parameters (jazz, classical, pop)
-      - Real-time parameter adjustment
-      
-      The system also includes a collaborative mode where multiple users can contribute to the same composition, with the AI model adapting to maintain musical coherence between different user inputs.
-    `,
-    features: [
-      "Real-time music generation",
-      "Style transfer",
-      "MIDI export",
-      "Collaborative composition",
     ],
   },
   {
