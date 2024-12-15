@@ -194,10 +194,7 @@ export default function MusicDetailPage() {
 
                     {/* Performance Image Section */}
                     {project.performanceImage && (
-                      <div className="mt-8 space-y-4">
-                        <h2 className="text-2xl font-semibold text-white mb-4">
-                          Performance
-                        </h2>
+                      <div className="mt-8">
                         <div className="relative rounded-lg overflow-hidden">
                           <img
                             src={project.performanceImage.url}
