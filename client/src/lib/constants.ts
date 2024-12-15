@@ -211,8 +211,6 @@ export const projects = [
     description: "Reinforcement learning for melody generation",
     image: "/images/Qtar.png",
     technologies: ["PyTorch", "Web Audio API", "Flask", "TensorFlow.js"],
-    demoUrl: "https://neural-music.example.com",
-    projectUrl: "https://qtar.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/qtar",
     videoUrl: "/videos/qtar-demo.mp4",
     liveDemo: true,
