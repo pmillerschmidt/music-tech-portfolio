@@ -59,15 +59,14 @@ export function Contact() {
                     About Me
                   </h3>
                   <p className="text-white/80 mb-6 leading-relaxed">
-                    I'm a tinkerer and musical late bloomer who loves building
-                    technology that my younger self would have found joy in.
-                    From founding a makerspace in high school to developing
-                    musical toys, I focus on making learning playful and
-                    impactful. By combining machine learning with electronic
-                    instrument design, I build generative systems and adaptive
-                    interfaces that support human creative agency. I'm on a
-                    mission to transform music education through technology that
-                    makes artistic expression accessible to everyone.
+                    As a tinkerer who discovered music later in life, I aim to
+                    build the tools I wish I'd had. With a background in
+                    computer science, machine learning, and electronic
+                    instrument design, I want to create adaptive systems that
+                    make musical expression more accessible. From building a
+                    makerspace in high school to developing musical toys at
+                    Yale, I'm driven to use technology to help people learn
+                    through play.
                   </p>
                 </div>
                 <div>
