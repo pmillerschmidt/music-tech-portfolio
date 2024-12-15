@@ -217,6 +217,19 @@ export const projects = [
     liveDemo: true,
     demoDescription:
       "Create unique musical pieces using deep learning models trained on various musical styles.",
+    detailedDescription: `
+      Q-tar is a reinforcement learning-based system for generating melodies in real-time. The project explores the application of Q-learning algorithms to musical composition, treating melody generation as a sequential decision-making process. The system learns optimal note sequences by maximizing a reward function that considers both musical theory rules and stylistic patterns from training data.
+
+      The neural network architecture combines a convolutional layer for processing local note patterns with LSTM layers for capturing longer-term musical dependencies. The model is trained using a custom reward function that evaluates both the local coherence of note transitions and the global structure of the generated melodies.
+
+      A web interface allows users to interact with the trained model, providing controls for:
+      - Tempo and rhythm constraints
+      - Harmonic context (key and chord progression)
+      - Style parameters (jazz, classical, pop)
+      - Real-time parameter adjustment
+      
+      The system also includes a collaborative mode where multiple users can contribute to the same composition, with the AI model adapting to maintain musical coherence between different user inputs.
+    `,
     features: [
       "Real-time music generation",
       "Style transfer",
@@ -261,6 +274,30 @@ export const projects = [
     isYoutubeVideo: true,
     demoDescription:
       "Play against an AI opponent that uses advanced game tree search algorithms and positional evaluation",
+    detailedDescription: `
+      This chess engine implements the minimax algorithm with alpha-beta pruning to create a challenging AI opponent. The engine evaluates positions using a sophisticated scoring system that considers multiple factors:
+
+      - Material balance (piece values and their relative worth)
+      - Piece mobility and control of key squares
+      - Pawn structure analysis
+      - King safety evaluation
+      - Control of center squares
+      - Development of pieces in the opening
+
+      The implementation uses iterative deepening to ensure the engine makes moves within a reasonable time frame while maximizing the search depth. The alpha-beta pruning optimization significantly reduces the number of positions that need to be evaluated, allowing the engine to search deeper within the same time constraints.
+
+      Key technical features include:
+      - Dynamic move ordering to improve pruning efficiency
+      - Transposition table for storing previously evaluated positions
+      - Late move reduction for deeper search of promising variations
+      - Quiescence search to handle tactical sequences accurately
+
+      The web interface provides an interactive board where users can play against the engine, with options to:
+      - Adjust the engine's playing strength
+      - Take back moves and analyze positions
+      - View the engine's evaluation of the current position
+      - Export games in PGN format
+    `,
     features: [
       "Alpha-beta pruning algorithm",
       "Position evaluation",
