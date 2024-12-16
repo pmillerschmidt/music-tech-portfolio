@@ -141,6 +141,10 @@ export const projects = [
     demoDescription:
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
+    <div>
+      <p class="mb-2"><strong>MelGen Output</strong></p>
+      <audio controls src="/audio/melgen-demo.mp3" class="w-full"></audio>
+    </div>
 Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
     `,
     features: [
@@ -192,7 +196,7 @@ Music generation with machine learning poses unique challenges due to the high d
     ],
   },
   {
-    title: "Q-tar & Hfonics",
+    title: "Q-tar",
     description: "Reinforcement learning for melody generation",
     image: "/images/Qtar.png",
     technologies: ["PyTorch", "Reinforcement Learning", "Flask"],
@@ -208,7 +212,7 @@ Music generation with machine learning poses unique challenges due to the high d
 
       Once the model is pretrained on the environment, human feedback is incorporated through a React-based web application. The user can interact with the system by listening to generated melodies and then giving them a rating between 1-5. That rating is then incorporated into the models reward function and used to train the model. 
 
-      A parallel project is Hfonics, which is a generative melodic model trained on the Maestro dataset from Google Magenta. After being trained, the model can be used to generate melodies in real-time. It also has a RL-based feedback mechanism to fine-tune the model. 
+      A parallel project is <a href='https://github.com/pmillerschmidt/hfonics' target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Hfonics</a>, which is a generative melodic model trained on the Maestro dataset from Google Magenta. After being trained, the model can be used to generate melodies in real-time. It also has a RL-based feedback mechanism to fine-tune the model. 
 
       I was interested in testing whether this approach, which is often used for training LLMs might also be effective in music generation. 
     `,
