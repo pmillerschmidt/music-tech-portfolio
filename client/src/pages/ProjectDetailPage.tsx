@@ -187,7 +187,7 @@ export default function ProjectDetailPage() {
               )}
 
               {/* Demo Video Section */}
-              {!project.title.includes("MelGen") && project.videoUrl && (
+              {project.videoUrl && (
                 <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                   <CardContent className="p-6">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Project Demo</h2>
