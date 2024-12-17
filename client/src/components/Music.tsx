@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import {
   Card,
   CardContent,
@@ -7,37 +8,28 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { musicProjects } from "../lib/constants";
-import { ExternalLink } from "lucide-react";
-import { Link as WouterLink } from "wouter"; // Import for wouter Link
-
+import { ExternalLink, Loader2 } from "lucide-react";
+import { Link as WouterLink } from "wouter";
 
 export function Music() {
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [visibleProjects, setVisibleProjects] = useState(6);
+  const [isLoading, setIsLoading] = useState(false);
+  const { element, isIntersecting } = useIntersectionObserver({
+    threshold: 0.5,
+    rootMargin: '100px',
+  });
 
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    if (e.currentTarget.scrollLeft > 0 && !hasScrolled) {
-      setHasScrolled(true);
-    } else if (e.currentTarget.scrollLeft === 0 && hasScrolled) {
-      setHasScrolled(false);
+  useEffect(() => {
+    if (isIntersecting && !isLoading && visibleProjects < musicProjects.length) {
+      setIsLoading(true);
+      // Simulate loading delay for smooth transition
+      setTimeout(() => {
+        setVisibleProjects((prev) => Math.min(prev + 3, musicProjects.length));
+        setIsLoading(false);
+      }, 500);
     }
-  };
-
-  const scrollRight = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (scrollContainerRef.current) {
-      // Calculate the width of one project card including gap
-      const cardWidth = scrollContainerRef.current.clientWidth / 3;
-      // Scroll by exactly 3 cards
-      scrollContainerRef.current.scrollBy({
-        left: cardWidth * 3,
-        behavior: 'smooth'
-      });
-    }
-  };
+  }, [isIntersecting, isLoading, visibleProjects]);
 
   return (
     <section id="music" className="relative py-4 min-h-screen flex items-center -mt-24">
@@ -60,45 +52,19 @@ export function Music() {
           Music & Sound
         </motion.h2>
 
-        <div className="relative group">
-          {/* Scroll indicator */}
-          {!hasScrolled && scrollContainerRef.current && scrollContainerRef.current.scrollWidth > scrollContainerRef.current.clientWidth && (
-            <motion.button 
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-[100] p-3 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 text-white/60 hover:text-white/80 transition-all duration-300 hover:scale-110 cursor-pointer"
-              onClick={scrollRight}
-              whileHover={{ x: [0, 5, 0] }}
-              transition={{ duration: 1 }}
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="pointer-events-none"
-              >
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </motion.button>
-          )}
-
+        <div className="relative">
           <div className="container mx-auto px-4">
-            <div 
-              ref={scrollContainerRef}
-              className="grid grid-cols-1 md:grid-flow-col md:auto-cols-[calc(33.333%-1.333rem)] gap-6 pb-6 md:overflow-x-auto md:snap-x md:snap-mandatory custom-scrollbar"
-              onScroll={handleScroll}
-            >
-              {musicProjects.map((project, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {musicProjects.slice(0, visibleProjects).map((project, index) => (
                 <motion.div
                   key={project.title}
-                  initial={{ opacity: 0, x: 100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="w-full"
                 >
-                  <WouterLink href={`/music/${index}`}> {/* Using wouter Link */}
+                  <WouterLink href={`/music/${index}`}>
                     <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
                       <CardHeader>
                         <CardTitle className="text-white">
@@ -137,6 +103,19 @@ export function Music() {
                   </WouterLink>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Loading indicator and intersection observer target */}
+            <div ref={element} className="w-full py-8 flex justify-center">
+              {isLoading && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <Loader2 className="w-6 h-6 text-white animate-spin" />
+                </motion.div>
+              )}
             </div>
           </div>
         </div>
