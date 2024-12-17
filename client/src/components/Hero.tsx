@@ -61,7 +61,7 @@ export function Hero() {
           >
             <span>View My Work</span>
             <motion.div
-              animate={{ y: [0, 10, 0] }}
+              animate={{ y: [-5, 5, -5] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="ml-2 inline-flex items-center justify-center"
             >
