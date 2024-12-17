@@ -1,4 +1,3 @@
-import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -9,38 +8,16 @@ import {
 } from "@/components/ui/card";
 import { musicProjects } from "../lib/constants";
 import { ExternalLink } from "lucide-react";
-import { Link as WouterLink } from "wouter";
+import { Link } from "wouter";
 
 export function Music() {
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    if (e.currentTarget.scrollLeft > 0 && !hasScrolled) {
-      setHasScrolled(true);
-    } else if (e.currentTarget.scrollLeft === 0 && hasScrolled) {
-      setHasScrolled(false);
-    }
-  };
-
-  const scrollRight = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (scrollContainerRef.current) {
-      const cardWidth = scrollContainerRef.current.clientWidth / 3;
-      scrollContainerRef.current.scrollBy({
-        left: cardWidth * 3,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <section
       id="music"
       className="relative min-h-screen -mt-1"
     >
       <div className="relative w-full h-full">
+        {/* Background that covers entire section */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src="/images/music-background.png"
@@ -52,7 +29,9 @@ export function Music() {
           </div>
         </div>
 
+        {/* Content container */}
         <div className="relative z-10">
+          {/* First viewport - initial view */}
           <div className="flex items-center">
             <div className="container mx-auto px-4 py-12">
               <motion.h2
@@ -67,14 +46,14 @@ export function Music() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {musicProjects.map((project, index) => (
                   <motion.div
-                    key={project.title}
+                    key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="w-full"
                   >
-                    <WouterLink href={`/music/${index}`}>
+                    <Link href={`/music/${index}`}>
                       <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
                         <CardHeader className="p-4">
                           <CardTitle className="text-white">
@@ -85,7 +64,7 @@ export function Music() {
                           </CardDescription>
                         </CardHeader>
                         <CardContent className="p-4">
-                          <div className="relative h-48 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                          <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
                             <img
                               src={project.image}
                               alt={project.title}
@@ -110,7 +89,7 @@ export function Music() {
                           </div>
                         </CardContent>
                       </Card>
-                    </WouterLink>
+                    </Link>
                   </motion.div>
                 ))}
               </div>
