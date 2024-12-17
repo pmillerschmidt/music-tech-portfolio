@@ -29,8 +29,8 @@ export default function MusicDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black">
-      <div className="relative min-h-screen">
+    <main className="bg-black relative min-h-screen">
+      <div className="absolute inset-0">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
