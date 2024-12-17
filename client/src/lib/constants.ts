@@ -100,6 +100,8 @@ export const projects = [
     demoUrl: "https://grooveblocks.mit.edu",
     projectUrl: "https://grooveblocks.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/grooveblocks",
+    videoUrl: "https://www.youtube.com/embed/x5WkWsCPJ6E",
+    isYoutubeVideo: true,
     detailedDescription: `
       <p>GrooveBlocks reimagines music education through tangible, interactive building blocks that make composition accessible from day one. Traditional music education often prioritizes technical proficiency over creative expression, leading to high dropout rates and missed opportunities for musical discovery. Instead of following the conventional path of years of practice before creation, GrooveBlocks lets students start creating immediately through an intuitive system of modular blocks that control different musical elements.</p> 
       <div>
@@ -117,9 +119,6 @@ export const projects = [
     </div>
     
     <p>What sets GrooveBlocks apart is its adaptive approach. Rather than overwhelming beginners with full musical complexity (like a piano's 88 keys or a DAW's countless controls), the system introduces elements gradually as students develop. This balanced approach keeps students engaged and challenged at the right level, allowing them to discover their musical identity while building technical skills. Through testing with middle schoolers and collaboration with educators, we refined this approach to ensure it keeps students engaged while fostering genuine musical growth. While we reached testing agreements with the Music for Young Children foundation, we paused the project indefinitely as we returned to our respective universities.</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/x5WkWsCPJ6E?si=dzzrCyO7XtQcbLTQ" title="YouTube video player" frameborder="0" style="display: block; margin: 0 auto;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
     `,
     features: [
       "Interactive block-based composition",
@@ -204,7 +203,7 @@ Music generation with machine learning poses unique challenges due to the high d
     demoUrl: "https://neural-music.example.com",
     projectUrl: "https://qtar.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/qtar",
-    videoUrl: "https://www.youtube.com/embed/VGp2k8LJc3M",
+    videoUrl: "https://www.youtube.com/watch?v=IcCUpgkPF8k",
     isYoutubeVideo: true,
     liveDemo: true,
     demoDescription:
