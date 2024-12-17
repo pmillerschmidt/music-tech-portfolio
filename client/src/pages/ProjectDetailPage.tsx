@@ -30,10 +30,10 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black">
-      <div className="relative min-h-screen pb-20">
+    <main className="min-h-screen bg-black overflow-hidden">
+      <div className="relative min-h-screen">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
+        <div className="fixed inset-0 z-0">
           <img
             src={project.image}
             alt={project.title}

@@ -14,17 +14,17 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative bg-black"
+      className="relative bg-black overflow-hidden"
     >
-      <div className="relative w-full">
+      <div className="relative w-full min-h-screen">
         {/* Background that covers entire section */}
-        <div className="fixed inset-0 z-0 overflow-hidden">
+        <div className="fixed inset-0 z-0">
           <img
             src="/images/projects-inverted.jpg"
             alt="Projects Background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90 backdrop-blur-md" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/90 backdrop-blur-sm" />
         </div>
 
         {/* Content container */}
