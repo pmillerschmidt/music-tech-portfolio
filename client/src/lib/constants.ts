@@ -77,7 +77,7 @@ export const musicProjects = [
   },
   {
     title: "Coursework",
-    summary: "Academic background in theory and study",
+    summary: "Academic background",
     description:
       "A collaborative film score composition project with Baltazar Lora",
     detailedDescription: `

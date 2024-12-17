@@ -54,15 +54,15 @@ export function Hero() {
           Musician | Maker | Educator
         </p>
         <Button
-          className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 inline-flex items-center justify-center"
+          className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
           size="lg"
           onClick={scrollToProjects}
         >
-          <span>View My Work</span>
+          <span className="inline-flex items-center">View My Work</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="ml-2 inline-flex items-center"
+            className="flex items-center"
           >
             <svg
               width="24"
