@@ -14,11 +14,11 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen -mt-1"
+      className="relative bg-black"
     >
-      <div className="relative w-full h-full">
+      <div className="relative w-full">
         {/* Background that covers entire section */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="fixed inset-0 z-0 overflow-hidden">
           <img
             src="/images/projects-inverted.jpg"
             alt="Projects Background"
@@ -28,9 +28,9 @@ export function Projects() {
         </div>
 
         {/* Content container */}
-        <div className="relative z-10">
+        <div className="relative z-10 min-h-screen">
           {/* First viewport - initial view */}
-          <div className="flex items-center">
+          <div className="flex items-center min-h-screen">
             <div className="container mx-auto px-4 py-12">
               <motion.h2
                 className="text-4xl font-bold mb-8 text-center text-white hero-text bg-clip-text text-transparent"
@@ -96,7 +96,7 @@ export function Projects() {
           </div>
 
           {/* Second set of projects */}
-          <div className="min-h-screen pt-0 -mt-20">
+          <div className="min-h-screen py-20">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {projects.slice(3, 6).map((project, index) => (
