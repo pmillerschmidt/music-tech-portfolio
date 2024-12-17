@@ -113,18 +113,22 @@ export default function ProjectDetailPage() {
                       </div>
                       <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
                       <div className="prose prose-invert">
-                        <ul className="list-none pl-0 space-y-2">
+                        <ul className="list-none space-y-4">
                             {project.detailedDescription.split('\n').map((paragraph, index) => {
                               const trimmedParagraph = paragraph.trim();
                               if (!trimmedParagraph) return null;
                               
-                              return trimmedParagraph.startsWith('-') ? (
-                                <li key={index} className="flex text-white/80">
-                                  <span className="mr-2">•</span>
-                                  <span className="flex-1">{trimmedParagraph.substring(1).trim()}</span>
-                                </li>
-                              ) : (
-                                <p key={index} className="text-white/80 mb-4">{trimmedParagraph}</p>
+                              if (trimmedParagraph.startsWith('-')) {
+                                return (
+                                  <li key={index} className="flex items-start text-white/80">
+                                    <span className="mr-3 mt-1.5">•</span>
+                                    <span className="flex-1">{trimmedParagraph.substring(1).trim()}</span>
+                                  </li>
+                                );
+                              }
+                              
+                              return (
+                                <p key={index} className="text-white/80">{trimmedParagraph}</p>
                               );
                             })}
                           </ul>
@@ -177,18 +181,22 @@ export default function ProjectDetailPage() {
                       <CardContent className="p-6">
                         <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
                         <div className="prose prose-invert">
-                          <ul className="list-none pl-0 space-y-2">
+                          <ul className="list-none space-y-4">
                             {project.detailedDescription.split('\n').map((paragraph, index) => {
                               const trimmedParagraph = paragraph.trim();
                               if (!trimmedParagraph) return null;
                               
-                              return trimmedParagraph.startsWith('-') ? (
-                                <li key={index} className="flex text-white/80">
-                                  <span className="mr-2">•</span>
-                                  <span className="flex-1">{trimmedParagraph.substring(1).trim()}</span>
-                                </li>
-                              ) : (
-                                <p key={index} className="text-white/80 mb-4">{trimmedParagraph}</p>
+                              if (trimmedParagraph.startsWith('-')) {
+                                return (
+                                  <li key={index} className="flex items-start text-white/80">
+                                    <span className="mr-3 mt-1.5">•</span>
+                                    <span className="flex-1">{trimmedParagraph.substring(1).trim()}</span>
+                                  </li>
+                                );
+                              }
+                              
+                              return (
+                                <p key={index} className="text-white/80">{trimmedParagraph}</p>
                               );
                             })}
                           </ul>
