@@ -29,7 +29,7 @@ export default function MusicDetailPage() {
   }
 
   return (
-    <main className="bg-black relative min-h-screen">
+    <main className="bg-black relative min-h-screen overflow-hidden">
       <div className="absolute inset-0">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
@@ -42,9 +42,8 @@ export default function MusicDetailPage() {
               willChange: "transform",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black/20" />
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black" />
         </div>
 
         {/* Content */}
