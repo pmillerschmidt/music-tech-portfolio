@@ -110,7 +110,7 @@ export default function MusicDetailPage() {
                         <h2 className="text-2xl font-semibold text-white mb-6">
                           Original Works
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 gap-4">
                           {project.originalWorks.map((work, index) => (
                             <div
                               key={index}
@@ -137,7 +137,7 @@ export default function MusicDetailPage() {
                         <h2 className="text-2xl font-semibold text-white mb-6">
                           Remixes
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 gap-4">
                           {project.remixes.map((remix, index) => (
                             <div
                               key={index}
