@@ -113,25 +113,21 @@ export default function ProjectDetailPage() {
                       </div>
                       <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
                       <div className="prose prose-invert">
-                        <ul className="list-none space-y-4">
-                            {project.detailedDescription.split('\n').map((paragraph, index) => {
+                          <div className="space-y-4" dangerouslySetInnerHTML={{
+                            __html: project.detailedDescription.split('\n').map(paragraph => {
                               const trimmedParagraph = paragraph.trim();
-                              if (!trimmedParagraph) return null;
+                              if (!trimmedParagraph) return '';
                               
                               if (trimmedParagraph.startsWith('-')) {
-                                return (
-                                  <li key={index} className="flex items-start text-white/80">
-                                    <span className="mr-3 mt-1.5">•</span>
-                                    <span className="flex-1">{trimmedParagraph.substring(1).trim()}</span>
-                                  </li>
-                                );
+                                return `<div class="flex items-start gap-3 text-white/80">
+                                  <span class="select-none">•</span>
+                                  <span style="flex: 1">${trimmedParagraph.substring(1).trim()}</span>
+                                </div>`;
                               }
                               
-                              return (
-                                <p key={index} className="text-white/80">{trimmedParagraph}</p>
-                              );
-                            })}
-                          </ul>
+                              return `<p class="text-white/80">${trimmedParagraph}</p>`;
+                            }).join('')
+                          }} />
                         </div>
                     </CardContent>
                   </Card>
@@ -181,25 +177,21 @@ export default function ProjectDetailPage() {
                       <CardContent className="p-6">
                         <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
                         <div className="prose prose-invert">
-                          <ul className="list-none space-y-4">
-                            {project.detailedDescription.split('\n').map((paragraph, index) => {
+                          <div className="space-y-4" dangerouslySetInnerHTML={{
+                            __html: project.detailedDescription.split('\n').map(paragraph => {
                               const trimmedParagraph = paragraph.trim();
-                              if (!trimmedParagraph) return null;
+                              if (!trimmedParagraph) return '';
                               
                               if (trimmedParagraph.startsWith('-')) {
-                                return (
-                                  <li key={index} className="flex items-start text-white/80">
-                                    <span className="mr-3 mt-1.5">•</span>
-                                    <span className="flex-1">{trimmedParagraph.substring(1).trim()}</span>
-                                  </li>
-                                );
+                                return `<div class="flex items-start gap-3 text-white/80">
+                                  <span class="select-none">•</span>
+                                  <span style="flex: 1">${trimmedParagraph.substring(1).trim()}</span>
+                                </div>`;
                               }
                               
-                              return (
-                                <p key={index} className="text-white/80">{trimmedParagraph}</p>
-                              );
-                            })}
-                          </ul>
+                              return `<p class="text-white/80">${trimmedParagraph}</p>`;
+                            }).join('')
+                          }} />
                         </div>
                       </CardContent>
                     </Card>
