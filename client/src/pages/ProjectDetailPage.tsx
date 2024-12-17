@@ -30,8 +30,8 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black">
-      <div className="relative min-h-screen">
+    <main className="min-h-screen bg-black overflow-x-hidden">
+      <div className="relative h-full">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
@@ -49,8 +49,8 @@ export default function ProjectDetailPage() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto">
+        <div className="relative z-10 container mx-auto px-4 py-20 min-h-screen">
+          <div className="max-w-4xl mx-auto pb-20">
             <Link href="/#projects">
                   <Button 
                     variant="outline" 
