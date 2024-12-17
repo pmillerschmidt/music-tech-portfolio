@@ -14,140 +14,132 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative bg-black overflow-hidden"
+      className="relative bg-black"
     >
-      <div className="relative w-full min-h-screen">
-        {/* Background that covers entire section */}
-        <div className="fixed inset-0 z-0">
-          <img
-            src="/images/projects-inverted.jpg"
-            alt="Projects Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/90 backdrop-blur-sm" />
-        </div>
+      {/* Fixed background with continuous gradient */}
+      <div className="fixed inset-0 z-0">
+        <img
+          src="/images/projects-inverted.jpg"
+          alt="Projects Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/90 backdrop-blur-sm" />
+      </div>
 
-        {/* Content container */}
-        <div className="relative z-10 min-h-screen">
-          {/* First viewport - initial view */}
-          <div className="flex items-center min-h-screen">
-            <div className="container mx-auto px-4 py-12">
-              <motion.h2
-                className="text-4xl font-bold mb-8 text-center text-white hero-text bg-clip-text text-transparent"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                Projects
-              </motion.h2>
+      {/* Content container */}
+      <div className="relative z-10">
+        {/* Projects Grid Section */}
+        <div className="min-h-screen flex flex-col justify-center py-20">
+          <div className="container mx-auto px-4">
+            <motion.h2
+              className="text-4xl font-bold mb-12 text-center text-white hero-text bg-clip-text text-transparent"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              Projects
+            </motion.h2>
 
-              {/* First three projects */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {projects.slice(0, 3).map((project, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="w-full"
-                  >
-                    <Link href={`/projects/${index}`}>
-                      <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
-                        <CardHeader className="p-4">
-                          <CardTitle className="text-white">
-                            {project.title}
-                          </CardTitle>
-                          <CardDescription className="text-white/70">
-                            {project.description}
-                          </CardDescription>
-                        </CardHeader>
-                        <CardContent className="p-4">
-                          <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                            <img
-                              src={project.image}
-                              alt={project.title}
-                              className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
-                              <span className="text-white font-medium flex items-center">
-                                View Details
-                                <ExternalLink className="w-4 h-4 ml-2" />
-                              </span>
-                            </div>
+            {/* First set of projects */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {projects.slice(0, 3).map((project, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Link href={`/projects/${index}`}>
+                    <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
+                      <CardHeader className="p-4">
+                        <CardTitle className="text-white">
+                          {project.title}
+                        </CardTitle>
+                        <CardDescription className="text-white/70">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="p-4">
+                        <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                            <span className="text-white font-medium flex items-center">
+                              View Details
+                              <ExternalLink className="w-4 h-4 ml-2" />
+                            </span>
                           </div>
-                          <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((tech) => (
-                              <span
-                                key={tech}
-                                className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </motion.div>
+              ))}
             </div>
-          </div>
 
-          {/* Second set of projects */}
-          <div className="min-h-screen py-20">
-            <div className="container mx-auto px-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {projects.slice(3, 6).map((project, index) => (
-                  <motion.div
-                    key={index + 3}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="w-full"
-                  >
-                    <Link href={`/projects/${index + 3}`}>
-                      <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
-                        <CardHeader className="p-4">
-                          <CardTitle className="text-white">
-                            {project.title}
-                          </CardTitle>
-                          <CardDescription className="text-white/70">
-                            {project.description}
-                          </CardDescription>
-                        </CardHeader>
-                        <CardContent className="p-4">
-                          <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
-                            <img
-                              src={project.image}
-                              alt={project.title}
-                              className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
-                              <span className="text-white font-medium flex items-center">
-                                View Details
-                                <ExternalLink className="w-4 h-4 ml-2" />
-                              </span>
-                            </div>
+            {/* Second set of projects */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.slice(3, 6).map((project, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Link href={`/projects/${index + 3}`}>
+                    <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group/card cursor-pointer">
+                      <CardHeader className="p-4">
+                        <CardTitle className="text-white">
+                          {project.title}
+                        </CardTitle>
+                        <CardDescription className="text-white/70">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="p-4">
+                        <div className="relative h-40 w-full bg-cover bg-center rounded-md mb-4 overflow-hidden group-hover:shadow-lg transition-all duration-300">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity flex items-center justify-center">
+                            <span className="text-white font-medium flex items-center">
+                              View Details
+                              <ExternalLink className="w-4 h-4 ml-2" />
+                            </span>
                           </div>
-                          <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((tech) => (
-                              <span
-                                key={tech}
-                                className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm border border-white/10"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
