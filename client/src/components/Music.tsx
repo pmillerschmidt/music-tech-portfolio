@@ -41,6 +41,7 @@ export function Music() {
                 Music & Sound
               </motion.h2>
 
+              {/* First three projects */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {musicProjects.map((project, index) => (
                   <motion.div
