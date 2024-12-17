@@ -204,7 +204,8 @@ Music generation with machine learning poses unique challenges due to the high d
     demoUrl: "https://neural-music.example.com",
     projectUrl: "https://qtar.mit.edu",
     githubUrl: "https://github.com/pmillerschmidt/qtar",
-    videoUrl: "/videos/qtar-demo.mp4",
+    videoUrl: "https://www.youtube.com/embed/VGp2k8LJc3M",
+    isYoutubeVideo: true,
     liveDemo: true,
     demoDescription:
       "Create unique musical pieces using deep learning models trained on various musical styles.",
