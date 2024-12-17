@@ -40,7 +40,7 @@ export function Music() {
   };
 
   return (
-    <section id="music" className="relative py-4 min-h-screen flex items-center -mt-24">
+    <section id="music" className="relative py-20 min-h-screen flex items-center -mt-1">
       <div className="absolute inset-0 z-0">
         <img
           src="/images/music-background.png"
@@ -86,7 +86,7 @@ export function Music() {
           <div className="container mx-auto px-4">
             <div 
               ref={scrollContainerRef}
-              className="grid grid-cols-1 md:grid-flow-col md:auto-cols-[calc(33.333%-1.333rem)] gap-6 pb-6 md:overflow-x-auto md:snap-x md:snap-mandatory custom-scrollbar"
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-6"
               onScroll={handleScroll}
             >
               {musicProjects.map((project, index) => (
