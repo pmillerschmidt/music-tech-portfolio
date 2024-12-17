@@ -16,18 +16,25 @@ export function Projects() {
   const [visibleProjects, setVisibleProjects] = useState(6);
   const [isLoading, setIsLoading] = useState(false);
   const { element, isIntersecting } = useIntersectionObserver({
-    threshold: 0.5,
-    rootMargin: '100px',
+    threshold: 0.1,
+    rootMargin: '500px',
   });
 
   useEffect(() => {
     if (isIntersecting && !isLoading && visibleProjects < projects.length) {
       setIsLoading(true);
       // Simulate loading delay for smooth transition
+      // Reduced delay for faster loading
       setTimeout(() => {
         setVisibleProjects((prev) => Math.min(prev + 3, projects.length));
         setIsLoading(false);
-      }, 500);
+        // Prefetch next set of images
+        const nextProjects = projects.slice(visibleProjects + 3, visibleProjects + 6);
+        nextProjects.forEach(project => {
+          const img = new Image();
+          img.src = project.image;
+        });
+      }, 200);
     }
   }, [isIntersecting, isLoading, visibleProjects]);
 
