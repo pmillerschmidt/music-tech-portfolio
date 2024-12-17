@@ -96,7 +96,7 @@ export function Projects() {
           </div>
 
           {/* Second set of projects */}
-          <div className="min-h-[80vh] pt-0">
+          <div className="min-h-screen pt-0 -mt-20">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {projects.slice(3, 6).map((project, index) => (
