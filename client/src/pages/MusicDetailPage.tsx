@@ -110,22 +110,24 @@ export default function MusicDetailPage() {
                         <h2 className="text-2xl font-semibold text-white mb-6">
                           Original Works
                         </h2>
-                        {project.originalWorks.map((work, index) => (
-                          <div
-                            key={index}
-                            className="bg-white/5 rounded-lg p-4 space-y-2"
-                          >
-                            <div className="flex justify-between items-center">
-                              <h3 className="text-lg font-medium text-white">
-                                {work.title}
-                              </h3>
-                              <span className="text-white/60 text-sm">
-                                {work.year}
-                              </span>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                          {project.originalWorks.map((work, index) => (
+                            <div
+                              key={index}
+                              className="bg-white/5 rounded-lg p-4 space-y-2"
+                            >
+                              <div className="flex justify-between items-center">
+                                <h3 className="text-lg font-medium text-white">
+                                  {work.title}
+                                </h3>
+                                <span className="text-white/60 text-sm">
+                                  {work.year}
+                                </span>
+                              </div>
+                              <audio controls className="w-full" src={work.url} />
                             </div>
-                            <audio controls className="w-full" src={work.url} />
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
                     )}
 
@@ -135,26 +137,28 @@ export default function MusicDetailPage() {
                         <h2 className="text-2xl font-semibold text-white mb-6">
                           Remixes
                         </h2>
-                        {project.remixes.map((remix, index) => (
-                          <div
-                            key={index}
-                            className="bg-white/5 rounded-lg p-4 space-y-2"
-                          >
-                            <div className="flex justify-between items-center">
-                              <h3 className="text-lg font-medium text-white">
-                                {remix.title}
-                              </h3>
-                              <span className="text-white/60 text-sm">
-                                {remix.year}
-                              </span>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                          {project.remixes.map((remix, index) => (
+                            <div
+                              key={index}
+                              className="bg-white/5 rounded-lg p-4 space-y-2"
+                            >
+                              <div className="flex justify-between items-center">
+                                <h3 className="text-lg font-medium text-white">
+                                  {remix.title}
+                                </h3>
+                                <span className="text-white/60 text-sm">
+                                  {remix.year}
+                                </span>
+                              </div>
+                              <audio
+                                controls
+                                className="w-full"
+                                src={remix.url}
+                              />
                             </div>
-                            <audio
-                              controls
-                              className="w-full"
-                              src={remix.url}
-                            />
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
                     )}
 
