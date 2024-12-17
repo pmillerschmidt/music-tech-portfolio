@@ -86,7 +86,7 @@ export function Music() {
           <div className="container mx-auto px-4">
             <div 
               ref={scrollContainerRef}
-              className="grid grid-flow-col auto-cols-[calc(33.333%-1.333rem)] gap-6 pb-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar"
+              className="grid grid-cols-1 md:grid-flow-col md:auto-cols-[calc(33.333%-1.333rem)] gap-6 pb-6 md:overflow-x-auto md:snap-x md:snap-mandatory custom-scrollbar"
               onScroll={handleScroll}
             >
               {musicProjects.map((project, index) => (
