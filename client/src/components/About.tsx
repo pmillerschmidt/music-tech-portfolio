@@ -44,7 +44,7 @@ export function About() {
                 </h3>
                 <p className="text-gray-600 mb-6">
                   As a tinkerer who discovered music later in life, I aim to
-                  build the tools I wish I'd had. With a background in computer
+                  build the tools I wish I'd had growing up. With a background in computer
                   science, machine learning, and electronic instrument design, I
                   want to create adaptive systems that make musical expression
                   more accessible. From building a makerspace in high school to

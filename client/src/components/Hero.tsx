@@ -51,7 +51,7 @@ export function Hero() {
           </span>
         </h1>
         <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
-          Musician | Engineer | Educator
+          Musician | Maker | Educator
         </p>
         <Button
           className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"

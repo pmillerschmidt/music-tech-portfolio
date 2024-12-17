@@ -13,7 +13,8 @@ export const musicProjects = [
     summary: "Original works, collaborations, and remixes",
     image: "/images/visual-scoring.jpg",
     technologies: ["Ableton Live", "Logic Pro", "Rekordbox"],
-    detailedDescription: `I began producing as a sophomore at Yale and it quickly became one of the greatest joys of my life. I typically make House or EDM, but enjoy exploring different sounds and genres. My favorite part of writing music is collaboration, and I am lucky to be friends with some amazing musicians. I have worked with acts like <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Balt Lora</a>, <a href="https://open.spotify.com/artist/3QCB7sHyeE8BM8G5JqA1Z4" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Wacomo</a>, and <a href="https://open.spotify.com/artist/1lhIL1YVgF6X1I8IMluKZi" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">PJ Frantz</a>. Below is a selection of some originals (all collaborations with my friend <a href="https://open.spotify.com/artist/7jszfbhgcYuNuQt2QR8HCy" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Abby Walker</a>) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year. I've played in many dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.`,
+    detailedDescription:
+      "I began producing as a sophomore at Yale and it has become one of the greatest joys of my life. I typically make House or EDM, but I like exploring different sounds and genres. My favorite part of writing music is collaborating with friends. I am lucky to be friends with some many amazing musicians and have worked with acts like Balt Lora, Wacomo, and PJ Frantz. Below is a selection of some originals (all collaborations with my friend Abby Walker) and remixes. Eager to perform and share my love for dance music, I started to DJ in my senior year at Yale. I've played in dingy basements, but also at larger venues like Elm City Tap House and Toads Place in New Haven.",
     originalWorks: [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
@@ -55,7 +56,7 @@ export const musicProjects = [
     title: "Computer Music",
     summary: "Musical machines and probabilistic composition",
     detailedDescription:
-      "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, a few recordings survived. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
+      "After taking a class on electronic dance music, I was hungry to dive deeper into this intersection of interests. The next few years, I took several classes in computer music, including algorithmic music, sound synthesis, and electronic instrument design. In these classes I learned about the history of the field and how to build computer music systems in Max/MSP and SuperCollider. While a few cherished projects have been lost to time, I have a few recordings of some projects. Below are some samplings from a project I did for algorithmic music. I built mealy machines and Markov models to extract stastical information from musical data that was then used to generate probabalistic music sequences.",
     image: "/images/computer-music.png",
     githubUrl: "https://github.com/pmillerschmidt/Musical-Machines",
     technologies: ["SuperCollider", "Markov Model", "Max/MSP"],
@@ -102,18 +103,18 @@ export const projects = [
     videoUrl: "https://www.youtube.com/embed/x5WkWsCPJ6E",
     isYoutubeVideo: true,
     detailedDescription: `
-      <p>GrooveBlocks reimagines music education through tangible, interactive building blocks that make composition accessible from day one. Traditional music education often prioritizes technical proficiency over creative expression, leading to high dropout rates and missed opportunities for musical discovery. Instead of requiring years of practice before creation, GrooveBlocks lets students start song-writing immediately through an intuitive system of modular blocks that control different musical elements.</p> 
+      <p>GrooveBlocks reimagines music education through tangible, interactive building blocks that make composition accessible from day one. Traditional music education often prioritizes technical proficiency over creative expression, leading to high dropout rates and missed opportunities for musical discovery. Instead of following the conventional path of years of practice before creation, GrooveBlocks lets students start creating immediately through an intuitive system of modular blocks that control different musical elements.</p> 
       <div>
         <img src="/images/grooveblocks/grooveblocks-design.png" alt="Design" class="w-full rounded-lg shadow-lg mb-2" />
         <p class="text-sm text-white/60 text-center">Grooveblocks initial design conceptions</p>
       </div>
       
-      <p>The hardware consists of connectable blocks for rhythm, melody, harmony, and effects, each equipped with sensors that translate physical manipulation into sound. These blocks interface with our companion app, which features three seamlessly integrated modes: Learn, Jam, and Create. The Learn mode adapts to each student's interests and progress, introducing new concepts when they're ready. Jam mode facilitates improvisation and collaboration, while Create mode offers varying levels of compositional guidance based on the student's experience. The Mode's are designed to easily transition between, so a student can improvise/play and then easily begin composing based on their improvisation. </p>
+      <p>The hardware consists of connectable blocks for rhythm, melody, harmony, and effects, each equipped with sensors that translate physical manipulation into musical elements. These blocks interface with our companion app, which features three seamlessly integrated modes: Learn, Jam, and Create. The Learn mode uses AI to adapt to each student's interests and progress, introducing new concepts when they're ready. Jam mode facilitates improvisation and collaboration, while Create mode offers varying levels of compositional guidance based on the student's experience.</p>
 
     <div style="display: flex; gap: 1rem; margin: 1.5rem 0;">
       <div style="flex: 1;">
         <img src="/images/grooveblocks/grooveblocks-ui.png" alt="Grooveblocks Interface" style="width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;" />
-        <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.6); text-align: center;">Jam Mode UI (left) & Prospective UI stylexw (right)</p>
+        <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.6); text-align: center;">Jam Mode UI & Prospective UI Design</p>
       </div>
     </div>
     
@@ -160,19 +161,19 @@ Music generation with machine learning poses unique challenges due to the high d
     technologies: ["C++", "MIDI", "Embedded Systems"],
     githubUrl: "https://github.com/pmillerschmidt/Artiphon-Music-Logic",
     detailedDescription: `
-      <p>For my capstone project at Artiphon, I built a lightweight melody generator in C++. The algorithm incorporated a Trigram Hidden Markov Model and user-specified temperatures for precise melodic control. The program parses artist-specific MIDI to emulate their style. For my exploration, I fed it Avicii top-line melodies normalized around A minor. The model is designed to be efficient and work on Artiphon's low-memory, embedded systems. It was an interesting challenge in building statistical models that are simple, but create novel and reasonable music.</p>
+      <p>For my capstone project at Artiphon, I built a context-sensitive, Markov-based melody generator in C++. The algorithm incorporated a Trigram Hidden Markov Model and user-specified temperatures for precise melodic control. The program parses artist-specific MIDI to emulate their style. For my exploration, I fed it Avicii top-line melodies normalized around A minor. The model is designed to be lightweight and work on the low-memory, embedded systems that Artiphon specializes in. It was an interesting challenge in building statistical models that are simple, but still create novel and reasonable music.</p>
 
       <h3 class="text-xl font-semibold mt-6 mb-4">User controls</h3>
       <ul class="list-none space-y-2">
         <li><strong>Chord coefficient:</strong> the likelihood of chord tones</li>
         <li><strong>Strong note coefficient:</strong> the likelihood that down beats emphasize chord tones</li>
         <li><strong>Movement hesitance:</strong> the amount of desired movement (jumpiness)</li>
-        <li><strong>Movement spread:</strong> the probabalistic range of the melody</li>
+        <li><strong>Movement spread:</strong> essentially the range of the generated melody</li>
         <li><strong>Repetition coefficient:</strong> likelihood of repetition (1 = none, 0 = total repetition)</li>
       </ul>
 
       <h3 class="text-xl font-semibold mt-6 mb-4">Audio Examples</h3>
-      Here are examples of the generator creating top-line melodies, with temperatures displayed in the title. The lead melody is the generated section, the accompaniment is for reference. 
+      Here are a few examples of the generator creating top-line melodies. The temperatures are displayed in the title. The drum/bass/chords are just for reference, the lead melody is the generated section
       <div class="space-y-4">
         <div>
           <p class="mb-2"><strong>CSMG-Avicii-{4,7,3,12,0}</strong></p>
@@ -227,35 +228,36 @@ Music generation with machine learning poses unique challenges due to the high d
         After evaluating results, I simplified the training to two focused phases:
     </p>
     <ol class="list-decimal pl-6 mb-6">
-        <li class="mb-2"><strong>Phase One</strong>: The agent learns fundamental melodic rules and motif structures</li>
-        <li class="mb-2"><strong>Phase Two</strong>: Building on these basics, the agent explores complex patterns and long-term musical coherence. This phase incorporates successful motifs from Phase One, rewarding the agent for creating variations that maintain similarity with previously successful patterns.</li>
+        <li class="mb-2">Phase One: The agent learns fundamental melodic rules and motif structures</li>
+        <li class="mb-2">Phase Two: Building on these basics, the agent explores complex patterns and long-term musical coherence. This phase incorporates successful motifs from Phase One, rewarding the agent for creating variations that maintain similarity with previously successful patterns.</li>
     </ol>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Training with Human Feedback</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Human-in-the-Loop Training</h2>
     <p class="mb-6">
-        The system is structured into two training stages:
+        The system is structured into two main stages:
     </p>
     <ol class="list-decimal pl-6 mb-6">
-        <li class="mb-2"><strong>Pre-training</strong>: Initial learning of musical rules and patterns (phase 1 & 2)</li>
-        <li class="mb-2"><strong>RL Fine-tuning</strong>: Training from phase 2, the agent incorporates human feedback collected through a custom UI. These human ratings directly influence the reward function, helping guide the agent toward more natural compositions.</li>
+        <li class="mb-2">Pre-training: Initial learning of musical rules and patterns</li>
+        <li class="mb-2">RL Fine-tuning: Beginning in Phase Two, the agent incorporates human feedback collected through a custom UI. These human ratings directly influence the reward function, helping guide the agent toward more musically satisfying compositions.</li>
     </ol>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Results</h2>
-    <p class="mb-6">
-        Here are two samples of the agent's melodies. The first is a melody generated from the pretrained weights and the second is a melody generated from the fine-tuned weights, after a few episodes of human feedback. There is not a massive difference, but you can tell that the agent is learning to generate more complex melodies, specifically ones that have more note variety. It also seems to be over-learning syncopation, so I may need to update those rewards.
-    </p>
     <div>
       <p class="mb-2"><strong>Qtar Pretrained Output</strong></p>
       <audio controls src="/audio/qtar-pretrained.mp3" class="w-full"></audio>
     </div>
 
     <div>
-      <p class="mb-2"><strong>Qtar Trained Output (with Human Feedback)</strong></p>
-      <audio controls src="/audio/qtar-trained.mp3" class="w-full"></audio>
+      <p class="mb-2"><strong>Qtar Pretrained Output</strong></p>
+      <audio controls src="/audio/qtar-pretrained.mp3" class="w-full"></audio>
     </div>
     
     `,
-    features: ["Reinforcement Learning", "Human Feedback", "Web interface"],
+    features: [
+      "Real-time music generation",
+      "Style transfer",
+      "MIDI export",
+      "Collaborative composition",
+    ],
   },
   {
     title: "nextChord",
@@ -271,7 +273,7 @@ Music generation with machine learning poses unique challenges due to the high d
     isYoutubeVideo: true,
     embedDemo: false,
     detailedDescription: `
-      nextChord/ChordCompass is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. The temperature parameter controls the amount of randomness in the prediction. I built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with complex progressions and a larger vocabulary of chords to predict.
+      nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict.
 
       <div>
         <p class="mb-2"><strong>nextChord Output</strong></p>

@@ -59,14 +59,14 @@ export function Contact() {
                     About Me
                   </h3>
                   <p className="text-white/80 mb-6 leading-relaxed">
-                    As a tinkerer who discovered music-making later in life, I
-                    aim to build the tools I wish I'd had. With a background in
-                    computer science, machine learning, and electronic
-                    instrument design, I want to create adaptive systems that
-                    make musical expression more accessible. From building a
-                    makerspace in high school to developing musical toys at
-                    Yale, I'm driven to use technology to help people learn
-                    through play.
+                    From starting a maker space in high school to developing
+                    musical toys at Yale, I'm driven to use technology to help
+                    people learn through play. Since discovering electronic
+                    music production in college, I’ve been on a mission to build
+                    the instruments I wish I’d had growing up. With my
+                    background in machine learning, electronic instrument
+                    design, and education, I want to create the next generation
+                    of musical instruments and reshape how we learn music.
                   </p>
                 </div>
                 <div>
