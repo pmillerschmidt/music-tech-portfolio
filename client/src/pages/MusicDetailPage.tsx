@@ -29,10 +29,10 @@ export default function MusicDetailPage() {
   }
 
   return (
-    <main className="bg-black relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0">
+    <main className="min-h-screen bg-black">
+      <div className="fixed inset-0 z-0">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0">
           <img
             src={project.image}
             alt={project.title}
@@ -45,9 +45,11 @@ export default function MusicDetailPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black" />
         </div>
+      </div>
 
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 py-20">
+      {/* Content */}
+      <div className="relative z-10 min-h-screen">
+        <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             <Link href="/#music">
                   <Button

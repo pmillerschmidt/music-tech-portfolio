@@ -30,24 +30,26 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black relative overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="fixed inset-0">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-[20s] hover:scale-110"
-          style={{
-            filter: "brightness(0.7) contrast(1.1)",
-            willChange: "transform",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black" />
+    <main className="min-h-screen bg-black">
+      <div className="fixed inset-0 z-0">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-[20s] hover:scale-110"
+            style={{
+              filter: "brightness(0.7) contrast(1.1)",
+              willChange: "transform",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/5 to-black" />
+        </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 min-h-screen">
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             <Link href="/#projects">
