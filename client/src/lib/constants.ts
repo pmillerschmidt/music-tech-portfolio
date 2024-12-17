@@ -211,17 +211,21 @@ Music generation with machine learning poses unique challenges due to the high d
     detailedDescription: `
       Q-tar is a reinforcement learning-based system for generating melodies in real-time. The project explores the application of Q-learning algorithms to musical composition, treating melody generation as a sequential decision-making process. The system learns optimal note sequences by maximizing a reward function that considers both musical theory rules and stylistic patterns from training data.
 
-      Once the model is pretrained on the environment, human feedback is incorporated through a React-based web application. The user can interact with the system by listening to generated melodies and then giving them a rating between 1-5. That rating is then incorporated into the models reward function and used to train the model. 
+      The neural network architecture combines a convolutional layer for processing local note patterns with LSTM layers for capturing longer-term musical dependencies. The model is trained using a custom reward function that evaluates both the local coherence of note transitions and the global structure of the generated melodies.
 
-      A parallel project is <a href='https://github.com/pmillerschmidt/hfonics' target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Hfonics</a>, which is a generative melodic model trained on the Maestro dataset from Google Magenta. After being trained, the model can be used to generate melodies in real-time. It also has a RL-based feedback mechanism to fine-tune the model. 
-
-      I was interested in testing whether this approach, which is often used for training LLMs might also be effective in music generation. 
+      A web interface allows users to interact with the trained model, providing controls for:
+      - Tempo and rhythm constraints
+      - Harmonic context (key and chord progression)
+      - Style parameters (jazz, classical, pop)
+      - Real-time parameter adjustment
+      
+      The system also includes a collaborative mode where multiple users can contribute to the same composition, with the AI model adapting to maintain musical coherence between different user inputs.
     `,
     features: [
       "Real-time music generation",
-      "Reinforcement Learning",
-      "Attention",
-      "RLHF fine-tuning",
+      "Style transfer",
+      "MIDI export",
+      "Collaborative composition",
     ],
   },
   {
@@ -234,6 +238,9 @@ Music generation with machine learning poses unique challenges due to the high d
     isExternalDemo: true,
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     liveDemo: true,
+    videoUrl: "https://www.youtube.com/embed/F9KaOG3SCbU",
+    isYoutubeVideo: true,
+    embedDemo: false,
     detailedDescription: `
       nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict.
 
@@ -278,36 +285,5 @@ Music generation with machine learning poses unique challenges due to the high d
       "Real-time move calculation",
     ],
   },
-  {
-    title: "Q-tar",
-    description: "Reinforcement learning for melody generation",
-    image: "/images/Qtar.png",
-    technologies: ["PyTorch", "Reinforcement Learning", "Flask"],
-    demoUrl: "https://neural-music.example.com",
-    projectUrl: "https://qtar.mit.edu",
-    githubUrl: "https://github.com/pmillerschmidt/qtar",
-    videoUrl: "/videos/qtar-demo.mp4",
-    liveDemo: true,
-    demoDescription:
-      "Create unique musical pieces using deep learning models trained on various musical styles.",
-    detailedDescription: `
-      Q-tar is a reinforcement learning-based system for generating melodies in real-time. The project explores the application of Q-learning algorithms to musical composition, treating melody generation as a sequential decision-making process. The system learns optimal note sequences by maximizing a reward function that considers both musical theory rules and stylistic patterns from training data.
-
-      The neural network architecture combines a convolutional layer for processing local note patterns with LSTM layers for capturing longer-term musical dependencies. The model is trained using a custom reward function that evaluates both the local coherence of note transitions and the global structure of the generated melodies.
-
-      A web interface allows users to interact with the trained model, providing controls for:
-      - Tempo and rhythm constraints
-      - Harmonic context (key and chord progression)
-      - Style parameters (jazz, classical, pop)
-      - Real-time parameter adjustment
-      
-      The system also includes a collaborative mode where multiple users can contribute to the same composition, with the AI model adapting to maintain musical coherence between different user inputs.
-    `,
-    features: [
-      "Real-time music generation",
-      "Style transfer",
-      "MIDI export",
-      "Collaborative composition",
-    ],
-  },
+  //Removed duplicate Q-tar entry
 ];
