@@ -141,11 +141,12 @@ export const projects = [
     demoDescription:
       "Experience real-time melody generation that adapts to chord progressions. Create unique melodic lines that follow musical theory principles.",
     detailedDescription: `
-    <div>
-      <p class="mb-2"><strong>MelGen Output</strong></p>
-      <audio controls src="/audio/melgen-demo.mp3" class="w-full"></audio>
-    </div>
+    
 Music generation with machine learning poses unique challenges due to the high dimensionality of audio data and the complex temporal and hierarchical structures inherent in music. MelGen, an AI-powered MIDI generator, addresses these challenges by generating melodies based on harmonic structures. Trained on the Rock Corpus Dataset—comprising harmonic analyses and melodic transcriptions of 20th-century songs—the model uses an LSTM architecture with a single LSTM layer, dropout, and a softmax classifier. Training spanned 50 epochs with a learning rate of 0.001 and a sparse categorical cross-entropy loss function. Despite these efforts, the model initially produced melodies with inconsistencies, such as prolonged notes caused by overestimated continuation probabilities. To mitigate this, continuation reduction was implemented to balance note lengths, resulting in more coherent outputs. Users can interact with MelGen by providing a MIDI file of chords and a seed melody, which the model builds upon to generate new melodies. The project's codebase includes tools for data preprocessing, training, and melody generation, highlighting its end-to-end approach to addressing the complexities of music generation.
+<div>
+  <p class="mb-2"><strong>MelGen Output</strong></p>
+  <audio controls src="/audio/melgen-demo.mp3" class="w-full"></audio>
+</div>
     `,
     features: [
       "Real-time melody generation",
@@ -233,8 +234,14 @@ Music generation with machine learning poses unique challenges due to the high d
     isExternalDemo: true,
     githubUrl: "https://github.com/pmillerschmidt/ChordCompass",
     liveDemo: true,
+    videoUrl: "https://www.youtube.com/embed/F9KaOG3SCbU",
+    isYoutubeVideo: true,
     detailedDescription: `
       nextChord is a chord progression neural network trained on the <a href="https://paperswithcode.com/dataset/niko-chord-progression-dataset#:~:text=The%20Niko%20Chord%20Progression%20Dataset%20is%20used%20in%20AccoMontage2.,have%20an%20'Unknown'%20style.)" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Niko Chord Progression Dataset</a> which contains 5k+ chord progressions. It pre-processes progressions into sequences of roman numerals, and then uses a LSTM to predict the next chord in the sequence. There is a temperature parameter that controls the amount of randomness in the prediction. I also built a web interface and API to inference the model. The next steps of this project are to integrate a more diverse dataset with more complicated progressions and a larger vocabulary of chords to predict.
+      <div>
+        <p class="mb-2"><strong>nextChord Output</strong></p>
+        <audio controls src="/audio/nextchord-demo.mp3" class="w-full"></audio>
+      </div>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/F9KaOG3SCbU?si=DCH0-pj5UwgRz2yw" style="display: block; margin: 0 auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     `,
