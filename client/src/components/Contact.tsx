@@ -66,7 +66,7 @@ export function Contact() {
                     the instruments I wish I’d had growing up. With my
                     background in machine learning, electronic instrument
                     design, and education, I want to create the next generation
-                    of musical instruments and reshape how we learn music.
+                    of instruments and reshape how we learn music.
                   </p>
                 </div>
                 <div>

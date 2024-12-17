@@ -17,17 +17,17 @@ export const musicProjects = [
     originalWorks: [
       {
         title: "Tell Me a Lie (feat. Abby Walker)",
-        url: "/audio/Tell Me a Lie (feat. Abby Walker).mp3",
+        url: "/audio/Tell Me a Lie.mp3",
         year: "2022",
       },
       {
         title: "Something (feat. Abby Walker)",
-        url: "/audio/something (feat. Abby Walker) - lolla bounce.mp3",
-        year: "2022",
+        url: "/audio/something.mp3",
+        year: "2023",
       },
       {
         title: "Afterlife (feat. Abby Walker)",
-        url: "/audio/afterlife (feat. Abby Walker) - lolla bounce.mp3",
+        url: "/audio/afterlife.mp3",
         year: "2023",
       },
     ],

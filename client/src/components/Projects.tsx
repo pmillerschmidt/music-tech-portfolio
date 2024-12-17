@@ -17,7 +17,7 @@ export function Projects() {
   const [isLoading, setIsLoading] = useState(false);
   const { element, isIntersecting } = useIntersectionObserver({
     threshold: 0.1,
-    rootMargin: '500px',
+    rootMargin: "500px",
   });
 
   useEffect(() => {
@@ -29,8 +29,11 @@ export function Projects() {
         setVisibleProjects((prev) => Math.min(prev + 3, projects.length));
         setIsLoading(false);
         // Prefetch next set of images
-        const nextProjects = projects.slice(visibleProjects + 3, visibleProjects + 6);
-        nextProjects.forEach(project => {
+        const nextProjects = projects.slice(
+          visibleProjects + 3,
+          visibleProjects + 6,
+        );
+        nextProjects.forEach((project) => {
           const img = new Image();
           img.src = project.image;
         });

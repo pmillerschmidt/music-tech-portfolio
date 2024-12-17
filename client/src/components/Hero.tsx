@@ -19,7 +19,7 @@ export function Hero() {
       {/* Background Container */}
       <div className="absolute inset-0 z-0">
         <motion.img
-          src="/images/hero.jpeg"
+          src="/images/projects-background.png"
           alt="Creative Technology Background"
           className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-[20s] hover:scale-110"
           initial={{ opacity: 0 }}
@@ -54,15 +54,15 @@ export function Hero() {
           Musician | Maker | Educator
         </p>
         <Button
-          className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
+          className="group bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 inline-flex items-center justify-center"
           size="lg"
           onClick={scrollToProjects}
         >
-          View My Work
+          <span>View My Work</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="ml-2"
+            className="ml-2 inline-flex items-center"
           >
             <svg
               width="24"
