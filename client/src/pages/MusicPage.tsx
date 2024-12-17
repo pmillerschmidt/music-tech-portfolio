@@ -2,7 +2,7 @@ import { Music } from "../components/Music";
 
 export default function MusicPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black">
       <Music />
     </main>
   );
