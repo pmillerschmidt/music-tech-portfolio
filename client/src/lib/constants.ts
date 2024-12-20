@@ -291,7 +291,7 @@ Music generation with machine learning poses unique challenges due to the high d
     projectUrl: "https://pmillerschmidt.github.io/Chess-Alpha-Beta/",
     isExternalDemo: true,
     githubUrl: "https://github.com/pmillerschmidt/Chess-Alpha-Beta",
-    videoUrl: "https://youtube.com/watch?v=fieytpoR_04",
+    videoUrl: "https://www.youtube.com/watch?v=_lQSp4do4To",
     liveDemo: true,
     isYoutubeVideo: true,
     demoDescription:
