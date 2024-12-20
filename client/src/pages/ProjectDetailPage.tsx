@@ -98,7 +98,16 @@ export default function ProjectDetailPage() {
                 </div>
               </div>
 
-              {/* Demo Video Section (moved to top) */}
+              {/* Short Description */}
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 mb-6">
+                <CardContent className="p-6">
+                  <p className="text-white/80 text-lg">
+                    {project.description}
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Demo Video Section */}
               {project.videoUrl && (
                 <Card className="bg-white/10 backdrop-blur-sm border-white/20 mb-6">
                   <CardContent className="p-6">
@@ -178,14 +187,7 @@ export default function ProjectDetailPage() {
                 </>
               ) : (
                 <>
-                  {/* Short Description */}
-                  <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                    <CardContent className="p-6">
-                      <p className="text-white/80 text-lg">
-                        {project.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+                  
 
                   {/* Detailed Description */}
                   {project.detailedDescription && (
