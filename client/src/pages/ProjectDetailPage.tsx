@@ -98,110 +98,9 @@ export default function ProjectDetailPage() {
                 </div>
               </div>
 
-              {/* For MelGen project, show About section first */}
-              {project.title === "MelGen" ? (
-                <>
-                  {/* About Section with Image */}
-                  <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                    <CardContent className="p-6">
-                      <div className="aspect-video rounded-lg overflow-hidden bg-black/40 mb-6">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
-                      <div className="prose prose-invert">
-                          <div className="space-y-4" dangerouslySetInnerHTML={{
-                            __html: project.detailedDescription.split('\n').map(paragraph => {
-                              const trimmedParagraph = paragraph.trim();
-                              if (!trimmedParagraph) return '';
-                              
-                              if (trimmedParagraph.startsWith('-')) {
-                                return `<div class="flex items-start gap-3 text-white/80">
-                                  <span class="select-none">•</span>
-                                  <span style="flex: 1">${trimmedParagraph.substring(1).trim()}</span>
-                                </div>`;
-                              }
-                              
-                              return `<p class="text-white/80">${trimmedParagraph}</p>`;
-                            }).join('')
-                          }} />
-                        </div>
-                    </CardContent>
-                  </Card>
-
-                  {/* Demo Video Section */}
-                  {project.videoUrl && (
-                    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                      <CardContent className="p-6">
-                        <h2 className="text-2xl font-semibold mb-4 text-white">Project Demo</h2>
-                        <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
-                          {project.isYoutubeVideo ? (
-                            <iframe
-                              src={project.videoUrl.includes('embed') ? project.videoUrl : project.videoUrl.replace('watch?v=', 'embed/')}
-                              className="w-full h-full"
-                              title={`${project.title} Demo`}
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                            />
-                          ) : (
-                            <video
-                              src={project.videoUrl}
-                              controls
-                              className="w-full h-full"
-                              poster={project.image}
-                            />
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  )}
-                </>
-              ) : (
-                <>
-                  {/* Short Description */}
-                  <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                    <CardContent className="p-6">
-                      <p className="text-white/80 text-lg">
-                        {project.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  {/* Detailed Description */}
-                  {project.detailedDescription && (
-                    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                      <CardContent className="p-6">
-                        <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
-                        <div className="prose prose-invert">
-                          <div className="space-y-4" dangerouslySetInnerHTML={{
-                            __html: project.detailedDescription.split('\n').map(paragraph => {
-                              const trimmedParagraph = paragraph.trim();
-                              if (!trimmedParagraph) return '';
-                              
-                              if (trimmedParagraph.startsWith('-')) {
-                                return `<div class="flex items-start gap-3 text-white/80">
-                                  <span class="select-none">•</span>
-                                  <span style="flex: 1">${trimmedParagraph.substring(1).trim()}</span>
-                                </div>`;
-                              }
-                              
-                              return `<p class="text-white/80">${trimmedParagraph}</p>`;
-                            }).join('')
-                          }} />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  )}
-                </>
-              )}
-
-              {/* Demo Video Section */}
-              {project.videoUrl && !project.title.includes("MelGen") && (
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              {/* Demo Video Section (moved to top) */}
+              {project.videoUrl && (
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20 mb-6">
                   <CardContent className="p-6">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Project Demo</h2>
                     <div className="aspect-video rounded-lg overflow-hidden bg-black/40">
@@ -227,21 +126,109 @@ export default function ProjectDetailPage() {
                 </Card>
               )}
 
-              {/* Key Features */}
-              {project.features && (
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-6">
-                    <h2 className="text-2xl font-semibold mb-4 text-white">Key Features</h2>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {project.features.map((feature) => (
-                        <li key={feature} className="flex items-center text-white/80">
-                          <span className="w-2 h-2 bg-primary rounded-full mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+              {/* For MelGen project, show About section first */}
+              {project.title === "MelGen" ? (
+                <>
+                  {/* About Section with Image */}
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                    <CardContent className="p-6">
+                      <div className="aspect-video rounded-lg overflow-hidden bg-black/40 mb-6">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
+                      <div className="prose prose-invert">
+                          <div className="space-y-4" dangerouslySetInnerHTML={{
+                            __html: project.detailedDescription.split('\n').map(paragraph => {
+                              const trimmedParagraph = paragraph.trim();
+                              if (!trimmedParagraph) return '';
+
+                              if (trimmedParagraph.startsWith('-')) {
+                                return `<div class="flex items-start gap-3 text-white/80">
+                                  <span class="select-none">•</span>
+                                  <span style="flex: 1">${trimmedParagraph.substring(1).trim()}</span>
+                                </div>`;
+                              }
+
+                              return `<p class="text-white/80">${trimmedParagraph}</p>`;
+                            }).join('')
+                          }} />
+                        </div>
+                    </CardContent>
+                  </Card>
+                  {/* Key Features */}
+                  {project.features && (
+                    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                      <CardContent className="p-6">
+                        <h2 className="text-2xl font-semibold mb-4 text-white">Key Features</h2>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {project.features.map((feature) => (
+                            <li key={feature} className="flex items-center text-white/80">
+                              <span className="w-2 h-2 bg-primary rounded-full mr-2" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  )}
+                </>
+              ) : (
+                <>
+                  {/* Short Description */}
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                    <CardContent className="p-6">
+                      <p className="text-white/80 text-lg">
+                        {project.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  {/* Detailed Description */}
+                  {project.detailedDescription && (
+                    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                      <CardContent className="p-6">
+                        <h2 className="text-2xl font-semibold mb-4 text-white">About This Project</h2>
+                        <div className="prose prose-invert">
+                          <div className="space-y-4" dangerouslySetInnerHTML={{
+                            __html: project.detailedDescription.split('\n').map(paragraph => {
+                              const trimmedParagraph = paragraph.trim();
+                              if (!trimmedParagraph) return '';
+
+                              if (trimmedParagraph.startsWith('-')) {
+                                return `<div class="flex items-start gap-3 text-white/80">
+                                  <span class="select-none">•</span>
+                                  <span style="flex: 1">${trimmedParagraph.substring(1).trim()}</span>
+                                </div>`;
+                              }
+
+                              return `<p class="text-white/80">${trimmedParagraph}</p>`;
+                            }).join('')
+                          }} />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+                  {/* Key Features */}
+                  {project.features && (
+                    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                      <CardContent className="p-6">
+                        <h2 className="text-2xl font-semibold mb-4 text-white">Key Features</h2>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {project.features.map((feature) => (
+                            <li key={feature} className="flex items-center text-white/80">
+                              <span className="w-2 h-2 bg-primary rounded-full mr-2" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  )}
+                </>
               )}
 
               {/* Technologies */}
@@ -261,7 +248,7 @@ export default function ProjectDetailPage() {
                 </CardContent>
               </Card>
 
-              
+
             </motion.div>
           </div>
         </div>
