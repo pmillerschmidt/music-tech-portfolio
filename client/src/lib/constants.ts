@@ -77,7 +77,7 @@ export const musicProjects = [
   },
   {
     title: "Coursework",
-    summary: "Academic background",
+    summary: "Academic background in thoery and taxonomy",
     description:
       "A collaborative film score composition project with Baltazar Lora",
     detailedDescription: `
@@ -259,7 +259,7 @@ Music generation with machine learning poses unique challenges due to the high d
   },
   {
     title: "nextChord",
-    description: "chord progression neural network",
+    description: "Chord progression neural network",
     image: "/images/next-chord.png",
     technologies: ["PyTorch", "Long Short-Term Memory", "React"],
     demoUrl: "https://pmillerschmidt.github.io/ChordCompass/",
