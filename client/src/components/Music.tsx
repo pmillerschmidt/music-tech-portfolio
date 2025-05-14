@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { useIntersectionObserver } from "../hooks/use-intersection-observer";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
+} from "../components/ui/card";
 import { musicProjects } from "../lib/constants";
 import { ExternalLink, Loader2 } from "lucide-react";
 import { Link as WouterLink } from "wouter";

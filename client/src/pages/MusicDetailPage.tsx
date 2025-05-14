@@ -1,8 +1,8 @@
 import { useRoute } from "wouter";
 import { musicProjects } from "../lib/constants";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 
@@ -163,7 +163,7 @@ export default function MusicDetailPage() {
                       </div>
                     )}
 
-                    {/* Video Section - Moved to the end */}
+                    {/* Video Section - Moved to the end
                     {project.videoUrl && (
                       <div className="mt-8">
                         <h2 className="text-2xl font-semibold text-white mb-4">
@@ -196,7 +196,7 @@ export default function MusicDetailPage() {
                           )}
                         </div>
                       </div>
-                    )}
+                    )} */}
 
                     {/* Performance Image Section */}
                     {project.performanceImage && (
