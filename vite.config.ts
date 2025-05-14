@@ -11,8 +11,10 @@ const __dirname = dirname(__filename);
 
 export default defineConfig(({ mode }) => {
   const isGitHubPages = mode === 'gh-pages';
-  
+
   return {
+    root: "./client", // This tells Vite where your app lives
+    base: isGitHubPages ? "/music-tech-portfolio/" : "/", // Match your GitHub repo name here
     plugins: [
       react(),
       checker({ typescript: true }),
@@ -21,16 +23,13 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "./client/src"),
-        "@db": path.resolve(__dirname, "./db"),
+        "@": path.resolve(__dirname, "client/src"), // Fix alias relative to root
+        "@db": path.resolve(__dirname, "db"),
       },
     },
-    root: "./client",
     build: {
-      outDir: isGitHubPages ? "../docs" : "../dist/public",
+      outDir: isGitHubPages ? path.resolve(__dirname, "docs") : path.resolve(__dirname, "dist/public"),
       emptyOutDir: true,
     },
-    // Set base for GitHub Pages - CHANGE THIS TO YOUR REPO NAME
-    base: isGitHubPages ? "/music-tech-portfolio/" : "/",
   };
 });
