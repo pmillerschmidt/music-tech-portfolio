@@ -69,8 +69,8 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // Use port 5000 consistently
-  const PORT = 5000;
+  // Use port 8080 consistently
+  const PORT = 3001;
   server.listen(PORT, "0.0.0.0", () => {
     log(`serving on port ${PORT}`);
   });

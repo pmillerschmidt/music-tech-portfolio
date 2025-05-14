@@ -78,12 +78,15 @@ export const musicProjects = [
   },
   {
     title: "Coursework",
-    summary: "Academic background in theory and study",
+    summary: "Academic background",
     description:
       "A collaborative film score composition project with Baltazar Lora",
     detailedDescription: `
-    Music classes at Yale were a wonderful oasis of creativity and joy in my otherwise gruelling engineering coursework. After taking introductory theory courses my first year, I took nearly every course I was proficient enough to handle. Some of my favorites include Where Music Theories Collide, American Neighborhood Musics, and Gamelan Ensemble. 
-    Below is a visual score I wrote with my friend and collaborator <a href="https://open.spotify.com/artist/1OcU1uVtqF9umURdShNIwP" target="_blank" rel="noopener noreferrer" class="text-primary-500 font-medium no-underline hover:underline hover:decoration-2 hover:text-primary-400 transition-all duration-200">Baltazar Lora</a> for our composition seminar.`,
+    I graduated from Yale University with a B.S. in Computer Science in 2023. I focused my studies on the intersection of artificial intelligence and music. For my senior thesis, I built a harmonically-attentive LSTM melody generator.
+At Yale, my chosen electives demonstrate my specific interests within computer science. For Software Engineering (React, Vue, NodeJS, Firebase), I worked with a team of engineers to build a portable web application that allows users to track their friends’ commutes home with a variety of safety features, including messaging and location services. In Computational Intelligence For Games (Python), I built AlphaBot, a minimax chess engine with Alpha-beta pruning and Scout optimizations. For Algorithmic Music (Supercollider, MaxMSP), I built numerous automated and responsive musical generation tools. In Natural Language Processing (TensorFlow, Word2Vec, Keras), I designed sequence-to-sequence text models using RNNs, LSTMs, and Transformers.
+Alongside internships at startups, I explored entrepreneurship by founding Grooveblocks, an edtech company focused on making music education more accessible through a composition-based approach and combinatory instruments. I developed hardware prototypes, an Android app, and a formal pedagogy. I also co-founded Elite Suite Tutoring to address the educational gap left by virtual learning during the pandemic.
+In my free time, I enjoy producing music, DJing, writing and performing comedy sketches, and skiing (this photo was taken when I worked as a lift attendant in Colorado).
+`,
     image: "/images/theory.jpg",
     videoUrl: "https://www.youtube.com/embed/W0jj0Gkzsc8",
     isYoutubeVideo: true,
